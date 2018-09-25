@@ -1,0 +1,16 @@
+{
+	"index.html": {
+		"resources": [
+			"chat.html",
+			"main.html"
+		],
+		"refer": [
+			"chat2.html",
+			"me.html",
+			"chat.html",
+			"concat.html",
+			"main.html",
+			"slide.html"
+		]
+	}
+}

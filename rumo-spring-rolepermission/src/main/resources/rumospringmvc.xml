@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 资源文件加载必须放在springmvc.xml的核心配置文件中  -->
+	<context:property-placeholder location="classpath:springmvc/resource.properties"/>
+	<!-- 扫包 -->
+	<context:component-scan base-package="com.rumo.controller"/>
+	
+	<!-- 启动springmvc的注解相关信息,视图转换，数据类型转换 -->
+	<mvc:annotation-driven>
+		    <mvc:message-converters register-defaults="true">
+	        <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	        	<property name="supportedMediaTypes">
+	        		<list>  
+	                    <value>text/plain;charset=UTF-8</value>  
+	                    <value>text/html;charset=UTF-8</value>  
+	                </list>  
+	        	</property>
+	        </bean> 
+	        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	        	<property name="prefixJson" value="false" />
+	        	<property name="objectMapper">
+	        		 <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+	                       <!-- 处理responseBody 里面日期类型 --> 
+	                       <property name="dateFormat">  
+	                           <bean class="java.text.SimpleDateFormat">  
+	                               <constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />  
+	                           </bean>  
+	                       </property> 
+	                       <!-- 为null字段时不显示 -->
+	                       <!-- <property name="serializationInclusion">
+	                           <value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>
+	                       </property>  -->
+	                   </bean>  
+	        	</property>
+	        	 <property name="supportedMediaTypes">  
+	                <list>  
+	                    <value>application/json;charset=UTF-8</value>  
+	                    <value>application/x-www-form-urlencoded;charset=UTF-8</value>  
+	                </list>  
+	            </property>
+	        </bean>
+	    </mvc:message-converters> 
+	</mvc:annotation-driven> 
+	
+	<!-- 静态化资源处理 -->
+	<!-- json转换配置 -->
+    <!-- <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" >
+    	<property name="prettyPrint" value="true"></property>
+    </bean> -->
+	
+	<!-- 配置静态资源文件 -->
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/images/" mapping="/images/**" />
+	
+	
+	<!-- 统一异常处理 -->
+    <bean class="com.rumo.core.SpringExceptionResolver" /> 
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+	<!-- 异步返回的json视图-->
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>
+	
+	<!-- jsp视图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+</beans>
+

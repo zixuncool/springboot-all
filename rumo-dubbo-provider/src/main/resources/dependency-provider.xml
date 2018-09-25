@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--  <context:component-scan base-package="bhz.dubbo.dependency.provider"></context:component-scan>    -->
+    <dubbo:annotation package="bhz.dubbo.dependency.provider"/>
+    <!-- <dubbo:annotation package="bhz" /> -->
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="dependency-provider"/>
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry  address="zookeeper://192.168.189.145:2181?backup=192.168.189.144:2181,192.168.189.133:2181"/>
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20890"/>
+
+    <!-- <dubbo:service interface="bhz.dubbo.dependency.provider.DependencyService" ref="dependencyServiceImpl"></dubbo:service> -->
+
+    <!-- 注意这里，我们在使用DependencyService的时候，这个服务可能需要依赖某一个服务，比如SampleService 检查级联依赖关系 默认为true
+    当有依赖服务的时候，需要根据需求进行设置
+        check=false的是时候dubbo的依赖服务不会进行依赖检查，正常启动，在消费服务的时候会报出异常，如果服务启动起来以后会自动连接服务。
+    -->
+    <dubbo:reference id="sampleService" check="true" interface="bhz.dubbo.sample.provider.SampleService"/>
+
+</beans>
