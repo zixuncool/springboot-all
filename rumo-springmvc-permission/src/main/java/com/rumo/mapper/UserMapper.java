@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.rumo.pojo.Params;
 import com.rumo.pojo.User;
 
 public interface UserMapper {
@@ -16,7 +17,7 @@ public interface UserMapper {
 
     User selectByPrimaryKey(Integer id);
     
-    List<User> selectByPrimaryKeyAll();
+    List<User> selectByPrimaryKeyAll(Params params);
 
     int updateByPrimaryKeySelective(User record);
 

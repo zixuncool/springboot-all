@@ -26,10 +26,19 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
   
-   <select id="selectByPrimaryKeyAll" resultMap="BaseResultMap" >
+   <select id="selectByPrimaryKeyAll" resultMap="BaseResultMap" parameterType="com.rumo.pojo.Params">
+    <bind name="keywordlike" value="'%'+keyword+'%'"/>
     select 
     <include refid="Base_Column_List" />
     from rumo_user
+    <where>
+    	<if test="keyword!=null and keyword!=''">
+    		username like #{keywordlike} or telephone like #{keywordlike}
+    	</if>
+    	<if test="status!=null">
+    		and status = #{status}
+    	</if>
+    </where>
   </select>
   
   

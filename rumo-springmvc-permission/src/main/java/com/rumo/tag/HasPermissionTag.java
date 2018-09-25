@@ -49,7 +49,7 @@ public class HasPermissionTag extends BodyTagSupport {
     }
     
     private boolean isValidator(List<Map<String, String>> permissions) {
-    	//如果没有找到就false
+    	/*//如果没有找到就false
     	boolean flag = false;
     	for (Map<String, String> map : permissions) {
     		//如果找到了就直接退出返回
@@ -58,8 +58,14 @@ public class HasPermissionTag extends BodyTagSupport {
 				break;
 			}
 		}
-    	return flag;
+    	return flag;*/
+    	
+    	return true;
     }
+    
+    
+    
+    
     
 
     @Override

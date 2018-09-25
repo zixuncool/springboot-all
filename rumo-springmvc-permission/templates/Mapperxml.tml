@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rumo.mapper.[beanModel]Mapper" >
+  
+  <resultMap id="BaseResultMap" type="com.rumo.pojo.[beanModel]" >
+    <constructor >
+       <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="content" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="user_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+   id,title,content,create_time,update_time,user_id,status
+  </sql>
+ 
+   <select id="selectByPrimaryKeyAll" resultMap="BaseResultMap" parameterType="com.rumo.pojo.Params">
+    <bind name="keywordlike" value="'%'+keyword+'%'"/>
+    select 
+    <include refid="Base_Column_List" />
+    from rumo_[model]
+    <where>
+    	<if test="keyword!=null and keyword!=''">
+    		title like #{keywordlike}
+    	</if>
+    	<if test="status!=null">
+    		and status = #{status}
+    	</if>
+    </where>
+  </select>
+  
+</mapper>

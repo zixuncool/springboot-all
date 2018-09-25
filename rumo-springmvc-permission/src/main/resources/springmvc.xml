@@ -37,7 +37,7 @@
 	    <bean class="com.rumo.core.SpringExceptionResolver" /> 
 	    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
 	 -->
-	
+	 
 	
 	<!-- 加载属性文件 -->
 	<context:property-placeholder location="classpath:resource/resource.properties" />

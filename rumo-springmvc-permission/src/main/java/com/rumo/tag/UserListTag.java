@@ -1,4 +1,4 @@
-package com.rumo.tag;
+/*package com.rumo.tag;
 
 
 
@@ -17,7 +17,7 @@ import com.rumo.core.ApplicationContextHelper;
 import com.rumo.pojo.User;
 import com.rumo.service.user.IUserService;
 
-/**
+*//**
  * 
  * @ClassName: HasUrlPermissionTag
  * @Description: 根据url判断权限标签
@@ -47,7 +47,7 @@ SKIP_PAGE：忽略对余下页面的处理，doEndTag()函数可用
 EVAL_BODY_TAG：已经废止，由EVAL_BODY_BUFFERED取代
 EVAL_BODY_BUFFERED：申请缓冲区，由setBodyContent()函数得到的BodyContent对象来处理tag的body，如果类实现了BodyTag，那么doStartTag()可用，否则非法
  * 
- */
+ *//*
 public class UserListTag extends BodyTagSupport {
 
     private String var;//  acApplication/forMain.do
@@ -59,9 +59,9 @@ public class UserListTag extends BodyTagSupport {
 
     @Override
     public int doStartTag() throws JspException { // 在标签开始处出发该方法
-        /*HttpServletRequest request=(HttpServletRequest) pageContext.getRequest();
+        HttpServletRequest request=(HttpServletRequest) pageContext.getRequest();
         WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(request.getServletContext());
-        IUserService userService = context.getBean(IUserService.class);*/
+        IUserService userService = context.getBean(IUserService.class);
         IUserService userService =  ApplicationContextHelper.popBean(IUserService.class);
         if(var==null)var = "user";
         //获取session中存放的权限
@@ -110,4 +110,4 @@ public class UserListTag extends BodyTagSupport {
 		this.var = var;
 	}
 
-}
+}*/

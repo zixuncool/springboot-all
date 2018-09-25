@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.code.kaptcha.Constants;
-import com.rumo.core.ApplicationContextHelper;
 import com.rumo.params.UserVo;
 import com.rumo.pojo.User;
 import com.rumo.service.permission.IPermissionService;

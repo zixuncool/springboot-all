@@ -1,0 +1,40 @@
+package com.rumo.service.[model];
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.rumo.mapper.[beanModel]Mapper;
+import com.rumo.vo.[beanModel]Vo;
+import com.rumo.pojo.Params;
+import com.rumo.pojo.[beanModel];
+import com.rumo.vo.ServerResponse;
+
+
+/**
+ * 
+ * todo:[description]
+ * [beanModel]ServiceImpl<br/>
+ * 作者:[author]<br/>
+ * 创建时间：[datetime] <br/>
+ * @version 1.0.0<br/>
+ *
+ */
+@Service
+public class [beanModel]ServiceImpl implements I[beanModel]Service  {
+
+	@Autowired
+	private [beanModel]Mapper [model]Mapper;
+	
+	public ServerResponse find[beanModel]s(Params params){
+		PageHelper.startPage(params.getPageNo(), params.getPageSize());
+		List<[beanModel]> [model]s = [model]Mapper.selectByPrimaryKeyAll(params);
+		PageInfo<[beanModel]> pageInfo = new PageInfo<>([model]s);
+		return ServerResponse.createBySuccess(pageInfo);
+	}
+	
+}

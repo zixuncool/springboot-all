@@ -9,12 +9,15 @@
  */
 package com.rumo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
 import com.rumo.pojo.User;
 
@@ -36,7 +39,6 @@ import io.swagger.annotations.ApiParam;
 @RequestMapping
 @Api("首页管理")
 public class IndexController {
-
 	
 	//@RequestMapping 以上
 	@ApiOperation(value="访问首页",notes="我和你讲一个故事，这是一个首页")
@@ -46,7 +48,6 @@ public class IndexController {
 		return "index";
 	}
 	
-
 	@ResponseBody
 	@PostMapping("/save")
 	@ApiOperation(value="注册用户",notes="我和你讲一个故事，这注册用户")

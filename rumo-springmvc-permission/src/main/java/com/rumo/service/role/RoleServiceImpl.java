@@ -14,7 +14,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rumo.mapper.RoleMapper;
 import com.rumo.mapper.RoleUserMapper;
 import com.rumo.pojo.Role;
 import com.rumo.vo.ServerResponse;

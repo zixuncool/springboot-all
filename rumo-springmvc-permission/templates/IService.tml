@@ -1,0 +1,8 @@
+package com.rumo.service.[model];
+
+import com.rumo.pojo.Params;
+import com.rumo.vo.ServerResponse;
+
+public interface I[beanModel]Service {
+	public ServerResponse find[beanModel]s(Params params);
+}

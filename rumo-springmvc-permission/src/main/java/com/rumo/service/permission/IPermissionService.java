@@ -11,8 +11,6 @@ package com.rumo.service.permission;
 import com.rumo.pojo.Permission;
 import com.rumo.vo.ServerResponse;
 
-import net.sf.jsqlparser.schema.Server;
-
 /**
  * 
  * PermissionServerImpl<br/>

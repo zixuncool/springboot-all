@@ -10,8 +10,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.rumo.mapper.UserMapper;
 import com.rumo.params.UserVo;
+import com.rumo.pojo.Params;
 import com.rumo.pojo.User;
-import com.rumo.service.role.IRoleService;
 import com.rumo.util.MD5Util;
 import com.rumo.vo.ServerResponse;
 
@@ -22,11 +22,11 @@ public class UserServiceImpl implements IUserService  {
 	@Autowired
 	private UserMapper userMapper;
 	
-	public PageInfo<User> findUsers(int pageNum,int pageSize){
-		PageHelper.startPage(pageNum, pageSize);
-		List<User> users = userMapper.selectByPrimaryKeyAll();
+	public ServerResponse findUsers(Params params){
+		PageHelper.startPage(params.getPageNo(), params.getPageSize());
+		List<User> users = userMapper.selectByPrimaryKeyAll(params);
 		PageInfo<User> pageInfo = new PageInfo<>(users);
-		return pageInfo;
+		return ServerResponse.createBySuccess(pageInfo);
 	}
 	
 	
