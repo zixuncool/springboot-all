@@ -1,0 +1,63 @@
+
+   jdk5.0以后提供了多种并发类容器来替代同步类容器从而改善性能。同步类容器的状态都是
+   串行化的，他们虽然实现了线程安装，但是严重降低了并发性，在多线程环境时，严重降低应用程序
+   的吞吐量。
+   并发容器类容器是专门针对并发设计的，使用ConcurrentHashMap来替代给予散列的传统的hashtable
+   。而且在ConcurrentHashMap中，添加了一些常见的复合操作的支持，以及使用了CopyOnWriteArrayList
+   代替了Vector.并发的CopyOnWriteArraySet，以及并发的Queue。ConcurrentLinkedQueue和LinkedBlockingQueue
+   。前者是高性能过得队列，后者是以阻塞形式的队列，具体实现Queue还有很多，
+   比如：ArrayBlockingQueue,PriorityBlockingQueue,SynchronousQueue等。
+
+   ConcurrentMap接口下提供两个重要的实现类：
+   ConcurrentHashMap和ConcurrentSkipListMap(并发支持排序)
+   ConcurrentHashMap内部使用段来标识这些不同的步伐，每个段其实就是一个小的HashTable，他们有自己的锁，
+   只要多个修改操作发生在不同的段上，它们就可以并发进行，把一个整体分成了16个段，也就是最高支持16个线程并发修改操作。
+   这也是在多线程场景时减小锁的粒度从而降低锁竞争的一种方案，并且代码中大多共享变量使用volatile关键字申明，
+   目的是第一时间获取修改的内容，性能非常好，
+
+
+   Copy-On-Write容器
+   简称cow,是一种用于程序设计中的优化策略。
+   JDK的cow容器中有两种：CopyOnWriteArrayList和CopyOnWriteArraySet
+   Cow容器非常有用 ，可以在很并发场景中使用到。
+   什么是CopyOnWrite容器：
+   它是一种即写时复制的容器。通俗的理解就是当我们往一个容器中添加元素的时候，不直接
+   往当前容器添加，而是先将当前容器进行copy,复制出一个新的容器，然后新的容器里添加元素，
+   添加完元素之后，再将原容器的引用指向新的容器。这样做的好处是我们可以对CopyOnWrite容器
+   记性并发的读，而不需要加锁，因为当前容器不会添加任何元素，所以CopyOnWrite容器也是一种
+   读写分离的思想，读和写不同的容器。
+
+
+   如何解决高并发：
+   1: 网络
+   2：服务器层面 nginx,如果解决不了：lvs+haproxy+nginx,
+   3：硬件方面
+   4：从业务拆分(核心和重点)
+   5：从代码层面 或者从nginx层面
+
+
+
+
+
+   Collections.util工具类详细讲解和使用
+
+
+   线程阻塞：
+   CountDownLatch
+   经常用于监听某些初始化操作，等初始化完毕执行完毕以后，通知主线程继续工作。
+   com.rumo.thread2.countlatch.UseCountDownLatch
+   CyclicBarrier
+   假设有一个场景，每个线程代表一个跑步运动员，当运动员都准备好了，才一起出发，只要有一个人没准备好，大家都等待。
+   com.rumo.thread2.countlatch.UseCyclicBarrier
+
+   重入锁和读写锁的高级深入
+   锁:在java多线程中，我们知道可以使用synchronized关键字来实现线程间的同步互斥操作，那么其实还有一个更优秀的机制去完成这个
+   同步互斥的工作，那就是Lock对象，锁常见的又：重入锁和读写锁。自旋锁，偏向锁。 它们比synchronized更为强大的功能，并且有嗅探锁定，分路多支的概念。
+
+
+    读写互斥
+    读读共享
+    写写互斥
+
+
+
