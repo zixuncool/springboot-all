@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Boot Web thymeleaf Sample
+Implementation-Version: 2.0.0.RELEASE
+Built-By: Administrator
+Implementation-Vendor-Id: org.springframework.boot
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/spring-boot-web-thymeleaf
+Created-By: Maven Integration for Eclipse
+

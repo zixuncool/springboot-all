@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: dockercompose-springboot-mysql-nginx
+Implementation-Version: 1.0
+Built-By: Administrator
+Implementation-Vendor-Id: com.neo
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/dockercompose-springboot-mysql-nginx
+Created-By: Maven Integration for Eclipse
+

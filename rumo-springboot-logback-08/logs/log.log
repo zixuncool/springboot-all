@@ -1,0 +1,99 @@
+2018-08-28 20:30:21.413  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Starting RumoApplication on 5W16038EWPHNENY with PID 6732 (started by Administrator in F:\濡沫VIP课程\maven\rumo-springboot-logback-08)
+2018-08-28 20:30:21.413  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : The following profiles are active: prod
+2018-08-28 20:30:21.417  INFO 6732 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@627b8f0d: startup date [Tue Aug 28 20:30:21 CST 2018]; root of context hierarchy
+2018-08-28 20:30:21.759  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2018-08-28 20:30:21.761  INFO 6732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 20:30:21.761  INFO 6732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-28 20:30:21.791  INFO 6732 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 20:30:21.792  INFO 6732 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 375 ms
+2018-08-28 20:30:21.804  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-28 20:30:21.805  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 20:30:21.805  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 20:30:21.805  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 20:30:21.806  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 20:30:21.837  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:30:21.866  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@627b8f0d: startup date [Tue Aug 28 20:30:21 CST 2018]; root of context hierarchy
+2018-08-28 20:30:21.870  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.rumo.web.IndexController.index(java.lang.String)
+2018-08-28 20:30:21.871  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.rumo.web.LogbackController.index(java.lang.String)
+2018-08-28 20:30:21.871  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.rumo.web.LoginController.login()
+2018-08-28 20:30:21.873  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 20:30:21.873  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 20:30:21.880  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:30:21.880  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:30:21.911  INFO 6732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-28 20:30:21.920  INFO 6732 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-08-28 20:30:21.937  INFO 6732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-28 20:30:21.955  INFO 6732 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 20:30:21.967  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2018-08-28 20:30:21.968  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Started RumoApplication in 0.588 seconds (JVM running for 59.693)
+2018-08-28 20:30:21.973  INFO 6732 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-28 20:30:28.010  INFO 6732 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 20:30:28.011  INFO 6732 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 20:30:28.014  INFO 6732 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 3 ms
+2018-08-28 20:30:28.017  INFO 6732 --- [http-nio-8088-exec-1] com.rumo.web.LogbackController           : info 日志输出了....
+2018-08-28 20:30:28.017  WARN 6732 --- [http-nio-8088-exec-1] com.rumo.web.LogbackController           : warn 日志输出了....
+2018-08-28 20:30:28.017 ERROR 6732 --- [http-nio-8088-exec-1] com.rumo.web.LogbackController           : error 日志输出了....
+2018-08-28 20:31:10.501  INFO 6732 --- [Thread-16] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@627b8f0d: startup date [Tue Aug 28 20:30:21 CST 2018]; root of context hierarchy
+2018-08-28 20:31:10.503  INFO 6732 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-28 20:31:10.861  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Starting RumoApplication on 5W16038EWPHNENY with PID 6732 (started by Administrator in F:\濡沫VIP课程\maven\rumo-springboot-logback-08)
+2018-08-28 20:31:10.862  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : The following profiles are active: prod
+2018-08-28 20:31:10.864  INFO 6732 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a21f78f: startup date [Tue Aug 28 20:31:10 CST 2018]; root of context hierarchy
+2018-08-28 20:31:11.151  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2018-08-28 20:31:11.152  INFO 6732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 20:31:11.152  INFO 6732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-28 20:31:11.176  INFO 6732 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 20:31:11.177  INFO 6732 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 313 ms
+2018-08-28 20:31:11.183  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-28 20:31:11.185  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 20:31:11.186  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 20:31:11.186  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 20:31:11.186  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 20:31:11.215  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:11.237  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a21f78f: startup date [Tue Aug 28 20:31:10 CST 2018]; root of context hierarchy
+2018-08-28 20:31:11.242  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.rumo.web.IndexController.index(java.lang.String)
+2018-08-28 20:31:11.243  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.rumo.web.LogbackController.index(java.lang.String)
+2018-08-28 20:31:11.243  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.rumo.web.LoginController.login()
+2018-08-28 20:31:11.244  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 20:31:11.244  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 20:31:11.247  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:11.247  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:11.273  INFO 6732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-28 20:31:11.279  INFO 6732 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-08-28 20:31:11.295  INFO 6732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-28 20:31:11.305  INFO 6732 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 20:31:11.312  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2018-08-28 20:31:11.313  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Started RumoApplication in 0.48 seconds (JVM running for 109.038)
+2018-08-28 20:31:11.314  INFO 6732 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-28 20:31:20.731  INFO 6732 --- [Thread-22] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1a21f78f: startup date [Tue Aug 28 20:31:10 CST 2018]; root of context hierarchy
+2018-08-28 20:31:20.733  INFO 6732 --- [Thread-22] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-28 20:31:21.058  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Starting RumoApplication on 5W16038EWPHNENY with PID 6732 (started by Administrator in F:\濡沫VIP课程\maven\rumo-springboot-logback-08)
+2018-08-28 20:31:21.058  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : The following profiles are active: prod
+2018-08-28 20:31:21.061  INFO 6732 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6745f11a: startup date [Tue Aug 28 20:31:21 CST 2018]; root of context hierarchy
+2018-08-28 20:31:21.381  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2018-08-28 20:31:21.383  INFO 6732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 20:31:21.383  INFO 6732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-08-28 20:31:21.400  INFO 6732 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 20:31:21.401  INFO 6732 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 340 ms
+2018-08-28 20:31:21.409  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-28 20:31:21.410  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 20:31:21.410  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 20:31:21.410  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 20:31:21.410  INFO 6732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 20:31:21.434  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:21.457  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6745f11a: startup date [Tue Aug 28 20:31:21 CST 2018]; root of context hierarchy
+2018-08-28 20:31:21.460  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.rumo.web.IndexController.index(java.lang.String)
+2018-08-28 20:31:21.461  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.rumo.web.LogbackController.index(java.lang.String)
+2018-08-28 20:31:21.461  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login]}" onto public java.lang.String com.rumo.web.LoginController.login()
+2018-08-28 20:31:21.462  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 20:31:21.463  INFO 6732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 20:31:21.466  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:21.466  INFO 6732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 20:31:21.489  INFO 6732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2018-08-28 20:31:21.496  INFO 6732 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-08-28 20:31:21.512  INFO 6732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-08-28 20:31:21.520  INFO 6732 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 20:31:21.530  INFO 6732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2018-08-28 20:31:21.531  INFO 6732 --- [restartedMain] com.rumo.RumoApplication                 : Started RumoApplication in 0.497 seconds (JVM running for 119.256)
+2018-08-28 20:31:21.532  INFO 6732 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2018-08-28 20:32:14.101  INFO 6732 --- [Thread-28] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6745f11a: startup date [Tue Aug 28 20:31:21 CST 2018]; root of context hierarchy
+2018-08-28 20:32:14.103  INFO 6732 --- [Thread-28] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

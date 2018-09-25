@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.rumo</groupId>
+	<artifactId>rumo-springboot-profile-03</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- 添加springboot的父工程 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+	</parent>
+
+	<dependencies>
+	
+		<!-- 
+			springboot提供很多的spring-boot-starter开头的依赖配置，这种配置它作用就是可以把很多相关性的一些依赖
+			全部帮你整理归档
+			web- springmvc servlet aop core bean tomcat json处理
+		 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+	</dependencies>
+	
+
+</project>
