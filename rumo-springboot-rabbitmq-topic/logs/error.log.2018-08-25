@@ -1,0 +1,45 @@
+2018-08-25 16:17:50  [ restartedMain:4646 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+
+2018-08-25 16:30:27  [ restartedMain:4883 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+
+2018-08-25 16:31:56  [ restartedMain:5394 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+

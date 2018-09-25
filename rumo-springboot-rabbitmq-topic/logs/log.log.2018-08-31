@@ -1,0 +1,37 @@
+2018-08-31 00:22:45  [ DefaultMessageListenerContainer-3:27792089 ] - [ WARN ]  Caught exception trying rollback() when putting session back into the pool, will invalidate. javax.jms.IllegalStateException: The Session is closed
+javax.jms.IllegalStateException: The Session is closed
+	at org.apache.activemq.ActiveMQSession.checkClosed(ActiveMQSession.java:771)
+	at org.apache.activemq.ActiveMQSession.rollback(ActiveMQSession.java:596)
+	at org.apache.activemq.jms.pool.PooledSession.close(PooledSession.java:118)
+	at org.springframework.jms.support.JmsUtils.closeSession(JmsUtils.java:109)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.clearResources(DefaultMessageListenerContainer.java:1241)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1087)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-31 00:22:45  [ ActiveMQ Connection Executor: tcp:///192.168.189.152:61616@2795:27792199 ] - [ INFO ]  Expiring connection ActiveMQConnection {id=ID:DESKTOP-ETO6QNU-13845-1535618380307-13:17,clientId=ID:DESKTOP-ETO6QNU-13845-1535618380307-12:3,started=false} on IOException: Software caused connection abort: recv failed
+2018-08-31 00:22:45  [ DefaultMessageListenerContainer-3:27792089 ] - [ WARN ]  Caught exception trying rollback() when putting session back into the pool, will invalidate. javax.jms.IllegalStateException: The Session is closed
+javax.jms.IllegalStateException: The Session is closed
+	at org.apache.activemq.ActiveMQSession.checkClosed(ActiveMQSession.java:771)
+	at org.apache.activemq.ActiveMQSession.rollback(ActiveMQSession.java:596)
+	at org.apache.activemq.jms.pool.PooledSession.close(PooledSession.java:118)
+	at org.springframework.jms.support.JmsUtils.closeSession(JmsUtils.java:109)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.clearResources(DefaultMessageListenerContainer.java:1241)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1087)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-31 00:22:45  [ DefaultMessageListenerContainer-3:27792089 ] - [ WARN ]  Caught exception trying rollback() when putting session back into the pool, will invalidate. javax.jms.IllegalStateException: The Session is closed
+javax.jms.IllegalStateException: The Session is closed
+	at org.apache.activemq.ActiveMQSession.checkClosed(ActiveMQSession.java:771)
+	at org.apache.activemq.ActiveMQSession.rollback(ActiveMQSession.java:596)
+	at org.apache.activemq.jms.pool.PooledSession.close(PooledSession.java:118)
+	at org.springframework.jms.support.JmsUtils.closeSession(JmsUtils.java:109)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.clearResources(DefaultMessageListenerContainer.java:1241)
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1087)
+	at java.lang.Thread.run(Thread.java:748)
+2018-08-31 00:22:46  [ DefaultMessageListenerContainer-3:27792238 ] - [ WARN ]  Setup of JMS message listener invoker failed for destination 'rumo.topic' - trying to recover. Cause: The Consumer is closed
+2018-08-31 00:22:46  [ DefaultMessageListenerContainer-3:27792238 ] - [ WARN ]  Setup of JMS message listener invoker failed for destination 'rumo.topic' - trying to recover. Cause: The Consumer is closed
+2018-08-31 00:22:46  [ DefaultMessageListenerContainer-3:27792239 ] - [ WARN ]  Setup of JMS message listener invoker failed for destination 'rumo.queue' - trying to recover. Cause: The Consumer is closed
+2018-08-31 13:10:02  [ DefaultMessageListenerContainer-3:73828561 ] - [ ERROR ]  Could not refresh JMS Connection for destination 'rumo.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to retrieve a connection from the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.189.152:61616. Reason: java.net.SocketException: Software caused connection abort: connect
+2018-08-31 13:10:02  [ DefaultMessageListenerContainer-3:73828599 ] - [ ERROR ]  Could not refresh JMS Connection for destination 'rumo.topic' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.189.152:61616. Reason: java.net.NoRouteToHostException: No route to host: connect
+2018-08-31 13:10:02  [ DefaultMessageListenerContainer-3:73828585 ] - [ ERROR ]  Could not refresh JMS Connection for destination 'rumo.queue' - retrying using FixedBackOff{interval=5000, currentAttempts=0, maxAttempts=unlimited}. Cause: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://192.168.189.152:61616. Reason: java.net.NoRouteToHostException: No route to host: connect
+2018-08-31 13:10:13  [ DefaultMessageListenerContainer-3:73839663 ] - [ INFO ]  Successfully refreshed JMS Connection
+2018-08-31 13:10:13  [ DefaultMessageListenerContainer-3:73839667 ] - [ INFO ]  Successfully refreshed JMS Connection
+2018-08-31 13:10:13  [ DefaultMessageListenerContainer-3:73839690 ] - [ INFO ]  Successfully refreshed JMS Connection

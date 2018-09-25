@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+    http://www.springframework.org/schema/rabbit/spring-rabbit-1.7.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    
+	<!--1 定义连接工厂 -->
+	<rabbit:connection-factory id="rabbitConnectionFactory" host="47.104.109.215" port="5672" username="admin" password="mkxiaoer" virtual-host="/rumo" />
+	
+    <rabbit:admin connection-factory="rabbitConnectionFactory"/>
+ 
+    <!-- autoDelete:是否自动删除 durable:持久化  -->
+    <rabbit:queue name="test123queue" durable="true"/>
+    <rabbit:queue name="test321queue" durable="true"/>
+    <rabbit:queue name="test3213queue" durable="true"/>
+ 
+	<!-- topic主题 -->
+    <rabbit:topic-exchange name="leo.pay.topic.exchange" durable="true">
+     	<rabbit:bindings> 
+			<rabbit:binding queue="test123queue" pattern="*.*.test123"> </rabbit:binding> 
+			<rabbit:binding queue="test321queue" pattern="test321.#"> </rabbit:binding> 
+			<rabbit:binding queue="test3213queue" pattern="test.#"> </rabbit:binding> 
+		</rabbit:bindings> 
+    </rabbit:topic-exchange>
+ 
+    <!-- 创建rabbitTemplate 消息模板类 -->
+    <rabbit:template id="rabbitTemplate" connection-factory="rabbitConnectionFactory" exchange="leo.pay.topic.exchange"  />
+	
+	
+	
+	<!--定义监听容易,当收到消息的时候会执行内部的配置 -->
+	<rabbit:listener-container connection-factory="rabbitConnectionFactory" >
+		<!--定义到底哪个类里面的什么方法用于处理收到的消息 -->
+		<rabbit:listener ref="consumer" method="test" queue-names="test123queue" />
+		<rabbit:listener ref="consumer2" method="test" queue-names="test321queue"/>
+		<rabbit:listener ref="consumer3" method="test" queue-names="test3213queue"/>
+	</rabbit:listener-container>
+	
+	
+	<!--定义消费者 -->
+	<bean id="consumer" class="com.rumo.rabbitmq.spring.topic.MyConsumer" />
+	<bean id="consumer2" class="com.rumo.rabbitmq.spring.topic.MyConsumer2" />
+	<bean id="consumer3" class="com.rumo.rabbitmq.spring.topic.MyConsumer3" />
+
+</beans>

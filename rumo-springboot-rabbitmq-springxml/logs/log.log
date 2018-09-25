@@ -1,0 +1,884 @@
+2018-09-09 14:33:14  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:33:14 CST 2018]; root of context hierarchy
+2018-09-09 14:33:15  [ main:107 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:33:16  [ main:1179 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:33:16  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1187 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:33:16  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1801 ] - [ INFO ]  Created new connection: connectionFactory#653542fa:0/SimpleConnection@369d9a8b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9641]
+2018-09-09 14:33:27  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:33:27 CST 2018]; root of context hierarchy
+2018-09-09 14:33:27  [ main:105 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:33:28  [ main:946 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:33:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:954 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:33:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1243 ] - [ INFO ]  Created new connection: connectionFactory#4b12fc4e:0/SimpleConnection@9c046e0 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9663]
+2018-09-09 14:33:53  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:33:53 CST 2018]; root of context hierarchy
+2018-09-09 14:33:53  [ main:103 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:33:54  [ main:897 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:33:54  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:903 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:33:54  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1211 ] - [ INFO ]  Created new connection: connectionFactory#5be54d5f:0/SimpleConnection@3dfe5a05 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9725]
+2018-09-09 14:34:17  [ main:24042 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:33:53 CST 2018]; root of context hierarchy
+2018-09-09 14:34:17  [ main:24043 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:34:17  [ main:24111 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:34:17  [ main:24179 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:34:17  [ main:24246 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:34:18  [ main:25181 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:34:18  [ main:25182 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:34:18  [ main:25182 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:34:36  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:34:36 CST 2018]; root of context hierarchy
+2018-09-09 14:34:36  [ main:84 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:34:37  [ main:968 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:34:37  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:982 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:34:38  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1305 ] - [ INFO ]  Created new connection: connectionFactory#3dcb6de:0/SimpleConnection@675e0724 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9813]
+2018-09-09 14:35:02  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:35:02 CST 2018]; root of context hierarchy
+2018-09-09 14:35:02  [ main:110 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:35:03  [ main:1005 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:35:03  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1013 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:35:03  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1391 ] - [ INFO ]  Created new connection: connectionFactory#6db737cb:0/SimpleConnection@683518e5 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9863]
+2018-09-09 14:35:08  [ main:6298 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:35:02 CST 2018]; root of context hierarchy
+2018-09-09 14:35:08  [ main:6299 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:35:08  [ main:6374 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:35:09  [ main:7062 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:35:09  [ main:7133 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:35:09  [ main:7238 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:35:09  [ main:7238 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:35:09  [ main:7238 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:35:37  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:35:37 CST 2018]; root of context hierarchy
+2018-09-09 14:35:37  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:35:38  [ main:990 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:35:38  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:997 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:35:38  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1305 ] - [ INFO ]  Created new connection: connectionFactory#645bf247:0/SimpleConnection@1c1d2b05 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 9936]
+2018-09-09 14:38:13  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:38:13 CST 2018]; root of context hierarchy
+2018-09-09 14:38:14  [ main:87 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:38:14  [ main:1036 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:38:14  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1043 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:38:15  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1328 ] - [ INFO ]  Created new connection: connectionFactory#4281c189:0/SimpleConnection@3f81a9d2 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 10250]
+2018-09-09 14:38:17  [ main:4080 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:38:13 CST 2018]; root of context hierarchy
+2018-09-09 14:38:17  [ main:4080 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:38:18  [ main:4142 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:38:18  [ main:4194 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:38:18  [ main:4241 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:38:18  [ main:4301 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:38:18  [ main:4302 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:38:18  [ main:4302 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:44:57  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@71623278: startup date [Sun Sep 09 14:44:57 CST 2018]; root of context hierarchy
+2018-09-09 14:44:57  [ main:308 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-work.xml]
+2018-09-09 14:44:59  [ main:1977 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:44:59  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:2002 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:44:59  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:2368 ] - [ INFO ]  Created new connection: connectionFactory#344dcb40:0/SimpleConnection@17c3bcb1 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 11206]
+2018-09-09 14:45:02  [ main:5063 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@71623278: startup date [Sun Sep 09 14:44:57 CST 2018]; root of context hierarchy
+2018-09-09 14:45:02  [ main:5064 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:45:02  [ main:5124 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:45:02  [ main:5285 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:45:02  [ main:5348 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:45:03  [ main:6283 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:45:03  [ main:6283 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:45:03  [ main:6284 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:54:47  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:54:47 CST 2018]; root of context hierarchy
+2018-09-09 14:54:47  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 14:54:48  [ main:1118 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:54:48  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1132 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:54:48  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1523 ] - [ INFO ]  Created new connection: connectionFactory#3a6a88db:0/SimpleConnection@411fa765 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 12421]
+2018-09-09 14:54:51  [ main:4493 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:54:47 CST 2018]; root of context hierarchy
+2018-09-09 14:54:51  [ main:4493 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:54:52  [ main:4610 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:54:52  [ main:4673 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:54:52  [ main:4731 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:54:53  [ main:5654 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:54:53  [ main:5655 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:54:53  [ main:5655 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:55:27  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:55:27 CST 2018]; root of context hierarchy
+2018-09-09 14:55:27  [ main:83 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 14:55:28  [ main:1001 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:55:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1015 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:55:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1316 ] - [ INFO ]  Created new connection: connectionFactory#78444453:0/SimpleConnection@67f1302b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 12502]
+2018-09-09 14:55:31  [ main:4475 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:55:27 CST 2018]; root of context hierarchy
+2018-09-09 14:55:31  [ main:4476 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:55:32  [ main:4549 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:55:32  [ main:4802 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:55:32  [ main:4955 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:55:33  [ main:5627 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:55:33  [ main:5627 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:55:33  [ main:5628 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:56:55  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:56:55 CST 2018]; root of context hierarchy
+2018-09-09 14:56:55  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 14:56:56  [ main:965 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:56:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:975 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:56:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1419 ] - [ INFO ]  Created new connection: connectionFactory#674be6be:0/SimpleConnection@24ddbc2 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 12683]
+2018-09-09 14:56:58  [ main:3116 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:56:55 CST 2018]; root of context hierarchy
+2018-09-09 14:56:58  [ main:3117 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:56:58  [ main:3171 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:56:58  [ main:3251 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:56:58  [ main:3315 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:56:59  [ main:4248 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:56:59  [ main:4335 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:57:00  [ main:5239 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:57:00  [ main:5239 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:57:00  [ main:5240 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:57:00  [ main:5241 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:57:04  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:57:04 CST 2018]; root of context hierarchy
+2018-09-09 14:57:04  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 14:57:05  [ main:962 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:57:05  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:972 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:57:06  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1299 ] - [ INFO ]  Created new connection: connectionFactory#49b95efd:0/SimpleConnection@67beb0d4 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 12708]
+2018-09-09 14:57:08  [ main:3358 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:57:04 CST 2018]; root of context hierarchy
+2018-09-09 14:57:08  [ main:3359 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:57:08  [ main:3528 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:57:08  [ main:3675 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:57:08  [ main:3762 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:57:09  [ main:4639 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:57:09  [ main:4709 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:57:10  [ main:5601 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:57:10  [ main:5602 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:57:10  [ main:5602 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:57:10  [ main:5602 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:58:01  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:58:01 CST 2018]; root of context hierarchy
+2018-09-09 14:58:01  [ main:98 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 14:58:02  [ main:944 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 14:58:02  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:954 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 14:58:02  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1281 ] - [ INFO ]  Created new connection: connectionFactory#1e522128:0/SimpleConnection@7179098 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 12826]
+2018-09-09 14:58:04  [ main:3273 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 14:58:01 CST 2018]; root of context hierarchy
+2018-09-09 14:58:04  [ main:3274 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 14:58:04  [ main:3354 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:58:05  [ main:3766 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:58:05  [ main:3820 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:58:06  [ main:4783 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:58:06  [ main:4850 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 14:58:07  [ main:5891 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 14:58:07  [ main:5891 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:58:07  [ main:5892 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 14:58:07  [ main:5893 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:00:39  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:00:39 CST 2018]; root of context hierarchy
+2018-09-09 15:00:40  [ main:92 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 15:00:40  [ main:933 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.amqp.rabbit.config.BindingFactoryBean#2': Cannot resolve reference to bean 'myQueue3_route' while setting bean property 'destinationQueue'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'myQueue3_route' available
+2018-09-09 15:01:18  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:01:18 CST 2018]; root of context hierarchy
+2018-09-09 15:01:18  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 15:01:19  [ main:963 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:01:19  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:973 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:01:19  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1289 ] - [ INFO ]  Created new connection: connectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 13235]
+2018-09-09 15:01:22  [ main:4912 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:01:18 CST 2018]; root of context hierarchy
+2018-09-09 15:01:22  [ main:4913 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:01:23  [ main:4983 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:01:23  [ main:5056 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:01:23  [ main:5127 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:01:23  [ main:5778 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:01:23  [ main:5846 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:01:23  [ main:5915 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:01:23  [ main:5915 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:01:23  [ main:5915 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:01:23  [ main:5916 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:24  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:04:24 CST 2018]; root of context hierarchy
+2018-09-09 15:04:24  [ main:81 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 15:04:25  [ main:971 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:04:25  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:979 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:04:25  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1280 ] - [ INFO ]  Created new connection: connectionFactory#3bdf2c7c:0/SimpleConnection@4c6a8895 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 13612]
+2018-09-09 15:04:29  [ main:4774 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:04:24 CST 2018]; root of context hierarchy
+2018-09-09 15:04:29  [ main:4774 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:04:29  [ main:4843 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:29  [ main:4910 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:29  [ main:4979 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:29  [ main:5435 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:29  [ main:5505 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:30  [ main:5762 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:30  [ main:5763 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:30  [ main:5763 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:30  [ main:5763 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:41  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:04:41 CST 2018]; root of context hierarchy
+2018-09-09 15:04:42  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 15:04:42  [ main:971 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:04:42  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:979 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:04:43  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1258 ] - [ INFO ]  Created new connection: connectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 13654]
+2018-09-09 15:04:46  [ main:4545 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:04:41 CST 2018]; root of context hierarchy
+2018-09-09 15:04:46  [ main:4546 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:04:46  [ main:4620 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:47  [ main:5599 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:47  [ main:5660 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:48  [ main:6313 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:48  [ main:6369 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:04:48  [ main:6541 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:04:48  [ main:6541 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:48  [ main:6541 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:04:48  [ main:6541 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:05:20  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:05:20 CST 2018]; root of context hierarchy
+2018-09-09 15:05:20  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 15:05:21  [ main:1001 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:05:21  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1009 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:05:22  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:2138 ] - [ INFO ]  Created new connection: connectionFactory#2bf62495:0/SimpleConnection@cbc8de1 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 13740]
+2018-09-09 15:05:25  [ main:5556 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:05:20 CST 2018]; root of context hierarchy
+2018-09-09 15:05:25  [ main:5557 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:05:25  [ main:5665 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:05:25  [ main:5817 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:05:26  [ main:5866 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:05:26  [ main:6668 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:05:26  [ main:6733 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:05:27  [ main:7678 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:05:27  [ main:7679 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:05:27  [ main:7679 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:05:27  [ main:7680 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:18:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:18:25 CST 2018]; root of context hierarchy
+2018-09-09 15:18:25  [ main:90 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:18:26  [ main:995 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:18:26  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1003 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:18:26  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1296 ] - [ INFO ]  Created new connection: connectionFactory#674be6be:0/SimpleConnection@24ddbc2 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 1374]
+2018-09-09 15:18:31  [ main:5565 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:18:25 CST 2018]; root of context hierarchy
+2018-09-09 15:18:31  [ main:5566 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:18:31  [ main:5640 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:18:31  [ main:5713 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:18:31  [ main:5783 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:18:32  [ main:6561 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:18:32  [ main:6627 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:18:32  [ main:6911 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:18:32  [ main:6974 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:18:32  [ main:7236 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:18:32  [ main:7299 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:18:33  [ main:7591 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:18:33  [ main:7592 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:18:33  [ main:7593 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:18:33  [ main:7593 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:18:33  [ main:7593 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:18:33  [ main:7594 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:19:06  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:19:06 CST 2018]; root of context hierarchy
+2018-09-09 15:19:06  [ main:102 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:19:07  [ main:959 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:19:07  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:966 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:19:07  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1285 ] - [ INFO ]  Created new connection: connectionFactory#f523f68:0/SimpleConnection@5031df0d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 1459]
+2018-09-09 15:19:11  [ main:5665 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:19:06 CST 2018]; root of context hierarchy
+2018-09-09 15:19:11  [ main:5666 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:19:11  [ main:5721 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:19:11  [ main:5788 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:19:12  [ main:5884 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:19:12  [ main:6707 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:19:13  [ main:6888 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:19:13  [ main:7004 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:19:13  [ main:7067 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:19:13  [ main:7355 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:19:13  [ main:7424 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:19:13  [ main:7674 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:19:13  [ main:7675 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:19:13  [ main:7676 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:19:13  [ main:7676 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:19:13  [ main:7676 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:19:13  [ main:7676 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:20:25 CST 2018]; root of context hierarchy
+2018-09-09 15:20:25  [ main:95 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:20:25  [ main:934 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:20:25  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:943 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:20:26  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1206 ] - [ INFO ]  Created new connection: connectionFactory#49b95efd:0/SimpleConnection@67beb0d4 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 1626]
+2018-09-09 15:20:30  [ main:5211 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:20:25 CST 2018]; root of context hierarchy
+2018-09-09 15:20:30  [ main:5211 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:20:30  [ main:5269 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:31  [ main:6026 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:31  [ main:6085 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:31  [ main:6321 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:31  [ main:6370 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:32  [ main:7321 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:32  [ main:7389 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:32  [ main:7905 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:33  [ main:7997 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:33  [ main:8204 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:33  [ main:8205 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:33  [ main:8205 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:33  [ main:8205 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:33  [ main:8205 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:33  [ main:8206 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:51  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:20:51 CST 2018]; root of context hierarchy
+2018-09-09 15:20:51  [ main:84 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:20:52  [ main:1159 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:20:52  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1170 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:20:53  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1456 ] - [ INFO ]  Created new connection: connectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 1684]
+2018-09-09 15:20:57  [ main:5708 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:20:51 CST 2018]; root of context hierarchy
+2018-09-09 15:20:57  [ main:5709 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:20:57  [ main:5774 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:57  [ main:6302 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:58  [ main:6369 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:58  [ main:6612 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:58  [ main:6678 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:58  [ main:6833 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:58  [ main:6897 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:59  [ main:7373 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:59  [ main:7436 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:20:59  [ main:7693 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:20:59  [ main:7693 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:59  [ main:7694 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:59  [ main:7694 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:59  [ main:7694 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:20:59  [ main:7695 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:27  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:22:27 CST 2018]; root of context hierarchy
+2018-09-09 15:22:27  [ main:100 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:22:28  [ main:982 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:22:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:991 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:22:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1343 ] - [ INFO ]  Created new connection: connectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 1969]
+2018-09-09 15:22:32  [ main:5657 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:22:27 CST 2018]; root of context hierarchy
+2018-09-09 15:22:32  [ main:5658 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:22:32  [ main:5726 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:33  [ main:6288 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:33  [ main:6350 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:33  [ main:6615 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:33  [ main:6678 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:33  [ main:6780 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:34  [ main:6859 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:34  [ main:7287 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:34  [ main:7351 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:34  [ main:7659 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:34  [ main:7659 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:34  [ main:7660 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:34  [ main:7660 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:34  [ main:7660 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:34  [ main:7660 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:22:52  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:22:52 CST 2018]; root of context hierarchy
+2018-09-09 15:22:52  [ main:78 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:22:53  [ main:975 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:22:53  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:985 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:22:54  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1300 ] - [ INFO ]  Created new connection: connectionFactory#5477bd2:0/SimpleConnection@6d0d3b33 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 2017]
+2018-09-09 15:22:58  [ main:5588 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:22:52 CST 2018]; root of context hierarchy
+2018-09-09 15:22:58  [ main:5589 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:22:58  [ main:5658 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:59  [ main:6235 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:59  [ main:6305 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:59  [ main:6577 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:59  [ main:6649 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:22:59  [ main:6717 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:22:59  [ main:6785 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:00  [ main:7730 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:00  [ main:7788 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:01  [ main:8581 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:01  [ main:8582 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:01  [ main:8582 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:01  [ main:8582 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:01  [ main:8583 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:01  [ main:8583 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:28  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:23:28 CST 2018]; root of context hierarchy
+2018-09-09 15:23:28  [ main:94 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:23:29  [ main:999 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:23:29  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1007 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:23:30  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1337 ] - [ INFO ]  Created new connection: connectionFactory#f523f68:0/SimpleConnection@5031df0d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 2104]
+2018-09-09 15:23:34  [ main:5675 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:23:28 CST 2018]; root of context hierarchy
+2018-09-09 15:23:34  [ main:5675 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:23:34  [ main:5748 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:34  [ main:6246 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:35  [ main:6308 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:35  [ main:6596 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:35  [ main:6668 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:35  [ main:6808 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:35  [ main:6880 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:36  [ main:7808 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:36  [ main:7870 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:23:37  [ main:8668 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:23:37  [ main:8668 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:37  [ main:8668 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:37  [ main:8668 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:37  [ main:8669 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:23:37  [ main:8669 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:24:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:24:25 CST 2018]; root of context hierarchy
+2018-09-09 15:24:26  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:24:26  [ main:967 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:24:26  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:976 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:24:27  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1283 ] - [ INFO ]  Created new connection: connectionFactory#2bf62495:0/SimpleConnection@cbc8de1 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 2223]
+2018-09-09 15:24:31  [ main:5605 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:24:25 CST 2018]; root of context hierarchy
+2018-09-09 15:24:31  [ main:5605 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:24:31  [ main:5674 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:24:32  [ main:6223 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:24:32  [ main:6294 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:24:32  [ main:6577 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:24:32  [ main:6646 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:24:32  [ main:6734 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:24:32  [ main:6801 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:24:33  [ main:7734 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:24:33  [ main:7802 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:24:34  [ main:8598 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:24:34  [ main:8598 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:24:34  [ main:8599 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:24:34  [ main:8599 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:24:34  [ main:8600 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:24:34  [ main:8600 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:25:28  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:25:28 CST 2018]; root of context hierarchy
+2018-09-09 15:25:28  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:25:29  [ main:971 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:25:29  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:979 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:25:30  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1296 ] - [ INFO ]  Created new connection: connectionFactory#f523f68:0/SimpleConnection@5031df0d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 2350]
+2018-09-09 15:25:34  [ main:5708 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:25:28 CST 2018]; root of context hierarchy
+2018-09-09 15:25:34  [ main:5708 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:25:34  [ main:5880 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:25:35  [ main:6303 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:25:35  [ main:6376 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:25:35  [ main:6627 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:25:35  [ main:6698 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:25:35  [ main:6851 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:25:35  [ main:6923 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:25:36  [ main:7854 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:25:36  [ main:7926 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:25:37  [ main:8698 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:25:37  [ main:8699 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:25:37  [ main:8699 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:25:37  [ main:8701 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:25:37  [ main:8701 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:25:37  [ main:8701 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:31:01  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:31:01 CST 2018]; root of context hierarchy
+2018-09-09 15:31:01  [ main:99 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:31:02  [ main:984 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:31:02  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:994 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:31:03  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1312 ] - [ INFO ]  Created new connection: connectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 3191]
+2018-09-09 15:31:11  [ main:9665 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:31:01 CST 2018]; root of context hierarchy
+2018-09-09 15:31:11  [ main:9666 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:31:11  [ main:10166 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:31:11  [ main:10223 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:31:12  [ main:10726 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:31:12  [ main:11199 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:31:13  [ main:11653 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:31:13  [ main:11799 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:31:14  [ main:12316 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:31:14  [ main:12783 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:31:15  [ main:13263 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:31:15  [ main:13768 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:31:15  [ main:13769 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:31:15  [ main:13769 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:31:15  [ main:13769 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:31:15  [ main:13769 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:31:15  [ main:13770 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:32:03  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:32:03 CST 2018]; root of context hierarchy
+2018-09-09 15:32:03  [ main:92 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:32:04  [ main:926 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:32:04  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:934 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:32:05  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1410 ] - [ INFO ]  Created new connection: connectionFactory#3bdf2c7c:0/SimpleConnection@4c6a8895 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 3318]
+2018-09-09 15:32:09  [ main:6128 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:32:03 CST 2018]; root of context hierarchy
+2018-09-09 15:32:09  [ main:6129 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:32:10  [ main:6201 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:32:10  [ main:6524 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:32:10  [ main:6592 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:32:10  [ main:6938 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:32:10  [ main:7005 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:32:11  [ main:7300 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:32:11  [ main:7397 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:32:12  [ main:8312 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:32:12  [ main:8380 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:32:12  [ main:9127 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:32:12  [ main:9127 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:32:12  [ main:9128 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:32:12  [ main:9128 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:32:12  [ main:9128 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:32:12  [ main:9128 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:33:06  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:33:06 CST 2018]; root of context hierarchy
+2018-09-09 15:33:06  [ main:96 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:33:07  [ main:961 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:33:07  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:969 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:33:07  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1311 ] - [ INFO ]  Created new connection: connectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 3443]
+2018-09-09 15:33:11  [ main:5624 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:33:06 CST 2018]; root of context hierarchy
+2018-09-09 15:33:11  [ main:5625 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:33:12  [ main:5783 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:33:12  [ main:5851 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:33:12  [ main:5922 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:33:12  [ main:6227 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:33:12  [ main:6312 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:33:13  [ main:6824 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:33:13  [ main:6824 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:33:13  [ main:6825 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:33:13  [ main:6825 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:54:52  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:54:52 CST 2018]; root of context hierarchy
+2018-09-09 15:54:52  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:54:53  [ main:879 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectAdmin2': Cannot resolve reference to bean 'connectionFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'connectionFactory' available
+2018-09-09 15:55:33  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:55:33 CST 2018]; root of context hierarchy
+2018-09-09 15:55:33  [ main:112 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:55:34  [ main:973 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0': Cannot resolve reference to bean 'connectionFactory' while setting bean property 'connectionFactory'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'connectionFactory' available
+2018-09-09 15:55:56  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:55:56 CST 2018]; root of context hierarchy
+2018-09-09 15:55:57  [ main:95 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:55:57  [ main:954 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:55:57  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:965 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:55:59  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:2075 ] - [ INFO ]  Created new connection: connectionFactory2#7f9de6cd:0/SimpleConnection@14265c24 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 6345]
+2018-09-09 15:56:03  [ main:6711 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:55:56 CST 2018]; root of context hierarchy
+2018-09-09 15:56:03  [ main:6712 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:56:03  [ main:6819 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:04  [ main:7287 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:04  [ main:7374 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:04  [ main:7678 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:04  [ main:7742 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:05  [ main:8067 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:05  [ main:8134 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:06  [ main:9067 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:06  [ main:9135 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:06  [ main:9695 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:06  [ main:9696 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:06  [ main:9696 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:06  [ main:9697 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:06  [ main:9697 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:06  [ main:9697 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:19  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:56:19 CST 2018]; root of context hierarchy
+2018-09-09 15:56:19  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:56:19  [ main:964 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:56:20  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:974 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:56:20  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1262 ] - [ INFO ]  Created new connection: connectionFactory2#4dbff943:0/SimpleConnection@4e8eba75 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 6390]
+2018-09-09 15:56:24  [ main:5499 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:56:19 CST 2018]; root of context hierarchy
+2018-09-09 15:56:24  [ main:5500 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:56:24  [ main:5568 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:25  [ main:6261 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:25  [ main:6330 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:25  [ main:6551 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:25  [ main:6646 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:26  [ main:7603 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:26  [ main:7663 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:27  [ main:8623 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:27  [ main:8685 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:56:28  [ main:9495 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:56:28  [ main:9496 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:28  [ main:9496 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:28  [ main:9496 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:28  [ main:9496 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:56:28  [ main:9497 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:57:46  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:57:46 CST 2018]; root of context hierarchy
+2018-09-09 15:57:46  [ main:89 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:57:47  [ main:991 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:57:47  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1001 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:57:47  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1369 ] - [ INFO ]  Created new connection: connectionFactory2#416d9724:0/SimpleConnection@6a96140d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 6565]
+2018-09-09 15:57:51  [ main:5099 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:57:46 CST 2018]; root of context hierarchy
+2018-09-09 15:57:51  [ main:5100 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:57:51  [ main:5168 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:57:51  [ main:5336 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:57:51  [ main:5405 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:57:52  [ main:6251 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:57:52  [ main:6320 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:57:53  [ main:7236 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:57:53  [ main:7236 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:57:53  [ main:7237 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:57:53  [ main:7237 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:58:33  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:58:33 CST 2018]; root of context hierarchy
+2018-09-09 15:58:34  [ main:87 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:58:34  [ main:976 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:58:34  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:985 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:58:35  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1336 ] - [ INFO ]  Created new connection: connectionFactory2#7215a14f:0/SimpleConnection@4c6dc1e5 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 6660]
+2018-09-09 15:58:38  [ main:4994 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:58:33 CST 2018]; root of context hierarchy
+2018-09-09 15:58:38  [ main:4995 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:58:39  [ main:5520 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:58:39  [ main:5586 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:58:39  [ main:5679 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:58:40  [ main:6170 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:58:40  [ main:6384 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:58:41  [ main:7142 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:58:41  [ main:7142 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:58:41  [ main:7142 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:58:41  [ main:7142 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:58:59  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:58:59 CST 2018]; root of context hierarchy
+2018-09-09 15:58:59  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 15:59:00  [ main:1017 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 15:59:00  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1028 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 15:59:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1406 ] - [ INFO ]  Created new connection: connectionFactory2#416d9724:0/SimpleConnection@6a96140d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 6712]
+2018-09-09 15:59:07  [ main:7466 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 15:58:59 CST 2018]; root of context hierarchy
+2018-09-09 15:59:07  [ main:7466 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 15:59:07  [ main:7675 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:59:07  [ main:8381 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:59:08  [ main:8464 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:59:08  [ main:8884 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:59:08  [ main:9080 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:59:09  [ main:9473 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:59:09  [ main:9677 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:59:09  [ main:9749 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:59:09  [ main:9828 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 15:59:10  [ main:10556 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 15:59:10  [ main:10557 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:59:10  [ main:10557 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:59:10  [ main:10558 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:59:10  [ main:10558 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 15:59:10  [ main:10558 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:04:14  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:04:14 CST 2018]; root of context hierarchy
+2018-09-09 16:04:14  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:04:14  [ main:886 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0': Cannot resolve reference to bean 'connectionFactory2' while setting bean property 'connectionFactory'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'connectionFactory2' available
+2018-09-09 16:07:55  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:07:55 CST 2018]; root of context hierarchy
+2018-09-09 16:07:55  [ main:96 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:07:56  [ main:1014 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:07:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1024 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:07:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1335 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#416d9724:0/SimpleConnection@6a96140d [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 7896]
+2018-09-09 16:08:01  [ main:5989 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:07:55 CST 2018]; root of context hierarchy
+2018-09-09 16:08:01  [ main:5989 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:08:01  [ main:6044 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:08:01  [ main:6207 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:08:01  [ main:6526 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:08:01  [ main:6795 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:08:01  [ main:6870 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:08:02  [ main:7265 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:08:02  [ main:7330 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:08:03  [ main:8747 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:08:03  [ main:8747 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:08:03  [ main:8749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:08:03  [ main:8749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:08:03  [ main:8749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:09:44  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:09:44 CST 2018]; root of context hierarchy
+2018-09-09 16:09:44  [ main:99 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:09:45  [ main:945 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:09:45  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:954 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:09:45  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1347 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#674be6be:0/SimpleConnection@24ddbc2 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8119]
+2018-09-09 16:09:49  [ main:5371 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:09:44 CST 2018]; root of context hierarchy
+2018-09-09 16:09:49  [ main:5372 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:09:49  [ main:5449 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:09:49  [ main:5559 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:09:49  [ main:5628 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:09:50  [ main:5708 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:09:50  [ main:5781 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:09:50  [ main:6565 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:09:50  [ main:6629 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:09:51  [ main:7563 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:09:51  [ main:7564 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:09:51  [ main:7566 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:09:51  [ main:7566 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:09:51  [ main:7566 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:11:21  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:11:21 CST 2018]; root of context hierarchy
+2018-09-09 16:11:21  [ main:105 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:11:22  [ main:992 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:11:22  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1003 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:11:23  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1309 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#40f677f8:0/SimpleConnection@4e75ad9b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8318]
+2018-09-09 16:11:26  [ main:5246 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:11:21 CST 2018]; root of context hierarchy
+2018-09-09 16:11:26  [ main:5247 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:11:27  [ main:5344 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:11:27  [ main:5419 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:11:27  [ main:5483 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:11:27  [ main:5563 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:11:27  [ main:5627 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:11:28  [ main:6387 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:11:28  [ main:6456 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:11:29  [ main:7369 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:11:29  [ main:7369 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:11:29  [ main:7371 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:11:29  [ main:7371 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:11:29  [ main:7372 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:11:56  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:11:56 CST 2018]; root of context hierarchy
+2018-09-09 16:11:56  [ main:88 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:11:57  [ main:982 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:11:57  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:989 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:11:57  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1289 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8384]
+2018-09-09 16:12:01  [ main:5247 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:11:56 CST 2018]; root of context hierarchy
+2018-09-09 16:12:01  [ main:5248 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:12:01  [ main:5321 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:12:01  [ main:5409 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:12:01  [ main:5625 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:12:01  [ main:5727 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:12:02  [ main:6001 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:12:02  [ main:6142 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:12:02  [ main:6314 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:12:02  [ main:6414 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:12:02  [ main:6415 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:12:02  [ main:6416 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:12:02  [ main:6416 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:12:02  [ main:6417 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:15:42  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:15:42 CST 2018]; root of context hierarchy
+2018-09-09 16:15:42  [ main:120 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-topic.xml]
+2018-09-09 16:15:43  [ main:1349 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:15:43  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1356 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:15:43  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1683 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8669]
+2018-09-09 16:15:47  [ main:5287 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:15:42 CST 2018]; root of context hierarchy
+2018-09-09 16:15:47  [ main:5290 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:15:47  [ main:5368 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:15:47  [ main:5447 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:15:47  [ main:5515 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:15:48  [ main:5914 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:15:48  [ main:5982 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:15:48  [ main:6375 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:15:48  [ main:6375 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:15:48  [ main:6376 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:15:48  [ main:6376 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:31  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:31 CST 2018]; root of context hierarchy
+2018-09-09 16:16:31  [ main:103 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:16:32  [ main:998 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:16:32  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1004 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:16:32  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1348 ] - [ INFO ]  Created new connection: connectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8670]
+2018-09-09 16:16:34  [ main:3119 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:31 CST 2018]; root of context hierarchy
+2018-09-09 16:16:34  [ main:3119 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:16:34  [ main:3192 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:34  [ main:3269 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:34  [ main:3338 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:35  [ main:4251 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:35  [ main:4324 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:36  [ main:5253 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:36  [ main:5254 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:36  [ main:5254 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:36  [ main:5254 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:40  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:40 CST 2018]; root of context hierarchy
+2018-09-09 16:16:40  [ main:106 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:16:41  [ main:1064 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:16:41  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1070 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:16:41  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1357 ] - [ INFO ]  Created new connection: connectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8671]
+2018-09-09 16:16:43  [ main:2765 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:40 CST 2018]; root of context hierarchy
+2018-09-09 16:16:43  [ main:2766 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:16:43  [ main:2826 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:43  [ main:3156 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:43  [ main:3218 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:44  [ main:3891 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:44  [ main:3953 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:45  [ main:4892 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:45  [ main:4892 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:45  [ main:4893 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:45  [ main:4893 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:50  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:50 CST 2018]; root of context hierarchy
+2018-09-09 16:16:50  [ main:96 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:16:51  [ main:1013 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:16:51  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1019 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:16:51  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1326 ] - [ INFO ]  Created new connection: connectionFactory#5477bd2:0/SimpleConnection@6d0d3b33 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8672]
+2018-09-09 16:16:53  [ main:3008 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:16:50 CST 2018]; root of context hierarchy
+2018-09-09 16:16:53  [ main:3009 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:16:53  [ main:3080 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:53  [ main:3163 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:53  [ main:3231 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:54  [ main:4142 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:54  [ main:4210 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:16:55  [ main:5130 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:16:55  [ main:5130 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:55  [ main:5131 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:16:55  [ main:5131 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:17:59  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:17:59 CST 2018]; root of context hierarchy
+2018-09-09 16:17:59  [ main:104 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:18:00  [ main:1127 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:18:00  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1135 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1585 ] - [ INFO ]  Created new connection: connectionFactory#4b6889a8:0/SimpleConnection@183cef4b [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8673]
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1589 ] - [ INFO ]  Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue_publish) durable:true, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1590 ] - [ INFO ]  Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue2_publish) durable:true, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1590 ] - [ INFO ]  Auto-declaring a non-durable, auto-delete, or exclusive Queue (myQueue3_publish) durable:true, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2018-09-09 16:18:01  [ AMQP Connection 47.104.109.215:5672:1822 ] - [ ERROR ]  Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - inequivalent arg 'auto_delete' for queue 'myQueue_publish' in vhost '/rumo': received 'true' but current is 'false', class-id=50, method-id=10)
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1922 ] - [ ERROR ]  Consumer received fatal exception on startup
+org.springframework.amqp.rabbit.listener.exception.FatalListenerStartupException: Mismatched queues
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:1221)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1470)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.AmqpIOException: java.io.IOException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:71)
+	at org.springframework.amqp.rabbit.connection.RabbitAccessor.convertRabbitAccessException(RabbitAccessor.java:113)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1467)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1417)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1393)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.initialize(RabbitAdmin.java:504)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin$11.onCreate(RabbitAdmin.java:419)
+	at org.springframework.amqp.rabbit.connection.CompositeConnectionListener.onCreate(CompositeConnectionListener.java:33)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:579)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1436)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1417)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:1393)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:336)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:1209)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:124)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:120)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:142)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclare(ChannelN.java:958)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclare(ChannelN.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:980)
+	at com.sun.proxy.$Proxy5.queueDeclare(Unknown Source)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.declareQueues(RabbitAdmin.java:579)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.access$200(RabbitAdmin.java:66)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin$12.doInRabbit(RabbitAdmin.java:508)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:1461)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - inequivalent arg 'auto_delete' for queue 'myQueue_publish' in vhost '/rumo': received 'true' but current is 'false', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:443)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:263)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:136)
+	... 25 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - inequivalent arg 'auto_delete' for queue 'myQueue_publish' in vhost '/rumo': received 'true' but current is 'false', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:515)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:340)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:162)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:109)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:676)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:48)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:603)
+	... 1 more
+2018-09-09 16:18:01  [ main:1928 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0'; nested exception is org.springframework.amqp.AmqpIllegalStateException: Fatal exception on listener startup
+2018-09-09 16:18:01  [ main:1929 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:01  [ main:1929 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:01  [ main:1930 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:01  [ main:1930 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1930 ] - [ ERROR ]  Stopping container from aborted consumer
+2018-09-09 16:18:01  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1935 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:18  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:18 CST 2018]; root of context hierarchy
+2018-09-09 16:18:18  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:18:19  [ main:1003 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:18:19  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1009 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:18:19  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1317 ] - [ INFO ]  Created new connection: connectionFactory#18bca577:0/SimpleConnection@775848dc [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8675]
+2018-09-09 16:18:21  [ main:2866 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:18 CST 2018]; root of context hierarchy
+2018-09-09 16:18:21  [ main:2867 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:18:21  [ main:2962 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:21  [ main:3029 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:21  [ main:3096 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:22  [ main:3996 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:22  [ main:4060 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:23  [ main:4998 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:23  [ main:4998 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:23  [ main:4999 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:23  [ main:4999 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:27  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:27 CST 2018]; root of context hierarchy
+2018-09-09 16:18:27  [ main:91 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-publish.xml]
+2018-09-09 16:18:28  [ main:972 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:18:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:978 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:18:28  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1313 ] - [ INFO ]  Created new connection: connectionFactory#5477bd2:0/SimpleConnection@6d0d3b33 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8676]
+2018-09-09 16:18:29  [ main:2886 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:27 CST 2018]; root of context hierarchy
+2018-09-09 16:18:29  [ main:2887 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:18:30  [ main:2957 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:30  [ main:3013 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:30  [ main:3082 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:31  [ main:4014 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:31  [ main:4080 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:18:32  [ main:5013 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:18:32  [ main:5013 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:32  [ main:5013 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:32  [ main:5014 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:18:55  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:55 CST 2018]; root of context hierarchy
+2018-09-09 16:18:55  [ main:98 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 16:18:56  [ main:994 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:18:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1000 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:18:56  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1311 ] - [ INFO ]  Created new connection: connectionFactory#674be6be:0/SimpleConnection@24ddbc2 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8679]
+2018-09-09 16:18:59  [ main:4902 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:18:55 CST 2018]; root of context hierarchy
+2018-09-09 16:18:59  [ main:4903 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:19:00  [ main:4985 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:00  [ main:5050 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:00  [ main:5113 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:01  [ main:6033 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:01  [ main:6100 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:02  [ main:7031 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:02  [ main:7032 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:19:02  [ main:7032 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:19:02  [ main:7032 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:19:05  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:19:05 CST 2018]; root of context hierarchy
+2018-09-09 16:19:05  [ main:96 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 16:19:06  [ main:999 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:19:06  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1005 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:19:07  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1278 ] - [ INFO ]  Created new connection: connectionFactory#7215a14f:0/SimpleConnection@4c6dc1e5 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8681]
+2018-09-09 16:19:10  [ main:4707 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:19:05 CST 2018]; root of context hierarchy
+2018-09-09 16:19:10  [ main:4708 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:19:10  [ main:4773 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:10  [ main:4833 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:10  [ main:4892 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:11  [ main:5824 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:11  [ main:5885 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:19:12  [ main:6816 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:19:12  [ main:6816 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:19:12  [ main:6817 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:19:12  [ main:6817 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:21:17  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:21:17 CST 2018]; root of context hierarchy
+2018-09-09 16:21:18  [ main:95 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 16:21:18  [ main:950 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:21:18  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:956 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:21:19  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1283 ] - [ INFO ]  Created new connection: connectionFactory#7215a14f:0/SimpleConnection@4c6dc1e5 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8695]
+2018-09-09 16:21:22  [ main:5039 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:21:17 CST 2018]; root of context hierarchy
+2018-09-09 16:21:22  [ main:5040 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:21:23  [ main:5110 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:21:23  [ main:5232 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:21:23  [ main:5302 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:21:24  [ main:6166 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:21:24  [ main:6234 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:21:25  [ main:7158 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:21:25  [ main:7159 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:21:25  [ main:7159 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:21:25  [ main:7159 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:21:56  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:21:56 CST 2018]; root of context hierarchy
+2018-09-09 16:21:56  [ main:79 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext-route.xml]
+2018-09-09 16:21:57  [ main:912 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-09 16:21:57  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:918 ] - [ INFO ]  Attempting to connect to: 47.104.109.215:5672
+2018-09-09 16:21:58  [ org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer#0-1:1232 ] - [ INFO ]  Created new connection: connectionFactory#5477bd2:0/SimpleConnection@6d0d3b33 [delegate=amqp://admin@47.104.109.215:5672//rumo, localPort= 8698]
+2018-09-09 16:22:01  [ main:4871 ] - [ INFO ]  Closing org.springframework.context.support.ClassPathXmlApplicationContext@383534aa: startup date [Sun Sep 09 16:21:56 CST 2018]; root of context hierarchy
+2018-09-09 16:22:01  [ main:4872 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-09 16:22:01  [ main:4938 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:22:01  [ main:5074 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:22:02  [ main:5143 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:22:02  [ main:5992 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:22:02  [ main:6060 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-09 16:22:03  [ main:6995 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-09 16:22:03  [ main:6996 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:22:03  [ main:6996 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-09 16:22:03  [ main:6997 ] - [ INFO ]  Shutdown ignored - container is not active already

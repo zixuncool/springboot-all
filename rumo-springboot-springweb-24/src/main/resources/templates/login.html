@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>我是登录页面</h1>
+    <a href="javascript:void(0);" onclick="login()">登陆</a>
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/stroage.js"></script>
+    <script>
+        function login(){
+            $.get("logined",function(data){
+                var url = getSession("memeoy_link");
+                window.location.href = url?url:"/admin/index";
+            })
+        }
+    </script>
+</body>
+</html>

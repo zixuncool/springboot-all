@@ -1,0 +1,1107 @@
+2018-09-04 15:01:03  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 15:01:03  [ restartedMain:263 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 12916 (D:\projects\rumo-springboot-rabbitmq\target\classes started by mengk in D:\projects\rumo-springboot-rabbitmq)
+2018-09-04 15:01:03  [ restartedMain:265 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 15:01:03  [ restartedMain:379 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2750e05f: startup date [Tue Sep 04 15:01:03 CST 2018]; root of context hierarchy
+2018-09-04 15:01:06  [ restartedMain:3475 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$dc4b4a87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 15:01:08  [ restartedMain:5080 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-09-04 15:01:08  [ localhost-startStop-1:5640 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 5264 ms
+2018-09-04 15:01:09  [ localhost-startStop-1:5924 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-09-04 15:01:09  [ localhost-startStop-1:5975 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-04 15:01:09  [ localhost-startStop-1:5977 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-04 15:01:09  [ localhost-startStop-1:5977 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-04 15:01:09  [ localhost-startStop-1:5977 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-04 15:01:10  [ restartedMain:6980 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:01:10  [ restartedMain:7488 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2750e05f: startup date [Tue Sep 04 15:01:03 CST 2018]; root of context hierarchy
+2018-09-04 15:01:10  [ restartedMain:7848 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public void com.rumo.controller.IndexController.test()
+2018-09-04 15:01:11  [ restartedMain:7861 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 15:01:11  [ restartedMain:7863 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 15:01:11  [ restartedMain:7948 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:01:11  [ restartedMain:7949 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:01:11  [ restartedMain:8442 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 15:01:11  [ restartedMain:8685 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 15:01:12  [ restartedMain:9768 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-09-04 15:01:12  [ restartedMain:9840 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-09-04 15:01:12  [ restartedMain:9859 ] - [ INFO ]  Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-09-04 15:01:13  [ restartedMain:9863 ] - [ INFO ]  Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-09-04 15:01:13  [ restartedMain:10110 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 15:01:13  [ SimpleAsyncTaskExecutor-1:10137 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:13  [ AMQP Connection 47.104.109.215:5672:10788 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: Socket Closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:14  [ restartedMain:10908 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-04 15:01:14  [ restartedMain:10922 ] - [ INFO ]  Started RumoApplication in 11.118 seconds (JVM running for 11.834)
+2018-09-04 15:01:18  [ SimpleAsyncTaskExecutor-1:15807 ] - [ INFO ]  Restarting Consumer@72a1670: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:18  [ SimpleAsyncTaskExecutor-2:15810 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:19  [ AMQP Connection 47.104.109.215:5672:16081 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:24  [ SimpleAsyncTaskExecutor-2:21092 ] - [ INFO ]  Restarting Consumer@2174d330: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:24  [ SimpleAsyncTaskExecutor-3:21093 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:24  [ AMQP Connection 47.104.109.215:5672:21429 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:29  [ SimpleAsyncTaskExecutor-3:26443 ] - [ INFO ]  Restarting Consumer@3a68463b: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:29  [ SimpleAsyncTaskExecutor-4:26444 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:29  [ AMQP Connection 47.104.109.215:5672:26723 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:34  [ SimpleAsyncTaskExecutor-4:31757 ] - [ INFO ]  Restarting Consumer@2ed5296a: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:34  [ SimpleAsyncTaskExecutor-5:31758 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:35  [ AMQP Connection 47.104.109.215:5672:32050 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:40  [ SimpleAsyncTaskExecutor-5:37070 ] - [ INFO ]  Restarting Consumer@10a56b1d: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:40  [ SimpleAsyncTaskExecutor-6:37071 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:40  [ AMQP Connection 47.104.109.215:5672:37343 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: Socket Closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:45  [ SimpleAsyncTaskExecutor-6:42362 ] - [ INFO ]  Restarting Consumer@5284133b: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:45  [ SimpleAsyncTaskExecutor-7:42362 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:45  [ AMQP Connection 47.104.109.215:5672:42658 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: Socket Closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:50  [ SimpleAsyncTaskExecutor-7:47679 ] - [ INFO ]  Restarting Consumer@6ebe127: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:50  [ SimpleAsyncTaskExecutor-8:47679 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:51  [ AMQP Connection 47.104.109.215:5672:48017 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:01:56  [ SimpleAsyncTaskExecutor-8:53029 ] - [ INFO ]  Restarting Consumer@2558a393: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:01:56  [ SimpleAsyncTaskExecutor-9:53030 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:01:56  [ AMQP Connection 47.104.109.215:5672:53306 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:01  [ SimpleAsyncTaskExecutor-9:58318 ] - [ INFO ]  Restarting Consumer@5d749acc: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:01  [ SimpleAsyncTaskExecutor-10:58319 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:01  [ AMQP Connection 47.104.109.215:5672:58478 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:06  [ SimpleAsyncTaskExecutor-10:63490 ] - [ INFO ]  Restarting Consumer@212db447: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:06  [ SimpleAsyncTaskExecutor-11:63491 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:06  [ AMQP Connection 47.104.109.215:5672:63761 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:11  [ SimpleAsyncTaskExecutor-11:68776 ] - [ INFO ]  Restarting Consumer@6927c3e2: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:11  [ SimpleAsyncTaskExecutor-12:68777 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:12  [ AMQP Connection 47.104.109.215:5672:68931 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:17  [ SimpleAsyncTaskExecutor-12:73943 ] - [ INFO ]  Restarting Consumer@7b45174f: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:17  [ SimpleAsyncTaskExecutor-13:73944 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:17  [ AMQP Connection 47.104.109.215:5672:74210 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:22  [ SimpleAsyncTaskExecutor-13:79222 ] - [ INFO ]  Restarting Consumer@7c4faf65: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:22  [ SimpleAsyncTaskExecutor-14:79222 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:22  [ AMQP Connection 47.104.109.215:5672:79379 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:27  [ SimpleAsyncTaskExecutor-14:84391 ] - [ INFO ]  Restarting Consumer@2d1b14ee: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:27  [ SimpleAsyncTaskExecutor-15:84391 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:27  [ AMQP Connection 47.104.109.215:5672:84661 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:32  [ SimpleAsyncTaskExecutor-15:89673 ] - [ INFO ]  Restarting Consumer@1158a0dc: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:32  [ SimpleAsyncTaskExecutor-16:89674 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:32  [ AMQP Connection 47.104.109.215:5672:89844 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:37  [ SimpleAsyncTaskExecutor-16:94856 ] - [ INFO ]  Restarting Consumer@6e079b2a: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:37  [ SimpleAsyncTaskExecutor-17:94856 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:38  [ AMQP Connection 47.104.109.215:5672:95061 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:43  [ SimpleAsyncTaskExecutor-17:100073 ] - [ INFO ]  Restarting Consumer@602b43a7: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:43  [ SimpleAsyncTaskExecutor-18:100073 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:43  [ AMQP Connection 47.104.109.215:5672:100350 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:48  [ SimpleAsyncTaskExecutor-18:105362 ] - [ INFO ]  Restarting Consumer@3c84fc19: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:48  [ SimpleAsyncTaskExecutor-19:105363 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:48  [ AMQP Connection 47.104.109.215:5672:105549 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:53  [ SimpleAsyncTaskExecutor-19:110560 ] - [ INFO ]  Restarting Consumer@1aa77605: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:53  [ SimpleAsyncTaskExecutor-20:110560 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:53  [ AMQP Connection 47.104.109.215:5672:110849 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:02:59  [ SimpleAsyncTaskExecutor-20:115861 ] - [ INFO ]  Restarting Consumer@385ddc9d: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:02:59  [ SimpleAsyncTaskExecutor-21:115861 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:02:59  [ AMQP Connection 47.104.109.215:5672:116182 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:04  [ SimpleAsyncTaskExecutor-21:121193 ] - [ INFO ]  Restarting Consumer@4b90fdfe: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:04  [ SimpleAsyncTaskExecutor-22:121194 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:04  [ AMQP Connection 47.104.109.215:5672:121472 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:09  [ SimpleAsyncTaskExecutor-22:126484 ] - [ INFO ]  Restarting Consumer@6d9c5a68: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:09  [ SimpleAsyncTaskExecutor-23:126485 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:09  [ AMQP Connection 47.104.109.215:5672:126660 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:14  [ SimpleAsyncTaskExecutor-23:131671 ] - [ INFO ]  Restarting Consumer@65b4a2d7: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:14  [ SimpleAsyncTaskExecutor-24:131671 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:15  [ AMQP Connection 47.104.109.215:5672:131940 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:20  [ SimpleAsyncTaskExecutor-24:136951 ] - [ INFO ]  Restarting Consumer@6c43c0a3: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:20  [ SimpleAsyncTaskExecutor-25:136951 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:20  [ AMQP Connection 47.104.109.215:5672:137217 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:25  [ SimpleAsyncTaskExecutor-25:142228 ] - [ INFO ]  Restarting Consumer@5214f8e2: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:25  [ SimpleAsyncTaskExecutor-26:142228 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:25  [ AMQP Connection 47.104.109.215:5672:142494 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:30  [ SimpleAsyncTaskExecutor-26:147505 ] - [ INFO ]  Restarting Consumer@60cab8cb: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:30  [ SimpleAsyncTaskExecutor-27:147506 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:30  [ AMQP Connection 47.104.109.215:5672:147670 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:35  [ SimpleAsyncTaskExecutor-27:152681 ] - [ INFO ]  Restarting Consumer@6d5ce1c6: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:35  [ SimpleAsyncTaskExecutor-28:152681 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:36  [ AMQP Connection 47.104.109.215:5672:152950 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:41  [ SimpleAsyncTaskExecutor-28:157961 ] - [ INFO ]  Restarting Consumer@9545720: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:41  [ SimpleAsyncTaskExecutor-29:157961 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:41  [ AMQP Connection 47.104.109.215:5672:158233 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:46  [ SimpleAsyncTaskExecutor-29:163245 ] - [ INFO ]  Restarting Consumer@222cb334: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:46  [ SimpleAsyncTaskExecutor-30:163245 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:46  [ AMQP Connection 47.104.109.215:5672:163515 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:51  [ SimpleAsyncTaskExecutor-30:168527 ] - [ INFO ]  Restarting Consumer@741a68e1: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:51  [ SimpleAsyncTaskExecutor-31:168528 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:51  [ AMQP Connection 47.104.109.215:5672:168800 ] - [ ERROR ]  An unexpected connection driver error occured
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readUnsignedByte(DataInputStream.java:288)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:164)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:580)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 15:03:56  [ SimpleAsyncTaskExecutor-31:173812 ] - [ INFO ]  Restarting Consumer@6247dcb1: tags=[{}], channel=null, acknowledgeMode=AUTO local queue size=0
+2018-09-04 15:03:56  [ SimpleAsyncTaskExecutor-32:173812 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:03:57  [ SimpleAsyncTaskExecutor-32:174018 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#4cf73db1:31/SimpleConnection@5792e233 [delegate=amqp://admin@47.104.109.215:5672/, localPort= 7160]
+2018-09-04 15:03:57  [ SimpleAsyncTaskExecutor-32:174319 ] - [ WARN ]  Failed to declare queue: rumo.queue
+2018-09-04 15:03:57  [ SimpleAsyncTaskExecutor-32:174320 ] - [ WARN ]  Queue declaration failed; retries left=3
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[rumo.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:711)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:588)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:996)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:991)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:52)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1030)
+	at com.sun.proxy.$Proxy81.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:690)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:288)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:138)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-09-04 15:04:02  [ SimpleAsyncTaskExecutor-32:179475 ] - [ WARN ]  Failed to declare queue: rumo.queue
+2018-09-04 15:04:02  [ SimpleAsyncTaskExecutor-32:179475 ] - [ WARN ]  Queue declaration failed; retries left=2
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[rumo.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:711)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:588)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:996)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:991)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:52)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1030)
+	at com.sun.proxy.$Proxy81.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:690)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:288)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:138)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-09-04 15:04:07  [ SimpleAsyncTaskExecutor-32:184632 ] - [ WARN ]  Failed to declare queue: rumo.queue
+2018-09-04 15:04:07  [ SimpleAsyncTaskExecutor-32:184632 ] - [ WARN ]  Queue declaration failed; retries left=1
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[rumo.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:711)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:588)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:996)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:991)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:52)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1030)
+	at com.sun.proxy.$Proxy81.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:690)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:288)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:138)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-09-04 15:04:12  [ SimpleAsyncTaskExecutor-32:189787 ] - [ WARN ]  Failed to declare queue: rumo.queue
+2018-09-04 15:04:12  [ SimpleAsyncTaskExecutor-32:189789 ] - [ ERROR ]  Consumer received fatal=false exception on startup
+org.springframework.amqp.rabbit.listener.QueuesNotAvailableException: Cannot prepare queue for listener. Either the queue doesn't exist or the broker will not allow us to use it.
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:620)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:996)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.amqp.rabbit.listener.BlockingQueueConsumer$DeclarationException: Failed to declare queue(s):[rumo.queue]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:711)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:588)
+	... 2 more
+Caused by: java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:991)
+	at com.rabbitmq.client.impl.ChannelN.queueDeclarePassive(ChannelN.java:52)
+	at org.springframework.amqp.rabbit.support.PublisherCallbackChannelImpl.queueDeclarePassive(PublisherCallbackChannelImpl.java:313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$CachedChannelInvocationHandler.invoke(CachingConnectionFactory.java:1030)
+	at com.sun.proxy.$Proxy81.queueDeclarePassive(Unknown Source)
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.attemptPassiveDeclarations(BlockingQueueConsumer.java:690)
+	... 3 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.AMQChannel.privateRpc(AMQChannel.java:288)
+	at com.rabbitmq.client.impl.AMQChannel.exnWrappingRpc(AMQChannel.java:138)
+	... 13 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'rumo.queue' in vhost '/', class-id=50, method-id=10)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-09-04 15:04:12  [ SimpleAsyncTaskExecutor-32:189791 ] - [ ERROR ]  Stopping container from aborted consumer
+2018-09-04 15:04:12  [ SimpleAsyncTaskExecutor-32:189791 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 15:04:12  [ SimpleAsyncTaskExecutor-32:189791 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 15:04:37  [ Thread-6:214686 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2750e05f: startup date [Tue Sep 04 15:01:03 CST 2018]; root of context hierarchy
+2018-09-04 15:04:37  [ Thread-6:214798 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 15:04:37  [ Thread-6:214798 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 15:04:37  [ Thread-6:214802 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 15:04:37  [ Thread-6:214802 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-09-04 15:04:37  [ Thread-6:214802 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-09-04 15:04:38  [ restartedMain:215436 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 12916 (D:\projects\rumo-springboot-rabbitmq\target\classes started by mengk in D:\projects\rumo-springboot-rabbitmq)
+2018-09-04 15:04:38  [ restartedMain:215437 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 15:04:38  [ restartedMain:215440 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@265d3bda: startup date [Tue Sep 04 15:04:38 CST 2018]; root of context hierarchy
+2018-09-04 15:04:39  [ restartedMain:215920 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$dc4b4a87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 15:04:39  [ restartedMain:216114 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-09-04 15:04:39  [ localhost-startStop-1:216188 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 748 ms
+2018-09-04 15:04:39  [ localhost-startStop-1:216262 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-09-04 15:04:39  [ localhost-startStop-1:216263 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-04 15:04:39  [ localhost-startStop-1:216263 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-04 15:04:39  [ localhost-startStop-1:216263 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-04 15:04:39  [ localhost-startStop-1:216265 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-04 15:04:39  [ restartedMain:216431 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:39  [ restartedMain:216518 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@265d3bda: startup date [Tue Sep 04 15:04:38 CST 2018]; root of context hierarchy
+2018-09-04 15:04:39  [ restartedMain:216527 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public void com.rumo.controller.IndexController.test()
+2018-09-04 15:04:39  [ restartedMain:216530 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 15:04:39  [ restartedMain:216531 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 15:04:39  [ restartedMain:216543 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:39  [ restartedMain:216544 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:39  [ restartedMain:216594 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 15:04:39  [ restartedMain:216618 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 15:04:39  [ restartedMain:216706 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-09-04 15:04:39  [ restartedMain:216736 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-09-04 15:04:39  [ restartedMain:216741 ] - [ INFO ]  Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-09-04 15:04:39  [ restartedMain:216744 ] - [ INFO ]  Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-09-04 15:04:39  [ restartedMain:216754 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 15:04:39  [ SimpleAsyncTaskExecutor-1:216757 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:04:40  [ SimpleAsyncTaskExecutor-1:216981 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#70bb565b:0/SimpleConnection@78ea2f19 [delegate=amqp://admin@47.104.109.215:5672/, localPort= 7187]
+2018-09-04 15:04:40  [ restartedMain:217198 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-04 15:04:40  [ restartedMain:217203 ] - [ INFO ]  Started RumoApplication in 1.806 seconds (JVM running for 218.114)
+2018-09-04 15:04:40  [ restartedMain:217208 ] - [ INFO ]  Condition evaluation unchanged
+2018-09-04 15:04:41  [ Thread-10:218131 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@265d3bda: startup date [Tue Sep 04 15:04:38 CST 2018]; root of context hierarchy
+2018-09-04 15:04:41  [ Thread-10:218133 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 15:04:41  [ Thread-10:218173 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 15:04:41  [ Thread-10:218183 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 15:04:41  [ Thread-10:218183 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 15:04:41  [ Thread-10:218185 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 15:04:41  [ Thread-10:218185 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-09-04 15:04:41  [ Thread-10:218186 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-09-04 15:04:41  [ restartedMain:218737 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 12916 (D:\projects\rumo-springboot-rabbitmq\target\classes started by mengk in D:\projects\rumo-springboot-rabbitmq)
+2018-09-04 15:04:41  [ restartedMain:218737 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 15:04:41  [ restartedMain:218741 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74acec44: startup date [Tue Sep 04 15:04:41 CST 2018]; root of context hierarchy
+2018-09-04 15:04:42  [ restartedMain:219170 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$dc4b4a87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 15:04:42  [ restartedMain:219325 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-09-04 15:04:42  [ localhost-startStop-1:219371 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 630 ms
+2018-09-04 15:04:42  [ localhost-startStop-1:219386 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-09-04 15:04:42  [ localhost-startStop-1:219387 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-04 15:04:42  [ localhost-startStop-1:219387 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-04 15:04:42  [ localhost-startStop-1:219387 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-04 15:04:42  [ localhost-startStop-1:219387 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-04 15:04:42  [ restartedMain:219491 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:42  [ restartedMain:219572 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74acec44: startup date [Tue Sep 04 15:04:41 CST 2018]; root of context hierarchy
+2018-09-04 15:04:42  [ restartedMain:219581 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public void com.rumo.controller.IndexController.test()
+2018-09-04 15:04:42  [ restartedMain:219584 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 15:04:42  [ restartedMain:219584 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 15:04:42  [ restartedMain:219600 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:42  [ restartedMain:219602 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 15:04:42  [ restartedMain:219644 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 15:04:42  [ restartedMain:219661 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 15:04:42  [ restartedMain:219721 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-09-04 15:04:42  [ restartedMain:219756 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-09-04 15:04:42  [ restartedMain:219759 ] - [ INFO ]  Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-09-04 15:04:42  [ restartedMain:219761 ] - [ INFO ]  Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-09-04 15:04:42  [ restartedMain:219772 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 15:04:42  [ SimpleAsyncTaskExecutor-1:219774 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 15:04:43  [ SimpleAsyncTaskExecutor-1:219942 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#25b973ca:0/SimpleConnection@294cfd02 [delegate=amqp://admin@47.104.109.215:5672/, localPort= 7195]
+2018-09-04 15:04:43  [ restartedMain:220158 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-09-04 15:04:43  [ restartedMain:220159 ] - [ INFO ]  Started RumoApplication in 1.459 seconds (JVM running for 221.07)
+2018-09-04 15:04:43  [ restartedMain:220161 ] - [ INFO ]  Condition evaluation unchanged
+2018-09-04 15:04:54  [ http-nio-8080-exec-1:231323 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-04 15:04:54  [ http-nio-8080-exec-1:231349 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-09-04 15:04:54  [ http-nio-8080-exec-1:231784 ] - [ ERROR ]  [THYMELEAF][http-nio-8080-exec-1] Exception processing template "send": Error resolving template "send", template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template "send", template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:870)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:800)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1471)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-09-04 16:14:34  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.HelloTest], using SpringBootContextLoader
+2018-09-04 16:14:35  [ main:110 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.HelloTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:14:35  [ main:112 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.HelloTest]: HelloTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:14:35  [ main:613 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.HelloTest
+2018-09-04 16:14:35  [ main:962 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:14:36  [ main:1080 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2145b572, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@39529185, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@72f926e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3daa422a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31c88ec8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1cbbffcd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27ce24aa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@481a996b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3427b02d]
+2018-09-04 16:14:36  [ background-preinit:1481 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:14:36  [ main:1916 ] - [ INFO ]  Starting HelloTest on DESKTOP-ETO6QNU with PID 19052 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:14:36  [ main:1918 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:14:36  [ main:1981 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:14:36 CST 2018]; root of context hierarchy
+2018-09-04 16:14:39  [ main:4292 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$f15002ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:14:40  [ main:5708 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:14:40  [ main:5999 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:14:36 CST 2018]; root of context hierarchy
+2018-09-04 16:14:41  [ main:6221 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:14:41  [ main:6228 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:14:41  [ main:6231 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:14:41  [ main:6291 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:14:41  [ main:6292 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:14:41  [ main:6636 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:14:41  [ main:6729 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:14:42  [ main:7465 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:14:42  [ SimpleAsyncTaskExecutor-1:7523 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:14:42  [ SimpleAsyncTaskExecutor-1:7860 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#271f18d3:0/SimpleConnection@3fdac6ba [delegate=amqp://admin@47.104.109.215:5672/, localPort= 5186]
+2018-09-04 16:14:45  [ main:10931 ] - [ INFO ]  Started HelloTest in 9.52 seconds (JVM running for 14.183)
+2018-09-04 16:14:47  [ Thread-3:12859 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:14:36 CST 2018]; root of context hierarchy
+2018-09-04 16:14:47  [ Thread-3:12918 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:14:47  [ Thread-3:12963 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13072 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13113 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13267 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13326 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13502 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13542 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13724 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13764 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:13975 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:48  [ Thread-3:14014 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14210 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14249 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14445 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14485 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14680 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14721 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14922 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:14:49  [ Thread-3:14923 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:14:49  [ Thread-3:14925 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14925 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:14:49  [ Thread-3:14926 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:13  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.ManyTest], using SpringBootContextLoader
+2018-09-04 16:15:13  [ main:9 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.ManyTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:15:13  [ main:10 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.ManyTest]: ManyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:15:13  [ main:239 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.ManyTest
+2018-09-04 16:15:13  [ main:412 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:15:13  [ main:431 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39529185, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72f926e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daa422a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31c88ec8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1cbbffcd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27ce24aa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@481a996b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3427b02d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@647e447]
+2018-09-04 16:15:14  [ background-preinit:597 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:15:14  [ main:902 ] - [ INFO ]  Starting ManyTest on DESKTOP-ETO6QNU with PID 9208 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:15:14  [ main:903 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:15:14  [ main:946 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:14 CST 2018]; root of context hierarchy
+2018-09-04 16:15:16  [ main:2676 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8ebaaf69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:15:17  [ main:3843 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:17  [ main:4138 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:14 CST 2018]; root of context hierarchy
+2018-09-04 16:15:17  [ main:4286 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:15:17  [ main:4299 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:15:17  [ main:4300 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:15:17  [ main:4354 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:17  [ main:4355 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:18  [ main:4491 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:15:18  [ main:4577 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:15:18  [ main:5080 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:15:18  [ SimpleAsyncTaskExecutor-1:5091 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:15:18  [ SimpleAsyncTaskExecutor-1:5349 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#3fc08eec:0/SimpleConnection@4009164b [delegate=amqp://admin@47.104.109.215:5672/, localPort= 5260]
+2018-09-04 16:15:22  [ main:8638 ] - [ INFO ]  Started ManyTest in 8.128 seconds (JVM running for 9.335)
+2018-09-04 16:15:22  [ Thread-3:8894 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:14 CST 2018]; root of context hierarchy
+2018-09-04 16:15:22  [ Thread-3:8896 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:15:22  [ Thread-3:9047 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:9569 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:9612 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:9822 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:9865 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:10085 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:10128 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:10335 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:23  [ Thread-3:10378 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:24  [ Thread-3:11082 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:24  [ Thread-3:11125 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12076 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12119 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12120 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12163 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12369 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:25  [ Thread-3:12411 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:26  [ Thread-3:12625 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:26  [ Thread-3:12625 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:15:26  [ Thread-3:12628 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12628 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12628 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12628 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12629 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12629 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12629 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12629 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:26  [ Thread-3:12629 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:45  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.ManyTest], using SpringBootContextLoader
+2018-09-04 16:15:45  [ main:11 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.ManyTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:15:45  [ main:12 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.ManyTest]: ManyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:15:45  [ main:235 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.ManyTest
+2018-09-04 16:15:45  [ main:373 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:15:45  [ main:390 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39529185, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72f926e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daa422a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31c88ec8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1cbbffcd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27ce24aa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@481a996b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3427b02d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@647e447]
+2018-09-04 16:15:45  [ background-preinit:568 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:15:46  [ main:835 ] - [ INFO ]  Starting ManyTest on DESKTOP-ETO6QNU with PID 18832 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:15:46  [ main:836 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:15:46  [ main:889 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:46 CST 2018]; root of context hierarchy
+2018-09-04 16:15:48  [ main:2809 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$7833ec13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:15:49  [ main:3941 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:49  [ main:4225 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:46 CST 2018]; root of context hierarchy
+2018-09-04 16:15:49  [ main:4367 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:15:49  [ main:4373 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:15:49  [ main:4374 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:15:49  [ main:4467 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:49  [ main:4468 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:15:49  [ main:4667 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:15:50  [ main:4774 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:15:50  [ main:5215 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:15:50  [ SimpleAsyncTaskExecutor-1:5230 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:15:50  [ SimpleAsyncTaskExecutor-1:5521 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#437e951d:0/SimpleConnection@709f50db [delegate=amqp://admin@47.104.109.215:5672/, localPort= 5291]
+2018-09-04 16:15:54  [ main:9445 ] - [ INFO ]  Started ManyTest in 8.979 seconds (JVM running for 10.098)
+2018-09-04 16:15:55  [ Thread-3:9761 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:15:46 CST 2018]; root of context hierarchy
+2018-09-04 16:15:55  [ Thread-3:9764 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:15:55  [ Thread-3:9848 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:9944 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:10000 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:10248 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:10300 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:10573 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:55  [ Thread-3:10627 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:56  [ Thread-3:10885 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:56  [ Thread-3:10937 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:57  [ Thread-3:11863 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:57  [ Thread-3:11915 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:57  [ Thread-3:11915 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:57  [ Thread-3:11969 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:12819 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:12870 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:13126 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:13178 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:13434 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:15:58  [ Thread-3:13434 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:15:58  [ Thread-3:13436 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13437 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13438 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:15:58  [ Thread-3:13438 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:05  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.ManyTest], using SpringBootContextLoader
+2018-09-04 16:17:05  [ main:11 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.ManyTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:17:05  [ main:12 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.ManyTest]: ManyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:17:06  [ main:264 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.ManyTest
+2018-09-04 16:17:06  [ main:450 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:17:06  [ main:467 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39529185, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72f926e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daa422a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31c88ec8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1cbbffcd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27ce24aa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@481a996b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3427b02d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@647e447]
+2018-09-04 16:17:06  [ background-preinit:648 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:17:06  [ main:957 ] - [ INFO ]  Starting ManyTest on DESKTOP-ETO6QNU with PID 18032 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:17:06  [ main:959 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:17:07  [ main:1028 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:17:06 CST 2018]; root of context hierarchy
+2018-09-04 16:17:09  [ main:3291 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5e197ada] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:17:10  [ main:4644 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:17:11  [ main:5163 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:17:06 CST 2018]; root of context hierarchy
+2018-09-04 16:17:11  [ main:5409 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:17:11  [ main:5414 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:17:11  [ main:5415 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:17:11  [ main:5519 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:17:11  [ main:5527 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:17:11  [ main:5747 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:17:11  [ main:5872 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:17:12  [ main:6499 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:17:12  [ SimpleAsyncTaskExecutor-1:6530 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:17:12  [ SimpleAsyncTaskExecutor-1:6812 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#4d4d48a6:0/SimpleConnection@639189b [delegate=amqp://admin@47.104.109.215:5672/, localPort= 5449]
+2018-09-04 16:17:16  [ main:10338 ] - [ INFO ]  Started ManyTest in 9.807 seconds (JVM running for 11.138)
+2018-09-04 16:17:17  [ Thread-3:11190 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@1bb266b3: startup date [Tue Sep 04 16:17:06 CST 2018]; root of context hierarchy
+2018-09-04 16:17:17  [ Thread-3:11201 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:17:17  [ Thread-3:11301 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12162 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12207 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12487 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12792 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12792 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12842 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:18  [ Thread-3:12976 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13027 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13276 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13326 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13327 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13377 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:19  [ Thread-3:13808 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:20  [ Thread-3:14194 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:20  [ Thread-3:14195 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:20  [ Thread-3:14745 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:17:20  [ Thread-3:14746 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:17:20  [ Thread-3:14746 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:17:20  [ Thread-3:14748 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14748 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14748 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14748 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:17:20  [ Thread-3:14749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:18:43  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.FanoutTest], using SpringBootContextLoader
+2018-09-04 16:18:43  [ main:13 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.FanoutTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:18:43  [ main:14 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.FanoutTest]: FanoutTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:18:44  [ main:286 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.FanoutTest
+2018-09-04 16:18:44  [ main:483 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:18:44  [ main:511 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2145b572, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@39529185, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@72f926e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3daa422a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31c88ec8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1cbbffcd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27ce24aa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@481a996b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3427b02d]
+2018-09-04 16:18:44  [ background-preinit:722 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:18:45  [ main:1084 ] - [ INFO ]  Starting FanoutTest on DESKTOP-ETO6QNU with PID 15840 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:18:45  [ main:1085 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:18:45  [ main:1141 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:18:45 CST 2018]; root of context hierarchy
+2018-09-04 16:18:47  [ main:3821 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$f15002ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:18:49  [ main:5454 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:18:49  [ main:6007 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:18:45 CST 2018]; root of context hierarchy
+2018-09-04 16:18:50  [ main:6224 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:18:50  [ main:6231 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:18:50  [ main:6244 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:18:50  [ main:6319 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:18:50  [ main:6320 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:18:50  [ main:6645 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:18:50  [ main:6790 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:18:51  [ main:7458 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:18:51  [ SimpleAsyncTaskExecutor-1:7470 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:18:51  [ SimpleAsyncTaskExecutor-1:7759 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#271f18d3:0/SimpleConnection@957b62b [delegate=amqp://admin@47.104.109.215:5672/, localPort= 6593]
+2018-09-04 16:18:57  [ main:13769 ] - [ INFO ]  Started FanoutTest in 13.173 seconds (JVM running for 14.597)
+2018-09-04 16:18:58  [ Thread-3:14306 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:18:45 CST 2018]; root of context hierarchy
+2018-09-04 16:18:58  [ Thread-3:14325 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:18:58  [ Thread-3:14385 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:18:58  [ Thread-3:14393 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:18:58  [ Thread-3:14447 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15385 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15690 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15691 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15742 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15932 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:18:59  [ Thread-3:15973 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16138 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16179 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16641 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16684 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16932 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:00  [ Thread-3:16980 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:01  [ Thread-3:17216 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:01  [ Thread-3:17586 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:01  [ Thread-3:17746 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:01  [ Thread-3:17747 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:19:01  [ Thread-3:17749 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17750 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17750 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17750 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17750 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17750 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17751 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17751 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:01  [ Thread-3:17752 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:28  [ main:0 ] - [ INFO ]  Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rumo.test.FanoutTest], using SpringBootContextLoader
+2018-09-04 16:19:28  [ main:12 ] - [ INFO ]  Could not detect default resource locations for test class [com.rumo.test.FanoutTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-09-04 16:19:28  [ main:13 ] - [ INFO ]  Could not detect default configuration classes for test class [com.rumo.test.FanoutTest]: FanoutTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-09-04 16:19:28  [ main:257 ] - [ INFO ]  Found @SpringBootConfiguration com.rumo.RumoApplication for test class com.rumo.test.FanoutTest
+2018-09-04 16:19:28  [ main:433 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-09-04 16:19:28  [ main:456 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2145b572, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@39529185, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@72f926e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3daa422a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31c88ec8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1cbbffcd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27ce24aa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@481a996b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3d51f06e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7ed7259e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@28eaa59a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3427b02d]
+2018-09-04 16:19:28  [ background-preinit:671 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-09-04 16:19:29  [ main:986 ] - [ INFO ]  Starting FanoutTest on DESKTOP-ETO6QNU with PID 16168 (started by mengk in D:\projects\rumo-springboot-rabbitmq-topic)
+2018-09-04 16:19:29  [ main:987 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2018-09-04 16:19:29  [ main:1053 ] - [ INFO ]  Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:19:29 CST 2018]; root of context hierarchy
+2018-09-04 16:19:31  [ main:3350 ] - [ INFO ]  Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8ebaaf69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-04 16:19:32  [ main:4724 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:19:33  [ main:5055 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:19:29 CST 2018]; root of context hierarchy
+2018-09-04 16:19:33  [ main:5220 ] - [ INFO ]  Mapped "{[/send],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.test()
+2018-09-04 16:19:33  [ main:5225 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-04 16:19:33  [ main:5227 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-04 16:19:33  [ main:5313 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:19:33  [ main:5314 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-04 16:19:33  [ main:5584 ] - [ WARN ]  [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-09-04 16:19:33  [ main:5739 ] - [ INFO ]  Adding welcome page template: index
+2018-09-04 16:19:34  [ main:6330 ] - [ INFO ]  Starting beans in phase 2147483647
+2018-09-04 16:19:34  [ SimpleAsyncTaskExecutor-1:6340 ] - [ INFO ]  Attempting to connect to: [47.104.109.215:5672]
+2018-09-04 16:19:34  [ SimpleAsyncTaskExecutor-1:6591 ] - [ INFO ]  Created new connection: rabbitConnectionFactory#3fc08eec:0/SimpleConnection@22c35f46 [delegate=amqp://admin@47.104.109.215:5672/, localPort= 7055]
+2018-09-04 16:19:42  [ main:13985 ] - [ INFO ]  Started FanoutTest in 13.452 seconds (JVM running for 14.802)
+2018-09-04 16:19:43  [ Thread-3:15060 ] - [ INFO ]  Closing org.springframework.web.context.support.GenericWebApplicationContext@4e268090: startup date [Tue Sep 04 16:19:29 CST 2018]; root of context hierarchy
+2018-09-04 16:19:43  [ Thread-3:15063 ] - [ INFO ]  Stopping beans in phase 2147483647
+2018-09-04 16:19:44  [ Thread-3:16172 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:44  [ Thread-3:16175 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:44  [ Thread-3:16214 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:45  [ Thread-3:17097 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:45  [ Thread-3:17136 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:45  [ Thread-3:17173 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:45  [ Thread-3:17215 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:45  [ Thread-3:17717 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:46  [ Thread-3:18055 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:46  [ Thread-3:18056 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:46  [ Thread-3:18096 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:46  [ Thread-3:18246 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:46  [ Thread-3:18288 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:47  [ Thread-3:19218 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:47  [ Thread-3:19260 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:47  [ Thread-3:19724 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:47  [ Thread-3:19762 ] - [ INFO ]  Waiting for workers to finish.
+2018-09-04 16:19:48  [ Thread-3:19964 ] - [ INFO ]  Successfully waited for workers to finish.
+2018-09-04 16:19:48  [ Thread-3:19964 ] - [ INFO ]  Stopping beans in phase 0
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already
+2018-09-04 16:19:48  [ Thread-3:19967 ] - [ INFO ]  Shutdown ignored - container is not active already

@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+    http://www.springframework.org/schema/rabbit/spring-rabbit-1.7.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    
+	<!--1 定义连接工厂 -->
+	<rabbit:connection-factory id="connectionFactory" host="47.104.109.215" port="5672" username="admin" password="mkxiaoer" virtual-host="/rumo" />
+	
+    <!--定义队列，自动声明(可以用于发消息和监听使用)-->
+    <rabbit:queue name="simplequeueu" auto-declare="true" />
+
+    <!--定义rabbit模版，指定连接工厂以及定义exchange-->
+    <rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/>
+
+    <!--MQ的管理，包括队列，交换器，声明等-->
+    <rabbit:admin connection-factory="connectionFactory" />
+
+
+    <!--队列监听-->
+    <rabbit:listener-container connection-factory="connectionFactory">
+        <rabbit:listener ref="myCustomer" method="test" queue-names="simplequeueu"/>
+    </rabbit:listener-container>
+
+    <!--定义消费者-->
+    <bean id="myCustomer" class="com.rumo.rabbitmq.spring.simple.MyConsumer"/>
+
+</beans>

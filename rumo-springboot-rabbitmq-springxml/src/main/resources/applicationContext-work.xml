@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit
+    http://www.springframework.org/schema/rabbit/spring-rabbit-1.7.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    
+	<!--1 定义连接工厂 -->
+	<rabbit:connection-factory id="connectionFactory" host="47.104.109.215" port="5672" username="admin" password="mkxiaoer" virtual-host="/rumo" />
+	
+    <!--定义队列，自动声明(可以用于发消息和监听使用)-->
+    <rabbit:queue name="simplequeueu_work" auto-declare="true" />
+
+    <!--定义rabbit模版，指定连接工厂以及定义exchange-->
+    <rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/>
+
+    <!--MQ的管理，包括队列，交换器，声明等-->
+    <rabbit:admin connection-factory="connectionFactory" />
+
+
+    <!--队列监听-->
+    <!-- 
+    	简单解释下就是concurrency设置的是对每个listener在初始化的时候设置的并发消费者的个数，prefetch是每次从一次性从broker里面取的待消费的消息的个数，上面的配置在监控后台看到的效果如下：
+		图中可以看出有两个消费者同时监听Queue，但是注意这里的消息只有被一个消费者消费掉就会自动ack，另外一个消费者就不会再获取到此消息，Prefetch Count为配置设置的值3，意味着每个消费者每次会预取3个消息准备消费。每个消费者对应的listener有个Exclusive参数，默认为false, 如果设置为true，concurrency就必须设置为1，即只能单个消费者消费队列里的消息，适用于必须严格执行消息队列的消费顺序（先进先出）。
+     -->
+    <rabbit:listener-container connection-factory="connectionFactory"  prefetch="1">
+        <rabbit:listener ref="myCustomer" method="test" queue-names="simplequeueu_work" />
+    </rabbit:listener-container>
+    <rabbit:listener-container connection-factory="connectionFactory"  prefetch="3">
+        <rabbit:listener ref="myCustomer2"  method="test" queue-names="simplequeueu_work"  />
+    </rabbit:listener-container>
+
+    <!--定义消费者-->
+    <bean id="myCustomer" class="com.rumo.rabbitmq.spring.work.MyConsumer"/>
+    <bean id="myCustomer2" class="com.rumo.rabbitmq.spring.work.MyConsumer2"/>
+
+</beans>

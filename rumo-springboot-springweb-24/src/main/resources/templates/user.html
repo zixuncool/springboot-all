@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>我是用户页面</h1>
+    登录的用户是：${session_user.username}
+ <a href="http://localhost:8080/logout">退出登录</a>
+    <script src="../resources/js/stroage.js"></script>
+    <script>
+        //记录地址
+        setSession("memeoy_link",window.location.href);
+    </script>
+</body>
+</html>

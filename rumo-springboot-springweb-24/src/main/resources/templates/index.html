@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>我是后台首页</h1>
+   1111 ${root} 1111
+    <hr>
+    2222${base}2222
+  登录的用户是：${session_user.username}
+  ${dateFormat(session_user.birthday,"yyyy-MM-dd")}
+  <a href="http://localhost:8080/logout">退出登录</a>
+
+     <script src="../resources/js/stroage.js"></script>
+    <script>
+        //记录地址
+        setSession("memeoy_link",window.location.href);
+    </script>
+</body>
+</html>

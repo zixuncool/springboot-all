@@ -1,0 +1,1359 @@
+2018-08-25 16:17:45  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-08-25 16:17:45  [ restartedMain:202 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 22660 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:17:45  [ restartedMain:204 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:17:46  [ restartedMain:296 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@187d3599: startup date [Sat Aug 25 16:17:46 CST 2018]; root of context hierarchy
+2018-08-25 16:17:47  [ restartedMain:1784 ] - [ WARN ]  No MyBatis mapper was found in '[com.rumo]' package. Please check your configuration.
+2018-08-25 16:17:49  [ restartedMain:3465 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:17:49  [ localhost-startStop-1:3714 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3423 ms
+2018-08-25 16:17:49  [ localhost-startStop-1:3930 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:17:49  [ localhost-startStop-1:3933 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:17:49  [ localhost-startStop-1:3946 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:17:49  [ localhost-startStop-1:3946 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:17:49  [ localhost-startStop-1:3947 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:17:49  [ localhost-startStop-1:3947 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:17:49  [ localhost-startStop-1:3948 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:17:49  [ restartedMain:4161 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.rumo.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-25 16:17:50  [ restartedMain:4305 ] - [ INFO ]  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-25 16:17:50  [ restartedMain:4646 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+
+2018-08-25 16:30:22  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-08-25 16:30:22  [ restartedMain:304 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 20840 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:30:22  [ restartedMain:306 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:30:22  [ restartedMain:402 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54724cef: startup date [Sat Aug 25 16:30:22 CST 2018]; root of context hierarchy
+2018-08-25 16:30:24  [ restartedMain:1900 ] - [ WARN ]  No MyBatis mapper was found in '[com.rumo]' package. Please check your configuration.
+2018-08-25 16:30:26  [ restartedMain:3646 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:30:26  [ localhost-startStop-1:3932 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3534 ms
+2018-08-25 16:30:26  [ localhost-startStop-1:4156 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:30:26  [ localhost-startStop-1:4159 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:30:26  [ localhost-startStop-1:4164 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:30:26  [ localhost-startStop-1:4165 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:30:26  [ localhost-startStop-1:4166 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:30:26  [ localhost-startStop-1:4166 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:30:26  [ localhost-startStop-1:4166 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:30:26  [ restartedMain:4250 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.rumo.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-25 16:30:26  [ restartedMain:4542 ] - [ INFO ]  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-25 16:30:27  [ restartedMain:4883 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+
+2018-08-25 16:31:51  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-08-25 16:31:51  [ restartedMain:415 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 21088 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:31:51  [ restartedMain:416 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:31:51  [ restartedMain:523 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@687df37a: startup date [Sat Aug 25 16:31:51 CST 2018]; root of context hierarchy
+2018-08-25 16:31:53  [ restartedMain:2042 ] - [ WARN ]  No MyBatis mapper was found in '[com.rumo]' package. Please check your configuration.
+2018-08-25 16:31:55  [ restartedMain:4385 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:31:55  [ localhost-startStop-1:4706 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 4188 ms
+2018-08-25 16:31:56  [ localhost-startStop-1:4919 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:31:56  [ localhost-startStop-1:4921 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:31:56  [ localhost-startStop-1:4925 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:31:56  [ localhost-startStop-1:4926 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:31:56  [ localhost-startStop-1:4927 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:31:56  [ localhost-startStop-1:4929 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:31:56  [ localhost-startStop-1:4930 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:31:56  [ restartedMain:5015 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.rumo.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-25 16:31:56  [ restartedMain:5070 ] - [ INFO ]  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-25 16:31:56  [ restartedMain:5394 ] - [ ERROR ]  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userMapper in com.rumo.service.UserServiceImpl required a bean of type 'com.rumo.mapper.UserMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.rumo.mapper.UserMapper' in your configuration.
+
+2018-08-25 16:40:14  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-08-25 16:40:14  [ restartedMain:302 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:40:14  [ restartedMain:308 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:40:14  [ restartedMain:403 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 16:40:14 CST 2018]; root of context hierarchy
+2018-08-25 16:40:17  [ restartedMain:3595 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:40:17  [ localhost-startStop-1:3916 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3516 ms
+2018-08-25 16:40:18  [ localhost-startStop-1:4211 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:40:18  [ localhost-startStop-1:4213 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:40:18  [ localhost-startStop-1:4222 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:40:18  [ localhost-startStop-1:4223 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:40:18  [ localhost-startStop-1:4224 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:40:18  [ localhost-startStop-1:4224 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:40:18  [ localhost-startStop-1:4224 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:40:18  [ restartedMain:4639 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:40:19  [ restartedMain:5210 ] - [ INFO ]  {dataSource-1} inited
+2018-08-25 16:40:19  [ restartedMain:5410 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:40:19  [ restartedMain:5814 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 16:40:14 CST 2018]; root of context hierarchy
+2018-08-25 16:40:19  [ restartedMain:5914 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:40:19  [ restartedMain:5917 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:40:19  [ restartedMain:5920 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:40:19  [ restartedMain:5921 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:40:19  [ restartedMain:5957 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:40:19  [ restartedMain:5957 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:40:20  [ restartedMain:6092 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:40:20  [ restartedMain:6226 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:40:20  [ restartedMain:6903 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:40:20  [ restartedMain:6949 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:40:20  [ restartedMain:6951 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:40:20  [ restartedMain:6952 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:40:20  [ restartedMain:6959 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:40:20  [ restartedMain:6960 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:40:21  [ restartedMain:7100 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:40:21  [ restartedMain:7104 ] - [ INFO ]  Started RumoApplication in 7.325 seconds (JVM running for 7.923)
+2018-08-25 16:42:26  [ http-nio-8080-exec-1:132316 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-25 16:42:26  [ http-nio-8080-exec-1:132357 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2018-08-25 16:46:37  [ Thread-6:383794 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 16:40:14 CST 2018]; root of context hierarchy
+2018-08-25 16:46:37  [ Thread-6:383796 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:46:37  [ Thread-6:383797 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:46:37  [ Thread-6:383799 ] - [ INFO ]  {dataSource-1} closed
+2018-08-25 16:46:38  [ restartedMain:384515 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:46:38  [ restartedMain:384515 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:46:38  [ restartedMain:384519 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@617950fa: startup date [Sat Aug 25 16:46:38 CST 2018]; root of context hierarchy
+2018-08-25 16:46:39  [ restartedMain:385185 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:46:39  [ localhost-startStop-1:385226 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 707 ms
+2018-08-25 16:46:39  [ localhost-startStop-1:385249 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:46:39  [ localhost-startStop-1:385250 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:46:39  [ localhost-startStop-1:385250 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:46:39  [ localhost-startStop-1:385251 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:46:39  [ localhost-startStop-1:385251 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:46:39  [ localhost-startStop-1:385251 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:46:39  [ localhost-startStop-1:385251 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:46:39  [ restartedMain:385304 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:46:39  [ restartedMain:385349 ] - [ INFO ]  {dataSource-2} inited
+2018-08-25 16:46:39  [ restartedMain:385820 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:46:39  [ restartedMain:385888 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@617950fa: startup date [Sat Aug 25 16:46:38 CST 2018]; root of context hierarchy
+2018-08-25 16:46:39  [ restartedMain:385897 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:46:39  [ restartedMain:385898 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:46:39  [ restartedMain:385900 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:46:39  [ restartedMain:385901 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:46:39  [ restartedMain:385914 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:46:39  [ restartedMain:385915 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:46:39  [ restartedMain:385937 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:46:39  [ restartedMain:385950 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:46:40  [ restartedMain:386026 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:46:40  [ restartedMain:386067 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:46:40  [ restartedMain:386068 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:46:40  [ restartedMain:386068 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:46:40  [ restartedMain:386074 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:46:40  [ restartedMain:386075 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:46:40  [ restartedMain:386094 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:46:40  [ restartedMain:386095 ] - [ INFO ]  Started RumoApplication in 1.628 seconds (JVM running for 386.914)
+2018-08-25 16:46:40  [ restartedMain:386100 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:46:47  [ http-nio-8080-exec-1:393531 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-25 16:46:47  [ http-nio-8080-exec-1:393541 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2018-08-25 16:48:31  [ Thread-10:497186 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@617950fa: startup date [Sat Aug 25 16:46:38 CST 2018]; root of context hierarchy
+2018-08-25 16:48:31  [ Thread-10:497190 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:48:31  [ Thread-10:497190 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:48:31  [ Thread-10:497203 ] - [ INFO ]  {dataSource-2} closed
+2018-08-25 16:48:31  [ restartedMain:497920 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:48:31  [ restartedMain:497920 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:48:31  [ restartedMain:497926 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22030b84: startup date [Sat Aug 25 16:48:31 CST 2018]; root of context hierarchy
+2018-08-25 16:48:32  [ restartedMain:498923 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:48:32  [ localhost-startStop-1:498964 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1038 ms
+2018-08-25 16:48:32  [ localhost-startStop-1:498987 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:48:32  [ localhost-startStop-1:498988 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:48:32  [ localhost-startStop-1:498988 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:48:32  [ localhost-startStop-1:498988 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:48:32  [ localhost-startStop-1:498989 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:48:32  [ localhost-startStop-1:498989 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:48:32  [ localhost-startStop-1:498989 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:48:33  [ restartedMain:499024 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:48:33  [ restartedMain:499057 ] - [ INFO ]  {dataSource-3} inited
+2018-08-25 16:48:33  [ restartedMain:499104 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:33  [ restartedMain:499158 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22030b84: startup date [Sat Aug 25 16:48:31 CST 2018]; root of context hierarchy
+2018-08-25 16:48:33  [ restartedMain:499169 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:48:33  [ restartedMain:499170 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:48:33  [ restartedMain:499172 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:48:33  [ restartedMain:499173 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:48:33  [ restartedMain:499187 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:33  [ restartedMain:499187 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:33  [ restartedMain:499214 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:48:33  [ restartedMain:499225 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:48:33  [ restartedMain:499292 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:48:33  [ restartedMain:499312 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:48:33  [ restartedMain:499314 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:48:33  [ restartedMain:499316 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:48:33  [ restartedMain:499318 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:48:33  [ restartedMain:499319 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:48:33  [ restartedMain:499333 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:48:33  [ restartedMain:499336 ] - [ INFO ]  Started RumoApplication in 1.467 seconds (JVM running for 500.154)
+2018-08-25 16:48:33  [ restartedMain:499340 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:48:54  [ Thread-17:520829 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22030b84: startup date [Sat Aug 25 16:48:31 CST 2018]; root of context hierarchy
+2018-08-25 16:48:54  [ Thread-17:520830 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:48:54  [ Thread-17:520830 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:48:54  [ Thread-17:520831 ] - [ INFO ]  {dataSource-3} closed
+2018-08-25 16:48:55  [ restartedMain:521592 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:48:55  [ restartedMain:521592 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:48:55  [ restartedMain:521595 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31483743: startup date [Sat Aug 25 16:48:55 CST 2018]; root of context hierarchy
+2018-08-25 16:48:56  [ restartedMain:522511 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:48:56  [ localhost-startStop-1:522552 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 957 ms
+2018-08-25 16:48:56  [ localhost-startStop-1:522576 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:48:56  [ localhost-startStop-1:522577 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:48:56  [ localhost-startStop-1:522578 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:48:56  [ localhost-startStop-1:522578 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:48:56  [ localhost-startStop-1:522578 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:48:56  [ localhost-startStop-1:522578 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:48:56  [ localhost-startStop-1:522579 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:48:56  [ restartedMain:522610 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:48:56  [ restartedMain:522654 ] - [ INFO ]  {dataSource-4} inited
+2018-08-25 16:48:56  [ restartedMain:522712 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:56  [ restartedMain:522752 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31483743: startup date [Sat Aug 25 16:48:55 CST 2018]; root of context hierarchy
+2018-08-25 16:48:56  [ restartedMain:522763 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:48:56  [ restartedMain:522764 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:48:56  [ restartedMain:522768 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:48:56  [ restartedMain:522769 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:48:56  [ restartedMain:522780 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:56  [ restartedMain:522781 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:48:56  [ restartedMain:522846 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:48:56  [ restartedMain:522857 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:48:56  [ restartedMain:522959 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:48:56  [ restartedMain:522993 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:48:56  [ restartedMain:522993 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:48:56  [ restartedMain:522994 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:48:57  [ restartedMain:523041 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:48:57  [ restartedMain:523085 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:48:57  [ restartedMain:523240 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:48:57  [ restartedMain:523241 ] - [ INFO ]  Started RumoApplication in 1.68 seconds (JVM running for 524.059)
+2018-08-25 16:48:57  [ restartedMain:523245 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:50:21  [ Thread-23:607980 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31483743: startup date [Sat Aug 25 16:48:55 CST 2018]; root of context hierarchy
+2018-08-25 16:50:21  [ Thread-23:607981 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:50:21  [ Thread-23:607981 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:50:21  [ Thread-23:607982 ] - [ INFO ]  {dataSource-4} closed
+2018-08-25 16:50:22  [ restartedMain:608442 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:50:22  [ restartedMain:608443 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:50:22  [ restartedMain:608459 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70d740bd: startup date [Sat Aug 25 16:50:22 CST 2018]; root of context hierarchy
+2018-08-25 16:50:22  [ restartedMain:608955 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:50:22  [ localhost-startStop-1:608979 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 520 ms
+2018-08-25 16:50:22  [ localhost-startStop-1:608992 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:50:22  [ localhost-startStop-1:608993 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:50:22  [ localhost-startStop-1:608993 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:50:22  [ localhost-startStop-1:608993 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:50:22  [ localhost-startStop-1:608994 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:50:22  [ localhost-startStop-1:608994 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:50:22  [ localhost-startStop-1:608994 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:50:23  [ restartedMain:609023 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:50:23  [ restartedMain:609049 ] - [ INFO ]  {dataSource-5} inited
+2018-08-25 16:50:23  [ restartedMain:609091 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:23  [ restartedMain:609136 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70d740bd: startup date [Sat Aug 25 16:50:22 CST 2018]; root of context hierarchy
+2018-08-25 16:50:23  [ restartedMain:609145 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:50:23  [ restartedMain:609147 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:50:23  [ restartedMain:609149 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:50:23  [ restartedMain:609156 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:50:23  [ restartedMain:609165 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:23  [ restartedMain:609165 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:23  [ restartedMain:609190 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:50:23  [ restartedMain:609206 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:50:23  [ restartedMain:609254 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:50:23  [ restartedMain:609273 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:50:23  [ restartedMain:609274 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:50:23  [ restartedMain:609274 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:50:23  [ restartedMain:609276 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:50:23  [ restartedMain:609277 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:50:23  [ restartedMain:609288 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:50:23  [ restartedMain:609290 ] - [ INFO ]  Started RumoApplication in 0.877 seconds (JVM running for 610.108)
+2018-08-25 16:50:23  [ restartedMain:609292 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:50:31  [ Thread-29:617714 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70d740bd: startup date [Sat Aug 25 16:50:22 CST 2018]; root of context hierarchy
+2018-08-25 16:50:31  [ Thread-29:617715 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:50:31  [ Thread-29:617716 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:50:31  [ Thread-29:617716 ] - [ INFO ]  {dataSource-5} closed
+2018-08-25 16:50:32  [ restartedMain:618136 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:50:32  [ restartedMain:618137 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:50:32  [ restartedMain:618139 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7377fbba: startup date [Sat Aug 25 16:50:32 CST 2018]; root of context hierarchy
+2018-08-25 16:50:32  [ restartedMain:618480 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:50:32  [ localhost-startStop-1:618501 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 362 ms
+2018-08-25 16:50:32  [ localhost-startStop-1:618511 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:50:32  [ localhost-startStop-1:618512 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:50:32  [ localhost-startStop-1:618512 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:50:32  [ localhost-startStop-1:618512 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:50:32  [ localhost-startStop-1:618512 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:50:32  [ localhost-startStop-1:618512 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:50:32  [ localhost-startStop-1:618513 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:50:32  [ restartedMain:618539 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:50:32  [ restartedMain:618575 ] - [ INFO ]  {dataSource-6} inited
+2018-08-25 16:50:32  [ restartedMain:618614 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:32  [ restartedMain:618675 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7377fbba: startup date [Sat Aug 25 16:50:32 CST 2018]; root of context hierarchy
+2018-08-25 16:50:32  [ restartedMain:618681 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:50:32  [ restartedMain:618681 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:50:32  [ restartedMain:618684 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:50:32  [ restartedMain:618684 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:50:32  [ restartedMain:618691 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:32  [ restartedMain:618691 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:50:32  [ restartedMain:618760 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:50:32  [ restartedMain:618801 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:50:32  [ restartedMain:618854 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:50:32  [ restartedMain:618877 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:50:32  [ restartedMain:618879 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:50:32  [ restartedMain:618880 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:50:32  [ restartedMain:618884 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:50:32  [ restartedMain:618885 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:50:32  [ restartedMain:618898 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:50:32  [ restartedMain:618898 ] - [ INFO ]  Started RumoApplication in 0.794 seconds (JVM running for 619.717)
+2018-08-25 16:50:32  [ restartedMain:618901 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:51:08  [ Thread-35:654509 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7377fbba: startup date [Sat Aug 25 16:50:32 CST 2018]; root of context hierarchy
+2018-08-25 16:51:08  [ Thread-35:654510 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:51:08  [ Thread-35:654510 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:51:08  [ Thread-35:654511 ] - [ INFO ]  {dataSource-6} closed
+2018-08-25 16:51:08  [ restartedMain:654983 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:51:08  [ restartedMain:654983 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:51:08  [ restartedMain:654986 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@755eb69a: startup date [Sat Aug 25 16:51:08 CST 2018]; root of context hierarchy
+2018-08-25 16:51:09  [ restartedMain:655379 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:51:09  [ localhost-startStop-1:655411 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 425 ms
+2018-08-25 16:51:09  [ localhost-startStop-1:655425 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:51:09  [ localhost-startStop-1:655426 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:51:09  [ localhost-startStop-1:655426 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:51:09  [ localhost-startStop-1:655426 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:51:09  [ localhost-startStop-1:655426 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:51:09  [ localhost-startStop-1:655426 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:51:09  [ localhost-startStop-1:655427 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:51:09  [ restartedMain:655451 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:51:09  [ restartedMain:655473 ] - [ INFO ]  {dataSource-7} inited
+2018-08-25 16:51:09  [ restartedMain:655509 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:51:09  [ restartedMain:655538 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@755eb69a: startup date [Sat Aug 25 16:51:08 CST 2018]; root of context hierarchy
+2018-08-25 16:51:09  [ restartedMain:655545 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:51:09  [ restartedMain:655545 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:51:09  [ restartedMain:655547 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:51:09  [ restartedMain:655547 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:51:09  [ restartedMain:655553 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:51:09  [ restartedMain:655554 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:51:09  [ restartedMain:655568 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:51:09  [ restartedMain:655577 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:51:09  [ restartedMain:655629 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:51:09  [ restartedMain:655642 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:51:09  [ restartedMain:655643 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:51:09  [ restartedMain:655644 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:51:09  [ restartedMain:655646 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:51:09  [ restartedMain:655646 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:51:09  [ restartedMain:655654 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:51:09  [ restartedMain:655655 ] - [ INFO ]  Started RumoApplication in 0.701 seconds (JVM running for 656.473)
+2018-08-25 16:51:09  [ restartedMain:655656 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:52:04  [ Thread-41:710406 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@755eb69a: startup date [Sat Aug 25 16:51:08 CST 2018]; root of context hierarchy
+2018-08-25 16:52:04  [ Thread-41:710406 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:52:04  [ Thread-41:710407 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:52:04  [ Thread-41:710407 ] - [ INFO ]  {dataSource-7} closed
+2018-08-25 16:52:04  [ restartedMain:710847 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:52:04  [ restartedMain:710847 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:52:04  [ restartedMain:710850 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1418a42e: startup date [Sat Aug 25 16:52:04 CST 2018]; root of context hierarchy
+2018-08-25 16:52:05  [ restartedMain:711212 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:52:05  [ localhost-startStop-1:711243 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 392 ms
+2018-08-25 16:52:05  [ localhost-startStop-1:711258 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:52:05  [ localhost-startStop-1:711259 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:52:05  [ localhost-startStop-1:711260 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:52:05  [ localhost-startStop-1:711260 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:52:05  [ localhost-startStop-1:711260 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:52:05  [ localhost-startStop-1:711260 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:52:05  [ localhost-startStop-1:711260 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:52:05  [ restartedMain:711288 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:52:05  [ restartedMain:711307 ] - [ INFO ]  {dataSource-8} inited
+2018-08-25 16:52:05  [ restartedMain:711349 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:05  [ restartedMain:711376 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1418a42e: startup date [Sat Aug 25 16:52:04 CST 2018]; root of context hierarchy
+2018-08-25 16:52:05  [ restartedMain:711383 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:52:05  [ restartedMain:711383 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:52:05  [ restartedMain:711385 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:52:05  [ restartedMain:711386 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:52:05  [ restartedMain:711390 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:05  [ restartedMain:711390 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:05  [ restartedMain:711407 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:52:05  [ restartedMain:711414 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:52:05  [ restartedMain:711449 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:52:05  [ restartedMain:711464 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:52:05  [ restartedMain:711465 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:52:05  [ restartedMain:711467 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:52:05  [ restartedMain:711470 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:52:05  [ restartedMain:711471 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:52:05  [ restartedMain:711484 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:52:05  [ restartedMain:711489 ] - [ INFO ]  Started RumoApplication in 0.667 seconds (JVM running for 712.307)
+2018-08-25 16:52:05  [ restartedMain:711491 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:52:43  [ Thread-47:749089 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1418a42e: startup date [Sat Aug 25 16:52:04 CST 2018]; root of context hierarchy
+2018-08-25 16:52:43  [ Thread-47:749089 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:52:43  [ Thread-47:749090 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:52:43  [ Thread-47:749090 ] - [ INFO ]  {dataSource-8} closed
+2018-08-25 16:52:43  [ restartedMain:749566 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:52:43  [ restartedMain:749566 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:52:43  [ restartedMain:749568 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b2e9516: startup date [Sat Aug 25 16:52:43 CST 2018]; root of context hierarchy
+2018-08-25 16:52:44  [ restartedMain:750008 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:52:44  [ localhost-startStop-1:750043 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 475 ms
+2018-08-25 16:52:44  [ localhost-startStop-1:750056 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:52:44  [ localhost-startStop-1:750056 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:52:44  [ localhost-startStop-1:750056 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:52:44  [ localhost-startStop-1:750056 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:52:44  [ localhost-startStop-1:750057 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:52:44  [ localhost-startStop-1:750057 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:52:44  [ localhost-startStop-1:750057 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:52:44  [ restartedMain:750085 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:52:44  [ restartedMain:750104 ] - [ INFO ]  {dataSource-9} inited
+2018-08-25 16:52:44  [ restartedMain:750140 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:44  [ restartedMain:750165 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b2e9516: startup date [Sat Aug 25 16:52:43 CST 2018]; root of context hierarchy
+2018-08-25 16:52:44  [ restartedMain:750171 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:52:44  [ restartedMain:750171 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:52:44  [ restartedMain:750173 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:52:44  [ restartedMain:750174 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:52:44  [ restartedMain:750179 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:44  [ restartedMain:750179 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:44  [ restartedMain:750196 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:52:44  [ restartedMain:750207 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:52:44  [ restartedMain:750266 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:52:44  [ restartedMain:750283 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:52:44  [ restartedMain:750285 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:52:44  [ restartedMain:750285 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:52:44  [ restartedMain:750289 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:52:44  [ restartedMain:750290 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:52:44  [ restartedMain:750309 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:52:44  [ restartedMain:750310 ] - [ INFO ]  Started RumoApplication in 0.765 seconds (JVM running for 751.128)
+2018-08-25 16:52:44  [ restartedMain:750312 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:52:48  [ Thread-53:754695 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b2e9516: startup date [Sat Aug 25 16:52:43 CST 2018]; root of context hierarchy
+2018-08-25 16:52:48  [ Thread-53:754695 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:52:48  [ Thread-53:754696 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:52:48  [ Thread-53:754696 ] - [ INFO ]  {dataSource-9} closed
+2018-08-25 16:52:49  [ restartedMain:755116 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:52:49  [ restartedMain:755116 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:52:49  [ restartedMain:755118 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35a0b899: startup date [Sat Aug 25 16:52:49 CST 2018]; root of context hierarchy
+2018-08-25 16:52:49  [ restartedMain:755486 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:52:49  [ localhost-startStop-1:755504 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 386 ms
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:52:49  [ localhost-startStop-1:755515 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:52:49  [ localhost-startStop-1:755516 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:52:49  [ restartedMain:755537 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:52:49  [ restartedMain:755557 ] - [ INFO ]  {dataSource-10} inited
+2018-08-25 16:52:49  [ restartedMain:755584 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:49  [ restartedMain:755617 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35a0b899: startup date [Sat Aug 25 16:52:49 CST 2018]; root of context hierarchy
+2018-08-25 16:52:49  [ restartedMain:755622 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:52:49  [ restartedMain:755623 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:52:49  [ restartedMain:755624 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:52:49  [ restartedMain:755625 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:52:49  [ restartedMain:755631 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:49  [ restartedMain:755631 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:49  [ restartedMain:755644 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:52:49  [ restartedMain:755651 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:52:49  [ restartedMain:755686 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:52:49  [ restartedMain:755696 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:52:49  [ restartedMain:755696 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:52:49  [ restartedMain:755696 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:52:49  [ restartedMain:755698 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:52:49  [ restartedMain:755699 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:52:49  [ restartedMain:755705 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:52:49  [ restartedMain:755706 ] - [ INFO ]  Started RumoApplication in 0.609 seconds (JVM running for 756.524)
+2018-08-25 16:52:49  [ restartedMain:755707 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:52:52  [ Thread-59:758104 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35a0b899: startup date [Sat Aug 25 16:52:49 CST 2018]; root of context hierarchy
+2018-08-25 16:52:52  [ Thread-59:758105 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:52:52  [ Thread-59:758105 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:52:52  [ Thread-59:758106 ] - [ INFO ]  {dataSource-10} closed
+2018-08-25 16:52:52  [ restartedMain:758511 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:52:52  [ restartedMain:758511 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:52:52  [ restartedMain:758513 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c227d79: startup date [Sat Aug 25 16:52:52 CST 2018]; root of context hierarchy
+2018-08-25 16:52:52  [ restartedMain:758830 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:52:52  [ localhost-startStop-1:758856 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 343 ms
+2018-08-25 16:52:52  [ localhost-startStop-1:758866 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:52:52  [ localhost-startStop-1:758867 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:52:52  [ localhost-startStop-1:758867 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:52:52  [ localhost-startStop-1:758867 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:52:52  [ localhost-startStop-1:758867 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:52:52  [ localhost-startStop-1:758867 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:52:52  [ localhost-startStop-1:758868 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:52:52  [ restartedMain:758887 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:52:52  [ restartedMain:758899 ] - [ INFO ]  {dataSource-11} inited
+2018-08-25 16:52:52  [ restartedMain:758921 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:52  [ restartedMain:758944 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c227d79: startup date [Sat Aug 25 16:52:52 CST 2018]; root of context hierarchy
+2018-08-25 16:52:52  [ restartedMain:758952 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:52:52  [ restartedMain:758953 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:52:52  [ restartedMain:758954 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:52:52  [ restartedMain:758954 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:52:52  [ restartedMain:758959 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:52  [ restartedMain:758960 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:52  [ restartedMain:758973 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:52:52  [ restartedMain:758980 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:52:53  [ restartedMain:759007 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:52:53  [ restartedMain:759014 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:52:53  [ restartedMain:759016 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:52:53  [ restartedMain:759016 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:52:53  [ restartedMain:759017 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:52:53  [ restartedMain:759017 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:52:53  [ restartedMain:759025 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:52:53  [ restartedMain:759026 ] - [ INFO ]  Started RumoApplication in 0.535 seconds (JVM running for 759.845)
+2018-08-25 16:52:53  [ restartedMain:759027 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:52:56  [ Thread-65:762428 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c227d79: startup date [Sat Aug 25 16:52:52 CST 2018]; root of context hierarchy
+2018-08-25 16:52:56  [ Thread-65:762429 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:52:56  [ Thread-65:762429 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:52:56  [ Thread-65:762430 ] - [ INFO ]  {dataSource-11} closed
+2018-08-25 16:52:56  [ restartedMain:762827 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:52:56  [ restartedMain:762827 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:52:56  [ restartedMain:762828 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43f66f60: startup date [Sat Aug 25 16:52:56 CST 2018]; root of context hierarchy
+2018-08-25 16:52:57  [ restartedMain:763164 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:52:57  [ localhost-startStop-1:763189 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 361 ms
+2018-08-25 16:52:57  [ localhost-startStop-1:763199 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:52:57  [ localhost-startStop-1:763200 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:52:57  [ localhost-startStop-1:763200 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:52:57  [ localhost-startStop-1:763200 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:52:57  [ localhost-startStop-1:763200 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:52:57  [ localhost-startStop-1:763201 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:52:57  [ localhost-startStop-1:763201 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:52:57  [ restartedMain:763227 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:52:57  [ restartedMain:763256 ] - [ INFO ]  {dataSource-12} inited
+2018-08-25 16:52:57  [ restartedMain:763302 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:57  [ restartedMain:763343 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43f66f60: startup date [Sat Aug 25 16:52:56 CST 2018]; root of context hierarchy
+2018-08-25 16:52:57  [ restartedMain:763348 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:52:57  [ restartedMain:763348 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:52:57  [ restartedMain:763349 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:52:57  [ restartedMain:763350 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:52:57  [ restartedMain:763354 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:57  [ restartedMain:763354 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:52:57  [ restartedMain:763366 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:52:57  [ restartedMain:763373 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:52:57  [ restartedMain:763421 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:52:57  [ restartedMain:763439 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:52:57  [ restartedMain:763440 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:52:57  [ restartedMain:763440 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:52:57  [ restartedMain:763443 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:52:57  [ restartedMain:763444 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:52:57  [ restartedMain:763458 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:52:57  [ restartedMain:763459 ] - [ INFO ]  Started RumoApplication in 0.652 seconds (JVM running for 764.277)
+2018-08-25 16:52:57  [ restartedMain:763460 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:53:07  [ Thread-71:773908 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43f66f60: startup date [Sat Aug 25 16:52:56 CST 2018]; root of context hierarchy
+2018-08-25 16:53:07  [ Thread-71:773908 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:53:07  [ Thread-71:773908 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:53:07  [ Thread-71:773909 ] - [ INFO ]  {dataSource-12} closed
+2018-08-25 16:53:08  [ restartedMain:774324 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:53:08  [ restartedMain:774324 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:53:08  [ restartedMain:774326 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5288e4: startup date [Sat Aug 25 16:53:08 CST 2018]; root of context hierarchy
+2018-08-25 16:53:08  [ restartedMain:774688 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:53:08  [ localhost-startStop-1:774711 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 385 ms
+2018-08-25 16:53:08  [ localhost-startStop-1:774721 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:53:08  [ localhost-startStop-1:774721 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:53:08  [ localhost-startStop-1:774721 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:53:08  [ localhost-startStop-1:774722 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:53:08  [ localhost-startStop-1:774722 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:53:08  [ localhost-startStop-1:774722 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:53:08  [ localhost-startStop-1:774722 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:53:08  [ restartedMain:774745 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:53:08  [ restartedMain:774770 ] - [ INFO ]  {dataSource-13} inited
+2018-08-25 16:53:08  [ restartedMain:774808 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:08  [ restartedMain:774835 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5288e4: startup date [Sat Aug 25 16:53:08 CST 2018]; root of context hierarchy
+2018-08-25 16:53:08  [ restartedMain:774841 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:53:08  [ restartedMain:774842 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:53:08  [ restartedMain:774844 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:53:08  [ restartedMain:774844 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:53:08  [ restartedMain:774850 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:08  [ restartedMain:774850 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:08  [ restartedMain:774863 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:53:08  [ restartedMain:774868 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:53:08  [ restartedMain:774898 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:53:08  [ restartedMain:774911 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:53:08  [ restartedMain:774911 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:53:08  [ restartedMain:774912 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:53:08  [ restartedMain:774914 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:53:08  [ restartedMain:774915 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:53:08  [ restartedMain:774924 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:53:08  [ restartedMain:774925 ] - [ INFO ]  Started RumoApplication in 0.622 seconds (JVM running for 775.743)
+2018-08-25 16:53:08  [ restartedMain:774926 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:53:21  [ Thread-77:787397 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5288e4: startup date [Sat Aug 25 16:53:08 CST 2018]; root of context hierarchy
+2018-08-25 16:53:21  [ Thread-77:787398 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:53:21  [ Thread-77:787398 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:53:21  [ Thread-77:787398 ] - [ INFO ]  {dataSource-13} closed
+2018-08-25 16:53:21  [ restartedMain:787799 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:53:21  [ restartedMain:787799 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:53:21  [ restartedMain:787801 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a20bcf7: startup date [Sat Aug 25 16:53:21 CST 2018]; root of context hierarchy
+2018-08-25 16:53:22  [ restartedMain:788107 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:53:22  [ localhost-startStop-1:788134 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 333 ms
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:53:22  [ localhost-startStop-1:788145 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:53:22  [ localhost-startStop-1:788146 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:53:22  [ restartedMain:788166 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:53:22  [ restartedMain:788184 ] - [ INFO ]  {dataSource-14} inited
+2018-08-25 16:53:22  [ restartedMain:788214 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:22  [ restartedMain:788237 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a20bcf7: startup date [Sat Aug 25 16:53:21 CST 2018]; root of context hierarchy
+2018-08-25 16:53:22  [ restartedMain:788240 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:53:22  [ restartedMain:788241 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:53:22  [ restartedMain:788241 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:53:22  [ restartedMain:788241 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:53:22  [ restartedMain:788245 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:22  [ restartedMain:788245 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:53:22  [ restartedMain:788253 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:53:22  [ restartedMain:788257 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:53:22  [ restartedMain:788282 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:53:22  [ restartedMain:788289 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:53:22  [ restartedMain:788290 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:53:22  [ restartedMain:788290 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:53:22  [ restartedMain:788292 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:53:22  [ restartedMain:788292 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:53:22  [ restartedMain:788298 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:53:22  [ restartedMain:788299 ] - [ INFO ]  Started RumoApplication in 0.521 seconds (JVM running for 789.118)
+2018-08-25 16:53:22  [ restartedMain:788300 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:55:01  [ Thread-83:887198 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a20bcf7: startup date [Sat Aug 25 16:53:21 CST 2018]; root of context hierarchy
+2018-08-25 16:55:01  [ Thread-83:887199 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:55:01  [ Thread-83:887199 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:55:01  [ Thread-83:887200 ] - [ INFO ]  {dataSource-14} closed
+2018-08-25 16:55:01  [ restartedMain:887667 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:55:01  [ restartedMain:887668 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:55:01  [ restartedMain:887669 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e355cb0: startup date [Sat Aug 25 16:55:01 CST 2018]; root of context hierarchy
+2018-08-25 16:55:02  [ restartedMain:888109 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:55:02  [ localhost-startStop-1:888134 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 465 ms
+2018-08-25 16:55:02  [ localhost-startStop-1:888149 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:55:02  [ localhost-startStop-1:888149 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:55:02  [ localhost-startStop-1:888150 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:55:02  [ localhost-startStop-1:888151 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:55:02  [ localhost-startStop-1:888151 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:55:02  [ localhost-startStop-1:888151 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:55:02  [ localhost-startStop-1:888151 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:55:02  [ restartedMain:888181 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:55:02  [ restartedMain:888205 ] - [ INFO ]  {dataSource-15} inited
+2018-08-25 16:55:02  [ restartedMain:888271 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:02  [ restartedMain:888328 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e355cb0: startup date [Sat Aug 25 16:55:01 CST 2018]; root of context hierarchy
+2018-08-25 16:55:02  [ restartedMain:888345 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:55:02  [ restartedMain:888346 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:55:02  [ restartedMain:888352 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:55:02  [ restartedMain:888353 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:55:02  [ restartedMain:888365 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:02  [ restartedMain:888367 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:02  [ restartedMain:888427 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:55:02  [ restartedMain:888437 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:55:02  [ restartedMain:888504 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:55:02  [ restartedMain:888537 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:55:02  [ restartedMain:888538 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:55:02  [ restartedMain:888538 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:55:02  [ restartedMain:888541 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:55:02  [ restartedMain:888542 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:55:02  [ restartedMain:888574 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:55:02  [ restartedMain:888575 ] - [ INFO ]  Started RumoApplication in 0.937 seconds (JVM running for 889.393)
+2018-08-25 16:55:02  [ restartedMain:888577 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:55:05  [ Thread-89:891044 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4e355cb0: startup date [Sat Aug 25 16:55:01 CST 2018]; root of context hierarchy
+2018-08-25 16:55:05  [ Thread-89:891045 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:55:05  [ Thread-89:891045 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:55:05  [ Thread-89:891046 ] - [ INFO ]  {dataSource-15} closed
+2018-08-25 16:55:05  [ restartedMain:891504 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:55:05  [ restartedMain:891504 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:55:05  [ restartedMain:891506 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69e42067: startup date [Sat Aug 25 16:55:05 CST 2018]; root of context hierarchy
+2018-08-25 16:55:06  [ restartedMain:892043 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:55:06  [ localhost-startStop-1:892091 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 585 ms
+2018-08-25 16:55:06  [ localhost-startStop-1:892112 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:55:06  [ localhost-startStop-1:892113 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:55:06  [ localhost-startStop-1:892113 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:55:06  [ localhost-startStop-1:892113 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:55:06  [ localhost-startStop-1:892113 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:55:06  [ localhost-startStop-1:892114 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:55:06  [ localhost-startStop-1:892114 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:55:06  [ restartedMain:892160 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:55:06  [ restartedMain:892207 ] - [ INFO ]  {dataSource-16} inited
+2018-08-25 16:55:06  [ restartedMain:892260 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:06  [ restartedMain:892294 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69e42067: startup date [Sat Aug 25 16:55:05 CST 2018]; root of context hierarchy
+2018-08-25 16:55:06  [ restartedMain:892300 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:55:06  [ restartedMain:892300 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:55:06  [ restartedMain:892301 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:55:06  [ restartedMain:892302 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:55:06  [ restartedMain:892312 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:06  [ restartedMain:892312 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:55:06  [ restartedMain:892337 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:55:06  [ restartedMain:892344 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:55:06  [ restartedMain:892398 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:55:06  [ restartedMain:892410 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:55:06  [ restartedMain:892410 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:55:06  [ restartedMain:892410 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:55:06  [ restartedMain:892412 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:55:06  [ restartedMain:892413 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:55:06  [ restartedMain:892422 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:55:06  [ restartedMain:892424 ] - [ INFO ]  Started RumoApplication in 0.957 seconds (JVM running for 893.242)
+2018-08-25 16:55:06  [ restartedMain:892426 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:56:23  [ Thread-95:969499 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69e42067: startup date [Sat Aug 25 16:55:05 CST 2018]; root of context hierarchy
+2018-08-25 16:56:23  [ Thread-95:969499 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:56:23  [ Thread-95:969500 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:56:23  [ Thread-95:969500 ] - [ INFO ]  {dataSource-16} closed
+2018-08-25 16:56:24  [ restartedMain:970451 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:56:24  [ restartedMain:970451 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:56:24  [ restartedMain:970454 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cb1f8c: startup date [Sat Aug 25 16:56:24 CST 2018]; root of context hierarchy
+2018-08-25 16:56:24  [ restartedMain:970837 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:56:24  [ localhost-startStop-1:970865 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 411 ms
+2018-08-25 16:56:24  [ localhost-startStop-1:970874 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:56:24  [ localhost-startStop-1:970874 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:56:24  [ localhost-startStop-1:970875 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:56:24  [ localhost-startStop-1:970875 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:56:24  [ localhost-startStop-1:970875 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:56:24  [ localhost-startStop-1:970875 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:56:24  [ localhost-startStop-1:970875 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:56:24  [ restartedMain:970892 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:56:24  [ restartedMain:970905 ] - [ INFO ]  {dataSource-17} inited
+2018-08-25 16:56:24  [ restartedMain:970938 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:24  [ restartedMain:970959 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cb1f8c: startup date [Sat Aug 25 16:56:24 CST 2018]; root of context hierarchy
+2018-08-25 16:56:24  [ restartedMain:970964 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:56:24  [ restartedMain:970965 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:56:24  [ restartedMain:970966 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:56:24  [ restartedMain:970966 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:56:24  [ restartedMain:970974 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:24  [ restartedMain:970974 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:24  [ restartedMain:970994 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:56:25  [ restartedMain:971004 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:56:25  [ restartedMain:971066 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:56:25  [ restartedMain:971090 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:56:25  [ restartedMain:971091 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:56:25  [ restartedMain:971091 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:56:25  [ restartedMain:971093 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:56:25  [ restartedMain:971094 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:56:25  [ restartedMain:971104 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:56:25  [ restartedMain:971104 ] - [ INFO ]  Started RumoApplication in 0.693 seconds (JVM running for 971.922)
+2018-08-25 16:56:25  [ restartedMain:971106 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:56:39  [ Thread-101:985568 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cb1f8c: startup date [Sat Aug 25 16:56:24 CST 2018]; root of context hierarchy
+2018-08-25 16:56:39  [ Thread-101:985569 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:56:39  [ Thread-101:985570 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:56:39  [ Thread-101:985571 ] - [ INFO ]  {dataSource-17} closed
+2018-08-25 16:56:40  [ restartedMain:986097 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:56:40  [ restartedMain:986097 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:56:40  [ restartedMain:986100 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60606d5a: startup date [Sat Aug 25 16:56:40 CST 2018]; root of context hierarchy
+2018-08-25 16:56:40  [ restartedMain:986490 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:56:40  [ localhost-startStop-1:986515 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 415 ms
+2018-08-25 16:56:40  [ localhost-startStop-1:986527 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:56:40  [ localhost-startStop-1:986528 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:56:40  [ localhost-startStop-1:986528 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:56:40  [ localhost-startStop-1:986528 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:56:40  [ localhost-startStop-1:986528 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:56:40  [ localhost-startStop-1:986528 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:56:40  [ localhost-startStop-1:986529 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:56:40  [ restartedMain:986552 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:56:40  [ restartedMain:986574 ] - [ INFO ]  {dataSource-18} inited
+2018-08-25 16:56:40  [ restartedMain:986608 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:40  [ restartedMain:986637 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60606d5a: startup date [Sat Aug 25 16:56:40 CST 2018]; root of context hierarchy
+2018-08-25 16:56:40  [ restartedMain:986643 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:56:40  [ restartedMain:986644 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:56:40  [ restartedMain:986645 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:56:40  [ restartedMain:986646 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:56:40  [ restartedMain:986653 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:40  [ restartedMain:986653 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:56:40  [ restartedMain:986664 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:56:40  [ restartedMain:986672 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:56:40  [ restartedMain:986708 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:56:40  [ restartedMain:986718 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:56:40  [ restartedMain:986719 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:56:40  [ restartedMain:986719 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:56:40  [ restartedMain:986720 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:56:40  [ restartedMain:986720 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:56:40  [ restartedMain:986730 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:56:40  [ restartedMain:986731 ] - [ INFO ]  Started RumoApplication in 0.666 seconds (JVM running for 987.549)
+2018-08-25 16:56:40  [ restartedMain:986733 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:56:59  [ Thread-107:1005359 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60606d5a: startup date [Sat Aug 25 16:56:40 CST 2018]; root of context hierarchy
+2018-08-25 16:56:59  [ Thread-107:1005360 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:56:59  [ Thread-107:1005360 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:56:59  [ Thread-107:1005360 ] - [ INFO ]  {dataSource-18} closed
+2018-08-25 16:56:59  [ restartedMain:1005733 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:56:59  [ restartedMain:1005733 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:56:59  [ restartedMain:1005734 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4971b6d2: startup date [Sat Aug 25 16:56:59 CST 2018]; root of context hierarchy
+2018-08-25 16:57:00  [ restartedMain:1006435 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:57:00  [ localhost-startStop-1:1006466 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 732 ms
+2018-08-25 16:57:00  [ localhost-startStop-1:1006480 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006481 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006481 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006481 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006481 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006481 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:57:00  [ localhost-startStop-1:1006482 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:57:00  [ restartedMain:1006544 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:57:00  [ restartedMain:1006619 ] - [ INFO ]  {dataSource-19} inited
+2018-08-25 16:57:00  [ restartedMain:1006699 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:00  [ restartedMain:1006784 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4971b6d2: startup date [Sat Aug 25 16:56:59 CST 2018]; root of context hierarchy
+2018-08-25 16:57:00  [ restartedMain:1006799 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:57:00  [ restartedMain:1006800 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:57:00  [ restartedMain:1006803 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:57:00  [ restartedMain:1006803 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:57:00  [ restartedMain:1006826 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:00  [ restartedMain:1006827 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:00  [ restartedMain:1006843 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:57:00  [ restartedMain:1006864 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:57:00  [ restartedMain:1006906 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:57:00  [ restartedMain:1006934 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:57:00  [ restartedMain:1006935 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:57:00  [ restartedMain:1006935 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:57:00  [ restartedMain:1006938 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:57:00  [ restartedMain:1006940 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:57:00  [ restartedMain:1006951 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:57:00  [ restartedMain:1006952 ] - [ INFO ]  Started RumoApplication in 1.24 seconds (JVM running for 1007.77)
+2018-08-25 16:57:00  [ restartedMain:1006955 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:57:02  [ Thread-113:1008321 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4971b6d2: startup date [Sat Aug 25 16:56:59 CST 2018]; root of context hierarchy
+2018-08-25 16:57:02  [ Thread-113:1008322 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:57:02  [ Thread-113:1008323 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:57:02  [ Thread-113:1008323 ] - [ INFO ]  {dataSource-19} closed
+2018-08-25 16:57:02  [ restartedMain:1008758 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:57:02  [ restartedMain:1008758 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:57:02  [ restartedMain:1008760 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26b83532: startup date [Sat Aug 25 16:57:02 CST 2018]; root of context hierarchy
+2018-08-25 16:57:03  [ restartedMain:1009114 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:57:03  [ localhost-startStop-1:1009135 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 375 ms
+2018-08-25 16:57:03  [ localhost-startStop-1:1009143 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:57:03  [ localhost-startStop-1:1009144 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:57:03  [ restartedMain:1009162 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:57:03  [ restartedMain:1009179 ] - [ INFO ]  {dataSource-20} inited
+2018-08-25 16:57:03  [ restartedMain:1009202 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:03  [ restartedMain:1009222 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26b83532: startup date [Sat Aug 25 16:57:02 CST 2018]; root of context hierarchy
+2018-08-25 16:57:03  [ restartedMain:1009225 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:57:03  [ restartedMain:1009226 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:57:03  [ restartedMain:1009227 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:57:03  [ restartedMain:1009228 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:57:03  [ restartedMain:1009233 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:03  [ restartedMain:1009234 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:03  [ restartedMain:1009246 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:57:03  [ restartedMain:1009250 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:57:03  [ restartedMain:1009280 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:57:03  [ restartedMain:1009293 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:57:03  [ restartedMain:1009294 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:57:03  [ restartedMain:1009395 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:57:03  [ restartedMain:1009442 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:57:03  [ restartedMain:1009444 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:57:03  [ restartedMain:1009462 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:57:03  [ restartedMain:1009463 ] - [ INFO ]  Started RumoApplication in 0.728 seconds (JVM running for 1010.281)
+2018-08-25 16:57:03  [ restartedMain:1009465 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:57:05  [ Thread-119:1011706 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@26b83532: startup date [Sat Aug 25 16:57:02 CST 2018]; root of context hierarchy
+2018-08-25 16:57:05  [ Thread-119:1011707 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:57:05  [ Thread-119:1011707 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:57:05  [ Thread-119:1011708 ] - [ INFO ]  {dataSource-20} closed
+2018-08-25 16:57:06  [ restartedMain:1012086 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:57:06  [ restartedMain:1012086 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:57:06  [ restartedMain:1012088 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2934e019: startup date [Sat Aug 25 16:57:06 CST 2018]; root of context hierarchy
+2018-08-25 16:57:06  [ restartedMain:1012415 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:57:06  [ localhost-startStop-1:1012436 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 348 ms
+2018-08-25 16:57:06  [ localhost-startStop-1:1012447 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:57:06  [ localhost-startStop-1:1012448 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:57:06  [ restartedMain:1012469 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:57:06  [ restartedMain:1012485 ] - [ INFO ]  {dataSource-21} inited
+2018-08-25 16:57:06  [ restartedMain:1012510 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:06  [ restartedMain:1012530 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2934e019: startup date [Sat Aug 25 16:57:06 CST 2018]; root of context hierarchy
+2018-08-25 16:57:06  [ restartedMain:1012538 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:57:06  [ restartedMain:1012538 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:57:06  [ restartedMain:1012539 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:57:06  [ restartedMain:1012540 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:57:06  [ restartedMain:1012544 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:06  [ restartedMain:1012544 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:06  [ restartedMain:1012556 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:57:06  [ restartedMain:1012563 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:57:06  [ restartedMain:1012600 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:57:06  [ restartedMain:1012615 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:57:06  [ restartedMain:1012616 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:57:06  [ restartedMain:1012616 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:57:06  [ restartedMain:1012617 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:57:06  [ restartedMain:1012617 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:57:06  [ restartedMain:1012625 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:57:06  [ restartedMain:1012625 ] - [ INFO ]  Started RumoApplication in 0.562 seconds (JVM running for 1013.443)
+2018-08-25 16:57:06  [ restartedMain:1012627 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:57:26  [ Thread-125:1032168 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2934e019: startup date [Sat Aug 25 16:57:06 CST 2018]; root of context hierarchy
+2018-08-25 16:57:26  [ Thread-125:1032169 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:57:26  [ Thread-125:1032169 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:57:26  [ Thread-125:1032169 ] - [ INFO ]  {dataSource-21} closed
+2018-08-25 16:57:26  [ restartedMain:1032607 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:57:26  [ restartedMain:1032607 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:57:26  [ restartedMain:1032609 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25751363: startup date [Sat Aug 25 16:57:26 CST 2018]; root of context hierarchy
+2018-08-25 16:57:26  [ restartedMain:1032939 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:57:26  [ localhost-startStop-1:1032958 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 349 ms
+2018-08-25 16:57:26  [ localhost-startStop-1:1032971 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032971 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032971 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032971 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032972 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032972 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:57:26  [ localhost-startStop-1:1032972 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:57:26  [ restartedMain:1032994 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:57:27  [ restartedMain:1033013 ] - [ INFO ]  {dataSource-22} inited
+2018-08-25 16:57:27  [ restartedMain:1033038 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:27  [ restartedMain:1033056 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25751363: startup date [Sat Aug 25 16:57:26 CST 2018]; root of context hierarchy
+2018-08-25 16:57:27  [ restartedMain:1033062 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:57:27  [ restartedMain:1033062 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:57:27  [ restartedMain:1033063 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:57:27  [ restartedMain:1033063 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:57:27  [ restartedMain:1033069 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:27  [ restartedMain:1033069 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:27  [ restartedMain:1033078 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:57:27  [ restartedMain:1033088 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:57:27  [ restartedMain:1033119 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:57:27  [ restartedMain:1033126 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:57:27  [ restartedMain:1033127 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:57:27  [ restartedMain:1033127 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:57:27  [ restartedMain:1033129 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:57:27  [ restartedMain:1033129 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:57:27  [ restartedMain:1033135 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:57:27  [ restartedMain:1033136 ] - [ INFO ]  Started RumoApplication in 0.56 seconds (JVM running for 1033.954)
+2018-08-25 16:57:27  [ restartedMain:1033137 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:57:32  [ Thread-131:1038588 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25751363: startup date [Sat Aug 25 16:57:26 CST 2018]; root of context hierarchy
+2018-08-25 16:57:32  [ Thread-131:1038590 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:57:32  [ Thread-131:1038590 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:57:32  [ Thread-131:1038591 ] - [ INFO ]  {dataSource-22} closed
+2018-08-25 16:57:33  [ restartedMain:1039168 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:57:33  [ restartedMain:1039168 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:57:33  [ restartedMain:1039171 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@699cec56: startup date [Sat Aug 25 16:57:33 CST 2018]; root of context hierarchy
+2018-08-25 16:57:33  [ restartedMain:1039613 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:57:33  [ localhost-startStop-1:1039648 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 477 ms
+2018-08-25 16:57:33  [ localhost-startStop-1:1039659 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039659 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039659 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039660 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039660 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039660 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:57:33  [ localhost-startStop-1:1039660 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:57:33  [ restartedMain:1039702 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:57:33  [ restartedMain:1039751 ] - [ INFO ]  {dataSource-23} inited
+2018-08-25 16:57:33  [ restartedMain:1039821 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:33  [ restartedMain:1039860 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@699cec56: startup date [Sat Aug 25 16:57:33 CST 2018]; root of context hierarchy
+2018-08-25 16:57:33  [ restartedMain:1039865 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:57:33  [ restartedMain:1039866 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:57:33  [ restartedMain:1039867 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:57:33  [ restartedMain:1039867 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:57:33  [ restartedMain:1039872 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:33  [ restartedMain:1039872 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:57:33  [ restartedMain:1039894 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:57:33  [ restartedMain:1039903 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:57:33  [ restartedMain:1039959 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:57:33  [ restartedMain:1039972 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:57:33  [ restartedMain:1039972 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:57:33  [ restartedMain:1039972 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:57:33  [ restartedMain:1039975 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:57:33  [ restartedMain:1039975 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:57:33  [ restartedMain:1039985 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:57:33  [ restartedMain:1039986 ] - [ INFO ]  Started RumoApplication in 0.847 seconds (JVM running for 1040.804)
+2018-08-25 16:57:33  [ restartedMain:1039990 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:59:05  [ Thread-137:1131476 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@699cec56: startup date [Sat Aug 25 16:57:33 CST 2018]; root of context hierarchy
+2018-08-25 16:59:05  [ Thread-137:1131477 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:59:05  [ Thread-137:1131477 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:59:05  [ Thread-137:1131478 ] - [ INFO ]  {dataSource-23} closed
+2018-08-25 16:59:06  [ restartedMain:1132364 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:59:06  [ restartedMain:1132364 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:59:06  [ restartedMain:1132366 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@631b015b: startup date [Sat Aug 25 16:59:06 CST 2018]; root of context hierarchy
+2018-08-25 16:59:06  [ restartedMain:1132797 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:59:06  [ localhost-startStop-1:1132861 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 495 ms
+2018-08-25 16:59:06  [ localhost-startStop-1:1132875 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132875 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132876 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132876 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132876 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132876 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:59:06  [ localhost-startStop-1:1132877 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:59:06  [ restartedMain:1132929 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:59:06  [ restartedMain:1132963 ] - [ INFO ]  {dataSource-24} inited
+2018-08-25 16:59:07  [ restartedMain:1133009 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:07  [ restartedMain:1133063 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@631b015b: startup date [Sat Aug 25 16:59:06 CST 2018]; root of context hierarchy
+2018-08-25 16:59:07  [ restartedMain:1133070 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:59:07  [ restartedMain:1133070 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:59:07  [ restartedMain:1133072 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:59:07  [ restartedMain:1133075 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:59:07  [ restartedMain:1133084 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:07  [ restartedMain:1133084 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:07  [ restartedMain:1133100 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:59:07  [ restartedMain:1133108 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:59:07  [ restartedMain:1133152 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:59:07  [ restartedMain:1133163 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:59:07  [ restartedMain:1133163 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:59:07  [ restartedMain:1133163 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:59:07  [ restartedMain:1133164 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:59:07  [ restartedMain:1133164 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:59:07  [ restartedMain:1133170 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:59:07  [ restartedMain:1133171 ] - [ INFO ]  Started RumoApplication in 0.832 seconds (JVM running for 1133.99)
+2018-08-25 16:59:07  [ restartedMain:1133172 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:59:27  [ Thread-143:1153773 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@631b015b: startup date [Sat Aug 25 16:59:06 CST 2018]; root of context hierarchy
+2018-08-25 16:59:27  [ Thread-143:1153774 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:59:27  [ Thread-143:1153774 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:59:27  [ Thread-143:1153774 ] - [ INFO ]  {dataSource-24} closed
+2018-08-25 16:59:28  [ restartedMain:1154249 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:59:28  [ restartedMain:1154249 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:59:28  [ restartedMain:1154252 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5762a2d: startup date [Sat Aug 25 16:59:28 CST 2018]; root of context hierarchy
+2018-08-25 16:59:28  [ restartedMain:1154609 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:59:28  [ localhost-startStop-1:1154641 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 389 ms
+2018-08-25 16:59:28  [ localhost-startStop-1:1154667 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154667 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154668 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154668 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154669 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154669 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:59:28  [ localhost-startStop-1:1154669 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:59:28  [ restartedMain:1154728 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:59:28  [ restartedMain:1154769 ] - [ INFO ]  {dataSource-25} inited
+2018-08-25 16:59:28  [ restartedMain:1154821 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:28  [ restartedMain:1154873 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5762a2d: startup date [Sat Aug 25 16:59:28 CST 2018]; root of context hierarchy
+2018-08-25 16:59:28  [ restartedMain:1154901 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:59:28  [ restartedMain:1154901 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:59:28  [ restartedMain:1154903 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:59:28  [ restartedMain:1154903 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:59:28  [ restartedMain:1154909 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:28  [ restartedMain:1154910 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:29  [ restartedMain:1155001 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:59:29  [ restartedMain:1155010 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:59:29  [ restartedMain:1155069 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:59:29  [ restartedMain:1155087 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:59:29  [ restartedMain:1155087 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:59:29  [ restartedMain:1155088 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:59:29  [ restartedMain:1155090 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:59:29  [ restartedMain:1155095 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:59:29  [ restartedMain:1155106 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:59:29  [ restartedMain:1155107 ] - [ INFO ]  Started RumoApplication in 0.894 seconds (JVM running for 1155.925)
+2018-08-25 16:59:29  [ restartedMain:1155110 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 16:59:49  [ Thread-149:1175669 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5762a2d: startup date [Sat Aug 25 16:59:28 CST 2018]; root of context hierarchy
+2018-08-25 16:59:49  [ Thread-149:1175670 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 16:59:49  [ Thread-149:1175670 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 16:59:49  [ Thread-149:1175670 ] - [ INFO ]  {dataSource-25} closed
+2018-08-25 16:59:50  [ restartedMain:1176147 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 16:59:50  [ restartedMain:1176148 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 16:59:50  [ restartedMain:1176149 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d745a69: startup date [Sat Aug 25 16:59:50 CST 2018]; root of context hierarchy
+2018-08-25 16:59:50  [ restartedMain:1176474 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 16:59:50  [ localhost-startStop-1:1176501 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 352 ms
+2018-08-25 16:59:50  [ localhost-startStop-1:1176516 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176516 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176517 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176517 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176517 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176517 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 16:59:50  [ localhost-startStop-1:1176517 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 16:59:50  [ restartedMain:1176536 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 16:59:50  [ restartedMain:1176554 ] - [ INFO ]  {dataSource-26} inited
+2018-08-25 16:59:50  [ restartedMain:1176580 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:50  [ restartedMain:1176639 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d745a69: startup date [Sat Aug 25 16:59:50 CST 2018]; root of context hierarchy
+2018-08-25 16:59:50  [ restartedMain:1176644 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 16:59:50  [ restartedMain:1176645 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 16:59:50  [ restartedMain:1176646 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 16:59:50  [ restartedMain:1176646 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 16:59:50  [ restartedMain:1176652 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:50  [ restartedMain:1176652 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 16:59:50  [ restartedMain:1176666 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 16:59:50  [ restartedMain:1176673 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 16:59:50  [ restartedMain:1176708 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 16:59:50  [ restartedMain:1176730 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 16:59:50  [ restartedMain:1176731 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 16:59:50  [ restartedMain:1176731 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 16:59:50  [ restartedMain:1176732 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 16:59:50  [ restartedMain:1176733 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 16:59:50  [ restartedMain:1176743 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 16:59:50  [ restartedMain:1176744 ] - [ INFO ]  Started RumoApplication in 0.621 seconds (JVM running for 1177.562)
+2018-08-25 16:59:50  [ restartedMain:1176747 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:00:50  [ Thread-155:1236452 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d745a69: startup date [Sat Aug 25 16:59:50 CST 2018]; root of context hierarchy
+2018-08-25 17:00:50  [ Thread-155:1236459 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:00:50  [ Thread-155:1236460 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:00:50  [ Thread-155:1236461 ] - [ INFO ]  {dataSource-26} closed
+2018-08-25 17:00:51  [ restartedMain:1237125 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:00:51  [ restartedMain:1237125 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:00:51  [ restartedMain:1237128 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d65e053: startup date [Sat Aug 25 17:00:51 CST 2018]; root of context hierarchy
+2018-08-25 17:00:51  [ restartedMain:1237532 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:00:51  [ localhost-startStop-1:1237560 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 432 ms
+2018-08-25 17:00:51  [ localhost-startStop-1:1237568 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:00:51  [ localhost-startStop-1:1237569 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:00:51  [ restartedMain:1237585 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:00:51  [ restartedMain:1237599 ] - [ INFO ]  {dataSource-27} inited
+2018-08-25 17:00:51  [ restartedMain:1237624 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:00:51  [ restartedMain:1237658 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d65e053: startup date [Sat Aug 25 17:00:51 CST 2018]; root of context hierarchy
+2018-08-25 17:00:51  [ restartedMain:1237666 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:00:51  [ restartedMain:1237666 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:00:51  [ restartedMain:1237669 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:00:51  [ restartedMain:1237669 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:00:51  [ restartedMain:1237674 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:00:51  [ restartedMain:1237675 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:00:51  [ restartedMain:1237684 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:00:51  [ restartedMain:1237689 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:00:51  [ restartedMain:1237719 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:00:51  [ restartedMain:1237735 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:00:51  [ restartedMain:1237736 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:00:51  [ restartedMain:1237736 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:00:51  [ restartedMain:1237738 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:00:51  [ restartedMain:1237738 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:00:51  [ restartedMain:1237744 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:00:51  [ restartedMain:1237744 ] - [ INFO ]  Started RumoApplication in 0.665 seconds (JVM running for 1238.563)
+2018-08-25 17:00:51  [ restartedMain:1237746 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:01:16  [ Thread-161:1262431 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d65e053: startup date [Sat Aug 25 17:00:51 CST 2018]; root of context hierarchy
+2018-08-25 17:01:16  [ Thread-161:1262435 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:01:16  [ Thread-161:1262435 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:01:16  [ Thread-161:1262436 ] - [ INFO ]  {dataSource-27} closed
+2018-08-25 17:01:17  [ restartedMain:1263512 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:01:17  [ restartedMain:1263512 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:01:17  [ restartedMain:1263514 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a57846: startup date [Sat Aug 25 17:01:17 CST 2018]; root of context hierarchy
+2018-08-25 17:01:18  [ restartedMain:1264294 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:01:18  [ localhost-startStop-1:1264339 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 825 ms
+2018-08-25 17:01:18  [ localhost-startStop-1:1264357 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264358 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264358 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264359 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264359 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264359 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:01:18  [ localhost-startStop-1:1264359 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:01:18  [ restartedMain:1264378 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:01:18  [ restartedMain:1264416 ] - [ INFO ]  {dataSource-28} inited
+2018-08-25 17:01:18  [ restartedMain:1264442 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:18  [ restartedMain:1264498 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a57846: startup date [Sat Aug 25 17:01:17 CST 2018]; root of context hierarchy
+2018-08-25 17:01:18  [ restartedMain:1264503 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:01:18  [ restartedMain:1264504 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:01:18  [ restartedMain:1264505 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:01:18  [ restartedMain:1264506 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:01:18  [ restartedMain:1264515 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:18  [ restartedMain:1264516 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:18  [ restartedMain:1264530 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:01:18  [ restartedMain:1264538 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:01:18  [ restartedMain:1264602 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:01:18  [ restartedMain:1264622 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:01:18  [ restartedMain:1264623 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:01:18  [ restartedMain:1264623 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:01:18  [ restartedMain:1264625 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:01:18  [ restartedMain:1264626 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:01:18  [ restartedMain:1264648 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:01:18  [ restartedMain:1264650 ] - [ INFO ]  Started RumoApplication in 1.172 seconds (JVM running for 1265.468)
+2018-08-25 17:01:18  [ restartedMain:1264652 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:01:23  [ Thread-167:1269052 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27a57846: startup date [Sat Aug 25 17:01:17 CST 2018]; root of context hierarchy
+2018-08-25 17:01:23  [ Thread-167:1269053 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:01:23  [ Thread-167:1269054 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:01:23  [ Thread-167:1269054 ] - [ INFO ]  {dataSource-28} closed
+2018-08-25 17:01:23  [ restartedMain:1269672 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:01:23  [ restartedMain:1269673 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:01:23  [ restartedMain:1269675 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@304562ed: startup date [Sat Aug 25 17:01:23 CST 2018]; root of context hierarchy
+2018-08-25 17:01:24  [ restartedMain:1270158 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:01:24  [ localhost-startStop-1:1270187 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 512 ms
+2018-08-25 17:01:24  [ localhost-startStop-1:1270199 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270199 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270199 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270200 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270200 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270200 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:01:24  [ localhost-startStop-1:1270200 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:01:24  [ restartedMain:1270266 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:01:24  [ restartedMain:1270393 ] - [ INFO ]  {dataSource-29} inited
+2018-08-25 17:01:24  [ restartedMain:1270463 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:24  [ restartedMain:1270507 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@304562ed: startup date [Sat Aug 25 17:01:23 CST 2018]; root of context hierarchy
+2018-08-25 17:01:24  [ restartedMain:1270512 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:01:24  [ restartedMain:1270512 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:01:24  [ restartedMain:1270514 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:01:24  [ restartedMain:1270514 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:01:24  [ restartedMain:1270523 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:24  [ restartedMain:1270524 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:01:24  [ restartedMain:1270549 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:01:24  [ restartedMain:1270559 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:01:24  [ restartedMain:1270592 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:01:24  [ restartedMain:1270604 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:01:24  [ restartedMain:1270604 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:01:24  [ restartedMain:1270605 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:01:24  [ restartedMain:1270607 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:01:24  [ restartedMain:1270608 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:01:24  [ restartedMain:1270616 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:01:24  [ restartedMain:1270616 ] - [ INFO ]  Started RumoApplication in 0.976 seconds (JVM running for 1271.435)
+2018-08-25 17:01:24  [ restartedMain:1270618 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:03:01  [ Thread-173:1366997 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@304562ed: startup date [Sat Aug 25 17:01:23 CST 2018]; root of context hierarchy
+2018-08-25 17:03:01  [ Thread-173:1366998 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:03:01  [ Thread-173:1366998 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:03:01  [ Thread-173:1366999 ] - [ INFO ]  {dataSource-29} closed
+2018-08-25 17:03:01  [ restartedMain:1367519 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 24504 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:03:01  [ restartedMain:1367519 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:03:01  [ restartedMain:1367521 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6336cbfd: startup date [Sat Aug 25 17:03:01 CST 2018]; root of context hierarchy
+2018-08-25 17:03:01  [ restartedMain:1367909 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:03:01  [ localhost-startStop-1:1367936 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 415 ms
+2018-08-25 17:03:01  [ localhost-startStop-1:1367976 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367977 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367977 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367977 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367980 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367980 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:03:01  [ localhost-startStop-1:1367982 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:03:02  [ restartedMain:1368023 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:03:02  [ restartedMain:1368045 ] - [ INFO ]  {dataSource-30} inited
+2018-08-25 17:03:02  [ restartedMain:1368078 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:03:02  [ restartedMain:1368103 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6336cbfd: startup date [Sat Aug 25 17:03:01 CST 2018]; root of context hierarchy
+2018-08-25 17:03:02  [ restartedMain:1368109 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:03:02  [ restartedMain:1368109 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public java.util.List<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:03:02  [ restartedMain:1368110 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:03:02  [ restartedMain:1368111 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:03:02  [ restartedMain:1368120 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:03:02  [ restartedMain:1368120 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:03:02  [ restartedMain:1368145 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:03:02  [ restartedMain:1368160 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:03:02  [ restartedMain:1368198 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:03:02  [ restartedMain:1368217 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:03:02  [ restartedMain:1368218 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:03:02  [ restartedMain:1368218 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:03:02  [ restartedMain:1368221 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:03:02  [ restartedMain:1368222 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:03:02  [ restartedMain:1368238 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:03:02  [ restartedMain:1368239 ] - [ INFO ]  Started RumoApplication in 0.756 seconds (JVM running for 1369.057)
+2018-08-25 17:03:02  [ restartedMain:1368241 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:57:16  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 6.0.11.Final
+2018-08-25 17:57:17  [ restartedMain:233 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 20280 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:57:17  [ restartedMain:234 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:57:17  [ restartedMain:323 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 17:57:17 CST 2018]; root of context hierarchy
+2018-08-25 17:57:19  [ restartedMain:2967 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:57:20  [ localhost-startStop-1:3255 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 2934 ms
+2018-08-25 17:57:20  [ localhost-startStop-1:3653 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:57:20  [ localhost-startStop-1:3655 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:57:20  [ localhost-startStop-1:3666 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:57:20  [ localhost-startStop-1:3667 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:57:20  [ localhost-startStop-1:3668 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:57:20  [ localhost-startStop-1:3668 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:57:20  [ localhost-startStop-1:3669 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:57:20  [ restartedMain:3871 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:57:21  [ restartedMain:4384 ] - [ INFO ]  {dataSource-1} inited
+2018-08-25 17:57:21  [ restartedMain:4600 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:57:21  [ restartedMain:4842 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 17:57:17 CST 2018]; root of context hierarchy
+2018-08-25 17:57:21  [ restartedMain:4961 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:57:21  [ restartedMain:4967 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:57:21  [ restartedMain:4973 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:57:21  [ restartedMain:4974 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:57:21  [ restartedMain:5059 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:57:21  [ restartedMain:5059 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:57:22  [ restartedMain:5175 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:57:22  [ restartedMain:5283 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:57:22  [ restartedMain:5635 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:57:22  [ restartedMain:5677 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:57:22  [ restartedMain:5679 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:57:22  [ restartedMain:5679 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:57:22  [ restartedMain:5685 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:57:22  [ restartedMain:5686 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:57:22  [ restartedMain:5737 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:57:22  [ restartedMain:5741 ] - [ INFO ]  Started RumoApplication in 6.008 seconds (JVM running for 6.698)
+2018-08-25 17:57:59  [ http-nio-8080-exec-1:42959 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-25 17:57:59  [ http-nio-8080-exec-1:42995 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2018-08-25 17:58:34  [ Thread-6:77546 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@512bc60c: startup date [Sat Aug 25 17:57:17 CST 2018]; root of context hierarchy
+2018-08-25 17:58:34  [ Thread-6:77548 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:58:34  [ Thread-6:77549 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:58:34  [ Thread-6:77550 ] - [ INFO ]  {dataSource-1} closed
+2018-08-25 17:58:34  [ restartedMain:78045 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 20280 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:58:34  [ restartedMain:78046 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:58:34  [ restartedMain:78051 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77308789: startup date [Sat Aug 25 17:58:34 CST 2018]; root of context hierarchy
+2018-08-25 17:58:35  [ restartedMain:78785 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:58:35  [ localhost-startStop-1:78834 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 784 ms
+2018-08-25 17:58:35  [ localhost-startStop-1:78868 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:58:35  [ localhost-startStop-1:78869 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:58:35  [ localhost-startStop-1:78874 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:58:35  [ localhost-startStop-1:78874 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:58:35  [ localhost-startStop-1:78875 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:58:35  [ localhost-startStop-1:78875 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:58:35  [ localhost-startStop-1:78875 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:58:35  [ restartedMain:78953 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:58:35  [ restartedMain:79020 ] - [ INFO ]  {dataSource-2} inited
+2018-08-25 17:58:35  [ restartedMain:79073 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:58:35  [ restartedMain:79149 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77308789: startup date [Sat Aug 25 17:58:34 CST 2018]; root of context hierarchy
+2018-08-25 17:58:36  [ restartedMain:79167 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:58:36  [ restartedMain:79168 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:58:36  [ restartedMain:79176 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:58:36  [ restartedMain:79179 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:58:36  [ restartedMain:79188 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:58:36  [ restartedMain:79189 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:58:36  [ restartedMain:79212 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:58:36  [ restartedMain:79231 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:58:36  [ restartedMain:79315 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:58:36  [ restartedMain:79347 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:58:36  [ restartedMain:79348 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:58:36  [ restartedMain:79349 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:58:36  [ restartedMain:79354 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:58:36  [ restartedMain:79355 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:58:36  [ restartedMain:79382 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:58:36  [ restartedMain:79384 ] - [ INFO ]  Started RumoApplication in 1.38 seconds (JVM running for 80.341)
+2018-08-25 17:58:36  [ restartedMain:79387 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:58:41  [ http-nio-8080-exec-9:84686 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-25 17:58:41  [ http-nio-8080-exec-9:84690 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2018-08-25 17:59:17  [ Thread-10:120454 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77308789: startup date [Sat Aug 25 17:58:34 CST 2018]; root of context hierarchy
+2018-08-25 17:59:17  [ Thread-10:120464 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:59:17  [ Thread-10:120464 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:59:17  [ Thread-10:120469 ] - [ INFO ]  {dataSource-2} closed
+2018-08-25 17:59:17  [ restartedMain:120987 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 20280 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:59:17  [ restartedMain:120987 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:59:17  [ restartedMain:120990 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18661588: startup date [Sat Aug 25 17:59:17 CST 2018]; root of context hierarchy
+2018-08-25 17:59:18  [ restartedMain:121554 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:59:18  [ localhost-startStop-1:121595 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 605 ms
+2018-08-25 17:59:18  [ localhost-startStop-1:121613 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:59:18  [ localhost-startStop-1:121614 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:59:18  [ localhost-startStop-1:121615 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:59:18  [ localhost-startStop-1:121615 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:59:18  [ localhost-startStop-1:121619 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:59:18  [ localhost-startStop-1:121619 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:59:18  [ localhost-startStop-1:121619 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:59:18  [ restartedMain:121649 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:59:18  [ restartedMain:121687 ] - [ INFO ]  {dataSource-3} inited
+2018-08-25 17:59:18  [ restartedMain:121720 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:18  [ restartedMain:121770 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18661588: startup date [Sat Aug 25 17:59:17 CST 2018]; root of context hierarchy
+2018-08-25 17:59:18  [ restartedMain:121777 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:59:18  [ restartedMain:121778 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:59:18  [ restartedMain:121779 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:59:18  [ restartedMain:121780 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:59:18  [ restartedMain:121790 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:18  [ restartedMain:121790 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:18  [ restartedMain:121813 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:59:18  [ restartedMain:121826 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:59:18  [ restartedMain:121877 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:59:18  [ restartedMain:121904 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:59:18  [ restartedMain:121905 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:59:18  [ restartedMain:121906 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:59:18  [ restartedMain:121910 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:59:18  [ restartedMain:121912 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:59:18  [ restartedMain:121930 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:59:18  [ restartedMain:121935 ] - [ INFO ]  Started RumoApplication in 0.984 seconds (JVM running for 122.893)
+2018-08-25 17:59:18  [ restartedMain:121940 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:59:23  [ Thread-16:126321 ] - [ INFO ]  Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18661588: startup date [Sat Aug 25 17:59:17 CST 2018]; root of context hierarchy
+2018-08-25 17:59:23  [ Thread-16:126322 ] - [ INFO ]  Unregistering JMX-exposed beans on shutdown
+2018-08-25 17:59:23  [ Thread-16:126322 ] - [ INFO ]  Unregistering JMX-exposed beans
+2018-08-25 17:59:23  [ Thread-16:126323 ] - [ INFO ]  {dataSource-3} closed
+2018-08-25 17:59:23  [ restartedMain:126837 ] - [ INFO ]  Starting RumoApplication on DESKTOP-ETO6QNU with PID 20280 (D:\projects\rumo-springboot-mybatis\target\classes started by mengk in D:\projects\rumo-springboot-mybatis)
+2018-08-25 17:59:23  [ restartedMain:126837 ] - [ INFO ]  The following profiles are active: dev
+2018-08-25 17:59:23  [ restartedMain:126840 ] - [ INFO ]  Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ac369dd: startup date [Sat Aug 25 17:59:23 CST 2018]; root of context hierarchy
+2018-08-25 17:59:24  [ restartedMain:127352 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2018-08-25 17:59:24  [ localhost-startStop-1:127460 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 620 ms
+2018-08-25 17:59:24  [ localhost-startStop-1:127478 ] - [ INFO ]  Servlet dispatcherServlet mapped to [/]
+2018-08-25 17:59:24  [ localhost-startStop-1:127478 ] - [ INFO ]  Servlet statViewServlet mapped to [/druid/*]
+2018-08-25 17:59:24  [ localhost-startStop-1:127479 ] - [ INFO ]  Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-25 17:59:24  [ localhost-startStop-1:127479 ] - [ INFO ]  Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-25 17:59:24  [ localhost-startStop-1:127479 ] - [ INFO ]  Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-25 17:59:24  [ localhost-startStop-1:127479 ] - [ INFO ]  Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-25 17:59:24  [ localhost-startStop-1:127480 ] - [ INFO ]  Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-25 17:59:24  [ restartedMain:127507 ] - [ INFO ]  Init DruidDataSource
+2018-08-25 17:59:24  [ restartedMain:127533 ] - [ INFO ]  {dataSource-4} inited
+2018-08-25 17:59:24  [ restartedMain:127780 ] - [ INFO ]  Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:24  [ restartedMain:127808 ] - [ INFO ]  Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ac369dd: startup date [Sat Aug 25 17:59:23 CST 2018]; root of context hierarchy
+2018-08-25 17:59:24  [ restartedMain:127814 ] - [ INFO ]  Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.rumo.controller.IndexController.index(org.springframework.ui.Model)
+2018-08-25 17:59:24  [ restartedMain:127814 ] - [ INFO ]  Mapped "{[/findUsers],methods=[GET]}" onto public com.github.pagehelper.PageInfo<com.rumo.pojo.User> com.rumo.controller.IndexController.findUsers()
+2018-08-25 17:59:24  [ restartedMain:127816 ] - [ INFO ]  Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-25 17:59:24  [ restartedMain:127816 ] - [ INFO ]  Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-25 17:59:24  [ restartedMain:127824 ] - [ INFO ]  Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:24  [ restartedMain:127825 ] - [ INFO ]  Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-25 17:59:24  [ restartedMain:127853 ] - [ WARN ]  [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-08-25 17:59:24  [ restartedMain:127862 ] - [ INFO ]  Adding welcome page template: index
+2018-08-25 17:59:24  [ restartedMain:127922 ] - [ INFO ]  LiveReload server is running on port 35729
+2018-08-25 17:59:24  [ restartedMain:127941 ] - [ INFO ]  Registering beans for JMX exposure on startup
+2018-08-25 17:59:24  [ restartedMain:127942 ] - [ INFO ]  Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-25 17:59:24  [ restartedMain:127942 ] - [ INFO ]  Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-25 17:59:24  [ restartedMain:127946 ] - [ INFO ]  Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-25 17:59:24  [ restartedMain:127946 ] - [ INFO ]  Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-25 17:59:24  [ restartedMain:127964 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2018-08-25 17:59:24  [ restartedMain:127966 ] - [ INFO ]  Started RumoApplication in 1.161 seconds (JVM running for 128.923)
+2018-08-25 17:59:24  [ restartedMain:127970 ] - [ INFO ]  Condition evaluation unchanged
+2018-08-25 17:59:33  [ http-nio-8080-exec-10:136256 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-25 17:59:33  [ http-nio-8080-exec-10:136258 ] - [ INFO ]  FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms
