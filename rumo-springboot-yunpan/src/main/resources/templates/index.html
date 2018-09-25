@@ -1,0 +1,111 @@
+<html class=" portrait">
+<head>
+	<title>编辑版式文档 - 后台管理系统</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="yes">
+	<meta name="description" content="webkit">
+	<!-- 头部文件引入 -->
+	<#include "common/header.html"/>
+</head>
+
+<body class="body_rtvBbY" style="">
+
+	<div class="modalc c-modalc c-dialog-0 ">
+		<div class="modal-dialogc c-modal-dialogc">
+			<div class="modal-content c-modal-content dialogcontent_pC0sg7">
+				<div class="modal-header clearfix c-modal-header dialogheader_guro2S">
+					<button class="close dialog-close c-defaultbutton defaultbutton_DMkY9l" data-dismiss="modal" type="button">
+    <span aria-hidden="True" class="c-span span_5O7o7I">
+     ×
+    </span>
+    <span class="sr-only c-span span_bsM657">
+     close
+    </span>
+			</button>
+					<i class="fa fa-folder c-icon icon_nEE5pK">
+			</i>
+					<h5 class="modal-title c-heading heading_Ih3tuY">
+				濡沫资源文件
+			</h5>
+					<div class="c-div div_FUZxHq">
+						<input class="foucs_bordercolor search_container c-input input_uyB3Y9" name="input1" placeholder="输入关键词搜索" type="text">
+						<a draggable="false" class="c-linkblock linkblock_1CIdBB" href="#">
+							<i class="fa fa-search c-icon icon_QQEuqK">
+					</i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body c-modal-body dialogbody_fNEjzK" id="dragbox">
+					<div class="c-tabs tabs_8PNFAj">
+						<ul class="nav nav-tabs c-tabmenu tabmenu_6qD4ET" role="tablist">
+							<li checked="False" class="common-resource c-tablink tablink_AfhUsh" data-c-tab="tab1">
+								<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_5eaa4f464e1f2121" role="tab">
+									公共素材库
+								</a>
+							</li>
+							<li checked="True" class="my-resource c-tablink tablink_Mnx2gg" data-c-tab="tab2">
+								<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_57acbd05ae44ad38" role="tab">
+									操作目录：<span id="foldername"></span>
+								</a>
+							</li>
+							<li checked="True" class="my-resource c-tablink tablink_Mnx2gg active" data-c-tab="tab2">
+								<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_57acbd05ae44ad38" role="tab">
+									我的上传
+								</a>
+							</li>
+							<li checked="False" class="fav-resource c-tablink tablink_NcjKiY">
+								<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_708ca4d7bd589929" role="tab">
+									收 藏
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content c-tabcontent tabcontent_eIa37K">
+							
+							<div class="tab-pane c-tabpane tabpane_6rChnK active" data-c-tab="tab2" id="tab_57acbd05ae44ad38">
+								<div class="no-wrap c-div div_tENlk2">
+									<div class="cs-tree-container _other_HMmrDF" cs-widget="tree">
+										<ul id="treeDemo" class="ztree cs-tree-list left_my_container _other_ekglAt">
+										</ul>
+									</div>
+								</div>
+								<div class="c-div div_JHPMpY">
+									<div class="right_my_container c-div div_list">
+										<div class="clearfix c-div div_3xmktN">
+											<div class="action-upload c-div div_tD5EZz">
+												<a draggable="false" class="c-linkblock linkblock_oYrGhA" href="#">
+													<!-- upload 上传组件 -->
+													<span id="filePicker"></span>
+													<!-- upload 上传组件 end -->
+												</a>
+												<!-- 文件存放的位置 -->
+												<div id="fileList"></div>
+											</div>
+											<div class="c-div div_4bJ8M8">
+											</div>
+										</div>
+										<!-- 文件存储的容器 -->
+										<div id="resourcebox">
+										</div>
+									</div>
+								</div>
+								<div class="c-div div_gtdLB2">
+									<div id="page" class="my_page_container c-div div_DSiru9">
+										
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 引入js模板 -->	
+	<#include "common/footer.html"/>
+	<#include "common/page-js.html"/>
+	<#include "common/upload-js.html"/>
+	<#include "common/ztree-js.html"/>
+	<script type="text/javascript" src="js/admin/upload.js"></script>
+</body></html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rumo.mapper.RoleUserMapper" >
+  
+  
+  <select id="findRoles" parameterType="int" resultType="com.rumo.pojo.Role">
+	  	SELECT
+			ro.id,
+			ro.name,
+			ro.status,
+			ro.type
+		FROM
+			rumo_role ro,
+			(
+				SELECT
+					*
+				FROM
+					rumo_role_user
+				WHERE
+					user_id = #{uid}
+			) c
+		WHERE
+			ro.id = c.role_id
+  </select>
+  
+  
+</mapper>

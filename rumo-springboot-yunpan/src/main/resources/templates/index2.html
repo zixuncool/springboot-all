@@ -1,0 +1,1102 @@
+<html class=" portrait"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>编辑版式文档 - 后台管理系统</title>
+		<meta name="renderer" content="webkit">
+		<link rel="shortcut icon" href="//v2static.epub360.com/epub360.ico">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="renderer" content="webkit">
+
+		<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" media="all">
+		<link type="text/css" href="css/font-awesome.min.css" rel="stylesheet" media="all">
+		<link type="text/css" href="css/packpro.built.d7a4735d.cache.css" rel="stylesheet" media="all">
+
+		<link type="text/css" href="css/styles.0d6480a0.cache.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+		<style>
+			#moveSelected {
+				position: absolute;
+				background-color: blue;
+				opacity: 0.3;
+				border: 1px dashed #d9d9d9;
+				top: 0;
+				left: 0;
+			}
+			
+			.selected {
+				background-color: #ccc;
+			}
+		</style>
+		
+	</head>
+
+	<body class="body_rtvBbY" style="">
+
+		<div class="modalc c-modalc c-dialog-0 ">
+			<div class="modal-dialogc c-modal-dialogc">
+				<div class="modal-content c-modal-content dialogcontent_pC0sg7">
+					<div class="modal-header clearfix c-modal-header dialogheader_guro2S">
+						<button class="close dialog-close c-defaultbutton defaultbutton_DMkY9l" data-dismiss="modal" type="button">
+     <span aria-hidden="True" class="c-span span_5O7o7I">
+      ×
+     </span>
+     <span class="sr-only c-span span_bsM657">
+      close
+     </span>
+				</button>
+						<i class="fa fa-folder c-icon icon_nEE5pK">
+				</i>
+						<h5 class="modal-title c-heading heading_Ih3tuY">
+					素材库
+				</h5>
+						<div class="c-div div_xKMnVC">
+							<a draggable="false" class="btn_darkgrey action-upload c-linkblock linkblock_aSk5Ul" href="#">
+								<i class="fa fa-upload c-icon icon_Eq61mX">
+						</i>
+								<p class="paragraph_ZX8yBG">
+									上传素材
+								</p>
+							</a>
+							
+							
+						</div>
+						<div class="c-div div_FUZxHq">
+							<input class="foucs_bordercolor search_container c-input input_uyB3Y9" name="input1" placeholder="输入关键词搜索" type="text">
+							<a draggable="false" class="c-linkblock linkblock_1CIdBB" href="#">
+								<i class="fa fa-search c-icon icon_QQEuqK">
+						</i>
+							</a>
+						</div>
+					</div>
+					<div class="modal-body c-modal-body dialogbody_fNEjzK" id="dragbox">
+						<div class="c-tabs tabs_8PNFAj">
+							<ul class="nav nav-tabs c-tabmenu tabmenu_6qD4ET" role="tablist">
+								<li checked="False" class="common-resource c-tablink tablink_AfhUsh" data-c-tab="tab1">
+									<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_5eaa4f464e1f2121" role="tab">
+										公共素材库
+									</a>
+								</li>
+								<li checked="True" class="my-resource c-tablink tablink_Mnx2gg active" data-c-tab="tab2">
+									<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_57acbd05ae44ad38" role="tab">
+										我的上传
+									</a>
+								</li>
+								<li checked="False" class="fav-resource c-tablink tablink_NcjKiY">
+									<a draggable="false" class="c-tabtextlink tabtextlink_9OY0j2" data-toggle="tab" href="#tab_708ca4d7bd589929" role="tab">
+										收 藏
+									</a>
+								</li>
+							</ul>
+							<div class="tab-content c-tabcontent tabcontent_eIa37K">
+								
+								<div class="tab-pane c-tabpane tabpane_6rChnK active" data-c-tab="tab2" id="tab_57acbd05ae44ad38">
+									<div class="no-wrap c-div div_tENlk2">
+										<div class="cs-tree-container _other_HMmrDF" cs-widget="tree">
+											<div><input type="text" id="foldername" style="width:100px;text-align: center;"/><button id="saveFolder">新建</button></div>
+											<ul id="folderlist" class="cs-tree-list left_my_container _other_ekglAt">
+											
+											
+												
+
+												<li data-cid="1" class="selected cs-tree-item cs-list-item _other_Nf1TaD" id="all">
+													<a draggable="false" class="cs-tree-btn hitarea link_x4Gn9S">
+														<i class="fa cs-tree-arrow _other_DMUUR4">
+												</i>
+													</a>
+													<div class="c-div div_2VUNkt">
+														<a draggable="false" class="cs-tree-content link_EBxTEa active" href="#">
+															<i class="fa fa-folder c-icon icon_8D9Xxy">
+													</i>
+															<span class="cs-tree-title _other_text_qsPDvX">所有</span>
+														</a>
+														
+														
+														
+														<div class="c-div div_actionMore">
+															<div class="dropdown c-dropdown c-dropdown-hover dropdown_zJsgpo" data-c_e_id="dropdowne0cef47becb2a3be">
+																<button class="btn btn-link c-dropdown-button dropdownbutton_fqG0mZ" data-toggle="dropdown" type="button">
+               <span class="caret c-span span_L0y4Ws">
+               </span>
+														</button>
+																<ul class="dropdown-menu c-dropdown-menu c-dropdown-menu-hover dropdownmenu_Twzicr" role="menu">
+																	<li class="c-dropdown-listitem dropdownlistitem_HHxUAe" role="presentation">
+																		<a draggable="false" class="c-dropdown-textlink dropdowntextlink_12Dzgi" href="#addsub" role="menuitem" tabindex="-1">
+																			新建子分类
+																		</a>
+																	</li>
+																	<li class="c-dropdown-listitem dropdownlistitem_ChFNvZ" role="presentation">
+																		<a draggable="false" class="c-dropdown-textlink dropdowntextlink_12Dzgi" href="#rename" role="menuitem" tabindex="-1">
+																			重命名
+																		</a>
+																	</li>
+																	<li class="c-dropdown-listitem dropdownlistitem_8tcf7H" role="presentation">
+																		<a draggable="false" class="c-dropdown-textlink dropdowntextlink_12Dzgi" href="#devare" role="menuitem" tabindex="-1">
+																			删除
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</li>	
+												
+												
+												
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											</ul>
+										</div>
+									</div>
+									<div class="c-div div_JHPMpY">
+										<div class="right_my_container c-div div_list">
+											<div class="clearfix c-div div_3xmktN">
+												<div class="action-upload c-div div_tD5EZz">
+													<a draggable="false" class="c-linkblock linkblock_oYrGhA" href="#">
+														<i class="fa fa-upload c-icon icon_dnn1Ct">
+												</i>
+													</a>
+												</div>
+												<div class="c-div div_4bJ8M8">
+												</div>
+											</div>
+
+											<article class="clearfix c-div div_oSSKRH" id="11941456">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/2a59961d2b27c2deef8c7bf1a12c7fed_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941456">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">vue2_cover.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941455">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/394fdc7267969dbc404aa0286c6565f3_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941455">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=4002449980,3208468253&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941454">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/4ba79382e5bfa8f284da10f3d4f74cbf_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941454">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=3367334004,3429491263&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941453">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/928bc18b7973ca377b03b0a57a7d1785_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941453">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=3352268370,1863002806&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941452">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/origin/fcaf111d2c4013f2e8276917a31dc7f6_origin.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941452">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=1557895113,2287860818&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941451">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/b59fd68a759915414472ddaeadce5216_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941451">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=1108621089,596839547&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941450">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/cea3dac50b8584f6cd51551536959441_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941450">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">u=76189240,2645424825&amp;fm=21&amp;gp=0.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941449">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/8084b35384483e01711c24225e912357_256.png">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941449">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">QQ图片20160914192915.png</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941448">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/56a5efab234699ccdad3f203ad28f95c_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941448">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">TB1MZ9aNVXXXXaQXFXXXXXXXXXX-900-500.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941447">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/77001f85f0bd59dd07a158b387ee1708_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941447">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">FqIKLuV1cLGvi9JjQm5YIHzaHFSJ.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941445">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/0421ece76679c1a5bb809662f032c748_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941445">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">dibu.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941443">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/f549d52a22e64759b95923ab770c3cb0_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941443">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">20150331-854cfacd622f5164_600x5000.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941442">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/36ab9e2db44662f853909ce335ab6dfc_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941442">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">13342191.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941441">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/41bcb339d1d2a02de94acb82f5b21c50_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941441">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">11821455_163827473000_2.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941440">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/cf60ee213a4b30a1fbc0be1c8e22c527_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941440">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">5205857_105717105000_2.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941439">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/a7d5d57c7314fb3789658f5787be2b8e_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941439">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">234620-15101312012190.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941438">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/a8d675f80fa1259daa569cada7c00030_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941438">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">85m58PICr38.jpg</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941437">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/1d3ff72626508a5c248c3722d33dae85_256.png">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941437">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">68p58PICJTq.png</p>
+												</div>
+											</article>
+											<article class="clearfix c-div div_oSSKRH" id="11941436">
+												<div class="c-div div_QNxosG">
+													<img class="c-image image_RYUI1N" src="materials/825731/thumb/b2245897bb42d50e64b7c8a30c4ed695_256.jpg">
+													<div class="c-div div_SUNYRV" style="z-index:1;">
+														<div class="clearfix c-div div_24LNze">
+															<a draggable="false" class="action-preview c-linkblock linkblock_xLqE9S" href="#">
+																<i class="fa fa-eye c-icon icon_yMAUER">
+														</i>
+															</a>
+
+															<a draggable="false" class="action-insert c-linkblock linkblock_TT2m0J" href="#">
+																<i class="fa fa-cloud-download c-icon icon_ySGc7U">
+															</i>
+															</a>
+
+														</div>
+													</div>
+
+												</div>
+												<div class="clearfix c-div div_J0XteR">
+													<div class="checkbox c-checkbox checkbox_iiiD5P">
+														<input class="c-checkbox-input checkboxinput_tpdFrw" name="mymaterial" type="checkbox" value="11941436">
+													</div>
+													<div class="c-div div_EitPkY">
+													</div>
+													<p class="paragraph_QGvA4m">58ee3d6d55fbb2fb059b86a34a4a20a44723dccb.jpg</p>
+												</div>
+											</article>
+										</div>
+									</div>
+									<div class="c-div div_gtdLB2">
+										<div class="my_page_container c-div div_DSiru9">
+											<a draggable="false" class="c-linkblock linkblock_1KxIkO" cs-pagefirst="" href="">
+												<p class="paragraph_MTjlLf">
+													«
+													<br>
+												</p>
+											</a>
+											<a draggable="false" class="c-linkblock linkblock_vjIFN5" cs-pageprev="" href="">
+												<p class="paragraph_2xoDvM">
+													‹
+												</p>
+											</a>
+											<a draggable="false" class="c-linkblock linkblock_NCkHzc active" cs-pageitem="" href="" data-page="1">
+												<p class="paragraph_lUC0aq">1</p>
+											</a>
+											<a draggable="false" class="c-linkblock linkblock_NCkHzc" cs-pageitem="" href="" data-page="2">
+												<p class="paragraph_lUC0aq">2</p>
+											</a>
+
+											<a draggable="false" class="c-linkblock linkblock_oZtbcC" cs-pagenext="" href="">
+												<p class="paragraph_PgwfrW">
+													›
+													<br>
+												</p>
+											</a>
+											<a draggable="false" class="c-linkblock linkblock_eNgGHR" cs-pagelast="" href="">
+												<p class="paragraph_VBPdFj">
+													»
+													<br>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 鼠标拖拽出的遮罩 （定位为 position:absolute）-->
+			<!-- 遮罩最好是在绑定了mouseover事件的元素内部，并且不要阻止遮罩的冒泡事件。这样鼠标移到了遮罩上面，依然可以利用冒泡执行父元素的mouseover事件，就不会出现遮罩只能扩大，不能缩小的情况了（亲自试过） -->
+			<div id="moveSelected" style="width: 0px; height: 0px; top: 0px; left: 0px;"></div>
+			
+			
+			<script src="js/jquery.min.js"></script>
+			<!-- <script src="js/vue.js"></script>
+			<script src="js/vue-resource.js"></script> -->
+			
+			
+			
+			<script>
+				
+				
+				//目录操作
+				var rumoFolder = {
+						
+					init:function(){
+						//执行查询
+						this.find();
+						//执行其他的附属业务操作
+						this.other();
+						//保存目录
+						this.save();
+					},
+					
+					other:function(){
+						//只找到一个 所有-onclick 2
+						/* $("#folderlist").find(".cs-tree-item").on("click",function(){
+							$(this).addClass("selected").siblings().removeClass("selected");
+						}); */
+						
+						
+						//异步执行---都最后才加载
+						//js---把所有的同步方法全部执行完毕以后---在去加载异步方法(ajax/setTimeout)
+						//委托
+					 	$("#folderlist").on("click",".cs-tree-item",function(){
+							$(this).addClass("selected").siblings().removeClass("selected");
+						}); 
+						
+					},
+					
+					find:function(){
+						//设置参数
+						var params = {"rootId":1,"pageNo":0,"pageSize":10};
+						var promise = $.get("http://localhost:8080/findFolders",params);
+						
+						//如果执行成功进行此方法
+						promise.done(function(response){
+							if(response){
+								var folders = response.data.list;
+								var html = "";
+								for(var i=0;i<folders.length;i++){
+									html +="<li  data-cid='"+folders[i].id+"' class='cs-tree-item cs-list-item _other_Nf1TaD'>"+
+									"		<a draggable='false' class='cs-tree-btn hitarea link_x4Gn9S'>"+
+									"			<i class='fa cs-tree-arrow _other_DMUUR4'>"+
+									"	</i>"+
+									"		</a>"+
+									"		<div class='c-div div_2VUNkt'>"+
+									"			<a draggable='false' class='cs-tree-content link_EBxTEa active' href='#'>"+
+									"				<i class='fa fa-folder c-icon icon_8D9Xxy'>"+
+									"		</i>"+
+									"				<span class='cs-tree-title _other_text_qsPDvX'>"+folders[i].name+"</span>"+
+									"			</a>"+
+									"			<div class='c-div div_actionMore'>"+
+									"				<div class='dropdown c-dropdown c-dropdown-hover dropdown_zJsgpo' data-c_e_id='dropdowne0cef47becb2a3be'>"+
+									"					<button class='btn btn-link c-dropdown-button dropdownbutton_fqG0mZ' data-toggle='dropdown' type='button'>"+
+									"               <span class='caret c-span span_L0y4Ws'>"+
+									"               </span>"+
+									"			</button>"+
+									"					<ul class='dropdown-menu c-dropdown-menu c-dropdown-menu-hover dropdownmenu_Twzicr' role='menu'>"+
+									"						<li class='c-dropdown-listitem' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#upload' role='menuitem' tabindex='-1'>"+
+									"								上传素材"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_HHxUAe' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#addsub' role='menuitem' tabindex='-1'>"+
+									"								新建子分类"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_ChFNvZ' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#rename' role='menuitem' tabindex='-1'>"+
+									"								重命名"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_8tcf7H' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#devare' role='menuitem' tabindex='-1'>"+
+									"								删除"+
+									"							</a>"+
+									"						</li>"+
+									"					</ul>"+
+									"				</div>"+
+									"			</div>"+
+									"		</div>"+
+									"	</li>";
+								}
+								
+								//追加元素到目标folderlist
+								$("#folderlist").children().eq(0).after(html);
+								
+							}
+						});
+						
+						//如果服务器出现出错都会进入此方法
+						promise.fail(function(err){
+							console.log(err);
+						});
+						
+					},
+					
+					save:function(){
+						
+						var $this = this;
+						$("#saveFolder").on("click",function(){
+							var foldername = $("#foldername").val();
+							if(!foldername){
+								alert("请输入目录名称");
+								$("#foldername").focus()
+								return;
+							}
+							
+							var parentId = $("#folderlist").find(".selected").data("cid");
+							var promise = $.post("http://localhost:8080/saveFolder",{"name":foldername,"parentId":parentId});
+						
+							promise.done(function(response){
+								if(response.status==200){
+								
+									$("#folderlist").append("<li  data-cid='"+response.data.id+"' class='cs-tree-item cs-list-item _other_Nf1TaD'>"+
+									"		<a draggable='false' class='cs-tree-btn hitarea link_x4Gn9S'>"+
+									"			<i class='fa cs-tree-arrow _other_DMUUR4'>"+
+									"	</i>"+
+									"		</a>"+
+									"		<div class='c-div div_2VUNkt'>"+
+									"			<a draggable='false' class='cs-tree-content link_EBxTEa active' href='#'>"+
+									"				<i class='fa fa-folder c-icon icon_8D9Xxy'>"+
+									"		</i>"+
+									"				<span class='cs-tree-title _other_text_qsPDvX'>"+foldername+"</span>"+
+									"			</a>"+
+									"			<div class='c-div div_actionMore'>"+
+									"				<div class='dropdown c-dropdown c-dropdown-hover dropdown_zJsgpo' data-c_e_id='dropdowne0cef47becb2a3be'>"+
+									"					<button class='btn btn-link c-dropdown-button dropdownbutton_fqG0mZ' data-toggle='dropdown' type='button'>"+
+									"               <span class='caret c-span span_L0y4Ws'>"+
+									"               </span>"+
+									"			</button>"+
+									"					<ul class='dropdown-menu c-dropdown-menu c-dropdown-menu-hover dropdownmenu_Twzicr' role='menu'>"+
+									"						<li class='c-dropdown-listitem' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#upload' role='menuitem' tabindex='-1'>"+
+									"								上传素材"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_HHxUAe' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#addsub' role='menuitem' tabindex='-1'>"+
+									"								新建子分类"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_ChFNvZ' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#rename' role='menuitem' tabindex='-1'>"+
+									"								重命名"+
+									"							</a>"+
+									"						</li>"+
+									"						<li class='c-dropdown-listitem dropdownlistitem_8tcf7H' role='presentation'>"+
+									"							<a draggable='false' class='c-dropdown-textlink dropdowntextlink_12Dzgi' href='#devare' role='menuitem' tabindex='-1'>"+
+									"								删除"+
+									"							</a>"+
+									"						</li>"+
+									"					</ul>"+
+									"				</div>"+
+									"			</div>"+
+									"		</div>"+
+									"	</li>");
+									
+									
+									//清空，并且获取焦点
+									$("#foldername").val("").focus(); 
+									
+								}
+							});
+						});
+						
+					},
+					
+					update:function(){
+						
+					},
+					
+					del:function(){
+						
+					}
+						
+				};	
+				
+				
+				var rumoResource = {
+						
+					init:function(){
+						this.find();
+					},
+					
+					find:function(){
+						
+					},
+					
+					save:function(){
+						
+					},
+					
+					update:function(){
+						
+					},
+					
+					del:function(){
+						
+					}
+						
+				};	
+			
+			
+				$(function(){
+					//初始化目录查询
+					rumoFolder.init();
+					//初始化文件查询
+					rumoResource.init();
+				});
+			
+			</script>
+			
+			
+			<script type="text/javascript">
+			$(document).ready(function() {
+				
+				/* var moveSelected = $('#moveSelected')[0];
+				var flag = false; //是搜开启拖拽的标志
+				var oldLeft = 0; //鼠标按下时的left,top
+				var oldTop = 0;
+				var selectedList = []; //拖拽多选选中的块集合
+				
+				var $dragarea = $(document);
+				var blockList = $('.div_oSSKRH');
+				
+				$('.div_oSSKRH').on("click",function(e){
+					e.stopPropagation();
+				});
+				
+				$(".checkboxinput_tpdFrw").on("mousedown",function(e){
+					flag = $(this).prop("checked");
+					if(!$(this).prop("checked")){
+						$(this).parents(".div_oSSKRH").addClass("selected");
+					}else{
+						$(this).parents(".div_oSSKRH").removeClass("selected");
+					}
+					e.stopPropagation();
+				});
+
+				// 鼠标按下时开启拖拽多选，将遮罩定位并展现
+				$dragarea.mousedown(function(event) {
+					$(".selected").removeClass("selected").find("input[type='checkbox']").prop("checked",false);
+					flag = true;
+					moveSelected.style.top = event.pageY + 'px';
+					moveSelected.style.left = event.pageX + 'px';
+					oldLeft = event.pageX;
+					oldTop = event.pageY;
+					event.preventDefault(); // 阻止默认行为
+					event.stopPropagation(); // 阻止事件冒泡
+				});
+				
+				// 鼠标移动时计算遮罩的位置，宽 高
+				$dragarea.mousemove(function(event) {
+					if(!flag) return; //只有开启了拖拽，才进行mouseover操作
+					if(event.pageX < oldLeft) { //向左拖
+						moveSelected.style.left = event.pageX + 'px';
+						moveSelected.style.width = (oldLeft - event.pageX) + 'px';
+					} else {
+						moveSelected.style.width = (event.pageX - oldLeft) + 'px';
+					}
+					
+					if(event.pageY < oldTop) { //向上
+						moveSelected.style.top = event.pageY + 'px';
+						moveSelected.style.height = (oldTop - event.pageY) + 'px';
+					} else {
+						moveSelected.style.height = (event.pageY - oldTop) + 'px';
+					}
+					
+					event.preventDefault(); // 阻止默认行为
+					event.stopPropagation(); // 阻止事件冒泡
+				});
+				
+				//鼠标抬起时计算遮罩的right 和 bottom，找出遮罩覆盖的块，关闭拖拽选中开关，清除遮罩数据
+				$dragarea.mouseup(function(event) {
+					moveSelected.style.bottom = Number(moveSelected.style.top.split('px')[0]) + Number(moveSelected.style.height.split('px')[0]) + 'px';
+					moveSelected.style.right = Number(moveSelected.style.left.split('px')[0]) + Number(moveSelected.style.width.split('px')[0]) + 'px';
+					findSelected();
+					flag = false;
+					clearDragData();
+					event.preventDefault(); // 阻止默认行为
+					event.stopPropagation(); // 阻止事件冒泡
+				});
+				
+				$dragarea.mouseleave(function(event) {
+					flag = false;
+					moveSelected.style.width = 0;
+					moveSelected.style.height = 0;
+					moveSelected.style.top = 0;
+					moveSelected.style.left = 0;
+					event.preventDefault(); // 阻止默认行为
+					event.stopPropagation(); // 阻止事件冒泡
+				});
+
+				function findSelected() {
+					for(var i = 0; i < blockList.length; i++) {
+						//计算每个块的定位信息
+						var left = $(blockList[i]).offset().left;
+						var right = $(blockList[i]).width() + left;
+						var top = $(blockList[i]).offset().top;
+						var bottom = $(blockList[i]).height() + top;
+						
+						//判断每个块是否被遮罩盖住（即选中）
+						var leftFlag = moveSelected.style.left.split('px')[0] <= left && left <= moveSelected.style.right.split('px')[0];
+						var rightFlag = moveSelected.style.left.split('px')[0] <= right && right <= moveSelected.style.right.split('px')[0];
+						var topFlag = moveSelected.style.top.split('px')[0] <= top && top <= moveSelected.style.bottom.split('px')[0];
+						var bottomFlag = moveSelected.style.top.split('px')[0] <= bottom && bottom <= moveSelected.style.bottom.split('px')[0];
+						
+						if((leftFlag || rightFlag) && (topFlag || bottomFlag)) {
+							selectedList.push(blockList[i]);
+							$(blockList[i]).addClass('selected').find("input[type='checkbox']").prop("checked",true);
+						}
+					}
+				}
+
+				function clearDragData() {
+					moveSelected.style.width = 0;
+					moveSelected.style.height = 0;
+					moveSelected.style.top = 0;
+					moveSelected.style.left = 0;
+					moveSelected.style.bottom = 0;
+					moveSelected.style.right = 0;
+				}
+			}); */
+		</script>
+	
+
+</body></html>

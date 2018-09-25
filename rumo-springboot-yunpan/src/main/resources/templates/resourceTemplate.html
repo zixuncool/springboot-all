@@ -1,0 +1,27 @@
+<#list response.data.list as resource>
+<article class="clearfix c-div div_oSSKRH" data-pages="${response.data.pages}" id="${resource.id}">
+	<div class="c-div div_QNxosG">
+		<img class="c-image image_RYUI1N"
+			src="http://localhost:8080/${resource.path}">
+		<div class="c-div div_SUNYRV" style="z-index: 1;">
+			<div class="clearfix c-div div_24LNze">
+				<a draggable="false"
+					class="action-preview c-linkblock linkblock_xLqE9S" href="#"> <i
+					class="fa fa-eye c-icon icon_yMAUER"> </i>
+				</a> <a draggable="false"
+					class="action-insert c-linkblock linkblock_TT2m0J" href="#"> <i
+					class="fa fa-cloud-download c-icon icon_ySGc7U"> </i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix c-div div_J0XteR">
+		<div class="checkbox c-checkbox checkbox_iiiD5P">
+			<input class="c-checkbox-input checkboxinput_tpdFrw"
+				name="mymaterial" type="checkbox" value="${resource.id}">
+		</div>
+		<div class="c-div div_EitPkY"></div>
+		<p class="paragraph_QGvA4m">${resource.oldname}</p>
+	</div>
+</article>
+</#list>
