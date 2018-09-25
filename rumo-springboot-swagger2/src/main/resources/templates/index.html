@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	我是首页
+	
+	<button id="getuser">获取用户信息</button>
+	<script>
+	
+	$("#getuser").on("click",function(){
+		
+		$.get("http://localhost:8080//getUser/1",function(data){
+			console.log(data);
+		});
+		
+	});
+		
+	</script>
+</body>
+</html>
