@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rumo</groupId>
+  <artifactId>rumo-maven-plugin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <!-- 1:定义maven插件，请记住把packing修改成为 maven-plugin-->
+  <packaging>maven-plugin</packaging>
+  
+  
+  <!-- 
+  
+  	  1:定义maven插件，请记住把packing修改成为 maven-plugin
+  	  2:导入maven定义插件相关的依赖包
+  	  3:添加编译插件的依赖
+  	  4:把你定义的插件，发布你的本地仓库中，给别的项目使用
+  
+   -->
+  
+  
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+  	<!-- 2:导入maven定义插件相关的依赖包 -->
+  	<dependency>
+  		<groupId>org.apache.maven</groupId>
+  		<artifactId>maven-plugin-api</artifactId>
+  		<version>3.5.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.maven.plugin-tools</groupId>
+  		<artifactId>maven-plugin-annotations</artifactId>
+  		<version>3.5</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	
+  	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>2.3.28</version>
+	</dependency>
+	 
+	 <dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.10</version>
+	</dependency> 	
+	
+  </dependencies>
+  
+  <build>
+		<!-- 3:定义插件 -->
+		<plugins>
+			<plugin>
+ 			<groupId>org.apache.maven.plugins</groupId>
+ 			<artifactId>maven-compiler-plugin</artifactId>
+ 			<version>3.6.1</version>
+ 			<configuration>
+ 				<source>1.8</source>
+ 				<target>1.8</target>
+ 			</configuration>
+			</plugin>
+		</plugins>
+  </build>
+  
+  
+</project>
