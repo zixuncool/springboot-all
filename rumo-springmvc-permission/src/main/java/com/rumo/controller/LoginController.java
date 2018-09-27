@@ -14,6 +14,7 @@ import com.rumo.pojo.User;
 import com.rumo.service.permission.IPermissionService;
 import com.rumo.service.role.IRoleService;
 import com.rumo.service.user.IUserService;
+import com.rumo.vo.RequestThrealLocalUtil;
 import com.rumo.vo.ServerResponse;
 import com.rumo.vo.SessionKeyContansts;
 
@@ -55,6 +56,7 @@ public class LoginController {
 		User user =  (User) response.getData();
 		//把用户放入到session中
 		session.setAttribute(SessionKeyContansts.SESSSION_KEY, user);
+		
 		//查询用户对应的角色
 		ServerResponse response2 = roleService.findRoleByUserId(user.getId());
 		session.setAttribute(SessionKeyContansts.SESSSION_KEY_ROLES, response2.getData());

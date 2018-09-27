@@ -34,7 +34,6 @@ com\rumo\mapper\CourseMapper.class
 com\rumo\validator\LengthEq.class
 com\rumo\util\RequestUtil.class
 com\rumo\controller\LoginController.class
-com\rumo\core\RequestHolder.class
 com\rumo\validator\IsMobileValidator.class
 com\rumo\tag\ForSkip.class
 com\rumo\core\ApplicationContextHelper.class
@@ -87,6 +86,7 @@ com\rumo\service\user\IUserService.class
 com\rumo\service\content\IContentService.class
 com\rumo\util\UUIDUtil.class
 com\rumo\mapper\RoleMapper.class
+com\rumo\vo\RequestThrealLocalUtil.class
 com\rumo\validator\ValidatorUtil.class
 com\rumo\util\MailUtil.class
 com\rumo\pojo\Role.class
@@ -100,6 +100,7 @@ com\rumo\tag\ForEachTag.class
 com\rumo\controller\permission\PermissionController.class
 com\rumo\redis\AccessKey.class
 com\rumo\tag\FilterTag.class
+com\rumo\vo\RoleVo.class
 com\rumo\util\CodeMsg.class
 com\rumo\auto\ProjectAutoUtil.class
 com\rumo\core\SpringExceptionResolver.class

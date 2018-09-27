@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<%@include file="_common.jsp"%>
+<%@include file="../_common.jsp"%>
 <title>管理员列表</title>
 </head>
 <body>
@@ -61,7 +61,7 @@
 	</table>
 </div>
 <!--_footer 作为公共模版分离出去-->
-<%@include file="_footer.jsp"%>
+<%@include file="../_footer.jsp"%>
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="${basePath}/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
 <script type="text/javascript" src="${basePath}/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 

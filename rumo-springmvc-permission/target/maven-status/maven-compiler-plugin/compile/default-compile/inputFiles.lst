@@ -41,6 +41,7 @@ D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\exception\Bus
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\pojo\RoleUser.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\mapper\ContentMapper.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\service\user\UserServiceImpl.java
+D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\auto\FreemakerContfiguration.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\util\JsonUtil.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\util\LevelUtil.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\pojo\Log.java
@@ -52,12 +53,14 @@ D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\params\AclPar
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\controller\AdminController.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\redis\OrderKey.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\tag\ElseIfTag.java
+D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\vo\RequestThrealLocalUtil.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\validator\LengthEqValidator.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\core\HttpInterceptor.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\tag\ChooseTag.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\mapper\PermissionMapper.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\service\permission\PermissionServiceImpl.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\controller\course\CourseController.java
+D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\vo\RoleVo.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\tag\UpperTag.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\service\RedisPool.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\tag\ForSkip.java
@@ -79,7 +82,6 @@ D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\controller\st
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\mapper\StatMapper.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\params\UserParam.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\util\MailUtil.java
-D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\core\RequestHolder.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\validator\IsMobileValidator.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\vo\StatVo.java
 D:\git\repository\rumo-springmvc-permission\src\main\java\com\rumo\vo\Mail.java

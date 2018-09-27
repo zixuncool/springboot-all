@@ -41,10 +41,8 @@ public class UserController {
 	public String findUsers(Params params,ModelMap modelMap) {
 		IUserService userService = ApplicationContextHelper.popBean(IUserService.class);
 		ServerResponse serverResponse = userService.findUsers(params);
-		//此serverResponse.getData()是一个@PageInfo<User> getList对象
 		modelMap.addAttribute("pages", serverResponse.getData());
-		return "admin/members/template";
-		
+		return "admin/user/template";
 	}
 	
 	

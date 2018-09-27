@@ -13,7 +13,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rumo.core.RequestHolder;
 import com.rumo.mapper.RolePermissionMapper;
 import com.rumo.pojo.Permission;
 import com.rumo.vo.ServerResponse;
@@ -35,7 +34,6 @@ public class PermissionServiceImpl implements IPermissionService {
 	
 	@Override
 	public ServerResponse save(Permission permission) {
-		System.out.println(RequestHolder.getCurrentUser().getId());
 		return ServerResponse.createBySuccess();
 	}
 	

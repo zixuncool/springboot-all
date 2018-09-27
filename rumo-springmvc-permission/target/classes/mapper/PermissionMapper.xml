@@ -1,61 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.rumo.mapper.RoleMapper" >
-  <resultMap id="BaseResultMap" type="com.rumo.pojo.Role" >
+<mapper namespace="com.rumo.mapper.PermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.rumo.pojo.Permission" >
     <constructor >
       <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="remark" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="operator" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="operate_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
       <arg column="operate_ip" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="code" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="module_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="url" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="seq" jdbcType="INTEGER" javaType="java.lang.Integer" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, type, status, remark, operator, operate_time, operate_ip
+    id, name, status, remark, operator, operate_time, operate_ip, code, module_id, url, 
+    type, seq
   </sql>
-  
-  
-  
-  <select id="selectRoles" resultMap="BaseResultMap" parameterType="com.rumo.pojo.Role" >
- 	 select 
-   		 <include refid="Base_Column_List" />
-    from rumo_role
-  </select>
-  
-  
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from rumo_role
+    from rumo_permission
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from rumo_role
+    delete from rumo_permission
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.rumo.pojo.Role" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
-    insert into rumo_role ( name, type, 
-      status, remark, operator, 
-      operate_time, operate_ip)
-    values ( #{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
-      #{status,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, 
-     now(), #{operateIp,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.rumo.pojo.Permission" >
+    insert into rumo_permission (id, name, status, 
+      remark, operator, operate_time, 
+      operate_ip, code, module_id, 
+      url, type, seq)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, 
+      #{operateIp,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{moduleId,jdbcType=INTEGER}, 
+      #{url,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{seq,jdbcType=INTEGER})
   </insert>
- 
-  <insert id="insertSelective" parameterType="com.rumo.pojo.Role" >
-    insert into rumo_role
+  <insert id="insertSelective" parameterType="com.rumo.pojo.Permission" >
+    insert into rumo_permission
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
       <if test="name != null" >
         name,
-      </if>
-      <if test="type != null" >
-        type,
       </if>
       <if test="status != null" >
         status,
@@ -72,6 +65,21 @@
       <if test="operateIp != null" >
         operate_ip,
       </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="moduleId != null" >
+        module_id,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="seq != null" >
+        seq,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -79,9 +87,6 @@
       </if>
       <if test="name != null" >
         #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=INTEGER},
       </if>
       <if test="status != null" >
         #{status,jdbcType=INTEGER},
@@ -98,16 +103,28 @@
       <if test="operateIp != null" >
         #{operateIp,jdbcType=VARCHAR},
       </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="moduleId != null" >
+        #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="seq != null" >
+        #{seq,jdbcType=INTEGER},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.rumo.pojo.Role" >
-    update rumo_role
+  <update id="updateByPrimaryKeySelective" parameterType="com.rumo.pojo.Permission" >
+    update rumo_permission
     <set >
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=INTEGER},
       </if>
       <if test="status != null" >
         status = #{status,jdbcType=INTEGER},
@@ -124,18 +141,37 @@
       <if test="operateIp != null" >
         operate_ip = #{operateIp,jdbcType=VARCHAR},
       </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="moduleId != null" >
+        module_id = #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="seq != null" >
+        seq = #{seq,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.rumo.pojo.Role" >
-    update rumo_role
+  <update id="updateByPrimaryKey" parameterType="com.rumo.pojo.Permission" >
+    update rumo_permission
     set name = #{name,jdbcType=VARCHAR},
-      type = #{type,jdbcType=INTEGER},
       status = #{status,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR},
       operator = #{operator,jdbcType=VARCHAR},
       operate_time = #{operateTime,jdbcType=TIMESTAMP},
-      operate_ip = #{operateIp,jdbcType=VARCHAR}
+      operate_ip = #{operateIp,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      module_id = #{moduleId,jdbcType=INTEGER},
+      url = #{url,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      seq = #{seq,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

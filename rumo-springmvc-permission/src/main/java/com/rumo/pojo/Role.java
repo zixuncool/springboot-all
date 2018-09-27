@@ -13,11 +13,11 @@ public class Role {
 
     private String remark;
 
-    private String operator;
+    private String operator;//从session获取
 
     private Date operateTime;
 
-    private String operateIp;
+    private String operateIp;//从request对象获取
 
     public Role(Integer id, String name, Integer type, Integer status, String remark, String operator, Date operateTime, String operateIp) {
         this.id = id;

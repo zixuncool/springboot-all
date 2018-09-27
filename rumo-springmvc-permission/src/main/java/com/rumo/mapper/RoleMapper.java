@@ -1,5 +1,7 @@
 package com.rumo.mapper;
 
+import java.util.List;
+
 import com.rumo.pojo.Role;
 
 public interface RoleMapper {
@@ -10,6 +12,8 @@ public interface RoleMapper {
     int insertSelective(Role record);
 
     Role selectByPrimaryKey(Integer id);
+    
+    List<Role> selectRoles();
 
     int updateByPrimaryKeySelective(Role record);
 
