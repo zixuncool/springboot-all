@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>二维码生成器</title>
+</head>
+<body>
+	
+	<h1>二维码生成器</h1>
+	<p>QRcode的方式来生成的，</p>
+	<ul>
+		<li>引入	QRcode.jar的包,墨风这个包，在mvnrepository不存在的。</li>
+		<li>如何将maven仓库中不存在的jar，打入到仓库中，是我们要去学习的知识,</li>
+		
+		<li>
+			<h4>如何安装第三方的jar包放入到maven仓库中：如下：</h4>
+			<h5 style="color:red;">前提条件：maven的环境变量要进行配置，并且执行mvn -version 能够得到maven的版本信息方可执行，否则无效</h5>
+			<div style="background:#eee;padding:10px;margin:10px">
+				mvn install:install-file -Dfile="D:\Qrcode.jar" -DgroupId=com.rumo.qrcode -DartifactId=Qrcode -Dversion=1.0 -Dpackaging=jar
+			</div>
+		</li>
+		<li>
+			<h5>然后在项目的pom.xml文件中依赖安装好的qrcode：</h5>
+			<pre>
+				<dependency>
+					<groupId>com.rumo.qrcode</groupId>
+					<artifactId>Qrcode</artifactId>
+					<version>1.0</version>
+				</dependency>
+			</pre>
+		</li>
+		<li>
+			<img src="http://localhost:8080/qrcode?k=i love you so much!!!" alt="" />
+			<img src="http://localhost:8080/qrcode?k=http://www.baidu.com" alt="" />
+			<img src="http://localhost:8080/qrcode?k=https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4036090525,2276461042&fm=58&s=3AE7C816CC15A480401FDBFC0300902C&bpow=121&bpoh=75" alt="" />
+		</li>
+	</ul>
+</body>
+</html>

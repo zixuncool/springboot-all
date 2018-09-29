@@ -53,30 +53,72 @@ public class AutoBuilder extends AbstractMojo {
 	@Parameter(property="path")
 	private String path;
 	
-	@Parameter(property="options")
-	private List<String> options;
+	@Parameter(property="tables")
+	private List<String> tables;
 	
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		System.out.println("你要写入的的目录是："+path);
-		for (String string : options) {
-			String[] infos = string.split(",");
-			String beanModel = infos[3];
-			Map<String, String> map = new HashMap<>();
-			//对应表---准备对应的数据
-			String tablename = infos[0];
-			map.put("baseDir",infos[1]);
-			map.put("pack",infos[2]);
-			map.put("beanModel",beanModel);
+		for (String tableinfo : tables) {
+			String[] tableinfos = tableinfo.split(",");//表名
+			String tablename = tableinfos[0];//表
+			String beanModel = tableinfos[1];//实体
+			String pojoDir = tableinfos[2];//包目录
+			String mapperdir = tableinfos[3];//mapper目录
+			/*String service = tableinfos[5];//service目录
+			String controller = tableinfos[5];//service目录
+*/			
+			
 			//查询对应的表
 			List<Map<String, String>> fields = loadTable(tablename);
+			Map<String, String> infos = new HashMap<>();
+			infos.put("beanModel",beanModel);
+			infos.put("baseDir","src/main/java");
+			infos.put("pack","com.rumo.pojo");
+			
 			//开始构建
-			createTemplate(fields,map,"pojo.tml",beanModel+".java");//pojo
-			createTemplate(fields,map,"vo.tml",beanModel+"Vo.java");//pojo
-			createTemplate(fields,map,"mapper.tml",beanModel+"Mapper.java");//pojo
-			createTemplate(fields,map,"service.tml",beanModel+"Mapper.java");//pojo
+			createTemplate(fields,"pojo.tml",beanModel,"src/main/java",pojoDir,beanModel+".java");
+			createTemplate(fields,"mapper.tml",beanModel,"src/main/java",mapperdir,beanModel+".java");
 		}
 	}
 	
+	
+	private  void createTemplate(List<Map<String, String>> fields,
+			String template,
+			String beanModel,
+			String baseDir,
+			String packagedir,
+			String fname) {
+		try {
+			Configuration cfg = new Configuration(Configuration.VERSION_2_3_28);
+			// 指定模板如何检索数据模型，这是一个高级的主题了… // 但先可以这么来用： 
+			cfg.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_28));
+			String classLoader_str = this.getClass().getClassLoader().getResource("/template").getPath();
+
+			// 指定模板文件从何处加载的数据源，这里设置成一个文件目录。
+			cfg.setDirectoryForTemplateLoading(new File(classLoader_str));
+			
+			// 数据
+			Map root = new HashMap(); 
+			// 在根中放入字符串"user" 
+			root.put("beanModel", beanModel); 
+			root.put("package", packagedir);
+			root.put("fields", fields);
+			
+			//找到对应模板
+			Template temp = cfg.getTemplate(template);
+			
+			String packagec = packagedir.replaceAll("\\.", "/");
+			//输出到指定目标
+			File rootPath = new File(path+File.separator+baseDir+File.separator+packagec);
+			if(!rootPath.exists())rootPath.mkdirs();
+			Writer out = new OutputStreamWriter(new FileOutputStream(new File(rootPath,fname)),"gbk");
+			//模板和数据 处理替换===真实数据或者页面
+			temp.process(root, out); 
+			out.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
 	
 	
 	/**
@@ -133,39 +175,4 @@ public class AutoBuilder extends AbstractMojo {
 		return null;
 	}
 	
-	
-	private  void createTemplate(List<Map<String, String>> fields,Map<String, String> infos,String template,String fname) {
-		try {
-			Configuration cfg = new Configuration(Configuration.VERSION_2_3_28);
-			// 指定模板如何检索数据模型，这是一个高级的主题了… // 但先可以这么来用： 
-			cfg.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_28));
-			// 指定模板文件从何处加载的数据源，这里设置成一个文件目录。
-			cfg.setDirectoryForTemplateLoading(new File(path+"/template"));
-			
-			// 数据
-			Map root = new HashMap(); 
-			// 在根中放入字符串"user" 
-			root.put("beanModel", infos.get("beanModel")); 
-			root.put("package", infos.get("pack"));
-			root.put("fields", fields);
-			
-			
-			//找到对应模板
-			Template temp = cfg.getTemplate(template);
-			
-			String packagec = infos.get("pack").replaceAll("\\.", "/");
-			//输出到指定目标
-			File rootPath = new File(path+File.separator+infos.get("baseDir")+File.separator+packagec);
-			if(!rootPath.exists())rootPath.mkdirs();
-			Writer out = new OutputStreamWriter(new FileOutputStream(new File(rootPath,fname)),"gbk");
-			//模板和数据 处理替换===真实数据或者页面
-			temp.process(root, out); 
-			out.flush();
-			
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-	}
 }

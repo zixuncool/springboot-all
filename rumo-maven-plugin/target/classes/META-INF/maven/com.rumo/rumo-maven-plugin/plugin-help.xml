@@ -61,23 +61,23 @@
       <threadSafe>false</threadSafe>
       <parameters>
         <parameter>
-          <name>options</name>
-          <type>java.util.List</type>
-          <required>false</required>
-          <editable>true</editable>
-          <description></description>
-        </parameter>
-        <parameter>
           <name>path</name>
           <type>java.lang.String</type>
           <required>false</required>
           <editable>true</editable>
           <description></description>
         </parameter>
+        <parameter>
+          <name>tables</name>
+          <type>java.util.List</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
       </parameters>
       <configuration>
-        <options implementation="java.util.List">${options}</options>
         <path implementation="java.lang.String">${path}</path>
+        <tables implementation="java.util.List">${tables}</tables>
       </configuration>
     </mojo>
   </mojos>

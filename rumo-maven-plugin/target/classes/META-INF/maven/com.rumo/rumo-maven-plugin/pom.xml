@@ -6,7 +6,6 @@
   <!-- 1:定义maven插件，请记住把packing修改成为 maven-plugin-->
   <packaging>maven-plugin</packaging>
   
-  
   <!-- 
   
   	  1:定义maven插件，请记住把packing修改成为 maven-plugin
