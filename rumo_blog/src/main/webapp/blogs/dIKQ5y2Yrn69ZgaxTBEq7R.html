@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>Java Web应用的代码分层最佳实践。-中华墨风-'s Zone</title>
+<meta name="description" content="代码分层，对于任何一个Java Web开发来说应该都不陌生。一个好的层次划分不仅可以能使代码结构更加清楚，还可以使项目分工更加 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="69" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/dIKQ5y2Yrn69ZgaxTBEq7R.html">Java Web应用的代码分层最佳实践。</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/19 14:05:43">2018/07/19 14:05:43</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">249</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<div class="asb asb-post asb-post-01"></div> 
+<p>代码分层，对于任何一个Java Web开发来说应该都不陌生。一个好的层次划分不仅可以能使代码结构更加清楚，还可以使项目分工更加明确，可读性大大提升，更加有利于后期的维护和升级。</p> 
+<p>从另外一个角度来看，好的代码分层架构，应该是可以很好的匹配上单一职责原则的。这样就可以降低层与层之间的依赖，还能最大程度的复用各层的逻辑。本文就来介绍下Java Web项目的代码到底应该如何分层。</p> 
+<h3>三层架构</h3> 
+<p>在软件体系架构设计中，分层式结构是最常见，也是最重要的一种结构。微软推荐的分层式结构一般分为三层，从下至上分别为：数据访问层、业务逻辑层（又或称为领域层）、表示层。这也是Java Web中重要的三层架构中的三个层次。区分层次的目的即为了“高内聚低耦合”的思想。</p> 
+<p>所谓三层体系结构，是在客户端与数据库之间加入了一个“中间层”，也叫组件层。这里所说的三层体系，不是指物理上的三层，不是简单地放置三台机器就是三层体系结构，也不仅仅有B/S应用才是三层体系结构，三层是指逻辑上的三层，即把这三个层放置到一台机器上。</p> 
+<h4>数据访问层</h4> 
+<p>主要是对非原始数据（数据库或者文本文件等存放数据的形式）的操作层，而不是指原始数据，也就是说，是对数据库的操作，而不是数据，具体为业务逻辑层或表示层提供数据服务。</p> 
+<h4>业务逻辑层</h4> 
+<p>主要是针对具体的问题的操作，也可以理解成对数据层的操作，对数据业务逻辑处理，如果说数据层是积木，那逻辑层就是对这些积木的搭建。</p> 
+<h4>界面层</h4> 
+<p>主要表示WEB方式。如果逻辑层相当强大和完善，无论表现层如何定义和更改，逻辑层都能完善地提供服务。</p> 
+<h4>三层架构与MVC的区别</h4> 
+<p>MVC（模型Model-视图View-控制器Controller）是一种架构模式，可以用它来创建在域对象和UI表示层对象之间的区分。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/05/MVC.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/05/MVC.png" alt="MVC" width="446" height="432" class="aligncenter size-full wp-image-2391"></a></p> 
+<p>同样是架构级别的，相同的地方在于他们都有一个表现层，但是他们不同的地方在于其他的两个层。</p> 
+<p>在三层架构中没有定义Controller的概念。这是最不同的地方。而MVC也没有把业务的逻辑访问看成两个层，这是采用三层架构或MVC搭建程序最主要的区别。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/05/3.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/05/3.png" alt="3" width="572" height="368" class="aligncenter size-full wp-image-2392"></a></p> 
+<h3>更加细致的分层</h3> 
+<p>随着网站的用户量的不断提升，系统架构也在不断的调整。有时候，随着业务越来越复杂，有时候三层架构好像不够用了。比如，我们的应用除了要给用户提供页面访问以外，还需要提供一些开放接口，供外部系统调用。这个接口既不属于界面层，也不应该属于业务逻辑层，因为他还可能包含一些和业务逻辑无关的处理，如权限控制、流量控制等。</p> 
+<p>还有，随着微服务的盛行，我们应用中可能要依赖很多外部接口或第三方平台。这部分代码放下业务逻辑层和数据访问层也都不合适。</p> 
+<p>所以，渐渐的，在三层架构的基础上，系统架构的分层变得更加复杂了。也正是因为复杂，就非常考验架构设计能力，因为层次划分的不好，很可能会影响后面的开发，给代码维护带来很大的困难。</p> 
+<p>下图，是阿里巴巴(参考《阿里巴巴Java开发手册》)提倡的应用分层结构：</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/05/ceng.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/05/ceng.png" alt="ceng" width="416" height="325" class="aligncenter size-full wp-image-2385"></a></p> 
+<h4>开放接口层</h4> 
+<p>可直接封装 Service 方法暴露成 RPC 接口；通过 Web 封装成 http 接口；进行网关安全控制、流量控制等。</p> 
+<h4>终端显示层</h4> 
+<p>各个端的模板渲染并执行显示的层。当前主要是 velocity 渲染，JS 渲染，JSP 渲染，移动端展示等。</p> 
+<h4>Web 层</h4> 
+<p>主要是对访问控制进行转发，各类基本参数校验，或者不复用的业务简单处理等。</p> 
+<h4>Service 层</h4> 
+<p>相对具体的业务逻辑服务层。</p> 
+<h4>Manager 层</h4> 
+<p>通用业务处理层，它有如下特征： 1） 对第三方平台封装的层，预处理返回结果及转化异常信息； 2） 对 Service 层通用能力的下沉，如缓存方案、中间件通用处理； 3） 与 DAO 层交互，对多个 DAO 的组合复用。</p> 
+<h4>DAO 层</h4> 
+<p>数据访问层，与底层 MySQL、Oracle、Hbase 等进行数据交互。</p> 
+<h4>外部接口或第三方平台</h4> 
+<p>包括其它部门 RPC 开放接口，基础平台，其它公司的 HTTP 接口。</p> 
+<h3>事务处理</h3> 
+<p>在了解了分层之后，我们再来看一下写Java Web代码的时候，大家比较关心的一个问题，那就是涉及到数据库操作的时候，事务处理应该在哪一层控制呢？</p> 
+<p>关于这个问题，仁者见仁，智者见智。作者认为，事务处理应该放在Service层和Manager层。</p> 
+<p>DAO层不应该有事务，应该只是很纯的 CRUD 等比较通用的数据访问方法。一个DAO应该只处理和自己相关的操作，不要有任何组合。组合的事情交给上层。</p> 
+<p>Service层和Manager层一般会组合多个DAO的CRUD操作，例如：在注册一个用户的时候需要往日志表里 INSERT 日志，那么就在 Service 层构造事务，在该事务中调用 Dao 层的 User.Insert () 与 Log.Insert ()。</p> 
+<h3>异常处理</h3> 
+<p>异常处理是Java中比较重要的一个话题，在《Effective Java》中有很多关于异常处理的最佳实践，这里不详细介绍了，本文主要简单说一下在应用代码分层之后，各个层次之间的异常应该如何处理，是自己捕获，还是向上一层抛出。</p> 
+<p>首先，每一层都是可能发生异常的。由于每一层的职责都不通，处理方式也可能有差别。</p> 
+<h4>DAO层</h4> 
+<p>在 DAO 层，产生的异常类型可能有很多，可能是SQL相关的异常，也可能是数据库连接相关的异常。</p> 
+<p>这一层的处理方式可以简单一点，直接try-catch(Exception)，然后封装成DAOException抛给上一层。这一层一般不需要打印日志，交给Service或者Manager层来打印。</p> 
+<pre><code>try{
+    CRUD
+}catch(Exception e){
+    throw new DAOException(e);
+}
+</code></pre> 
+<h4>Manager/Service</h4> 
+<p>首先，对于DAO层抛上来的异常一定要捕获的，并且记录日志打印现场。</p> 
+<p>但是值得注意的是，如果是需要事务控制的方法，要注意捕获到异常之后再向上抛一个新的异常，如 TransactionRolledbackException，否则事务无法回滚。</p> 
+<p>这两层发生的异常可以根据情况决定是继续向上抛还是自己处理掉。如果是自己可以处理的异常，就捕获，打日志，然后通过ErrorCode等方式返回给上一层。如果是自己无法处理或者不知道该如何处理的异常，就直接抛给上一层来处理。</p> 
+<h4>Web</h4> 
+<p>首先，可以明确的一点：Web层不应该再往外抛异常，因为这一层一旦抛异常，就可能会导致用户跳转到不友好的错误页面甚至看到错误信息等。</p> 
+<p>如果意识到这个异常将导致页面无法正常渲染，那么就应该直接跳转到友好错误页面，加上用户容易理解的错误提示信息。</p> 
+<h4>开放接口层</h4> 
+<p>这一层和Web层一样，不可以抛出异常。一般通过ErrorCode和ErrorMessage反馈给外部调用方。</p> 
+<p>这一层，要自己处理好所有的异常，定义好ErrorCode，并记录好日志，便于日后排查问题。</p> 
+<h3>总结</h3> 
+<p>本文主要介绍了Java Web项目中代码分层的方案，通过分层之后可以使没一层更加专注，解除耦合。并简单介绍了一下分层之后的事务处理和异常处理的逻辑。</p> 
+<p class="asb-post-footer"><strong>【公告】</strong><a target="_blank" href="http://www.hollischuang.com/转载说明">版权声明</a></p>(全文完)
+<center>
+ <img src="http://www.hollischuang.com/wp-content/uploads/2016/01/qrcode_for_gh_4ebd1b130cbe_430-1.jpg" width="300px" height="300px" title="" alt="">欢迎关注HollisChuang微信公众账号
+</center>
+<p class="post-copyright">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://www.hollischuang.com">HollisChuang's Blog</a> » <a href="http://www.hollischuang.com/archives/2384">Java Web应用的代码分层最佳实践。</a></p><p>此文转自：<a href='http://www.hollischuang.com/archives/2384' target='_blank'>http://www.hollischuang.com/archives/2384</a></p>
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/dIKQ5y2Yrn69ZgaxTBEq7R.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/dIKQ5y2Yrn69ZgaxTBEq7R.html">《Java Web应用的代码分层最佳实践。》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

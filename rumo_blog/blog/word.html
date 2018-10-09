@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>文字跟随鼠标移动t</title>
+  <!-- style是html元素的一个属性，在这里可以直接设置元素的样式 
+       这里的.move_out应该是最后这个字体的属性（？不是很清楚） 
+	   
+	   Position属性有四个可选值，它们分别是：static、absolute、fixed、relative。
+	   Pssition:relative是相对定位
+ 
+  -->
+  <style>
+  .move_out{position:relative; cursor:hand
+  ;font-family:"宋体"
+  }
+  </style>
+  
+  
+  <script language="javascript">
+   var move_out = false;
+   var x,y,z;
+ 
+   function move(){
+     if (event.button==move_out)
+     {
+		 z.style.pixelLeft=temporarily1+event.clientX-x;
+		 z.style.pixelTop=temporarily2+event.clientY-y;
+		 return false;
+     }
+   
+   }
+ 
+   function down(){
+	 if (event.srcElement.className=="move_out")
+	{
+		move_out=true;
+		z=event.srcElement;
+		temporarily1=z.style.pixelLeft;
+		temporarily2=z.style.pixelTop;
+		x=event.clientX;
+		y=event.clientY;
+		document.onmousemove=move;
+ 
+	}else{
+	    move_out=false;
+	
+	}
+   
+   }
+ 
+   document.onmousedown=down;
+   </script>
+ </head>
+ 
+ <body>
+ <font color=#ff6699 size=10 class="move_out">星光不问过路人，时光不负有心人。</font>  
+  
+ </body>
+</html>

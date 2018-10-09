@@ -1,0 +1,138 @@
+<footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="${basePath}/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='${basePath}/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="${basePath}/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='${basePath}/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="${basePath}/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='${basePath}/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>

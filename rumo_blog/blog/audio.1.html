@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <title>HTML5 Audio Visualizing</title>
+        <style type="text/css">
+            body {
+                background-color: #222222
+            }
+
+            input {
+                color: #ffffff
+            }
+
+            #wrapper {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+
+            #wrapper-inner {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 25%;
+                padding-right: 25%;
+            }
+
+            #tip {
+                color: #fff;
+                opacity: 0;
+                transition: opacity 1s;
+                -moz-transition: opacity 1s;
+                -webkit-transition: opacity 1s;
+                -o-transition: opacity 1s;
+            }
+
+            #tip.show {
+                opacity: 1
+            }
+        </style>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="wrapper-inner">
+                <p id="tip">Decoding...</p>
+                <input id="fileChooser" type="file" />
+				<audio src="02.mp3" id="audio" controls="controls"></audio>
+                <br>
+                <canvas id="visualizer" width="800" height="400">Your browser does not support Canvas tag.</canvas>
+            </div>
+        </div>
+		<script>
+					window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+					var canvas, ctx;
+					var audioContext;
+					var file;
+					var fileContent;
+					var audioBufferSourceNode;
+					var analyser;
+					
+					// 定义加载音频文件的函数
+					function loadSound(url) {
+						var request = new XMLHttpRequest(); //建立一个请求
+						request.open('GET', url, true); //配置好请求类型，文件路径等
+						request.responseType = 'arraybuffer'; //配置数据返回类型
+						// 一旦获取完成，对音频进行进一步操作，比如解码
+						request.onload = function() {
+							var arraybuffer = request.response;
+							audioContext.decodeAudioData(arraybuffer, function(buffer) {
+								start(buffer);	
+							});
+						}
+						request.send();
+					}
+
+					var start = function(buffer) {
+						if(audioBufferSourceNode) {
+							audioBufferSourceNode.stop();
+						}
+
+						audioBufferSourceNode = audioContext.createBufferSource();
+						audioBufferSourceNode.connect(analyser);
+						analyser.connect(audioContext.destination);
+						audioBufferSourceNode.buffer = buffer;
+						audioBufferSourceNode.start(0);
+						window.requestAnimationFrame(render); //先判断是否已经调用一次
+					}
+
+					var showTip = function(show) {
+						var tip = document.getElementById('tip');
+						if (show) {
+							tip.className = "show";
+						} else {
+							tip.className = "";
+						}
+					}
+
+					var render = function() {
+						ctx = canvas.getContext("2d");
+						ctx.strokeStyle = "#00d0ff";
+						ctx.lineWidth = 2;
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						var dataArray = new Uint8Array(analyser.frequencyBinCount);
+						analyser.getByteFrequencyData(dataArray);
+						var step = Math.round(dataArray.length / 60);
+						for (var i = 0; i < 40; i++) {
+							var energy = (dataArray[step * i] / 256.0) * 50;
+							/* for (var j = 0; j < energy; j++) {
+								ctx.beginPath();
+								ctx.moveTo(20 * i + 2, 200 + 4 * j);
+								ctx.lineTo(20 * (i + 1) - 2, 200 + 4 * j);
+								ctx.stroke();
+								ctx.beginPath();
+								ctx.moveTo(20 * i + 2, 200 - 4 * j);
+								ctx.lineTo(20 * (i + 1) - 2, 200 - 4 * j);
+								ctx.stroke(); 
+								
+							} */
+							ctx.beginPath();
+							ctx.moveTo(20 * i + 2, 400-energy*10);
+							ctx.lineTo(20 * (i + 1) - 2, 400-energy*10);
+							ctx.strokeStyle="#4684b2";
+							ctx.fillStyle="#F44336";
+							ctx.stroke();
+							ctx.fill();
+						}
+
+						window.requestAnimationFrame(render);
+					}
+
+					window.onload = function() {
+						audioContext = new AudioContext();
+						analyser = audioContext.createAnalyser();
+						analyser.fftSize = 256;
+						loadSound("http://127.0.0.1:8848/blog/02.mp3");
+						canvas = document.getElementById('visualizer');
+					}
+		</script>
+    </body>
+</html>

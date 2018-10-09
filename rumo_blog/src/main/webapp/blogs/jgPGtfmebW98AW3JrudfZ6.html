@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>深入理解多线程（二）—— Java的对象模型-中华墨风-'s Zone</title>
+<meta name="description" content="上一篇文章中简单介绍过synchronized关键字的方式，其中，同步代码块使用monitorenter和monitorexit两个指令实现，同步方法使用 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="98" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/jgPGtfmebW98AW3JrudfZ6.html">深入理解多线程（二）—— Java的对象模型</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/19 14:06:03">2018/07/19 14:06:03</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">273</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<div class="asb asb-post asb-post-01"></div> 
+<p><a href="http://www.hollischuang.com/archives/1883">上一篇</a>文章中简单介绍过<code>synchronized</code>关键字的方式，其中，同步代码块使用<code>monitorenter</code>和<code>monitorexit</code>两个指令实现，同步方法使用<code>ACC_SYNCHRONIZED</code>标记符实现。后面几篇文章会从JVM源码的角度更加深入，层层剥开<code>synchronized</code>的面纱。</p> 
+<p>在进入正题之前，肯定有些基础知识需要铺垫，那么先来看一下一个容易被忽略的但是又很重要的知识点 —— Java对象模型 。</p> 
+<p>大家都知道的是，Java对象保存在堆内存中。在内存中，一个Java对象包含三部分：对象头、实例数据和对齐填充。其中对象头是一个很关键的部分，因为<strong>对象头中包含锁状态标志、线程持有的锁等标志</strong>。这篇文章就主要从Java对象模型入手，找一找我们关系的对象头以及对象头中和锁相关的运行时数据在JVM中是如何表示的。</p> 
+<h3>Java的对象模型</h3> 
+<p>任何一个接触过Java的人都知道，Java是一种面向对象语言。在学习Java的过程中你一定对下面两句话不陌生：</p> 
+<ul> 
+ <li> <p>1、在面向对象的软件中，对象（Object）是某一个类（Class）的实例。 <a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E8%B1%A1_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6)">维基百科</a></p> </li> 
+ <li> <p>2、一切皆对象 <a href="https://book.douban.com/subject/1474824/">Thinking In Java</a></p> </li> 
+</ul> 
+<p>我们还知道，在JVM的内存结构中，对象保存在堆内存中，而我们在对对象进行操作时，其实操作的是对象的引用。那么对象本身在JVM中的结构是什么样的呢？本文的所有分析均基于<a href="https://github.com/openjdk-mirror/jdk7u-hotspot">HotSpot</a>虚拟机。</p> 
+<h3>oop-klass model</h3> 
+<p>HotSpot是基于c++实现，而c++是一门面向对象的语言，本身是具备面向对象基本特征的，所以Java中的对象表示，最简单的做法是为每个Java类生成一个c++类与之对应。但HotSpot JVM并没有这么做，而是设计了一个<code>OOP-Klass Model</code>。OOP（<code>Ordinary Object Pointer</code>）指的是普通对象指针，而<code>Klass</code>用来描述对象实例的具体类型。</p> 
+<p>为什么HotSpot要设计一套<code>oop-klass model</code>呢？答案是：HotSopt JVM的设计者不想让每个对象中都含有一个<code>vtable</code>（虚函数表）</p> 
+<p>这个解释似乎可以说得通。众所周知，C++和Java都是面向对象的语言，面向对象语言有一个很重要的特性就是多态。关于多态的实现，C++和Java有着本质的区别。</p> 
+<blockquote> 
+ <p>多态是面向对象的最主要的特性之一，是一种方法的动态绑定，实现运行时的类型决定对象的行为。多态的表现形式是父类指针或引用指向子类对象，在这个指针上调用的方法使用子类的实现版本。多态是IOC、模板模式实现的关键。</p> 
+ <blockquote> 
+  <p>在C++中通过虚函数表的方式实现多态，每个包含虚函数的类都具有一个虚函数表（virtual table），在这个类对象的地址空间的最靠前的位置存有指向虚函数表的指针。在虚函数表中，按照声明顺序依次排列所有的虚函数。由于C++在运行时并不维护类型信息，所以在编译时直接在子类的虚函数表中将被子类重写的方法替换掉。</p> 
+  <p>在Java中，在运行时会维持类型信息以及类的继承体系。每一个类会在方法区中对应一个数据结构用于存放类的信息，可以通过Class对象访问这个数据结构。其中，类型信息具有superclass属性指示了其超类，以及这个类对应的方法表（其中只包含这个类定义的方法，不包括从超类继承来的）。而每一个在堆上创建的对象，都具有一个指向方法区类型信息数据结构的指针，通过这个指针可以确定对象的类型。</p> 
+ </blockquote> 
+</blockquote> 
+<p>上面这段是我从网上摘取过来的，说的有一定道理，但是也不全对。至于为啥，我会在后文介绍到Klass的时候细说。</p> 
+<p>关于opp-klass模型的整体定义，在HotSpot的<a href="https://github.com/openjdk-mirror/jdk7u-hotspot">源码</a>中可以找到。</p> 
+<p>oops模块可以分成两个相对独立的部分：OOP框架和Klass框架。</p> 
+<p>在<a href="https://github.com/openjdk-mirror/jdk7u-hotspot/blob/50bdefc3afe944ca74c3093e7448d6b889cd20d1/src/share/vm/oops/oopsHierarchy.hpp">oopsHierarchy.hpp</a>里定义了oop和klass各自的体系。</p> 
+<h3>oop-klass结构</h3> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/oops.png"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/oops.png" alt="oops" width="661" height="529" class="aligncenter size-full wp-image-1922"></a></p> 
+<p>oop体系：</p> 
+<pre><code>//定义了oops共同基类
+typedef class   oopDesc*                            oop;
+//表示一个Java类型实例
+typedef class   instanceOopDesc*            instanceOop;
+//表示一个Java方法
+typedef class   methodOopDesc*                    methodOop;
+//表示一个Java方法中的不变信息
+typedef class   constMethodOopDesc*            constMethodOop;
+//记录性能信息的数据结构
+typedef class   methodDataOopDesc*            methodDataOop;
+//定义了数组OOPS的抽象基类
+typedef class   arrayOopDesc*                    arrayOop;
+//表示持有一个OOPS数组
+typedef class   objArrayOopDesc*            objArrayOop;
+//表示容纳基本类型的数组
+typedef class   typeArrayOopDesc*            typeArrayOop;
+//表示在Class文件中描述的常量池
+typedef class   constantPoolOopDesc*            constantPoolOop;
+//常量池告诉缓存
+typedef class   constantPoolCacheOopDesc*   constantPoolCacheOop;
+//描述一个与Java类对等的C++类
+typedef class   klassOopDesc*                    klassOop;
+//表示对象头
+typedef class   markOopDesc*                    markOop;
+</code></pre> 
+<p><strong>上面列出的是整个Oops模块的组成结构，其中包含多个子模块。每一个子模块对应一个类型，每一个类型的OOP都代表一个在JVM内部使用的特定对象的类型。</strong></p> 
+<p>从上面的代码中可以看到，有一个变量opp的类型是<code>oppDesc</code> ，OOPS类的共同基类型为<code>oopDesc</code>。</p> 
+<p><strong>在Java程序运行过程中，每创建一个新的对象，在JVM内部就会相应地创建一个对应类型的OOP对象。</strong>在HotSpot中，根据JVM内部使用的对象业务类型，具有多种<code>oopDesc</code>的子类。除了<code>oppDesc</code>类型外，opp体系中还有很多<code>instanceOopDesc</code>、<code>arrayOopDesc</code> 等类型的实例，他们都是<code>oopDesc</code>的子类。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/OOP结构.png"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/OOP结构.png" alt="OOP结构" width="911" height="384" class="aligncenter size-full wp-image-1923"></a></p> 
+<p>这些OOPS在JVM内部有着不同的用途，例如<strong>，<code>instanceOopDesc</code>表示类实例，<code>arrayOopDesc</code>表示数组。</strong>也就是说，<strong>当我们使用<code>new</code>创建一个Java对象实例的时候，JVM会创建一个<code>instanceOopDesc</code>对象来表示这个Java对象。同理，当我们使用<code>new</code>创建一个Java数组实例的时候，JVM会创建一个<code>arrayOopDesc</code>对象来表示这个数组对象。</strong></p> 
+<p>在HotSpot中，oopDesc类定义在<a href="https://github.com/openjdk-mirror/jdk7u-hotspot/blob/50bdefc3afe944ca74c3093e7448d6b889cd20d1/src/share/vm/oops/oop.hpp">oop.hpp</a>中，instanceOopDesc定义在<a href="https://github.com/openjdk-mirror/jdk7u-hotspot/blob/50bdefc3afe944ca74c3093e7448d6b889cd20d1/src/share/vm/oops/instanceOop.hpp">instanceOop.hpp</a>中，arrayOopDesc定义在<a href="https://github.com/openjdk-mirror/jdk7u-hotspot/blob/50bdefc3afe944ca74c3093e7448d6b889cd20d1/src/share/vm/oops/arrayOop.hpp">arrayOop.hpp</a>中。</p> 
+<p>简单看一下相关定义：</p> 
+<pre><code>class oopDesc {
+  friend class VMStructs;
+  private:
+      volatile markOop  _mark;
+      union _metadata {
+        wideKlassOop    _klass;
+        narrowOop       _compressed_klass;
+      } _metadata;
+
+  private:
+      // field addresses in oop
+      void*     field_base(int offset)        const;
+
+      jbyte*    byte_field_addr(int offset)   const;
+      jchar*    char_field_addr(int offset)   const;
+      jboolean* bool_field_addr(int offset)   const;
+      jint*     int_field_addr(int offset)    const;
+      jshort*   short_field_addr(int offset)  const;
+      jlong*    long_field_addr(int offset)   const;
+      jfloat*   float_field_addr(int offset)  const;
+      jdouble*  double_field_addr(int offset) const;
+      address*  address_field_addr(int offset) const;
+}
+
+
+class instanceOopDesc : public oopDesc {
+}
+
+class arrayOopDesc : public oopDesc {
+}
+</code></pre> 
+<p>通过上面的源码可以看到，<code>instanceOopDesc</code>实际上就是继承了<code>oopDesc</code>，并没有增加其他的数据结构，也就是说<code>instanceOopDesc</code>中主要包含以下几部分数据：<code>markOop _mark</code>和<code>union _metadata</code> 以及一些不同类型的 <code>field</code>。</p> 
+<p>HotSpot虚拟机中，对象在内存中存储的布局可以分为三块区域：对象头、实例数据和对齐填充。在虚拟机内部，一个Java对象对应一个<code>instanceOopDesc</code>的对象。其中对象头包含了两部分内容：<code>_mark</code>和<code>_metadata</code>，而实例数据则保存在oopDesc中定义的各种field中。</p> 
+<h4>_mark</h4> 
+<p>文章开头我们就说过，之所以我们要写这篇文章，是因为对象头中有和锁相关的运行时数据，这些运行时数据是<code>synchronized</code>以及其他类型的锁实现的重要基础，而关于锁标记、GC分代等信息均保存在<code>_mark</code>中。因为本文主要介绍的<code>oop-klass</code>模型，在这里暂时不对对象头做展开，下一篇文章介绍。</p> 
+<h4>_metadata</h4> 
+<p>前面介绍到的<code>_metadata</code>是一个共用体，其中<code>_klass</code>是普通指针，<code>_compressed_klass</code>是压缩类指针。在深入介绍之前，就要来到<code>oop-Klass</code>中的另外一个主角<code>klass</code>了。</p> 
+<h3>klass</h3> 
+<p>klass体系</p> 
+<pre><code>//klassOop的一部分，用来描述语言层的类型
+class  Klass;
+//在虚拟机层面描述一个Java类
+class   instanceKlass;
+//专有instantKlass，表示java.lang.Class的Klass
+class     instanceMirrorKlass;
+//专有instantKlass，表示java.lang.ref.Reference的子类的Klass
+class     instanceRefKlass;
+//表示methodOop的Klass
+class   methodKlass;
+//表示constMethodOop的Klass
+class   constMethodKlass;
+//表示methodDataOop的Klass
+class   methodDataKlass;
+//最为klass链的端点，klassKlass的Klass就是它自身
+class   klassKlass;
+//表示instanceKlass的Klass
+class     instanceKlassKlass;
+//表示arrayKlass的Klass
+class     arrayKlassKlass;
+//表示objArrayKlass的Klass
+class       objArrayKlassKlass;
+//表示typeArrayKlass的Klass
+class       typeArrayKlassKlass;
+//表示array类型的抽象基类
+class   arrayKlass;
+//表示objArrayOop的Klass
+class     objArrayKlass;
+//表示typeArrayOop的Klass
+class     typeArrayKlass;
+//表示constantPoolOop的Klass
+class   constantPoolKlass;
+//表示constantPoolCacheOop的Klass
+class   constantPoolCacheKlass;
+</code></pre> 
+<p>和<code>oopDesc</code>是其他oop类型的父类一样，Klass类是其他klass类型的父类。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/klass.png"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/klass.png" alt="klass" width="874" height="528" class="aligncenter size-full wp-image-1925"></a></p> 
+<p>Klass向JVM提供两个功能：</p> 
+<ul> 
+ <li>实现语言层面的Java类（在Klass基类中已经实现）</li> 
+ <li>实现Java对象的分发功能（由Klass的子类提供虚函数实现）</li> 
+</ul> 
+<p>文章开头的时候说过：之所以设计<code>oop-klass</code>模型，是因为HotSopt JVM的设计者不想让每个对象中都含有一个虚函数表。</p> 
+<p>HotSopt JVM的设计者把对象一拆为二，分为<code>klass</code>和<code>oop</code>，其中<code>oop</code>的职能主要在于表示对象的实例数据，所以其中不含有任何虚函数。而klass为了实现虚函数多态，所以提供了虚函数表。所以，关于Java的多态，其实也有虚函数的影子在。</p> 
+<p><code>_metadata</code>是一个共用体，其中<code>_klass</code>是普通指针，<code>_compressed_klass</code>是压缩类指针。这两个指针都指向<code>instanceKlass</code>对象，它用来描述对象的具体类型。</p> 
+<h3>instanceKlass</h3> 
+<p>JVM在运行时，需要一种用来标识Java内部类型的机制。在HotSpot中的解决方案是：为每一个已加载的Java类创建一个<code>instanceKlass</code>对象，用来在JVM层表示Java类。</p> 
+<p>来看下<a href="https://github.com/openjdk-mirror/jdk7u-hotspot/blob/50bdefc3afe944ca74c3093e7448d6b889cd20d1/src/share/vm/oops/instanceKlass.hpp">instanceKlass</a>的内部结构：</p> 
+<pre><code>  //类拥有的方法列表
+  objArrayOop     _methods;
+  //描述方法顺序
+  typeArrayOop    _method_ordering;
+  //实现的接口
+  objArrayOop     _local_interfaces;
+  //继承的接口
+  objArrayOop     _transitive_interfaces;
+  //域
+  typeArrayOop    _fields;
+  //常量
+  constantPoolOop _constants;
+  //类加载器
+  oop             _class_loader;
+  //protected域
+  oop             _protection_domain;
+      ....
+</code></pre> 
+<p>可以看到，一个类该具有的东西，这里面基本都包含了。</p> 
+<p>这里还有个点需要简单介绍一下。</p> 
+<p>在JVM中，对象在内存中的基本存在形式就是oop。那么，对象所属的类，在JVM中也是一种对象，因此它们实际上也会被组织成一种oop，即klassOop。同样的，对于klassOop，也有对应的一个klass来描述，它就是klassKlass，也是klass的一个子类。klassKlass作为oop的klass链的端点。关于对象和数组的klass链大致如下图：</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/400_ac3_932.png"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/400_ac3_932.png" alt="400_ac3_932" width="734" height="380" class="aligncenter size-full wp-image-1933"></a></p> 
+<p>在这种设计下，JVM对内存的分配和回收，都可以采用统一的方式来管理。oop-klass-klassKlass关系如图：</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/2579123-5b117a7c06e83d84.png"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/2579123-5b117a7c06e83d84.png" alt="2579123-5b117a7c06e83d84" width="700" height="490" class="aligncenter size-full wp-image-1931"></a></p> 
+<h3>内存存储</h3> 
+<p>关于一个Java对象，他的存储是怎样的，一般很多人会回答：对象存储在堆上。稍微好一点的人会回答：对象存储在堆上，对象的引用存储在栈上。今天，再给你一个更加显得牛逼的回答：</p> 
+<blockquote> 
+ <p>对象的实例（instantOopDesc)保存在堆上，对象的元数据（instantKlass）保存在方法区，对象的引用保存在栈上。</p> 
+</blockquote> 
+<p>其实如果细追究的话，上面这句话有点故意卖弄的意思。因为我们都知道。<strong>方法区用于存储虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。</strong> 所谓加载的类信息，其实不就是给每一个被加载的类都创建了一个 instantKlass对象么。</p> 
+<p>talk is cheap ,show me the code ：</p> 
+<pre><code>class Model
+{
+    public static int a = 1;
+    public int b;
+
+    public Model(int b) {
+        this.b = b;
+    }
+}
+
+public static void main(String[] args) {
+    int c = 10;
+    Model modelA = new Model(2);
+    Model modelB = new Model(3);
+}
+</code></pre> 
+<p>存储结构如下：</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2017/12/20170615230126453.jpeg"><img src="http://www.hollischuang.com/wp-content/uploads/2017/12/20170615230126453.jpeg" alt="20170615230126453" width="1588" height="712" class="aligncenter size-full wp-image-1930"></a></p> 
+<p>从上图中可以看到，在方法区的instantKlass中有一个<code>int a=1</code>的数据存储。在堆内存中的两个对象的oop中，分别维护着<code>int b=3</code>,<code>int b=2</code>的实例数据。和oopDesc一样，instantKlass也维护着一些<code>fields</code>，用来保存类中定义的类数据，比如<code>int a=1</code>。</p> 
+<h3>总结</h3> 
+<p>每一个Java类，在被JVM加载的时候，JVM会给这个类创建一个<code>instanceKlass</code>，保存在方法区，用来在JVM层表示该Java类。当我们在Java代码中，使用new创建一个对象的时候，JVM会创建一个<code>instanceOopDesc</code>对象，这个对象中包含了两部分信息，对象头以及元数据。对象头中有一些运行时数据，其中就包括和多线程相关的锁的信息。元数据其实维护的是指针，指向的是对象所属的类的<code>instanceKlass</code>。</p> 
+<h3>参考资料</h3> 
+<p><a href="http://blog.csdn.net/linxdcn/article/details/73287490">【理解HotSpot虚拟机】对象在jvm中的表示：OOP-Klass模型</a></p> 
+<p><a href="http://www.jianshu.com/p/b6cb4c694951">Java反射: 从JDK到JVM全链路详解</a></p> 
+<p><a href="http://www.voidcn.com/article/p-pzznrtkc-ez.html">HotSpotVM 对象机制实现浅析#1</a></p> 
+<p><a href="https://book.douban.com/subject/25847620/">HotSpot实战</a></p> 
+<p class="asb-post-footer"><strong>【公告】</strong><a target="_blank" href="http://www.hollischuang.com/转载说明">版权声明</a></p>(全文完)
+<center>
+ <img src="http://www.hollischuang.com/wp-content/uploads/2016/01/qrcode_for_gh_4ebd1b130cbe_430-1.jpg" width="300px" height="300px" title="" alt="">欢迎关注HollisChuang微信公众账号
+</center>
+<p class="post-copyright">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://www.hollischuang.com">HollisChuang's Blog</a> » <a href="http://www.hollischuang.com/archives/1910">深入理解多线程（二）—— Java的对象模型</a></p><p>此文转自：<a href='http://www.hollischuang.com/archives/1910' target='_blank'>http://www.hollischuang.com/archives/1910</a></p>
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/jgPGtfmebW98AW3JrudfZ6.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/jgPGtfmebW98AW3JrudfZ6.html">《深入理解多线程（二）—— Java的对象模型》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

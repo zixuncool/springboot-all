@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>KeKe解说Redis第三弹：Redis的操作字符串，集合，Set,Map-中华墨风-'s Zone</title>
+<meta name="description" content="概要：是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品。 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="26" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: 602px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/jpd7b963VZ26cRFvDPArsL.html">KeKe解说Redis第三弹：Redis的操作字符串，集合，Set,Map</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/04/18 10:08:05">2018/04/18 10:08:05</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">339</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+								<img src="http://localhost:8080/resource/blog/2018/04/18/201804181009191.jpg" id="imgmain" onload="loadimg(this)" onerror="imgError(this)" class="keui-imgbox">
+						</div>
+						<blockquote class="blockquote">
+<p>概要：是指由许多帧静止的画面，以一定的速度（如每秒16张）连续播放时，肉眼因视觉残象产生错觉，而误以为画面活动的作品。</p>
+</blockquote>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">查看Redis所有的key</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">#查看所有的key
+keys&nbsp;* 
+#查看以user开头的key
+keys user*</code></pre>
+
+<h4 class="post-headingsamll">1.1：关闭服务redis-server持久化问题</h4>
+
+<ol>
+	<li>直接使用在服务器端ctrl+c关闭服务或者使用进程关闭，都是是非常恐怖的事情，是不会持久化操作。</li>
+	<li>正常关闭使用shutdown,会持久化到磁盘。</li>
+	<li>可以使用save,直接保存到持久化到磁盘</li>
+	<li>连写关闭:&nbsp; redis-cli -p 6380 &nbsp;</li>
+</ol>
+
+<h4 class="post-headingsamll">1.2：Redis的分区和清空</h4>
+
+<p>redis内存服务器总共分为16个数据区进行数据存储，默认操作区是在 0区，你可以通过如下命令切换数据区。</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">select 0 
+select 1</code></pre>
+
+<p><code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">查看分区的设置：</code></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">vim&nbsp;redis.conf</code></pre>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">#&nbsp;Set the number of databases. The default database is DB 0, you can select
+# a different one on a per-connection basis using SELECT &lt;dbid&gt; where
+# dbid is a number between 0 and &#39;databases&#39;-1
+databases 16
+
+# By default Redis shows an ASCII art logo only when started to log to the
+# standard output and if the standard output is a TTY. Basically this means
+# that normally a logo is displayed only in interactive sessions.</code></pre>
+
+<p><font face="monospace">可以通过info命令查看分区的情况：</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json"># Keyspace
+db1:keys=1,expires=0,avg_ttl=0</code></pre>
+
+<p><font face="monospace">可以通过命令：dbsize查看redis的当前是在哪个分区分区。</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[1]&gt;&nbsp;dbsize
+(integer) 1
+</code></pre>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>清空使用：flushall 会清空redis中所有的数据，慎用</li>
+	<li>清空当前的数据库：flushdb</li>
+</ol>
+
+<h4 class="post-headingsamll">1.2：Redis查看命令 info</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[1]&gt;&nbsp;info
+# Server
+redis_version:4.0.9
+redis_git_sha1:00000000
+redis_git_dirty:0
+redis_build_id:b9002d51b745a0ef
+redis_mode:standalone
+os:Linux 3.10.0-693.2.2.el7.x86_64 x86_64
+arch_bits:64
+multiplexing_api:epoll
+atomicvar_api:atomic-builtin
+gcc_version:4.8.5
+process_id:5471
+run_id:bc7b91b6d9fa3a2538448d33ff5176ca5ee40f99
+tcp_port:6379
+uptime_in_seconds:1284
+uptime_in_days:0
+hz:10
+lru_clock:14064450
+executable:/tmp/redis-4.0.9/src/redis-server
+config_file:
+
+# Clients
+connected_clients:1
+client_longest_output_list:0
+client_biggest_input_buf:0
+blocked_clients:0
+
+# Memory
+used_memory:849616
+used_memory_human:829.70K
+used_memory_rss:8228864
+used_memory_rss_human:7.85M
+used_memory_peak:849616
+used_memory_peak_human:829.70K
+used_memory_peak_perc:100.12%
+used_memory_overhead:836190
+used_memory_startup:786456
+used_memory_dataset:13426
+used_memory_dataset_perc:21.26%
+total_system_memory:1928695808
+total_system_memory_human:1.80G
+used_memory_lua:37888
+used_memory_lua_human:37.00K
+maxmemory:0
+maxmemory_human:0B
+maxmemory_policy:noeviction
+mem_fragmentation_ratio:9.68
+mem_allocator:jemalloc-4.0.3
+active_defrag_running:0
+lazyfree_pending_objects:0
+
+# Persistence
+loading:0
+rdb_changes_since_last_save:0
+rdb_bgsave_in_progress:0
+rdb_last_save_time:1524012617
+rdb_last_bgsave_status:ok
+rdb_last_bgsave_time_sec:-1
+rdb_current_bgsave_time_sec:-1
+rdb_last_cow_size:0
+aof_enabled:0
+aof_rewrite_in_progress:0
+aof_rewrite_scheduled:0
+aof_last_rewrite_time_sec:-1
+aof_current_rewrite_time_sec:-1
+aof_last_bgrewrite_status:ok
+aof_last_write_status:ok
+aof_last_cow_size:0
+
+# Stats
+total_connections_received:1
+total_commands_processed:3
+instantaneous_ops_per_sec:0
+total_net_input_bytes:72
+total_net_output_bytes:28
+instantaneous_input_kbps:0.00
+instantaneous_output_kbps:0.00
+rejected_connections:0
+sync_full:0
+sync_partial_ok:0
+sync_partial_err:0
+expired_keys:0
+expired_stale_perc:0.00
+expired_time_cap_reached_count:0
+evicted_keys:0
+keyspace_hits:0
+keyspace_misses:0
+pubsub_channels:0
+pubsub_patterns:0
+latest_fork_usec:0
+migrate_cached_sockets:0
+slave_expires_tracked_keys:0
+active_defrag_hits:0
+active_defrag_misses:0
+active_defrag_key_hits:0
+active_defrag_key_misses:0
+
+# Replication
+role:master
+connected_slaves:0
+master_replid:d3d35d24f461bbf9e6fa9146d49991094e26cfe2
+master_replid2:0000000000000000000000000000000000000000
+master_repl_offset:0
+second_repl_offset:-1
+repl_backlog_active:0
+repl_backlog_size:1048576
+repl_backlog_first_byte_offset:0
+repl_backlog_histlen:0
+
+# CPU
+used_cpu_sys:0.52
+used_cpu_user:0.28
+used_cpu_sys_children:0.00
+used_cpu_user_children:0.00
+
+# Cluster
+cluster_enabled:0
+
+# Keyspace
+db1:keys=1,expires=0,avg_ttl=0
+</code></pre>
+
+<p>&nbsp; &nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h4 class="post-headingsamll">1.3：Redis的操作字符串</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">set&nbsp;key  value 设置元素
+
+get key  获取key元素
+
+del key 删除指定的key元素
+
+keys * 查看所有的key
+
+exists key  判断key是否存在
+
+expire key seconds 设置key的过期时间
+
+ttl key  查看key是否过期时间
+
+setex key seconds value 设置key的值为value,并且多少秒以后过期，是set key value + expire key seconds 的结合体。
+
+type key 查看key的类型
+
+randomkey 查看随机的keys.
+
+rename key newkey 更改key的名字 ，如果去修改存在的会覆盖
+
+renamenx key newkey 更改key的名字，如果去修改存在的不会覆盖，不生效操作。
+
+psetex key millseconds value 以毫秒为单位进行设置值
+
+getrange key startindex endindex 截图指定key的值的范围 
+
+getset key value 两个名字的结合体，先调用get key 然后在修改set key value。
+
+mset  key value key1 value1......keyn valuen. 批量设置
+
+mget key key1 key2......批量获取
+
+setnx key value 判断key是否存在，如果存在就不创建，如果不存在就创建，如果是set的就会覆盖操作。
+
+strlen key 查看某个key的长度
+
+msetnx key value key1 value1 批量设置并且判断key是否存在，不存在创建，存在就忽略。
+
+set key num 设置数值型，可以同incr进行自增控制
+
+127.0.0.1:6379&gt; set num 100
+OK
+127.0.0.1:6379&gt; incr num
+(integer) 101
+127.0.0.1:6379&gt; incr num
+(integer) 102
+127.0.0.1:6379&gt; incr num
+(integer) 103
+
+设置步长：incrby key count 设置步长递增。
+
+127.0.0.1:6379&gt; incrby num 10
+(integer) 113
+127.0.0.1:6379&gt; incrby num 10
+(integer) 123
+127.0.0.1:6379&gt; incrby num 10
+(integer) 133
+
+decr key  递减
+decrby key count 指定步长递减
+append key content 给指定的key追加内容</code>
+</pre>
+
+<h4 class="post-headingsamll">1.2：Redis 操作Map</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[1]&gt;&nbsp;hset students username keke
+(integer) 1
+127.0.0.1:6379[1]&gt; hset students age 32
+(integer) 1
+127.0.0.1:6379[1]&gt; hget students
+(error) ERR wrong number of arguments for &#39;hget&#39; command
+127.0.0.1:6379[1]&gt; hget students username
+&quot;keke&quot;
+127.0.0.1:6379[1]&gt; hget students age
+&quot;32&quot;
+127.0.0.1:6379[1]&gt; keys *
+1) &quot;students&quot;
+2) &quot;username&quot;
+127.0.0.1:6379[1]&gt; flushdb
+OK
+127.0.0.1:6379[1]&gt; clear
+127.0.0.1:6379[1]&gt; hset students username keke
+(integer) 1
+127.0.0.1:6379[1]&gt; hset students age 32
+(integer) 1
+127.0.0.1:6379[1]&gt; keys *
+1) &quot;students&quot;
+127.0.0.1:6379[1]&gt; hexists students username
+(integer) 1
+127.0.0.1:6379[1]&gt; hexists students usernamexxx
+(integer) 0
+127.0.0.1:6379[1]&gt; hget students username
+&quot;keke&quot;
+127.0.0.1:6379[1]&gt; hget students age
+&quot;32&quot;
+127.0.0.1:6379[1]&gt; hget students xxxx
+(nil)
+127.0.0.1:6379[1]&gt; hset students telephone 123454523432
+(integer) 1
+127.0.0.1:6379[1]&gt; hgetall students
+1) &quot;username&quot;
+2) &quot;keke&quot;
+3) &quot;age&quot;
+4) &quot;32&quot;
+5) &quot;telephone&quot;
+6) &quot;123454523432&quot;
+127.0.0.1:6379[1]&gt; hkeys students
+1) &quot;username&quot;
+2) &quot;age&quot;
+3) &quot;telephone&quot;
+127.0.0.1:6379[1]&gt; hvals students
+1) &quot;keke&quot;
+2) &quot;32&quot;
+3) &quot;123454523432&quot;
+127.0.0.1:6379[1]&gt; hlen students
+(integer) 3
+127.0.0.1:6379[1]&gt; hmget students username age
+1) &quot;keke&quot;
+2) &quot;32&quot;
+127.0.0.1:6379[1]&gt; hmset students address changsha male 1
+OK
+127.0.0.1:6379[1]&gt; hkeys students
+1) &quot;username&quot;
+2) &quot;age&quot;
+3) &quot;telephone&quot;
+4) &quot;address&quot;
+5) &quot;male&quot;
+127.0.0.1:6379[1]&gt; hdel students telephone male
+(integer) 2
+127.0.0.1:6379[1]&gt; hkeys students
+1) &quot;username&quot;
+2) &quot;age&quot;
+3) &quot;address&quot;
+</code></pre>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[1]&gt;&nbsp;hsetnx students username zhangsan
+(integer) 0
+127.0.0.1:6379[1]&gt; hgetall students
+1) &quot;username&quot;
+2) &quot;keke&quot;
+3) &quot;age&quot;
+4) &quot;32&quot;
+5) &quot;address&quot;
+6) &quot;changsha&quot;
+127.0.0.1:6379[1]&gt; hsetnx students username2 zhangsan
+(integer) 1
+127.0.0.1:6379[1]&gt; hgetall students
+1) &quot;username&quot;
+2) &quot;keke&quot;
+3) &quot;age&quot;
+4) &quot;32&quot;
+5) &quot;address&quot;
+6) &quot;changsha&quot;
+7) &quot;username2&quot;
+8) &quot;zhangsan&quot;
+</code>
+</pre>
+
+<h4 class="post-headingsamll">1.3：Redis 操作List</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[2]&gt;&nbsp;lpush numbers 1 2 3 4 5 6 7 8 9 10
+(integer) 10
+127.0.0.1:6379[2]&gt; keys *
+1) &quot;numbers&quot;
+127.0.0.1:6379[2]&gt; type numbers
+list
+127.0.0.1:6379[2]&gt; llen list
+(integer) 0
+127.0.0.1:6379[2]&gt; llen numbers
+(integer) 10
+127.0.0.1:6379[2]&gt; lrange numbers 0 5
+1) &quot;10&quot;
+2) &quot;9&quot;
+3) &quot;8&quot;
+4) &quot;7&quot;
+5) &quot;6&quot;
+6) &quot;5&quot;
+127.0.0.1:6379[2]&gt; lset numbers 0 100
+OK
+127.0.0.1:6379[2]&gt; lrange numbers 0 5
+1) &quot;100&quot;
+2) &quot;9&quot;
+3) &quot;8&quot;
+4) &quot;7&quot;
+5) &quot;6&quot;
+6) &quot;5&quot;
+127.0.0.1:6379[2]&gt; lindex numbers 5
+&quot;5&quot;
+127.0.0.1:6379[2]&gt; lindex numbers 0
+&quot;100&quot;
+127.0.0.1:6379[2]&gt; lpop numbers
+&quot;100&quot;
+127.0.0.1:6379[2]&gt; rpop numbers
+&quot;1&quot;
+127.0.0.1:6379[2]&gt; lrange numbers 0 100
+1) &quot;9&quot;
+2) &quot;8&quot;
+3) &quot;7&quot;
+4) &quot;6&quot;
+5) &quot;5&quot;
+6) &quot;4&quot;
+7) &quot;3&quot;
+8) &quot;2&quot;
+</code></pre>
+
+<h4 class="post-headingsamll">1.4：Redis 操作Set</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[3]&gt;&nbsp;sadd set1 a b c d 
+(integer) 4
+127.0.0.1:6379[3]&gt; keys *
+1) &quot;set1&quot;
+127.0.0.1:6379[3]&gt; type set1
+set
+127.0.0.1:6379[3]&gt; sadd set1 a 
+(integer) 0
+127.0.0.1:6379[3]&gt; scard set
+(integer) 0
+127.0.0.1:6379[3]&gt; scard set1
+(integer) 4
+127.0.0.1:6379[3]&gt; rename set1 set2
+OK
+127.0.0.1:6379[3]&gt; keys *
+1) &quot;set2&quot;
+127.0.0.1:6379[3]&gt; sadd set1 c  d e f
+(integer) 4
+127.0.0.1:6379[3]&gt; keys *
+1) &quot;set1&quot;
+2) &quot;set2&quot;
+127.0.0.1:6379[3]&gt; smembers test1
+(empty list or set)
+127.0.0.1:6379[3]&gt; smembers set1
+1) &quot;f&quot;
+2) &quot;d&quot;
+3) &quot;c&quot;
+4) &quot;e&quot;
+127.0.0.1:6379[3]&gt; smembers set2
+1) &quot;b&quot;
+2) &quot;d&quot;
+3) &quot;c&quot;
+4) &quot;a&quot;
+127.0.0.1:6379[3]&gt; smembers set2
+1) &quot;b&quot;
+2) &quot;d&quot;
+3) &quot;c&quot;
+4) &quot;a&quot;
+127.0.0.1:6379[3]&gt; sdiff set1 set2
+1) &quot;f&quot;
+2) &quot;e&quot;
+127.0.0.1:6379[3]&gt; sdiff set2 set1
+1) &quot;b&quot;
+2) &quot;a&quot;
+127.0.0.1:6379[3]&gt; sinter set1 set2
+1) &quot;d&quot;
+2) &quot;c&quot;
+127.0.0.1:6379[3]&gt; sunion set1 set2
+1) &quot;f&quot;
+2) &quot;b&quot;
+3) &quot;d&quot;
+4) &quot;c&quot;
+5) &quot;a&quot;
+6) &quot;e&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;c&quot;
+2) &quot;e&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;c&quot;
+2) &quot;e&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;c&quot;
+2) &quot;d&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;c&quot;
+2) &quot;e&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;c&quot;
+2) &quot;d&quot;
+127.0.0.1:6379[3]&gt; srandmember set1 2
+1) &quot;f&quot;
+2) &quot;d&quot;
+127.0.0.1:6379[3]&gt; sismember set1 a
+(integer) 0
+127.0.0.1:6379[3]&gt; sismember set1 e
+(integer) 1
+127.0.0.1:6379[3]&gt; smembers set1
+1) &quot;f&quot;
+2) &quot;d&quot;
+3) &quot;c&quot;
+4) &quot;e&quot;
+127.0.0.1:6379[3]&gt; srem set1 f d
+(integer) 2
+127.0.0.1:6379[3]&gt; smembers set1
+1) &quot;c&quot;
+2) &quot;e&quot;
+127.0.0.1:6379[3]&gt; spop set2 从集合中随机返回一个指定的元素，并且删除
+&quot;a&quot;
+127.0.0.1:6379[3]&gt; spop set2 
+&quot;b&quot;
+127.0.0.1:6379[3]&gt; spop set2 
+&quot;c&quot;
+127.0.0.1:6379[3]&gt; spop set2 
+&quot;d&quot;
+127.0.0.1:6379[3]&gt; spop set2 
+(nil)
+127.0.0.1:6379[3]&gt; spop set2 
+(nil)
+127.0.0.1:6379[3]&gt; SMEMBERS set2
+(empty list or set)
+</code></pre>
+
+<h4 class="post-headingsamll">1.5：Redis 操作有序集合</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">127.0.0.1:6379[4]&gt;&nbsp;zadd sortset1 100 a 200 b 300 c
+(integer) 3
+127.0.0.1:6379[4]&gt; keys *
+1) &quot;sortset1&quot;
+127.0.0.1:6379[4]&gt; type sortset1
+zset
+127.0.0.1:6379[4]&gt; rename sortset1 sortset
+OK
+127.0.0.1:6379[4]&gt; keys*
+(error) ERR unknown command &#39;keys*&#39;
+127.0.0.1:6379[4]&gt; keys *
+1) &quot;sortset&quot;
+127.0.0.1:6379[4]&gt; zcard sortset
+(integer) 3
+127.0.0.1:6379[4]&gt; zscore sortset1 a
+(nil)
+127.0.0.1:6379[4]&gt; zscore sortset a
+&quot;100&quot;
+127.0.0.1:6379[4]&gt; zscore sortset b
+&quot;200&quot;
+127.0.0.1:6379[4]&gt; zscore sortset c
+&quot;300&quot;
+127.0.0.1:6379[4]&gt; zscore sortset d
+(nil)
+127.0.0.1:6379[4]&gt; zcount sortset 0 220
+(integer) 2
+127.0.0.1:6379[4]&gt; zcount sortset 0 300
+(integer) 3
+127.0.0.1:6379[4]&gt; zrank sortset a
+(integer) 0
+127.0.0.1:6379[4]&gt; zrank sortset b
+(integer) 1
+127.0.0.1:6379[4]&gt; zrank sortset c
+(integer) 2
+127.0.0.1:6379[4]&gt; zincrby sortset 1000 a
+&quot;1100&quot;
+127.0.0.1:6379[4]&gt; zrank sortset a
+(integer) 2
+127.0.0.1:6379[4]&gt; zrank sortset b
+(integer) 0
+127.0.0.1:6379[4]&gt; zrank sortset c
+(integer) 1
+127.0.0.1:6379[4]&gt; zrange sortset 0 100
+1) &quot;b&quot;
+2) &quot;c&quot;
+3) &quot;a&quot;
+127.0.0.1:6379[4]&gt; zrange sortset 0 100 withscores
+1) &quot;b&quot;
+2) &quot;200&quot;
+3) &quot;c&quot;
+4) &quot;300&quot;
+5) &quot;a&quot;
+6) &quot;1100&quot;
+</code>
+</pre>
+</div>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/jpd7b963VZ26cRFvDPArsL.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/jpd7b963VZ26cRFvDPArsL.html">《KeKe解说Redis第三弹：Redis的操作字符串，集合，Set,Map》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+<script>$(".playbox").trigger("click");</script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rumo.mapper.BlogMapper" >
+  
+ 	 <resultMap id="BaseResultMap" type="com.rumo.pojo.Blog" >
+	      <id property="id" column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="title" column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="createTime" column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+	      <result property="updateTime" column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+	      <result property="isDelete" column="is_delete" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="userId" column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+	      <result property="status" column="status" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="description" column="description" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+	      <result property="img" column="img" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="tag" column="tag" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="kcolumn" column="kcolumn" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="musicLink" column="music_link" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="staticLink" column="static_link" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="videolink" column="videolink" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="appLink" column="app_link" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="hits" column="hits" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="categoryId" column="category_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="width" column="width" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="height" column="height" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="isComment" column="is_comment" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="isOpen" column="is_open" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="blogId" column="blog_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="courseId" column="course_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="loves" column="loves" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="price" column="price" jdbcType="FLOAT" javaType="java.lang.Float" />
+	      <result property="thumnimg" column="thumnimg" jdbcType="VARCHAR" javaType="java.lang.String" />
+	       <!-- 多对一映射  -->
+  		  <association property="category" select="com.rumo.mapper.CategoryMapper.getCategoryById" column="category_id" javaType="com.rumo.pojo.Category"></association>
+  		  <association property="user" select="com.rumo.mapper.UserMapper.getUserById" column="user_id" javaType="com.rumo.pojo.User"></association>
+  	</resultMap>
+  
+  	<sql id="Base_Column_List">
+  		id,title,loves,create_time,update_time,is_delete,user_id,status,description,img,tag,kcolumn,music_link,static_link,videolink,app_link,hits,category_id,width,height,is_comment,is_open,blog_id,course_id,thumnimg,price
+  	</sql>
+  	
+  
+  	<select id="counthitsblog" resultType="int" parameterType="int">
+  		SELECT hits FROM keke_blog WHERE id = #{blogId}
+  	</select>
+  	
+  	
+  	<select id="queryBlogGroupYear" resultType="java.util.Map" flushCache="false" parameterType="com.rumo.vo.BlogVo">
+  		SELECT
+			c.id,
+			c.title,
+			c.create_time as createTime,
+			c.static_link as staticLink,
+			c.hits,
+			c.loves,
+			c.category_id as categoryId,
+			kc.days,
+			kc.count
+		FROM
+			keke_blog c,
+			(
+				SELECT
+					DATE_FORMAT(create_time, '%Y%m') days,
+					count(id) count
+				FROM
+					keke_blog
+				GROUP BY
+					days
+			) kc
+		WHERE
+			DATE_FORMAT(c.create_time, '%Y%m') = kc.days AND c.status = #{status} and c.is_delete = #{isDelete}
+		order by ${sort}
+  	
+  	</select>
+  	
+  	
+  	
+  	 <select id="queryBlogMapAll" flushCache="false" parameterType="com.rumo.vo.BlogVo" resultType="java.util.Map">
+	  	SELECT
+			c.id,
+			c.title,
+			c.create_time AS createTime,
+			c.user_id AS userId,
+			c.description,
+			c.img,
+			c.status,
+			c.tag,
+			c.price,
+			c.kcolumn,
+			c.music_link AS musicLink,
+			c.static_link AS staticLink,
+			c.videolink,
+			c.app_link AS appLink,
+			c.hits,
+			c.loves,
+			c.is_open as isOpen,
+			c.is_comment as isComment,
+			c.width,
+			c.height,
+			c.category_id AS categoryId,
+			c.course_id AS courseId,
+			c.thumnimg,
+			kc.`name` AS categoryName,
+			ku.username,
+			ku.header_pic AS headerPic,
+			ku.sign,
+			ku.type AS utype,
+			ku.`level` AS ulevel
+		FROM
+			keke_blog c
+		LEFT JOIN keke_category kc ON kc.id = c.category_id
+		LEFT JOIN keke_user ku ON ku.id = c.user_id
+		<trim prefix="WHERE" prefixOverrides="AND | OR">  
+				<if test="isDelete!=null">
+					AND c.is_delete = ${isDelete}
+				</if>
+				<if test="status!=null">
+					AND c.status =${status}
+				</if>
+				<if test="keyword!=null">
+					AND c.title like '%${keyword}%' 
+				</if>
+				<if test="userId!=null">
+					AND c.user_id= ${userId}
+				</if>
+				<if test="filterId!=null">
+					AND c.id != ${filterId}
+				</if>
+				<if test="categoryId!=null">
+					AND c.category_id = ${categoryId}
+				</if>
+				<if test="mark!=null and mark==1"><!-- 今天 -->
+					AND TO_DAYS(c.create_time) = to_days(now())
+				</if>
+				<if test="mark!=null and mark==2"><!-- 昨天-->
+					<![CDATA[AND TO_DAYS(NOW())-TO_DAYS(c.create_time)=1]]>
+				</if>
+				<if test="mark!=null and mark==3"><!-- 近五天-->
+					<![CDATA[AND DATE_SUB(NOW(), INTERVAL 5 DAY) <= date(c.create_time)]]>
+				</if>
+				<if test="mark!=null and mark==4"><!-- 本周 -->
+					AND  WEEKOFYEAR(c.create_time)=WEEKOFYEAR(NOW())
+				</if>
+				<if test="mark!=null and mark==5"><!-- 上周 -->
+					AND YEARWEEK(date_format(c.create_time,'%Y-%m-%d')) = YEARWEEK(now())-1
+				</if>
+				<if test="mark!=null and mark==6"><!-- 本月 -->
+					AND date_format(c.create_time,'%Y-%m')=date_format(now(),'%Y-%m')
+				</if>
+				<if test="mark!=null and mark==7"><!-- 上月 -->
+					AND date_format(c.create_time,'%Y-%m')=date_format(DATE_SUB(NOW(), INTERVAL 1 MONTH),'%Y-%m')
+				</if>
+				<if test="mark!=null and mark==8"><!-- 上季度 -->
+					AND  QUARTER(c.create_time)=QUARTER(DATE_SUB(now(),interval 1 QUARTER))
+				</if>
+				<if test="mark!=null and mark==9"><!-- 本季度 -->
+					AND  QUARTER(c.create_time)=QUARTER(now())
+				</if>
+			</trim>
+			<choose>
+				<!--  MyBatis排序时使用order by 动态参数时需要注意，用$而不是# -->
+				<when test="sort!=null">
+	                ORDER BY ${sort}
+				</when>
+			</choose>
+	  </select>
+	  
+	  
+	  <select id="selectBlogsById" flushCache="false" parameterType="int" resultType="java.util.Map">
+	  	SELECT
+			c.id,
+			c.title,
+			c.create_time AS createTime,
+			c.user_id AS userId,
+			c.description,
+			c.img,
+			c.tag,
+			c.status,
+			c.kcolumn,
+			c.music_link AS musicLink,
+			c.static_link AS staticLink,
+			c.videolink,
+			c.app_link AS appLink,
+			c.hits,
+			c.loves,
+			c.width,
+			c.height,
+			c.is_open as isOpen,
+			c.is_comment as isComment,
+			c.price,
+			c.category_id AS categoryId,
+			c.course_id AS courseId,
+			c.thumnimg,
+			kc.`name` AS categoryName,
+			ku.username,
+			ku.header_pic AS headerPic,
+			ku.sign,
+			ku.type AS utype,
+			ku.`level` AS ulevel
+		FROM
+			keke_blog c
+		LEFT JOIN keke_category kc ON kc.id = c.category_id
+		LEFT JOIN keke_user ku ON ku.id = c.user_id
+		where c.id = #{id}
+	  </select>
+  	
+  	
+  	<select id="queryBlogByCourseId" resultMap="BaseResultMap" parameterType="int">
+  		SELECT <include refid="Base_Column_List"></include> FROM keke_blog where course_id = #{id}
+	</select>
+
+  	<select id="queryBlogAll" resultMap="BaseResultMap" parameterType="com.rumo.vo.BlogVo">
+  		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			keke_blog
+		<where>
+			 <if test="id!=null"> and id = #{id,jdbcType=INTEGER}</if>
+			 <if test="title!=null and title!=''"> and title = #{title,jdbcType=VARCHAR}</if>
+			 <if test="createTime!=null"> and create_time = now()</if>
+			 <if test="updateTime!=null"> and update_time = now()</if>
+			 <if test="isDelete!=null"> and is_delete = #{isDelete,jdbcType=INTEGER}</if>
+			 <if test="userId!=null"> and user_id = #{userId,jdbcType=BIGINT}</if>
+			 <if test="status!=null"> and status = #{status,jdbcType=INTEGER}</if>
+			 <if test="description!=null and description!=''"> and description = #{description,jdbcType=LONGVARCHAR}</if>
+			 <if test="img!=null and img!=''"> and img = #{img,jdbcType=VARCHAR}</if>
+			 <if test="tag!=null and tag!=''"> and tag = #{tag,jdbcType=VARCHAR}</if>
+			 <if test="kcolumn!=null"> and kcolumn = #{kcolumn,jdbcType=INTEGER}</if>
+			 <if test="musicLink!=null and musicLink!=''"> and music_link = #{musicLink,jdbcType=VARCHAR}</if>
+			 <if test="staticLink!=null and staticLink!=''"> and static_link = #{staticLink,jdbcType=VARCHAR}</if>
+			 <if test="videolink!=null and videolink!=''"> and videolink = #{videolink,jdbcType=VARCHAR}</if>
+			 <if test="appLink!=null and appLink!=''"> and app_link = #{appLink,jdbcType=VARCHAR}</if>
+			 <if test="hits!=null"> and hits = #{hits,jdbcType=INTEGER}</if>
+			 <if test="loves!=null"> and loves = #{loves,jdbcType=INTEGER}</if>
+			 <if test="categoryId!=null"> and category_id = #{categoryId,jdbcType=INTEGER}</if>
+			 <if test="width!=null"> and width = #{width,jdbcType=INTEGER}</if>
+			 <if test="height!=null"> and height = #{height,jdbcType=INTEGER}</if>
+			 <if test="isComment!=null"> and is_comment = #{isComment,jdbcType=INTEGER}</if>
+			 <if test="isOpen!=null and isOpen!=''"> and is_open = #{isOpen,jdbcType=VARCHAR}</if>
+			 <if test="blogId!=null"> and blog_id = #{blogId,jdbcType=INTEGER}</if>
+			 <if test="courseId!=null"> and course_id = #{courseId,jdbcType=INTEGER}</if>
+			 <if test="price!=null"> and price = #{price,jdbcType=FLOAT}</if>
+			 <if test="thumnimg!=null and thumnimg!=''"> and thumnimg = #{thumnimg,jdbcType=VARCHAR}</if>
+		</where>	
+  	</select>
+  
+  	<select id="getBlogById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			keke_blog
+		WHERE
+			id = #{id,jdbcType=INTEGER}
+  	</select>
+  	
+  	<insert id="saveBlog" flushCache="true" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+  		insert into keke_blog (title,create_time,update_time,is_delete,user_id,status,description,img,tag,kcolumn,music_link,static_link,videolink,app_link,hits,category_id,width,height,is_comment,is_open,blog_id,course_id,thumnimg,loves,price)values(#{title,jdbcType=VARCHAR},now(),now(),#{isDelete,jdbcType=INTEGER},#{userId,jdbcType=BIGINT},#{status,jdbcType=INTEGER},#{description,jdbcType=LONGVARCHAR},#{img,jdbcType=VARCHAR},#{tag,jdbcType=VARCHAR},#{kcolumn,jdbcType=INTEGER},#{musicLink,jdbcType=VARCHAR},#{staticLink,jdbcType=VARCHAR},#{videolink,jdbcType=VARCHAR},#{appLink,jdbcType=VARCHAR},#{hits,jdbcType=INTEGER},#{categoryId,jdbcType=INTEGER},#{width,jdbcType=INTEGER},#{height,jdbcType=INTEGER},#{isComment,jdbcType=INTEGER},#{isOpen,jdbcType=VARCHAR},#{blogId,jdbcType=INTEGER},#{courseId,jdbcType=INTEGER},#{thumnimg,jdbcType=VARCHAR},#{loves,jdbcType=INTEGER},#{price,jdbcType=FLOAT})
+  	</insert>
+  	
+  	<update id="updateBlog" parameterType="com.rumo.pojo.Blog" flushCache="true">
+  		update keke_blog 
+  		<set>
+			<if test="id!=null">id = #{id,jdbcType=INTEGER},</if>
+			<if test="title!=null and title!=''">title = #{title,jdbcType=VARCHAR},</if>
+			<if test="createTime!=null">create_time = #{createTime},</if>
+			<if test="isDelete!=null">is_delete = #{isDelete,jdbcType=INTEGER},</if>
+			<if test="userId!=null">user_id = #{userId,jdbcType=BIGINT},</if>
+			<if test="status!=null">status = #{status,jdbcType=INTEGER},</if>
+			<if test="description!=null and description!=''">description = #{description,jdbcType=LONGVARCHAR},</if>
+			<if test="img!=null and img!=''">img = #{img,jdbcType=VARCHAR},</if>
+			<if test="tag!=null and tag!=''">tag = #{tag,jdbcType=VARCHAR},</if>
+			<if test="kcolumn!=null">kcolumn = #{kcolumn,jdbcType=INTEGER},</if>
+			<if test="musicLink!=null and musicLink!=''">music_link = #{musicLink,jdbcType=VARCHAR},</if>
+			<if test="staticLink!=null and staticLink!=''">static_link = #{staticLink,jdbcType=VARCHAR},</if>
+			<if test="videolink!=null and videolink!=''">videolink = #{videolink,jdbcType=VARCHAR},</if>
+			<if test="appLink!=null and appLink!=''">app_link = #{appLink,jdbcType=VARCHAR},</if>
+			<if test="hits!=null">hits = #{hits,jdbcType=INTEGER},</if>
+			<if test="loves!=null">loves = #{loves,jdbcType=INTEGER},</if>
+			<if test="categoryId!=null">category_id = #{categoryId,jdbcType=INTEGER},</if>
+			<if test="width!=null">width = #{width,jdbcType=INTEGER},</if>
+			<if test="height!=null">height = #{height,jdbcType=INTEGER},</if>
+			<if test="isComment!=null">is_comment = #{isComment,jdbcType=INTEGER},</if>
+			<if test="isOpen!=null and isOpen!=''">is_open = #{isOpen,jdbcType=VARCHAR},</if>
+			<if test="blogId!=null">blog_id = #{blogId,jdbcType=INTEGER},</if>
+			<if test="courseId!=null">course_id = #{courseId,jdbcType=INTEGER},</if>
+			<if test="price!=null">price = #{price,jdbcType=FLOAT},</if>
+			<if test="thumnimg!=null and thumnimg!=''">thumnimg = #{thumnimg,jdbcType=VARCHAR},</if>
+			update_time = now(),
+  		</set>
+  		where id = #{id ,jdbcType=INTEGER}
+  	</update>
+  	
+  	<delete id="deleteBlogById" flushCache="true">
+  		<!-- delete from keke_blog where id = #{id,jdbcType=INTEGER} -->
+  		update keke_blog set is_delete = 1 where id = #{id,jdbcType=INTEGER}
+  	</delete>
+  	
+  	<update id="updateBlogHit" flushCache="true">
+  		update keke_blog set hits = hits + #{num} where id = #{id ,jdbcType=INTEGER}
+  	</update>
+  	
+  	<!-- 预览相关 -->
+  	<select id="queryBlogHits" flushCache="false" resultType="java.util.Map" parameterType="long">
+  		SELECT
+			c.blog_id as id,
+			c.create_time as createTime,
+			kb.title,
+			kb.category_id as categoryId,
+			kb.static_link as staticLink,
+			kb.app_link as appLink,
+			kb.hits,
+			kb.img,
+			kc.`name` as categoryName
+		FROM
+			keke_blog_hit c
+		LEFT JOIN keke_blog kb ON kb.id = c.blog_id
+		LEFT JOIN keke_category kc ON kc.id = kb.category_id
+		WHERE
+			c.type = 1 AND kb.`status` = 1 AND kb.is_delete = 0 AND c.user_id = #{userId,jdbcType=BIGINT}
+		ORDER BY c.create_time desc
+  	</select>
+  	
+  	<insert id="saveBlogHit" flushCache="true">
+	  	INSERT INTO keke_blog_hit(user_id,blog_id,type)VALUES(#{userId,jdbcType=BIGINT},#{blogId},#{type})
+  	</insert>
+  	
+  	<select id="countBlogHit" flushCache="false" resultType="int">
+  		SELECT
+			count(1)
+		FROM
+			keke_blog_hit 
+		WHERE
+			user_id = #{userId ,jdbcType=BIGINT} AND blog_id = #{blogId} AND type = #{type}
+  	</select>
+ </mapper>	

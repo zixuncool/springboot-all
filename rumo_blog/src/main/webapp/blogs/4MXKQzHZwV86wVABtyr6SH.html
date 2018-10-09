@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>常见的网站攻击手段及预防措施。-中华墨风-'s Zone</title>
+<meta name="description" content="XSS XSS攻击的全称是跨站脚本攻击(Cross Site Scripting),为了不和层叠样式表 (Cascading Style Sheets,CSS)的缩写混淆,故将跨 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="86" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/4MXKQzHZwV86wVABtyr6SH.html">常见的网站攻击手段及预防措施。</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/19 14:05:54">2018/07/19 14:05:54</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">316</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<div class="asb asb-post asb-post-01"></div> 
+<h3>XSS</h3> 
+<p>XSS攻击的全称是跨站脚本攻击(Cross Site Scripting),为了不和层叠样式表 (Cascading Style Sheets,CSS)的缩写混淆,故将跨站脚本攻击缩写为XSS,是WEB应用程序中最常见到的攻击手段之一。跨站脚本攻击指的是攻击者在网页中嵌入恶意脚本程序, 当用户打开该网页时,脚本程序便开始在客户端的浏览器上执行,以盗取客户端cookie、 盗取用户名密码、下载执行病毒木马程序等等。</p> 
+<p>有一种场景,用户在表单上输入一段数据后,提交给服务端进行持久化,其他页面上需要从服务端将数据取出来展示。还是使用之前那个表单nick,用户输入昵称之后,服务端会将nick保存,并在新的页面展现给用户,当普通用户正常输入hollis,页面会显示用户的 nick为hollis:</p> 
+<pre><code>&lt;body&gt; 
+    hollis
+&lt;/body&gt;
+</code></pre> 
+<p>但是,如果用户输入的不是一段正常的nick字符串,而是<code>&lt;script&gt;alert("haha")&lt;/script&gt;</code>, 服务端会将这段脚本保存起来,当有用户查看该页面时,页面会出现如下代码:</p> 
+<pre><code>&lt;body&gt; 
+    &lt;script&gt;
+        alert("haha")
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/xss1.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/xss1.png" alt="xss1" width="171" height="202" class="aligncenter size-full wp-image-2104"></a></p> 
+<h3>XSS该如何防御</h3> 
+<p>XSS之所以会发生,是因为用户输入的数据变成了代码。因此,我们需要对用户输入的数据进行HTML转义处理,将其中的“尖括号”、“单引号”、“引号” 之类的特殊字符进行转义编码。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/xss.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/xss.png" alt="xss" width="653" height="305" class="aligncenter size-full wp-image-2103"></a></p> 
+<p>如今很多开源的开发框架本身默认就提供HTML代码转义的功能,如流行的jstl、Struts等等,不需要开发人员再进行过多的开发。使用jstl标签进行HTML转义,将变量输出,代码 如下:</p> 
+<pre><code>&lt;c:out value="${nick}" escapeXml="true"&gt;&lt;/c:out&gt; 
+</code></pre> 
+<p>只需要将escapeXml设置为true, jstl就会将变量中的HTML代码进行转义输出。</p> 
+<h3>CSRF</h3> 
+<p>CSRF攻击的全称是跨站请求伪造(cross site request forgery), 是一种对网站的恶意利用,尽管听起来跟XSS跨站脚本攻击有点相似,但事实上CSRF与XSS差别很大,XSS利用的是站点内的信任用户,而CSRF则是通过伪装来自受信任用户的请求来利用受信任的网站。你可以这么理解CSRF攻击:攻击者盗用了你的身份,以你的名义向第三方网站发送恶意请求。CRSF能做的事情包括利用你的身份发邮件、发短信、进行交易转账等等,甚至盗取你的账号。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/csrf.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/csrf.png" alt="csrf" width="779" height="480" class="aligncenter size-full wp-image-2107"></a></p> 
+<p>假设某银行网站A,他以GET请求来发起转账操作,转账的地址为www.xxx.com/transfer.do?accountNum=10001&amp;money=10000,accountNum参数表示转账的目的账户,money参数表示转账金额。 而某大型论坛B上,一个恶意用户上传了一张图片,而图片的地址栏中填的并不是图片的地址,而是前面所说的转账地址:</p> 
+<pre><code>&lt;img src="http://www.xxx.com/transfer.do?accountNum=10001&amp;money=10000"&gt;
+</code></pre> 
+<p>当你登陆网站A后,没有及时登出,这个时候你访问了论坛B,不幸的事情发生了,你会发现你的账户里面少了10000块……</p> 
+<p>为什么会这样呢,在你登陆银行A的时候,你的浏览器端会生成银行A的cookie,而当你访问论坛B的时候,页面上的<img title="" alt="">标签需要浏览器发起一个新的HTTP请求,以获得图片资源, 当浏览器发起请求的时候,请求的却是银行A的转账地址www.xxx.com/transfer.do?accoun tNum=10001&amp;money=10000,并且会带上银行A的cookie信息,结果银行的服务器收到这个请求后,会认为是你发起的一次转账操作,因此你的账户里边便少了10000块。</p> 
+<h3>CSRF的防御</h3> 
+<h4>cookie设置为HttpOnly</h4> 
+<p>CSRF攻击很大程度上是利用了浏览器的cookie,为了防止站内的XSS漏洞盗取cookie,需要在cookie中设置”HttpOnly”属性,这样通过程序(如JavascriptS脚本、Applet等)就无法读取到cookie信息,避免了攻击者伪造cookie的情况出现。</p> 
+<h4>增加token</h4> 
+<p>CSRF攻击之所以能够成功,是因为攻击者可以伪造用户的请求,该请求中所有的用户验证信息都存在于cookie中,因此攻击者可以在不知道用户验证信息的情况下直接利用用户的cookie来通过安全验证。由此可知,抵御CSRF攻击的关键在于:在请求中放入攻击者所不能伪造的信息,并且该信息不存在于cookie之中。鉴于此,系统开发人员可以在HTTP请求中以参数的形式加入一个随机产生的token,并在服务端进行token校验,如果请求中没有token或者token内容不正确,则认为是CSRF攻击而拒绝该请求。</p> 
+<h4>通过Referer识别</h4> 
+<p>根据HTTP协议,在HTTP头中有一个字段叫Referer,它记录了该HTTP请求的来源地址。在通常情况下,访问一个安全受限页面的请求都来自于同一个网站。比如某银行的转账是通过用户访问http://www.xxx.com/transfer.do页面完成,用户必须先登录www.xxx.com,然后通过点击页面上的提交按钮来触发转账事件。当用户提交请求时,该转账请求的Referer值就会是提交按钮所在页面的URL(本例为www.xxx.com/transfer.do)。如果攻击者要对银行网站实施CSRF攻击,他只能在其他的网站构造请求,当用户通过其他网站发送请求到银行时,该请求的Referer的值是其他网站的地址,而不是银行转账页面的地址。因此,要防御CSRF攻击,银行网站只需要对于每一个转账请求验证其Referer值,如果是以www.xxx.com域名开头的地址,则说明该请求是来自银行网站自己的请求,是合法的。如果 Referer是其他网站的话,就有可能是CSRF攻击,则拒绝该请求。</p> 
+<h3>SQL注入攻击</h3> 
+<p>所谓SQL注入,就是通过把SQL命令伪装成正常的HTTP请求参数,传递到服务端,欺骗服务器最终执行恶意的SQL命令,达到入侵目的。攻击者可以利用SQL注入漏洞,查询非授权信息, 修改数据库服务器的数据,改变表结构,甚至是获取服务器root权限。总而言之,SQL注入漏洞的危害极大,攻击者采用的SQL指令,决定攻击的威力。当前涉及到大批量数据泄露的攻击事件,大部分都是通过利用SQL注入来实施的。</p> 
+<p>假设有个网站的登录页面,如下所示:</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/sql.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/sql.png" alt="sql" width="262" height="202" class="aligncenter size-full wp-image-2111"></a></p> 
+<p>假设用户输入nick为zhangsan,密码为password1,则验证通过,显示用户登录:</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/login11.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/login11.png" alt="login1" width="486" height="82" class="aligncenter size-full wp-image-2112"></a></p> 
+<p>否则,显示用户没有登录:</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/login2.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/login2.png" alt="login2" width="409" height="99" class="aligncenter size-full wp-image-2110"></a></p> 
+<h3>SQL注入攻击原理</h3> 
+<pre><code>Connection conn = getConnection();
+String sql = "select * from hhuser where nick = '" + nickname + "'" + " and passwords = '" + password + "'"; 
+Statement st = (Statement) conn.createStatement();
+ResultSet rs = st.executeQuery(sql);
+List&lt;UserInfo&gt; userInfoList = new ArrayList&lt;UserInfo&gt;(); 
+while (rs.next()) {
+UserInfo userinfo = new UserInfo();         
+userinfo.setUserid(rs.getLong("userid"));       
+userinfo.setPasswords(rs.getString("passwords"));       
+userinfo.setNick(rs.getString("nick"));         
+userinfo.setAge(rs.getInt("age"));      
+userinfo.setAddress(rs.getString("address"));       
+userInfoList.add(userinfo);
+}
+</code></pre> 
+<p>当用户输入nick为zhangsan,密码为<code>' or '1'='1</code>的时候,意想不到的事情出现了,页面显示为login状态:</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/login11.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/login11.png" alt="login1" width="486" height="82" class="aligncenter size-full wp-image-2112"></a></p> 
+<p>以上便是一次简单的、典型的SQL注入攻击。当然,SQL注入的危害不仅 如此,假设用户输入用户名zhangsan,在密码框输入<code>' ;drop table aaa;--</code> 会发生什么呢?</p> 
+<h3>SQL注入攻击防御</h3> 
+<h4>使用预编译语句</h4> 
+<p>预编译语句<code>PreparedStatement</code>是java.sql中的一个接口,继承自Statement接口。通过 Statement对象执行SQL语句时,需要将SQL语句发送给DBMS,由DBMS先进行编译后再执行。而预编译语句和Statement不同,在创建PreparedStatement对象时就指定了SQL语句,该语句立即发送给DBMS进行编译,当该编译语句需要被执行时,DBMS直接运行编译后的SQL语句,而不需要像其他SQL语句那样首先将其编译。 前面介绍过,引发SQL注入的根本原因是恶意用户将SQL指令伪装成参数传递到后端数据库执行, 作为一种更为安全的动态字符串的构建方法,预编译语句使用参数占位符来替代需要动态传入的参数,这样攻击者无法改变SQL语句的结构,SQL语句的语义不会发生改变,即便用户传入类似于前面<code>' or '1'='1</code>这样的字符串,数据库也会将其作为普通的字符串来处理。</p> 
+<h4>使用ORM框架</h4> 
+<p>由上文可见,防止SQL注入的关键在于对一些关键字符进行转义,而常见的一些ORM框架,如 ibatis、hibernate等,都支持对相应的关键字或者特殊符号进行转义,可以通过简单的配置, 很好的预防SQL注入漏洞,降低了普通的开发人员进行安全编程的门槛。 Ibatis的insert语句配置:</p> 
+<pre><code>&lt;insert id="insert" parameterClass="userDO"&gt;
+insert into users(gmt_create,gmt_modified,userid,user_nick,address,age,sex) values(now(),now(),#userId#,#userNick#,#address#,#age#,#sex#)
+&lt;/insert&gt;
+</code></pre> 
+<p>通过#符号配置的变量,ibatis能够对输入变量的一些关键字进行转义,防止SQL注入攻击。</p> 
+<h4>避免密码明文存放</h4> 
+<p>对存储的密码进行单向Hash,如使用MD5对密码进行摘要,而非直接存储明文密码,这样的好处就是万一用户信息泄露,即圈内所说的被“拖库”,黑客无法直接获取用户密码,而只能得到一串跟密码相差十万八千里的Hash码。</p> 
+<h4>处理好相应的异常</h4> 
+<p>后台的系统异常,很可能包含了一些如服务器版本、数据库版本、编程语言等等的信息,甚至是数据库连接的地址及用户名密码,攻击者可以按图索骥,找到对应版本的服务器漏洞或者数据库漏洞进行攻击,因此,必须要处理好后台的系统异常,重定向到相应的错误处理页面,而 不是任由其直接输出到页面上。</p> 
+<h3>文件上传漏洞</h3> 
+<p>在上网的过程中,我们经常会将一些如图片、压缩包之类的文件上传到远端服务器进行保存, 文件上传攻击指的是恶意攻击者利用一些站点没有对文件的类型做很好的校验这样的漏洞, 上传了可执行的文件或者脚本,并且通过脚本获得服务器上相应的权利,或者是通过诱导外 部用户访问或者下载上传的病毒或者木马文件,达到攻击目的。</p> 
+<p>为了防范用户上传恶意的可执行文件和脚本,以及将文件上传服务器当做免费的文件存储服务器使用,需要对上传的文件类型进行白名单(非黑名单,这点非常重要)校验,并且限制上传文件的大小,上传的文件,需要进行重新命名,使攻击者无法猜测到上传文件的访问路径。</p> 
+<p>对于上传的文件来说,不能简单的通过后缀名称来判断文件的类型,因为恶意攻击可以将可执行文件的后缀名称改成图片或者其他的后缀类型,诱导用户执行。因此,判断文件类型需要使用更安全的方式。很多类型的文件,起始的几个字节内容是固定的,因此,根据这几个字节的内容,就可以确定文件类型,这几个字节也被称为魔数(magic number)。</p> 
+<h3>DDoS攻击</h3> 
+<p>DDoS(Distributed Denial of Service),即分布式拒绝服务攻击,是目前最为强大、最难以防御的攻击方式之一。要理解DDos,得先从DoS说起。</p> 
+<p>最基本的DoS攻击就是利用合理的客户端请求来占用过多的服务器资源,从而使合法用户无法得到服务器的响应。DDoS攻击手段是在传统的DoS攻击基础之上产生的一类攻击方式,传统的DoS攻击一般是采用一对一方式的,当攻击目标CPU速度、内存或者网络带宽等等各项性能指标不高的情况下,它的效果是明显的,但随着计算机与网络技术的发展,计算机的处理能力显著增加,内存不断增大,同时也出现了千兆级别的网络,这使得DoS攻击逐渐失去效果。这时候分布式拒绝服务攻击手段(DDoS)便应运而生了。你理解了DoS攻击以后, DDoS的原理就非常简单了,它指的是攻击者借助公共网络,将数量庞大的计算机设备联合起来作为 攻击平台,对一个或多个目标发动攻击,从而达到瘫痪目标主机的目的。通常,在攻击开始前,攻击者会提前控制大量的用户计算机,称之为“肉鸡”,并通过指令使大量的肉鸡在同一时刻对某个主机进行访问,从而达到瘫痪目标主机的目的。</p> 
+<p>DDoS的攻击有很多种类型,如依赖蛮力的ICMP Flood、UDP Flood等等,随着硬件性能的 提升,需要的机器规模越来越大,组织大规模的攻击越来越困难,现在已经不常见,还有就是依赖协议特征以及具体的软件漏洞进行的攻击,如Slowloris攻击,Hash碰撞攻击等等,这类攻击主要利用协议以及软件漏洞发起攻击,需要在特定环境下才会出现,更多的攻击者采用的是前面两种的混合方式,即利用了协议、系统的缺陷,又具备了海量的流量, 如SYN Flood、DNS Query Flood等等。</p> 
+<h3>DNS Query Flood</h3> 
+<p>DNS Query Flood实际上是UDP Flood攻击的一种变形,由于DNS服务在互联网中不可替代的作用,一旦DNS服务器瘫痪,影响甚大。</p> 
+<p>DNS Query Flood攻击采用的方法是向被攻击的服务器发送海量的域名解析请求,通常,请求解析的域名是随机生成,大部分根本就不存在,并且通过伪造端口和客户端IP,防止查询请求被ACL过滤。被攻击的DNS服务器在接收到域名解析请求后,首先会在服务器上查找是否有对应的缓存, 由于域名是随机生成的,几乎不可能有相应的缓存信息,当没有缓存,并且该域名无法直接由该DNS服务器进行解析的时候,DNS服务器会向其上层DNS服务器递归查询域名信息,直到全球互联网的13台根DNS服务器。大量不存在的域名解析请求,给服务器带来了很大的负载,当解析请求超过一定量的时候,就会造成DNS服务器解析域名超时,这样攻击者便达成了攻击目的。</p> 
+<h3>CC攻击</h3> 
+<p>CC(Challenge Collapsar)攻击属于DDos的一种,是基于应用层HTTP协议 发起的DDos攻击,也被称为HTTP Flood。</p> 
+<p>CC攻击的原理是这样的,攻击者通过控制的大量“肉鸡”或者利用从互联网上搜寻的大量匿名的HTTP代理,模拟正常用户给网站发起请求直到该网站拒绝服务为止。大部分网站会通过CDN以及分布式缓存来加快服务端响应,提升网站的吞吐量,而这些精心构造的HTTP请求往往有意避开这些缓存,需要进行多次DB查询操作或者是一次请求返回大量的数据,加速系统 资源消耗,从而拖垮后端的业务处理系统,甚至连相关存储以及日志收集系统也无法幸免。</p> 
+<p class="asb-post-footer"><strong>【公告】</strong><a target="_blank" href="http://www.hollischuang.com/转载说明">版权声明</a></p>(全文完)
+<center>
+ <img src="http://www.hollischuang.com/wp-content/uploads/2016/01/qrcode_for_gh_4ebd1b130cbe_430-1.jpg" width="300px" height="300px" title="" alt="">欢迎关注HollisChuang微信公众账号
+</center>
+<p class="post-copyright">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://www.hollischuang.com">HollisChuang's Blog</a> » <a href="http://www.hollischuang.com/archives/2101">常见的网站攻击手段及预防措施。</a></p><p>此文转自：<a href='http://www.hollischuang.com/archives/2101' target='_blank'>http://www.hollischuang.com/archives/2101</a></p>
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/4MXKQzHZwV86wVABtyr6SH.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/4MXKQzHZwV86wVABtyr6SH.html">《常见的网站攻击手段及预防措施。》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

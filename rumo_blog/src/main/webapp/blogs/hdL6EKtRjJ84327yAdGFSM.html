@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>常见的安全算法-中华墨风-'s Zone</title>
+<meta name="description" content="一、数字摘要 数字摘要也称为消息摘要,它是一个唯一对应一个消息或文本的固定长度的值,它由一个单向Hash函数对消息进行计算而 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="84" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/hdL6EKtRjJ84327yAdGFSM.html">常见的安全算法</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/19 14:05:53">2018/07/19 14:05:53</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">328</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<div class="asb asb-post asb-post-01"></div> 
+<h2>一、数字摘要</h2> 
+<p>数字摘要也称为消息摘要,它是一个唯一对应一个消息或文本的固定长度的值,它由一个单向Hash函数对消息进行计算而产生。如果消息在传递的途中改变了,接收者通过对收到消息采用相同的Hash重新计算,新产生的摘要与原摘要进行比较,就可知道消息是否被篡改了,因此消息摘要能够验证消息的完整性。消息摘要采用单向Hash函数将需要计算的内容”摘要”成固定长度的串,这个串亦称为数字指纹。这个串有固定的长度,且不同的明文摘要成密文,其结果总是不同的(相对的),而同样的明文其摘要必定一致。这样这串摘要便可成为验证明文是否是”真身”的”指纹”了。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/数字摘要.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/数字摘要.png" alt="数字摘要" width="738" height="190" class="aligncenter size-full wp-image-2172"></a></p> 
+<h3>MD5</h3> 
+<p>MD5即Message Digest Algorithm 5(信息摘要算法5),是数字摘要算法一种实现,用于确保信息传输完整性和一致性,摘要长度为128位。MD5由MD4、MD3、MD2改进而来,主要增强算法复杂度和不可逆性,该算法因其普遍、稳定、快速的特点,在产业界得到了极为广泛的使用,目前主流的编程语言普遍都已有MD5算法实现。</p> 
+<h3>SHA</h3> 
+<p>SHA的全称是Secure Hash Algorithm,即安全散列算法。1993年,安全散列算法(SHA)由美国国家标准和技术协会(NIST)提出,并作为联邦信息处理标准(FIPS PUB 180)公布,1995年又发布了一个修订版FIPS PUB 180-1,通常称之为SHA-1。SHA-1是基于MD4算法的,现在已成为公认的最安全的散列算法之一,并被广泛使用。 SHA-1算法生成的摘要信息的长度为160位,由于生成的摘要信息更长,运算的过程更加复杂, 在相同的硬件上,SHA-1的运行速度比MD5更慢,但是也更为安全。</p> 
+<h2>二、对称加密</h2> 
+<p>对称加密算法是应用较早的加密算法,技术成熟。在对称加密算法中,数据发送方将明文(原始数据)和加密密钥一起经过特殊加密算法处理后,生成复杂的加密密文进行发送,数据接收方收到密文后,若想读取原文,则需要使用加密使用的密钥及相同算法的逆算法对加密的密文进行解密,才能使其恢复成可读明文。在对称加密算法中,使用的密钥只有一个,发送和接收双方都使用这个密钥对数据进行加密和解密,这就要求加密和解密方事先都必须知道加密的密钥。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/对称加密.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/对称加密.png" alt="对称加密" width="727" height="244" class="aligncenter size-full wp-image-2174"></a></p> 
+<h3>DES</h3> 
+<p>DES算法属于对称加密算法,明文按64位进行分组,密钥长64位,但事实上只有56位参与DES运算(第8、16、24、32、40、48、56、64位是校验位,使得每个密钥都有奇数个1),分组后的明文和56位的密钥按位替代或交换的方法形成密文。由于计算机运算能力的增强,原版DES密码的密钥长度变得容易被暴力破解,因此演变出了3DES算法。3DES是DES向AES过渡的加密算法,它使用3条56位的密钥对数据进行三次加密,是DES的一个更安全的变形。</p> 
+<h3>AES</h3> 
+<p>AES的全称是Advanced Encryption Standard,即高级加密标准,该算法由比利时密码学家Joan Daemen和Vincent Rijmen所设计,结合两位作者的名字,又称Rijndael加密算法, 是美国联邦政府采用的一种对称加密标准,这个标准用来替代原先的DES算法,已经广为全世界所使用,已然成为对称加密算法中最流行的算法之一。 AES算法作为新一代的数据加密标准汇聚了强安全性、高性能、高效率、易用和灵活等优点,设计有三个密钥长度:128,192,256位,比DES算法的加密强度更高,更为安全。</p> 
+<h2>三、非对称加密</h2> 
+<p>非对称加密算法又称为公开密钥加密算法,它需要两个密钥,一个称为公开密钥(public key), 即公钥,另一个称为私有密钥(private key),即私钥。公钥与私钥需要配对使用,如果用公钥对数据进行加密,只有用对应的私钥才能进行解密,而如果使用私钥对数据进行加密,那么只有用对应的公钥才能进行解密。因为加密和解密使用的是两个不同的密钥,所以这种算法称为非对称加密算法。 非对称加密算法实现机密信息交换的基本过程是:甲方生成一对密钥并将其中的一把作为公钥向其它人公开,得到该公钥的乙方使用该密钥对机密信息进行加密后再发送给甲方,甲方再使 用自己保存的另一把专用密钥,即私钥,对加密后的信息进行解密。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/非对称加密.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/非对称加密.png" alt="非对称加密" width="736" height="214" class="aligncenter size-full wp-image-2175"></a></p> 
+<h3>RSA</h3> 
+<p>RSA非对称加密算法是1977年由Ron Rivest、Adi Shamirh和LenAdleman开发的,RSA取名来自开发他们三者的名字。RSA是目前最有影响力的非对称加密算法,它能够抵抗到目前为止已知的所有密码攻击,已被ISO推荐为公钥数据加密标准。RSA算法基于一个十分简单的数论事实:将两个大素数相乘十分容易,但反过来想要对其乘积进行因式分解却极其困难, 因此可以将乘积公开作为加密密钥。</p> 
+<h2>四、数字签名</h2> 
+<p>签名认证是对非对称加密技术与数字摘要技术的综合运用,指的是将通信内容的摘要信息使用发送者的私钥进行加密,然后将密文与原文一起传输给信息的接收者,接收者通过发送者的公钥解密被加密的摘要信息,然后使用与发送者相同的摘要算法,对接收到的内容采用相同的方式产生摘要串,与解密的摘要串进行对比,如果相同,则说明接收到的内容是完整的,在传输过程中没有受到第三方篡改,否则则说明通信内容已被第三方修改。</p> 
+<p>每个人都有其特有的私钥且都是对外界保密的,而通过私钥加密的的信息,只能通过其对应的公钥才能解密,因此,私钥可以代表私钥持有者的身份,可以通过私钥对应的公钥来对私钥拥有者的身份进行校验。通过数字签名,能够确认消息是由信息发送方签名并发送出来的, 因为其他人根本假冒不了消息发送方的签名,他们没有消息发送者的私钥。而不同的内容, 摘要信息千差万别,通过数字摘要算法,可以确保传输内容的完整性,如果传输内容中途被篡改,对应的数字签名的值也将发生改变。</p> 
+<p>只有信息的发送者才能产生别人无法伪造的数字签名串,这个串能对信息发送者所发送的内容完整性以及发送者的身份进行校验和鉴别。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/数字签名1.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/数字签名1.png" alt="数字签名1" width="814" height="129" class="aligncenter size-full wp-image-2170"></a></p> 
+<p>通信正文经过相应的摘要算法生成摘要后,使用消息发送者的私钥进行加密,生成数字签名。</p> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/数字签名2.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/数字签名2.png" alt="数字签名2" width="790" height="200" class="aligncenter size-full wp-image-2171"></a></p> 
+<h2>五、数字证书</h2> 
+<p>我们每个人都有很多形式的身份证明,如身份证、驾驶证、护照等等,这些证件都是由相应的签发机构盖章认证,可信程度较高,很难进行伪造,并且,随着科技的发展,还可以通过指纹、视网膜等生物特征进行身份的认证。 数字证书(Digital Certificate),也称为电子证书,类似于日常生活中的身份证,也是一种形式的身份认证,用于标识网络中的用户身份。数字证书集合了多种密码学的加密算法,证书自身带有公钥信息,可以完成相应的加密、解密操作,同时,还拥有自身信息的数字签名,可以鉴别证书的颁发机构,以及证书内容的完整性。由于证书本身含有用户的认证信息,因此可以作为用户身份识别的依据。</p> 
+<p>通常数字证书会包含如下内容:</p> 
+<blockquote> 
+ <p>对象的名称(人,服务器,组织)</p> 
+ <p>证书的过期时间</p> 
+ <p>证书的颁发机构(谁为证书担保)</p> 
+ <p>证书颁发机构对证书信息的数字签名</p> 
+ <p>签名算法</p> 
+ <p>对象的公钥</p> 
+</blockquote> 
+<p><a href="http://www.hollischuang.com/wp-content/uploads/2018/03/数字证书.png"><img src="http://www.hollischuang.com/wp-content/uploads/2018/03/数字证书.png" alt="数字证书" width="443" height="477" class="aligncenter size-full wp-image-2173"></a></p> 
+<p class="asb-post-footer"><strong>【公告】</strong><a target="_blank" href="http://www.hollischuang.com/转载说明">版权声明</a></p>(全文完)
+<center>
+ <img src="http://www.hollischuang.com/wp-content/uploads/2016/01/qrcode_for_gh_4ebd1b130cbe_430-1.jpg" width="300px" height="300px" title="" alt="">欢迎关注HollisChuang微信公众账号
+</center>
+<p class="post-copyright">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://www.hollischuang.com">HollisChuang's Blog</a> » <a href="http://www.hollischuang.com/archives/2169">常见的安全算法</a></p><p>此文转自：<a href='http://www.hollischuang.com/archives/2169' target='_blank'>http://www.hollischuang.com/archives/2169</a></p>
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/hdL6EKtRjJ84327yAdGFSM.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/hdL6EKtRjJ84327yAdGFSM.html">《常见的安全算法》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

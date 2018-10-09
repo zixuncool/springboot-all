@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rumo.mapper.UserMapper" >
+  
+ 	 <resultMap id="BaseResultMap" type="com.rumo.pojo.User" >
+	      <id property="id" column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
+	      <result property="username" column="username" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="account" column="account" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="password" column="password" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="createTime" column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+	      <result property="headerPic" column="header_pic" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="updateTime" column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+	      <result property="isDelete" column="is_delete" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="age" column="age" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="male" column="male" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="active" column="active" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="sign" column="sign" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="url" column="url" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="gcount" column="gcount" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="fans" column="fans" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="type" column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="idcard" column="idcard" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="salary" column="salary" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="email" column="email" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="jifen" column="jifen" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="contribution" column="contribution" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="level" column="level" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="cron" column="cron" jdbcType="INTEGER" javaType="java.lang.Integer" />
+	      <result property="address" column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="job" column="job" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="intro" column="intro" jdbcType="VARCHAR" javaType="java.lang.String" />
+	      <result property="userdesc" column="userdesc" jdbcType="VARCHAR" javaType="java.lang.String" />
+  	</resultMap>
+  
+  	<sql id="Base_Column_List">
+  		id,username,account,password,create_time,header_pic,update_time,is_delete,age,male,active,sign,url,gcount,fans,type,idcard,salary,email,jifen,contribution,level,cron,address,job,intro,userdesc
+  	</sql>
+  	
+  	<select id="queryUserAll" resultMap="BaseResultMap" parameterType="com.rumo.vo.UserVo">
+  		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			keke_user
+		<where>
+			 <if test="id!=null"> and id = #{id,jdbcType=BIGINT}</if>
+			 <if test="username!=null and username!=''"> and username = #{username,jdbcType=VARCHAR}</if>
+			 <if test="account!=null and account!=''"> and account = #{account,jdbcType=VARCHAR}</if>
+			 <if test="password!=null and password!=''"> and password = #{password,jdbcType=VARCHAR}</if>
+			 <if test="createTime!=null"> and create_time = now()</if>
+			 <if test="headerPic!=null and headerPic!=''"> and header_pic = #{headerPic,jdbcType=VARCHAR}</if>
+			 <if test="updateTime!=null"> and update_time = now()</if>
+			 <if test="isDelete!=null"> and is_delete = #{isDelete,jdbcType=INTEGER}</if>
+			 <if test="age!=null"> and age = #{age,jdbcType=INTEGER}</if>
+			 <if test="male!=null"> and male = #{male,jdbcType=INTEGER}</if>
+			 <if test="active!=null"> and active = #{active,jdbcType=INTEGER}</if>
+			 <if test="sign!=null and sign!=''"> and sign = #{sign,jdbcType=VARCHAR}</if>
+			 <if test="url!=null and url!=''"> and url = #{url,jdbcType=VARCHAR}</if>
+			 <if test="gcount!=null"> and gcount = #{gcount,jdbcType=INTEGER}</if>
+			 <if test="fans!=null"> and fans = #{fans,jdbcType=INTEGER}</if>
+			 <if test="type!=null"> and type = #{type,jdbcType=INTEGER}</if>
+			 <if test="idcard!=null and idcard!=''"> and idcard = #{idcard,jdbcType=VARCHAR}</if>
+			 <if test="salary!=null and salary!=''"> and salary = #{salary,jdbcType=VARCHAR}</if>
+			 <if test="email!=null and email!=''"> and email = #{email,jdbcType=VARCHAR}</if>
+			 <if test="jifen!=null"> and jifen = #{jifen,jdbcType=INTEGER}</if>
+			 <if test="contribution!=null"> and contribution = #{contribution,jdbcType=INTEGER}</if>
+			 <if test="level!=null"> and level = #{level,jdbcType=INTEGER}</if>
+			 <if test="cron!=null"> and cron = #{cron,jdbcType=INTEGER}</if>
+			 <if test="address!=null and address!=''"> and address = #{address,jdbcType=VARCHAR}</if>
+			 <if test="job!=null and job!=''"> and job = #{job,jdbcType=VARCHAR}</if>
+			 <if test="intro!=null and intro!=''"> and intro = #{intro,jdbcType=VARCHAR}</if>
+			 <if test="userdesc!=null and userdesc!=''"> and userdesc = #{userdesc,jdbcType=VARCHAR}</if>
+		</where>	
+		<if test="sort!=null">
+			order by ${sort}
+		</if>
+  	</select>
+  
+  	<select id="getUserById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  		SELECT
+			<include refid="Base_Column_List"></include>
+		FROM
+			keke_user
+		WHERE
+			id = #{id,jdbcType=BIGINT}
+  	</select>
+  	
+  	<insert id="saveUser" flushCache="true" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+  		insert into keke_user (id,username,account,password,create_time,header_pic,update_time,is_delete,age,male,active,sign,url,gcount,fans,type,idcard,salary,email,jifen,contribution,level,cron,address,job,intro,userdesc)values(#{id,jdbcType=BIGINT},#{username,jdbcType=VARCHAR},#{account,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},now(),#{headerPic,jdbcType=VARCHAR},now(),#{isDelete,jdbcType=INTEGER},#{age,jdbcType=INTEGER},#{male,jdbcType=INTEGER},#{active,jdbcType=INTEGER},#{sign,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},#{gcount,jdbcType=INTEGER},#{fans,jdbcType=INTEGER},#{type,jdbcType=INTEGER},#{idcard,jdbcType=VARCHAR},#{salary,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{jifen,jdbcType=INTEGER},#{contribution,jdbcType=INTEGER},#{level,jdbcType=INTEGER},#{cron,jdbcType=INTEGER},#{address,jdbcType=VARCHAR},#{job,jdbcType=VARCHAR},#{intro,jdbcType=VARCHAR},#{userdesc,jdbcType=VARCHAR})
+  	</insert>
+  	
+  	<update id="updateUser" parameterType="com.rumo.pojo.User" flushCache="true">
+  		update keke_user 
+  		<set>
+			<if test="username!=null and username!=''">username = #{username,jdbcType=VARCHAR},</if>
+			<if test="account!=null and account!=''">account = #{account,jdbcType=VARCHAR},</if>
+			<if test="password!=null and password!=''">password = #{password,jdbcType=VARCHAR},</if>
+			<if test="headerPic!=null and headerPic!=''">header_pic = #{headerPic,jdbcType=VARCHAR},</if>
+			<if test="updateTime!=null">update_time = now(),</if>
+			<if test="isDelete!=null">is_delete = #{isDelete,jdbcType=INTEGER},</if>
+			<if test="age!=null">age = #{age,jdbcType=INTEGER},</if>
+			<if test="male!=null">male = #{male,jdbcType=INTEGER},</if>
+			<if test="active!=null">active = #{active,jdbcType=INTEGER},</if>
+			<if test="sign!=null and sign!=''">sign = #{sign,jdbcType=VARCHAR},</if>
+			<if test="url!=null and url!=''">url = #{url,jdbcType=VARCHAR},</if>
+			<if test="gcount!=null">gcount = #{gcount,jdbcType=INTEGER},</if>
+			<if test="fans!=null">fans = #{fans,jdbcType=INTEGER},</if>
+			<if test="type!=null">type = #{type,jdbcType=INTEGER},</if>
+			<if test="idcard!=null and idcard!=''">idcard = #{idcard,jdbcType=VARCHAR},</if>
+			<if test="salary!=null and salary!=''">salary = #{salary,jdbcType=VARCHAR},</if>
+			<if test="email!=null and email!=''">email = #{email,jdbcType=VARCHAR},</if>
+			<if test="jifen!=null">jifen = #{jifen,jdbcType=INTEGER},</if>
+			<if test="contribution!=null">contribution = #{contribution,jdbcType=INTEGER},</if>
+			<if test="level!=null">level = #{level,jdbcType=INTEGER},</if>
+			<if test="cron!=null">cron = #{cron,jdbcType=INTEGER},</if>
+			<if test="address!=null and address!=''">address = #{address,jdbcType=VARCHAR},</if>
+			<if test="job!=null and job!=''">job = #{job,jdbcType=VARCHAR},</if>
+			<if test="intro!=null and intro!=''">intro = #{intro,jdbcType=VARCHAR},</if>
+			<if test="userdesc!=null and userdesc!=''">userdesc = #{userdesc,jdbcType=VARCHAR},</if>
+  		</set>
+  		where id = #{id ,jdbcType=BIGINT}
+  	</update>
+  	
+  	<delete id="deleteUserById" flushCache="true" parameterType="java.lang.Long">
+  		delete from keke_user where id = #{id,jdbcType=BIGINT}
+  	</delete>
+  
+  	
+  	<!-- 短信相关 -->
+	<insert id="savePhone" >
+	  INSERT INTO keke_user_phone(telephone,type,code)VALUES(#{telephone},#{type},#{code})
+	</insert>
+	
+	<!-- 如果短信已经发送就不要在发送了,45分钟之内就不在发送了 -->
+	<select id="queryPhone"  resultType="int">
+		SELECT code FROM keke_user_phone WHERE telephone = #{telephone} AND type=#{type} AND TIMESTAMPDIFF(MINUTE,create_time,NOW()) &lt; 20 
+	</select>
+	
+	<!-- 统计用户信息 -->
+	<select id="countUserInfo"  resultType="java.util.Map" parameterType="long">
+		SELECT 
+		<if test="userId!=null">
+			(SELECT COUNT(1) FROM keke_blog_hit WHERE user_id = #{userId}) as cbnum1,
+			(SELECT COUNT(1) FROM keke_course_hit WHERE user_id = #{userId}) as cbnum2,
+			(SELECT COUNT(1) FROM keke_course_user WHERE user_id = #{userId}) as cbnum3,
+		</if>
+		(SELECT COUNT(1) FROM keke_user where is_delete = 0) as cbnum4,
+		(SELECT COUNT(1) FROM keke_course where is_delete = 0) as cbnum5,
+		(SELECT COUNT(1) FROM keke_blog WHERE is_delete = 0) as cbnum6
+		FROM DUAL
+	</select>
+  	
+ </mapper>	

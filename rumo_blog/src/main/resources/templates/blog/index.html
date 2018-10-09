@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+	<meta charset="UTF-8">
+	<#include "template/commons.html"/>
+	<title>内容博文模块-中华墨风 -'s Zone</title>
+	<meta name="description" content="内容博文模块">
+	<meta name="keywords" content="">
+</head>
+<body title="双击拉开详情">
+	<#include "template/header.html"/>
+	<main id="main" class="main">
+	<div class="main-inner">
+		<div id="content" class="content">
+			<section id="posts" class="posts-expand">
+				 <@blogList sort=" c.create_time desc" cid=9>
+					<article class="post post-type-normal ${(blog_index%2=0)?string('animated fadeInDown','animated2 fadeInUp')}" data-psize="${blog_page.pages}">
+						<header class="post-header">
+							<h1 class="post-title">
+								<a class="post-title-link" href="${basePath}/${blog.staticLink}"> ${blog.title}</a>
+							</h1>
+							<div class="post-meta">
+								<span class="post-time"> 发表于 <time datetime="${(blog.createTime)?string('yyyy/MM/dd HH:mm:ss')}" >${(blog.createTime)?string('yyyy/MM/dd HH:mm:ss')}</time>
+								</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;
+								<span><a href="${basePath}/search/${blog.categoryId}"  rel="index">
+								<span>${blog.categoryName}</span></a> </span></span> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">${(blog.hits)!0}</span>
+							</div>
+						</header>
+						<div class="post-body">
+							<#if blog.img?? && blog.img!="">
+								<div class="itb-imgbox pr" style="background-image:url(${basePath}/${blog.img})">
+									<#if blog.musicLink?? && blog.musicLink!="">
+										<audio src="${basePath}/${blog.musicLink}"></audio>
+										<a href="javascript:void(0)" class="playbox" onclick="loadSoundplay2(this)"><i class="fa fa-play-circle"></i></a>
+									</#if>
+								</div>
+								</#if>
+							<#if blog.videolink?? && blog.videolink!="">
+							<div class="itb-videobox">${blog.videolink}</div>
+							</#if>
+							${flex(blog.description,600)}						
+							<div class="post-more-link text-center">
+								<a class="btn" href="${basePath}/${blog.staticLink}" rel="contents"> 阅读全文» </a>
+								<#if session_user?? && session_user.type==4><a class="btn" href="${basePath}/admin/editBlog/${blog.id}" rel="contents"> 修改文章» </a></#if>
+							</div>
+						</div>
+						<footer class="post-footer">
+							<div class="post-eof"></div>
+						</footer>
+					</article>
+				</@blogList>
+			</section>
+		</div>
+		<nav class="paginationc" id="page">
+		</nav>
+	</div>
+	</main>
+	<#include "template/aside.html"/>
+	<#include "template/footer.html"/><#include "template/js.html"/>
+	<script type="text/javascript" src="${basePath}/js/page/jquery.page.js"></script>
+	<script type="text/javascript" src="${basePath}/js/highcode/highlight.min.js"></script>
+	<script type="text/javascript" src="${basePath}/js/main/blog.js"></script>
+	<script>$(".menu-item-blog").find("a").addClass("active").end().siblings().find("a").removeClass("active");</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+	<meta charset="UTF-8">
+	<#include "template/commons.html"/>
+	<link rel="stylesheet" href="${basePath}/js/vuepage/index.css">
+	<title>中华墨风 -'s Zone</title>
+	<meta name="description" content="中华墨风 为开发者提供问答、学习与交流编程知识的平台，创造属于开发者的时代！ ">
+	<meta name="keywords" content="中华墨风,javascript,php,python,java,mysql,ios,android,vue.js,node.js,html,css,git,docker,前端">
+</head>
+<body title="双击拉开详情" data-index="true" data-cid="${(cid)!}">
+<#include "template/header.html"/>	
+	
+<main id="main" class="main">
+<div class="main-inner">
+	<div id="appbox"  class="content">
+		<section id="posts" class="posts-expand">
+				<article v-for="(blog,index) in blogs" class="post post-type-normal animated fadeInDown" data-psize="11">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/KqbCv8WnHj1097gzZUf4MRm.html">{{blog.title}}</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time">作者：${blog.username} <time datetime="2018/10/01 20:58:50">2018/10/01 20:58:50</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp;分类： {{blog.categoryName}}:&nbsp;
+							<span><a href="http://localhost:8080/search/9" rel="index">
+							<span>分享</span></a> </span></span> &nbsp; | &nbsp; 璁垮 :&nbsp;<span id="bloghits">{{blog.hits}}</span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div v-if="blog.img!=null && blog.img!=''" class="itb-imgbox pr" :style="'background-image:url('+blog.img+')'">
+							<audio src="http://localhost:8080/upload/mp3/01b9039a-6aee-4851-adfb-a6f9a1b76bd6.mp3"></audio>
+							<a href="javascript:void(0)" class="playbox" onclick="loadSoundplay2(this)"><i class="fa fa-play-circle"></i></a>
+						</div>
+						<!-- <div v-html="blog.description|substr(0,1000)"></div> -->
+						<div class="post-more-link text-center">
+							<a class="btn" href="http://localhost:8080/blogs/KqbCv8WnHj1097gzZUf4MRm.html" rel="contents">阅读全文</a>
+						</div>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+		</section>
+		<nav class="paginationc" id="page">
+			一共有{{pages}}页,总共有{{total}}条.
+			<vue-page :cur="cur" :all="pages" :url="url" :callback="callback"></vue-page>
+		</nav>
+	</div>
+	
+	
+</div>
+</main>
+	
+	
+	<!-- 确定开发查询，分页，搜索
+		1:选择什么技术(vue/jquery/react(app))
+		2:引入vue/vue-resource/axios 
+		3:证明vuejs是否引入正常
+		4:准备数据去，不要做任何事情，也不考虑狗屁分页
+		5:直接快速通过$http.get方法抓取后台传递过来的数据.一定打印看与数据的形态。
+	 -->
+	
+
+	<#include "template/aside.html"/>		
+	<#include "template/footer.html"/>
+	<#include "template/js.html"/>
+	<script type="text/javascript" src="${basePath}/js/vuepage/vue-nav.js"></script>
+	
+	<script>
+	
+		var vue = new Vue({
+			el:"#appbox",
+			data:{
+				cur: 1,//默认是显示第一页
+		        all: 0,//显示有多少页
+		        pageSize:2,//每页显示多少条
+				pages:0,//查询数据出来的总页数
+				total:0,//一共有多少条记录
+				blogs:[]//文章数据
+			},
+			components:{
+	            'vue-page': Vnav
+	        },
+			created:function(){
+				//初始化执行数据
+				this.loadData(1,this.$data.pageSize);
+			},
+			//所有的事件定义在methos中
+			methods:{
+				
+				//加载数据
+				loadData:function(pageNo,pageSize){
+					this.$http.get("http://localhost:8080/blog/findblogs",{params:{pageNo:pageNo,pageSize:pageSize}}).then(function(response){
+						this.$data.blogs= response.body.data.list;
+						this.$data.pages = response.body.data.pages;
+						this.$data.total = response.body.data.total;
+					}).catch(function(err){console.log(err);});
+				},
+				
+				//每次执行分页执行的函数
+				callback(pageNo) {
+					//这里请记住一定要改变当前页的状态，否则，永远都显示第一页。
+	            	this.$data.cur = pageNo;
+	            	this.loadData(pageNo,this.$data.pageSize);
+	            }
+			}
+		});
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+		//点击数据加载的loading提示
+		loadingtip("#loading",8)
+		//漂浮的提示
+		//loading("23423423");
+		//loading("23423423423423",3);
+		
+		//mkCommon.tip("请输入密码!!!!","error")
+		//mkCommon.tip("请输入密码!!!!","success")
+		//mkCommon.tip("你确定删除吗?","tip",function(ok){
+		//	if(ok){
+		//		alert("ok")
+		//	}else{
+		//		alert("no ok")
+		//	}
+		//});
+		//mkCommon.tip("请输入密码!!!!","warn")
+		//setSession("username","keke");
+	</script>
+</body>
+</html>

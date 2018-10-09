@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>数据库三大范式详解-中华墨风-'s Zone</title>
+<meta name="description" content="数据库的设计范式是数据库设计所需要满足的规范，满足这些规范的数据库是简洁的、结构明晰的，同时，不会发生插入（insert）、删 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="46" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: 1200px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/4dmVbzALky46hx4Vc8gEmM.html">数据库三大范式详解</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/06/12 19:59:06">2018/06/12 19:59:06</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">455</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+								<img src="http://localhost:8080/resource/blog/2018/06/12/201806121958494.jpg" id="imgmain" onload="loadimg(this)" onerror="imgError(this)" class="keui-imgbox">
+						</div>
+						<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">数据库的设计范式是数据库设计所需要满足的规范，满足这些规范的数据库是简洁的、结构明晰的，同时，不会发生插入（insert）、删除（delete）和更新（update）操作异常。反之则是乱七八糟，不仅给数据库的编程人员制造麻烦，而且面目可憎，可能存储了大量不需要的冗余信息。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);"><span style="outline: 0px; box-sizing: border-box; font-weight: 700; word-break: break-all;">范式说明</span></p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);"><span style="outline: 0px; box-sizing: border-box; font-weight: 700; word-break: break-all;">1.1&nbsp;第一范式（1NF）无重复的列</span></p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp;所谓第一范式（1NF）是指数据库表的每一列都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。如果出现重复的属性，就可能需要定义一个新的实体，新的实体由重复的属性构成，新实体与原实体之间为一对多关系。在第一范式（1NF）中表的每一行只包含一个实例的信息。简而言之，第一范式就是无重复的列。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">说明：在任何一个关系数据库中，第一范式（1NF）是对关系模式的基本要求，不满足第一范式（1NF）的数据库就不是关系数据库。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">例如，如下的数据库表是符合第一范式的：</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="outline: 0px; border-spacing: 0px; box-sizing: border-box; border-collapse: collapse; margin-bottom: 24px; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); width: 851.818px;">
+	<tbody style="outline: 0px; box-sizing: border-box; border: 0px; word-break: break-all;">
+		<tr style="outline: 0px; box-sizing: border-box; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(221, 221, 221); word-break: break-all;">
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段1</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段2</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段3</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">而这样的数据库表是不符合第一范式的：</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="outline: 0px; border-spacing: 0px; box-sizing: border-box; border-collapse: collapse; margin-bottom: 24px; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); width: 851.818px;">
+	<tbody style="outline: 0px; box-sizing: border-box; border: 0px; word-break: break-all;">
+		<tr style="outline: 0px; box-sizing: border-box; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(221, 221, 221); word-break: break-all;">
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段1</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段2</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段3</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段4</p>
+			</td>
+		</tr>
+		<tr style="outline: 0px; box-sizing: border-box; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(221, 221, 221); word-break: break-all; background-color: rgb(247, 247, 247);">
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">&nbsp;</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">&nbsp;</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段3.1</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">字段3.2</p>
+			</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">
+			<p style="outline: 0px; box-sizing: border-box; word-break: break-all; margin: 0px; padding: 0px; line-height: 22px;">&nbsp;</p>
+			</td>
+		</tr>
+		<tr style="outline: 0px; box-sizing: border-box; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(221, 221, 221); word-break: break-all;">
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">&nbsp;</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">&nbsp;</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">&nbsp;</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">&nbsp;</td>
+			<td style="outline: 0px; margin: 0px; box-sizing: border-box; word-break: break-all; border: 1px solid rgb(221, 221, 221); color: rgb(79, 79, 79); line-height: 22px; padding: 8px;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">数据库表中的字段都是单一属性的，不可再分。这个单一属性由基本类型构成，包括整型、实数、字符型、逻辑型、日期型等。很显然，在当前的任何关系数据库管理系统（DBMS）中，傻瓜也不可能做出不符合第一范式的数据库，因为这些DBMS不允许你把数据库表的一列再分成二列或多列。因此，你想在现有的DBMS中设计出不符合第一范式的数据库都是不可能的。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);"><span style="outline: 0px; box-sizing: border-box; font-weight: 700; word-break: break-all;">1.2&nbsp;第二范式（2NF）属性完全依赖于主键&nbsp;[&nbsp;消除部分子函数依赖&nbsp;]</span></p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">如果关系模式R为第一范式，并且R中每一个非主属性完全函数依赖于R的某个候选键，&nbsp;则称为第二范式模式。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">第二范式（2NF）是在第一范式（1NF）的基础上建立起来的，即满足第二范式（2NF）必须先满足第一范式（1NF）。第二范式（2NF）要求数据库表中的每个实例或行必须可以被惟一地区分。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。这个惟一属性列被称为主关键字或主键、主码。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">例如员工信息表中加上了员工编号（emp_id）列，因为每个员工的员工编号是惟一的，因此每个员工可以被惟一区分。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">简而言之，第二范式（2NF）就是非主属性完全依赖于主关键字。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">所谓完全依赖是指不能存在仅依赖主关键字一部分的属性（设有函数依赖W&rarr;A，若存在XW，有X&rarr;A成立，那么称W&rarr;A是局部依赖，否则就称W&rarr;A是完全函数依赖）。如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">假定选课关系表为SelectCourse(学号,&nbsp;姓名,&nbsp;年龄,&nbsp;课程名称,&nbsp;成绩,&nbsp;学分)，关键字为组合关键字(学号,&nbsp;课程名称)，因为存在如下决定关系：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(学号,&nbsp;课程名称)&nbsp;&rarr;&nbsp;(姓名,&nbsp;年龄,&nbsp;成绩,&nbsp;学分)</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">这个数据库表不满足第二范式，因为存在如下决定关系：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(课程名称)&nbsp;&rarr;&nbsp;(学分)</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(学号)&nbsp;&rarr;&nbsp;(姓名,&nbsp;年龄)</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">即存在组合关键字中的字段决定非关键字的情况。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">由于不符合2NF，这个选课关系表会存在如下问题：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(1)&nbsp;数据冗余：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">同一门课程由n个学生选修，&quot;学分&quot;就重复n-1次；同一个学生选修了m门课程，姓名和年龄就重复了m-1次。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(2)&nbsp;更新异常：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">若调整了某门课程的学分，数据表中所有行的&quot;学分&quot;值都要更新，否则会出现同一门课程学分不同的情况。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(3)&nbsp;插入异常：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">假设要开设一门新的课程，暂时还没有人选修。这样，由于还没有&quot;学号&quot;关键字，课程名称和学分也无法记录入数据库。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(4)&nbsp;删除异常：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">假设一批学生已经完成课程的选修，这些选修记录就应该从数据库表中删除。但是，与此同时，课程名称和学分信息也被删除了。很显然，这也会导致插入异常。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">把选课关系表SelectCourse改为如下三个表：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">学生：Student(学号,&nbsp;姓名,&nbsp;年龄)；</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">课程：Course(课程名称,&nbsp;学分)；</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">选课关系：SelectCourse(学号,&nbsp;课程名称,&nbsp;成绩)。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">这样的数据库表是符合第二范式的，&nbsp;消除了数据冗余、更新异常、插入异常和删除异常。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">另外，所有单关键字的数据库表都符合第二范式，因为不可能存在组合关键字。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);"><span style="outline: 0px; box-sizing: border-box; font-weight: 700; word-break: break-all;">1.3&nbsp;第三范式（3NF）属性不依赖于其它非主属性&nbsp;[&nbsp;消除传递依赖&nbsp;]</span></p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">如果关系模式R是第二范式，且每个非主属性都不传递依赖于R的候选键，则称R为第三范式模式。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">满足第三范式（3NF）必须先满足第二范式（2NF）。第三范式（3NF）要求一个数据库表中不包含已在其它表中已包含的非主关键字信息。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">例如，存在一个部门信息表，其中每个部门有部门编号（dept_id）、部门名称、部门简介等信息。那么在的员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息再加入员工信息表中。如果不存在部门信息表，则根据第三范式（3NF）也应该构建它，否则就会有大量的数据冗余。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">第三范式（3NF）：在第二范式的基础上，数据表中如果不存在非关键字段对任一候选关键字段的传递函数依赖则符合第三范式。简而言之，第三范式就是属性不依赖于其它非主属性。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">所谓传递函数依赖，指的是如果存在&quot;A&nbsp;&rarr;&nbsp;B&nbsp;&rarr;&nbsp;C&quot;的决定关系，则C传递函数依赖于A。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">因此，满足第三范式的数据库表应该不存在如下依赖关系：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">关键字段&nbsp;&rarr;&nbsp;非关键字段x&nbsp;&rarr;&nbsp;非关键字段y</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">假定学生关系表为Student(学号,&nbsp;姓名,&nbsp;年龄,&nbsp;所在学院,&nbsp;学院地点,&nbsp;学院电话)，关键字为单一关键字&quot;学号&quot;，因为存在如下决定关系：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(学号)&nbsp;&rarr;&nbsp;(姓名,&nbsp;年龄,&nbsp;所在学院,&nbsp;学院地点,&nbsp;学院电话)</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">这个数据库是符合2NF的，但是不符合3NF，因为存在如下决定关系：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">(学号)&nbsp;&rarr;&nbsp;(所在学院)&nbsp;&rarr;&nbsp;(学院地点,&nbsp;学院电话)</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">即存在非关键字段&quot;学院地点&quot;、&quot;学院电话&quot;对关键字段&quot;学号&quot;的传递函数依赖。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">它也会存在数据冗余、更新异常、插入异常和删除异常的情况，读者可自行分析得知。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">把学生关系表分为如下两个表：</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">学生：(学号,&nbsp;姓名,&nbsp;年龄,&nbsp;所在学院)；</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">学院：(学院,&nbsp;地点,&nbsp;电话)。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">这样的数据库表是符合第三范式的，消除了数据冗余、更新异常、插入异常和删除异常。</p>
+
+<p style="outline: 0px; padding: 0px; box-sizing: border-box; font-size: 16px; color: rgb(79, 79, 79); line-height: 26px; margin: 0px 0px 16px; text-align: justify; word-break: break-all; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; background-color: rgb(255, 255, 255);">转自：《https://blog.csdn.net/w__yi/article/details/19934319》</p>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/4dmVbzALky46hx4Vc8gEmM.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/4dmVbzALky46hx4Vc8gEmM.html">《数据库三大范式详解》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+<script>$(".playbox").trigger("click");</script>
+</body>
+</html>

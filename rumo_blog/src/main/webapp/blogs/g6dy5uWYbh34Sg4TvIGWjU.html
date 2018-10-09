@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>那些总是会问到的面试题：getCurrentSession()与openSession()的区别？-中华墨风-'s Zone</title>
+<meta name="description" content="遇到过的问题： 情景1： 在使用SessionFactory的getCurrentSession方法时遇到如下错误，经过检查，原因如下： 是因为在hibern ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="34" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/g6dy5uWYbh34Sg4TvIGWjU.html">那些总是会问到的面试题：getCurrentSession()与openSession()的区别？</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/05/04 23:50:13">2018/05/04 23:50:13</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">274</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);"><strong>遇到过的问题：</strong></p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">情景1：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">在使用SessionFactory的getCurrentSession方法时遇到如下错误，经过检查，原因如下：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">是因为在hibernate.cfg.xml文件中忘记进行了如下设置：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">hibernate.current_session_context_class如果是在web容器中运行hibernate，则在hibernate.cfg.xml中加入这句话：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;jta&lt;/property&gt;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">如果是在一个单独的需要进行JDBC连接的java application中运行hibernate，则这样设置：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">情景2：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">在ssh2中的sessionFactory配置文件中</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">应将hibernate.current_session_context_class设为org.springframework.orm.hibernate3.SpringSessionContext（默认为此值）</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">并应用spring管理事务。如果为&lt;prop key=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/prop&gt; 则会报异常，</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">所以还是spring中hibernate.current_session_context_class的问题</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">在spring的类LocalSessionFactoryBean源码，方法buildSessionFactory中将hibernate.current_session_context_class设为org.springframework.orm.hibernate3.SpringSessionContext</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">hibernate.current_session_context_class属性</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">sessionFactory.getCurrentSession()可以完成一系列的工作，当调用时hibernate将session绑定到当前线程，事务结束后hibernate将session从当前线程中释放并且关闭session。当再次调用getCurrentSession()时将得到一个新的session，并重新开始这一系列工作。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">这样调用方法如下：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">Session session = HibernateUtil.getSessionFactory().getCurrentSession();</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">session.beginTransaction();</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">Event theEvent = new Event();</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">theEvent.setTitle(title);</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">theEvent.setDate(theDate);</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">session.save(theEvent);</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">session.getTransaction().commit(); &nbsp; //不需要close session了。 前提是改值设置为了thread.</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">在一个应用程序中，如果DAO 层使用Spring 的hibernate 模板，通过Spring 来控制session 的生命周期，则首选getCurrentSession ()。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">使用Hibernate的大多数应用程序需要某种形式的&ldquo;上下文相关的&rdquo; session，特定的session在整个特定的上下文范围内始终有效。然而，对不同类型的应用程序而言，要为什么是组成这种&ldquo;上下文&rdquo;下一个定义通常 是困难的；不同的上下文对&ldquo;当前&rdquo;这个概念定义了不同的范围。在3.0版本之前，使用Hibernate的程序要么采用自行编写的基于 ThreadLocal的上下文session，要么采用HibernateUtil这样的辅助类，要么采用第三方框架（比如Spring或Pico)， 它们提供了基于代理(proxy)或者基于拦截器(interception)的上下文相关session。&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">从3.0.1版本开 始，Hibernate增加了SessionFactory.getCurrentSession()方法。一开始，它假定了采用JTA事务，JTA事务 定义了当前session的范围和上下文(scope and context)。Hibernate开发团队坚信，因为有好几个独立的JTA TransactionManager实现稳定可用，不论是否被部署到一个J2EE容器中，大多数(假若不是所有的）应用程序都应该采用JTA事务管理。 基于这一点，采用JTA的上下文相关session可以满足你一切需要。&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">更好的是，从3.1开始，SessionFactory.getCurrentSession()的后台实现是可拔插的。因此，我们引入了新的扩展接口(org.hibernate.context.CurrentSessionContext)和新的配置参数(hibernate.current_session_context_class)，以便对什么是&ldquo;当前session&rdquo;的范围和上下文(scope and context)的定义进行拔插。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">请参阅org.hibernate.context.CurrentSessionContext接口的Javadoc,那里有关于它的契约的详细讨论。它定义了单一的方法，currentSession()，特定的实现用它来负责跟踪当前的上下文session。Hibernate内置了此接口的三种实现。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">org.hibernate.context.JTASessionContext - 当前session根据JTA来跟踪和界定。这和以前的仅支持JTA的方法是完全一样的。详情请参阅Javadoc。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">org.hibernate.context.ThreadLocalSessionContext - 当前session通过当前执行的线程来跟踪和界定。详情也请参阅Javadoc。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">org.hibernate.context.ManagedSessionContext - 当前session通过当前执行的线程来跟踪和界定。但是，你需要负责使用这个类的静态方法将Session实例绑定、或者取消绑定，它并不会打开(open)、flush或者关闭(close)任何Session。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">前两种实现都提供了&ldquo;每数据库事务对应一个session&rdquo;的编程模型，也称作每次请求一个session。Hibernate session的起始和终结由数据库事务的生存来控制。假若你在纯粹的 Java SE之上采用自行编写代码来管理事务,而不使用JTA，建议你使用Hibernate Transaction API来把底层事务实现从你的代码中隐藏掉。如果你使用JTA，请使用JTA借口来管理Transaction。如果你在支持CMT的EJB容器中执行代码，事务边界是声明式定义的，你不需要在代码中进行任何事务或session管理操作。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">hibernate.current_session_context_class配置参数定义了应该采用哪个org.hibernate.context.CurrentSessionContext实现。注意，为了向下兼容，如果未配置此参数，但是存在org.hibernate.transaction.TransactionManagerLookup的配置，Hibernate会采用org.hibernate.context.JTASessionContext。一般而言，此参数的值指明了要使用的实现类的全名，但那三种内置的实现可以使用简写，即&quot;jta&quot;、&quot;thread&quot;和&quot;managed&quot;。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);"><span style="font-size:18px;"><span style="color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">getCurrentSession()与openSession()的区别？</span></span></p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">在 SessionFactory 启动的时候， Hibernate 会根据配置创建相应的 CurrentSessionContext ，在 getCurrentSession() 被调用的时候，实际被执行的方法是CurrentSessionContext.currentSession() 。在 currentSession() 执行时，如果当前 Session 为空，currentSession 会调用SessionFactory的openSession 。所以getCurrentSession() 对于 Java EE 来说是更好的获取 Session 的方法。</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">* 采用getCurrentSession()创建的session会绑定到当前线程中，而采用openSession()创建的session则不会</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">* 采用getCurrentSession()创建的session在commit或rollback时会自动关闭，而采用openSession()创建的session必须手动关闭</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">2、使用getCurrentSession()需要在hibernate.cfg.xml文件中加入如下配置：</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">* 如果使用的是本地事务（jdbc事务）</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">* 如果使用的是全局事务（jta事务）</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;jta&lt;/property&gt;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">* 如果使用的是session的管理机制（不太常用）</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;managed&lt;/property&gt;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">利于ThreadLocal模式管理Session</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 早在Java1.2推出之时，Java平台中就引入了一个新的支持：java.lang.ThreadLocal，给我们在编写多线程程序</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 时提供了一种新的选择。ThreadLocal是什么呢？其实ThreadLocal并非是一个线程的本地实现版本，它并不是一个Thread，</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 而是thread local variable(线程局部变量)。也许把它命名为ThreadLocalVar更加合适。线程局部变量(ThreadLocal)</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 其实的功用非常简单，就是为每一个使用某变量的线程都提供一个该变量值的副本，是每一个线程都可以独立地改变自己的副本，</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 而不会和其它线程的副本冲突。从线程的角度看，就好像每一个线程都完全拥有一个该变量。&nbsp;</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; ThreadLocal是如何做到为每一个线程维护变量的副本的呢？其实实现的思路很简单，在ThreadLocal类中有一个Map，</p>
+
+<p style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;&nbsp; 用于存储每一个线程的变量的副本。比如下面的示例实现(为了简单，没有考虑集合的泛型)：&nbsp;</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">public&nbsp;class HibernateUtil {
+
+public static final ThreadLocal session =new ThreadLocal();
+
+public static final SessionFactory sessionFactory;
+
+   static {
+
+      try {
+
+        sessionFactory = new Configuration().configure().buildSessionFactory();
+
+      } catch (Throwable ex) {
+
+           throw new ExceptionInInitializerError(ex);
+
+      }     
+
+}
+
+     public static Session currentSession () throws HibernateException {
+
+        Session s = session.get ();
+
+        if(s == null) {
+
+          s = sessionFactory.openSession ();
+
+          session.set(s);
+
+           }
+
+         return s;
+
+       }
+
+    public static void closeSession() throws HibernateException {
+
+           Session s = session.get ();
+
+        if(s != null) {
+
+            s.close();
+
+        }
+
+        session.set(null);
+
+    }
+
+}</code></pre>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/g6dy5uWYbh34Sg4TvIGWjU.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/g6dy5uWYbh34Sg4TvIGWjU.html">《那些总是会问到的面试题：getCurrentSession()与openSession()的区别？》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

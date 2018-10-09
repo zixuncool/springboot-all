@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>ElasticSearch和solr的差别-中华墨风-'s Zone</title>
+<meta name="description" content="Elasticsearch简介 Elasticsearch是一个实时分布式搜索和分析引擎。它让你以前所未有的速度处理大数据成为可能。 它用于全文搜索 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="53" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: 712px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/TmQJdUWych53CR7g6M4NhD.html">ElasticSearch和solr的差别</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/11 10:54:45">2018/07/11 10:54:45</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">174</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+								<img src="http://localhost:8080/resource/blog/2018/07/11/201807111054120.png" id="imgmain" onload="loadimg(this)" onerror="imgError(this)" class="keui-imgbox">
+						</div>
+						<h2 style="margin: 20px 0px; padding: 0px; font-size: 21px; font-weight: bold; line-height: 1.5; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Elasticsearch简介</h2>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">是一个实时分布式搜索和分析引擎。它让你以前所未有的速度处理大数据成为可能。<br style="margin: 0px; padding: 0px;" />
+它用于全文搜索、结构化搜索、分析以及将这三者混合使用：<br style="margin: 0px; padding: 0px;" />
+维基百科使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">提供全文搜索并高亮关键字，以及输入实时搜索<span class="fontstyle2" style="margin: 0px; padding: 0px;">(search-asyou-type)<span class="fontstyle1" style="margin: 0px; padding: 0px;">和搜索纠错<span class="fontstyle2" style="margin: 0px; padding: 0px;">(did-you-mean)<span class="fontstyle1" style="margin: 0px; padding: 0px;">等搜索建议功能。<br style="margin: 0px; padding: 0px;" />
+英国卫报使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">结合用户日志和社交网络数据提供给他们的编辑以实时的反馈，以便及时了解公众对新发表的文章的回应。<br style="margin: 0px; padding: 0px;" />
+<span class="fontstyle0" style="margin: 0px; padding: 0px;">StackOverflow<span class="fontstyle1" style="margin: 0px; padding: 0px;">结合全文搜索与地理位置查询，以及<span class="fontstyle2" style="margin: 0px; padding: 0px;">more-like-this<span class="fontstyle1" style="margin: 0px; padding: 0px;">功能来找到相关的问题和答案。<br style="margin: 0px; padding: 0px;" />
+<span class="fontstyle0" style="margin: 0px; padding: 0px;">Github<span class="fontstyle1" style="margin: 0px; padding: 0px;">使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">检索<span class="fontstyle0" style="margin: 0px; padding: 0px;">1300<span class="fontstyle1" style="margin: 0px; padding: 0px;">亿行的代码。<br style="margin: 0px; padding: 0px;" />
+但是<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">不仅用于大型企业，它还让像<span class="fontstyle0" style="margin: 0px; padding: 0px;">DataDog<span class="fontstyle1" style="margin: 0px; padding: 0px;">以及<span class="fontstyle0" style="margin: 0px; padding: 0px;">Klout<span class="fontstyle1" style="margin: 0px; padding: 0px;">这样的创业公司将最初的想法变成可扩展的解决方案。<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">可以在你的笔记本上运行，也可以在数以百计的服务器上处理<span class="fontstyle0" style="margin: 0px; padding: 0px;">PB<span class="fontstyle1" style="margin: 0px; padding: 0px;">级别的数据 。</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle2" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle2" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle2" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;"><span class="fontstyle1" style="margin: 0px; padding: 0px;"><span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">是一个基于<span class="fontstyle0" style="margin: 0px; padding: 0px;">Apache Lucene(TM)<span class="fontstyle1" style="margin: 0px; padding: 0px;">的开源搜索引擎。无论在开源还是专有领域，<span class="fontstyle0" style="margin: 0px; padding: 0px;">Lucene<span class="fontstyle1" style="margin: 0px; padding: 0px;">可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库。<br style="margin: 0px; padding: 0px;" />
+但是，<span class="fontstyle0" style="margin: 0px; padding: 0px;">Lucene<span class="fontstyle1" style="margin: 0px; padding: 0px;">只是一个库。想要使用它，你必须使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Java<span class="fontstyle1" style="margin: 0px; padding: 0px;">来作为开发语言并将其直接集成到你的应用中，更糟糕的是，<span class="fontstyle0" style="margin: 0px; padding: 0px;">Lucene<span class="fontstyle1" style="margin: 0px; padding: 0px;">非常复杂，你需要深入了解检索的相关知识来理解它是如何工作的。<br style="margin: 0px; padding: 0px;" />
+<span class="fontstyle0" style="margin: 0px; padding: 0px;">Elasticsearch<span class="fontstyle1" style="margin: 0px; padding: 0px;">也使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Java<span class="fontstyle1" style="margin: 0px; padding: 0px;">开发并使用<span class="fontstyle0" style="margin: 0px; padding: 0px;">Lucene<span class="fontstyle1" style="margin: 0px; padding: 0px;">作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的&nbsp;<span class="fontstyle3" style="margin: 0px; padding: 0px;">RESTful API&nbsp;<span class="fontstyle1" style="margin: 0px; padding: 0px;">来隐藏<span class="fontstyle0" style="margin: 0px; padding: 0px;">Lucene<span class="fontstyle1" style="margin: 0px; padding: 0px;">的复杂性，从而让全文搜索变得简单。</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h2 style="margin: 20px 0px; padding: 0px; font-size: 21px; font-weight: bold; line-height: 1.5; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Solr简介</h2>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Solr&nbsp;是Apache下的一个顶级开源项目，采用Java开发，它是基于Lucene的全文搜索服务器。Solr提供了比Lucene更为丰富的查询语言，同时实现了可配置、可扩展，并对索引、搜索性能进行了优化</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Solr可以独立运行，运行在Jetty、Tomcat等这些Servlet容器中，Solr&nbsp;索引的实现方法很简单，用&nbsp;POST&nbsp;方法向&nbsp;Solr&nbsp;服务器发送一个描述&nbsp;Field&nbsp;及其内容的&nbsp;XML&nbsp;文档，Solr根据xml文档添加、删除、更新索引 。Solr&nbsp;搜索只需要发送&nbsp;HTTP GET&nbsp;请求，然后对&nbsp;Solr&nbsp;返回Xml、json等格式的查询结果进行解析，组织页面布局。Solr不提供构建UI的功能，Solr提供了一个管理界面，通过管理界面可以查询Solr的配置和运行情况。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">solr是基于lucene开发企业级搜索服务器，实际上就是封装了lucene。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Solr是一个独立的企业级搜索应用服务器，它对外提供类似于Web-service的API接口。用户可以通过http请求，向搜索引擎服务器提交一定格式的文件，生成索引；也可以通过提出查找请求，并得到返回结果。</p>
+
+<h2 style="margin: 20px 0px; padding: 0px; font-size: 21px; font-weight: bold; line-height: 1.5; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Lucene简介</h2>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Lucene是apache软件基金会4 jakarta项目组的一个子项目，是一个开放源代码的全文检索引擎工具包，但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分文本分析引擎（英文与德文两种西方语言）。Lucene的目的是为软件开发人员提供一个简单易用的工具包，以方便的在目标系统中实现全文检索的功能，或者是以此为基础建立起完整的全文检索引擎。Lucene是一套用于全文检索和搜寻的开源程式库，由Apache软件基金会支持和提供。Lucene提供了一个简单却强大的应用程式接口，能够做全文索引和搜寻。在Java开发环境里Lucene是一个成熟的免费开源工具。就其本身而言，Lucene是当前以及最近几年最受欢迎的免费Java信息检索程序库。人们经常提到信息检索程序库，虽然与搜索引擎有关，但不应该将信息检索程序库与搜索引擎相混淆。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Lucene是一个全文检索引擎的架构。那什么是全文搜索引擎？</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">全文搜索引擎是名副其实的搜索引擎，国外具代表性的有Google、Fast/AllTheWeb、AltaVista、Inktomi、Teoma、WiseNut等，国内著名的有百度（Baidu）。它们都是通过从互联网上提取的各个网站的信息（以网页文字为主）而建立的数据库中，检索与用户查询条件匹配的相关记录，然后按一定的排列顺序将结果返回给用户，因此他们是真正的搜索引擎。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">从搜索结果来源的角度，全文搜索引擎又可细分为两种，一种是拥有自己的检索程序（Indexer），俗称&ldquo;蜘蛛&rdquo;（Spider）程序或&ldquo;机器人&rdquo;（Robot）程序，并自建网页数据库，搜索结果直接从自身的数据库中调用，如上面提到的7家引擎；另一种则是租用其他引擎的数据库，并按自定的格式排列搜索结果，如Lycos引擎。</p>
+
+<h2 style="margin: 20px 0px; padding: 0px; font-size: 21px; font-weight: bold; line-height: 1.5; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Elasticsearch和Solr比较</h2>
+
+<div class="tzui-img"><img class="keui-imgbox" dh="313" dsamll="" dsrc="resource/content/2018/07/11/201807111052593.png" dw="719" src="http://www.itbooking.net/resource/content/2018/07/11/201807111052593.png" /></div>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><img class="keui-imgbox" dh="420" dsamll="" dsrc="resource/content/2018/07/11/201807111053112.png" dw="712" src="http://www.itbooking.net/resource/content/2018/07/11/201807111053112.png" /></p>
+
+<div class="tzui-img"><img class="keui-imgbox" dh="424" dsamll="" dsrc="resource/content/2018/07/11/201807111053161.png" dw="694" src="http://www.itbooking.net/resource/content/2018/07/11/201807111053161.png" /></div>
+
+<div class="tzui-img"><img class="keui-imgbox" dh="201" dsamll="" dsrc="resource/content/2018/07/11/201807111053201.png" dw="792" src="http://www.itbooking.net/resource/content/2018/07/11/201807111053201.png" /></div>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">ElasticSearch vs Solr 总结</strong></p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">　　</strong>（1）es基本是开箱即用，非常简单。Solr安装略微复杂一丢丢，可关注（<a href="http://www.cnblogs.com/blueskyli/p/7100443.html#3763227" style="margin: 0px; padding: 0px; color: rgb(0, 0, 0);" target="_blank">solr6.6教程-基础环境搭建(一)</a>）</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">　</strong>　（2）Solr 利用 Zookeeper 进行分布式管理，而 Elasticsearch 自身带有分布式协调管理功能。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　（3）Solr 支持更多格式的数据，比如JSON、XML、CSV，而 Elasticsearch 仅支持json文件格式。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　（4）Solr 官方提供的功能更多，而 Elasticsearch 本身更注重于核心功能，高级功能多有第三方插件提供，例如图形化界面需要kibana友好支撑</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　（5）Solr&nbsp;查询快，但更新索引时慢（即插入删除慢），用于电商等查询多的应用；</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　　　&nbsp; ES建立索引快（即查询慢），即实时性查询快，用于facebook新浪等搜索。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　&nbsp; &nbsp;　 Solr 是传统搜索应用的有力解决方案，但 Elasticsearch 更适用于新兴的实时搜索应用。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">　　（6）Solr比较成熟，有一个更大，更成熟的用户、开发和贡献者社区，而 Elasticsearch相对开发维护者较少，更新太快，学习使用成本较高。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<h2 style="margin: 20px 0px; padding: 0px; font-size: 21px; font-weight: bold; line-height: 1.5; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">Hermes</strong></h2>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">在整理solr和es资料的时候意外发现了一篇文章<a href="https://www.csdn.net/article/2014-12-22/2823243" style="margin: 0px; padding: 0px; color: rgb(0, 0, 0);" target="_blank">&nbsp;Hermes与开源的Solr、ElasticSearch的不同</a>，中提到了hermes和他们两者的对比，于是摘抄了下面的部分文字，由于首次见到没有什么了解，今摘抄下了给广大读者有兴趣的朋友吧1</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">Solr\ES ：偏重于为小规模的数据提供全文检索服务；Hermes：则更倾向于为大规模的数据仓库提供索引支持，为大规模数据仓库提供即席分析的解决方案，并降低数据仓库的成本，Hermes数据量更&ldquo;大&rdquo;。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">Solr、ES的使用特点如下：</strong></p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">1. 源自搜索引擎，侧重搜索与全文检索。&nbsp;<br style="margin: 0px; padding: 0px;" />
+2. 数据规模从几百万到千万不等，数据量过亿的集群特别少。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><strong style="margin: 0px; padding: 0px;">Hermes:的使用特点如下：</strong></p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">1. 一个基于大索引技术的海量数据实时检索分析平台。侧重数据分析。&nbsp;<br style="margin: 0px; padding: 0px;" />
+2. 数据规模从几亿到万亿不等。最小的表也是千万级别。在腾讯17 台TS5机器，就可以处理每天450亿的数据(每条数据1kb左右)，数据可以保存一个月之久。</p>
+
+<p style="margin: 10px auto; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/TmQJdUWych53CR7g6M4NhD.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/TmQJdUWych53CR7g6M4NhD.html">《ElasticSearch和solr的差别》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+<script>$(".playbox").trigger("click");</script>
+</body>
+</html>

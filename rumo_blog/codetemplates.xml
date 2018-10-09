@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="fieldcomment_context" deleted="false" description="Comment for fields" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.fieldcomment" name="fieldcomment">/**
+ * ${field}:${todo}（用一句话描述这个变量表示什么）
+ * @since 1.0.0
+ */
+</template><template autoinsert="false" context="typecomment_context" deleted="false" description="Comment for created types" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.typecomment" name="typecomment">
+/**
+ * 
+ * ${type_name}&lt;br/&gt;
+ * 创建人:mofeng&lt;br/&gt;
+ * 时间：${date}-${time} &lt;br/&gt;
+ * @version 1.0.0&lt;br/&gt;
+ * 
+ */</template><template autoinsert="false" context="filecomment_context" deleted="false" description="Comment for created Java files" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.filecomment" name="filecomment">
+ /**
+ * itbooking系统平台&lt;br/&gt;
+ * ${package_name}&lt;br/&gt;
+ * ${file_name}&lt;br/&gt;
+ * 创建人:mofeng &lt;br/&gt;
+ * 时间：${date}-${time} &lt;br/&gt;
+ * ${year}itbooking-版权所有&lt;br/&gt;
+ */</template><template autoinsert="false" context="constructorcomment_context" deleted="false" description="Comment for created constructors" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.constructorcomment" name="constructorcomment">
+/**
+ * 创建一个新的实例 ${enclosing_type}.
+ * ${tags}
+ */</template><template autoinsert="true" context="overridecomment_context" deleted="false" description="Comment for overriding methods" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.overridecomment" name="overridecomment">/* (non-Javadoc)
+ * ${see_to_overridden}
+ */</template><template autoinsert="false" context="gettercomment_context" deleted="false" description="Comment for getter method" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.gettercomment" name="gettercomment">/**
+ * ${bare_field_name}
+ *
+ * @return  the ${bare_field_name}
+ * @since   1.0.0
+*/
+</template><template autoinsert="false" context="methodcomment_context" deleted="false" description="Comment for non-overriding methods" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.methodcomment" name="methodcomment">/**
+ * (这里用一句话描述这个方法的作用)&lt;br/&gt;
+ * 方法名：${enclosing_method}&lt;br/&gt;
+ * 创建人：mofeng &lt;br/&gt;
+ * 时间：${date}-${time} &lt;br/&gt;
+ * 手机:1564545646464&lt;br/&gt;
+ * ${tags} ${return_type}&lt;br/&gt;
+ * @exception &lt;br/&gt;
+ * @since  1.0.0&lt;br/&gt;
+*/</template><template autoinsert="true" context="settercomment_context" deleted="false" description="Comment for setter method" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.settercomment" name="settercomment">/**
+ * @param ${param} the ${bare_field_name} to set
+ */</template><template autoinsert="true" context="delegatecomment_context" deleted="false" description="Comment for delegate methods" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.delegatecomment" name="delegatecomment">/**
+ * ${tags}
+ * ${see_to_target}
+ */</template></templates>

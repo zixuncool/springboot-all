@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>KeKe解说Redis第二弹：Redis的启动与关闭-中华墨风-'s Zone</title>
+<meta name="description" content="Redis目录分析 命令 简介 r ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="25" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: 602px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/L2ixkdMH9625D8cmhe2YLU.html">KeKe解说Redis第二弹：Redis的启动与关闭</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/04/16 11:57:50">2018/04/16 11:57:50</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">366</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+								<img src="http://localhost:8080/resource/blog/2018/04/16/201804161019213.jpg" id="imgmain" onload="loadimg(this)" onerror="imgError(this)" class="keui-imgbox">
+						</div>
+						<div class="mk_cntbox">
+<h4 class="post-heading">Redis目录分析</h4>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; 命令</td>
+			<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;简介</td>
+		</tr>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; redis-server</td>
+			<td>&nbsp; &nbsp; &nbsp;redis服务器端启动程序</td>
+		</tr>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; redis-cli</td>
+			<td>&nbsp; &nbsp; &nbsp;redis客户端操作工具，也可以用telnet根据纯文本协议去操作</td>
+		</tr>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; redis-benchmark</td>
+			<td>&nbsp; &nbsp; &nbsp;redis性能测试工具</td>
+		</tr>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; redis-check-aof</td>
+			<td>&nbsp; &nbsp; &nbsp;redis数据修复工具</td>
+		</tr>
+		<tr>
+			<td>&nbsp; &nbsp; &nbsp; redis-check-dump</td>
+			<td>&nbsp; &nbsp; &nbsp;redis检查导出工具</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4 class="post-headingsamll">1.1：启动Reids</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">redis04.0.9 src &gt; ./redis-server</code>
+</pre>
+
+<p><font face="monospace">启动成功如下：</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">[root@izulhfie1t5hdgz&nbsp;src]# ./redis-server 
+7297:C 16 Apr 10:31:29.536 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+7297:C 16 Apr 10:31:29.536 # Redis version=4.0.9, bits=64, commit=00000000, modified=0, pid=7297, just started
+7297:C 16 Apr 10:31:29.536 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+                _._                                                  
+           _.-``__ &#39;&#39;-._                                             
+      _.-``    `.  `_.  &#39;&#39;-._           Redis 4.0.9 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ &#39;&#39;-._                                   
+ (    &#39;      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|&#39;` _.-&#39;|     Port: 6379
+ |    `-._   `._    /     _.-&#39;    |     PID: 7297
+  `-._    `-._  `-./  _.-&#39;    _.-&#39;                                   
+ |`-._`-._    `-.__.-&#39;    _.-&#39;_.-&#39;|                                  
+ |    `-._`-._        _.-&#39;_.-&#39;    |           http://redis.io        
+  `-._    `-._`-.__.-&#39;_.-&#39;    _.-&#39;                                   
+ |`-._`-._    `-.__.-&#39;    _.-&#39;_.-&#39;|                                  
+ |    `-._`-._        _.-&#39;_.-&#39;    |                                  
+  `-._    `-._`-.__.-&#39;_.-&#39;    _.-&#39;                                   
+      `-._    `-.__.-&#39;    _.-&#39;                                       
+          `-._        _.-&#39;                                           
+              `-.__.-&#39;                                               
+
+7297:M 16 Apr 10:31:29.538 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+7297:M 16 Apr 10:31:29.538 # Server initialized
+7297:M 16 Apr 10:31:29.538 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add &#39;vm.overcommit_memory = 1&#39; to /etc/sysctl.conf and then reboot or run the command &#39;sysctl vm.overcommit_memory=1&#39; for this to take effect.
+7297:M 16 Apr 10:31:29.538 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command &#39;echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled&#39; as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+7297:M 16 Apr 10:31:29.538 * DB loaded from disk: 0.000 seconds
+7297:M 16 Apr 10:31:29.538 * Ready to accept connections其</code></pre>
+
+<p><font face="monospace">其他的连接方式：</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">redis-server&nbsp;redisxxx.conf 启动指定的文件
+redis-server --port 6380 指定端口启动 </code></pre>
+
+<h4 class="post-headingsamll">&nbsp;</h4>
+
+<h4 class="post-headingsamll">1.2：进程查看redis和端口检测</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">[root@izulhfie1t5hdgz&nbsp;~]# ps -ef | grep redis
+root      7297  3800  0 10:31 pts/0    00:00:00 ./redis-server *:6379
+root      7322  7303  0 10:33 pts/1    00:00:00 grep --color=auto redis
+[root@izulhfie1t5hdgz ~]# netstat -anpl | grep redis
+tcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      7297/./redis-server 
+tcp6       0      0 :::6379                 :::*                    LISTEN      7297/./redis-server 
+[root@izulhfie1t5hdgz ~]# 
+</code></pre>
+
+<p>&nbsp;</p>
+</div>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">修改Redis的conf文件</h4>
+
+<h4 class="post-headingsamll">2.1：设置密码</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">redis-4.0.9&nbsp;&gt; vi redis.conf
+
+# Warning: since Redis is pretty fast an outside user can try up to
+# 150k passwords per second against a good box. This means that you should
+# use a very strong password otherwise it will be very easy to break.
+# 请把注释删掉在写上你自己的密码
+requirepass 你的密码
+
+# Command renaming.
+#
+</code></pre>
+
+<h4 class="post-headingsamll">2.2：设置外网访问</h4>
+
+<p>Redis默认访问只有本地访问，找到redis.conf文件中的bind 127.0.0.1 给注释掉即可。</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">#
+#&nbsp;IF YOU ARE SURE YOU WANT YOUR INSTANCE TO LISTEN TO ALL THE INTERFACES
+# JUST COMMENT THE FOLLOWING LINE.
+# 把这里注释掉~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# bind 127.0.0.1
+
+# Protected mode is a layer of security protection, in order to avoid that
+# Redis instances left open on the internet are accessed and exploited.
+#
+</code></pre>
+</div>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">Redis客户端连接</h4>
+
+<h4 class="post-headingsamll">3.1：启动客户端</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">&gt; src/redis-cli</code></pre>
+
+<p><font face="monospace">完整如下，因为设置了密码所以需要auth 1234567 登录以后才能操作。</font><code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json"> </code></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">[root@izulhfie1t5hdgz&nbsp;redis-4.0.9]# clear
+[root@izulhfie1t5hdgz redis-4.0.9]# src/redis-cli
+127.0.0.1:6379&gt; ping
+(error) NOAUTH Authentication required.
+127.0.0.1:6379&gt; auth 1234567
+OK
+127.0.0.1:6379&gt; ping
+PONG</code></pre>
+
+<p>恭喜你连接成功。</p>
+
+<p>Redis客户端启动其他方式：</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">redis-cli&nbsp;代表启动默认端口，本机访问，无密码，不关闭
+redis-cli -p 6380 带端口启动
+redis-cli -p 6380 shutdown 关闭指定redis端口的服务器
+redis-cli -p 6380 -h 127.0.0.1 远程连接指定端口的服务器
+redis-cli -p 6380 -a 密码   密码连接服务器端
+quit 退出redis-cli</code></pre>
+
+<h2 style="border: 0px; margin: 2px 0px; padding: 0px; font-size: 1.8em; line-height: 1.8em; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis 连接命令</h2>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">下表列出了 redis 连接的基本命令：</p>
+
+<table class="reference" style="border: 0px; margin: 4px 0px; padding: 0px; border-collapse: collapse; width: 729px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">
+	<tbody style="border: 0px; margin: 0px; padding: 0px;">
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left; width: 29px;">序号</th>
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left;">命令及描述</th>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">1</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/connection-auth.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">AUTH password</a>&nbsp;<br />
+			验证密码是否正确</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">2</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/connection-echo.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">ECHO message</a>&nbsp;<br />
+			打印字符串</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">3</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/connection-ping.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">PING</a>&nbsp;<br />
+			查看服务是否运行</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">4</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/connection-quit.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">QUIT</a>&nbsp;<br />
+			关闭当前连接</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">5</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/connection-select.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SELECT index</a>&nbsp;<br />
+			切换到指定的数据库</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4 class="post-heading">&nbsp;</h4>
+
+<h4 class="post-heading">Redis操作字符串</h4>
+
+<p>&nbsp;</p>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis 字符串数据类型的相关命令用于管理 redis 字符串值，基本语法如下：</p>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">语法</h3>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+redis 127.0.0.1:6379&gt; COMMAND KEY_NAME
+</pre>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">实例</h3>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+redis 127.0.0.1:6379&gt; SET runoobkey redis
+OK
+redis 127.0.0.1:6379&gt; GET runoobkey
+&quot;redis&quot;
+</pre>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">在以上实例中我们使用了&nbsp;<b>SET</b>&nbsp;和&nbsp;<b>GET</b>&nbsp;命令，键为&nbsp;<strong style="border: 0px; margin: 0px; padding: 0px;">runoobkey</strong>。</p>
+
+<hr style="background-color: rgb(212, 212, 212); color: rgb(212, 212, 212); height: 1px; border-top: 0px; clear: both; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px;" />
+<h2 style="border: 0px; margin: 2px 0px; padding: 0px; font-size: 1.8em; line-height: 1.8em; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis 字符串命令</h2>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">下表列出了常用的 redis 字符串命令：</p>
+
+<table class="reference" style="border: 0px; margin: 4px 0px; padding: 0px; border-collapse: collapse; width: 729px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">
+	<tbody style="border: 0px; margin: 0px; padding: 0px;">
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left; width: 29px;">序号</th>
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left;">命令及描述</th>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">1</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-set.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SET key value</a>&nbsp;<br />
+			设置指定 key 的值</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">2</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-get.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">GET key</a>&nbsp;<br />
+			获取指定 key 的值。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">3</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-getrange.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">GETRANGE key start end</a>&nbsp;<br />
+			返回 key 中字符串值的子字符</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">4</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-getset.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">GETSET key value</a><br />
+			将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">5</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-getbit.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">GETBIT key offset</a><br />
+			对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">6</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-mget.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">MGET key1 [key2..]</a><br />
+			获取所有(一个或多个)给定 key 的值。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">7</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-setbit.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SETBIT key offset value</a><br />
+			对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">8</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-setex.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SETEX key seconds value</a><br />
+			将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">9</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-setnx.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SETNX key value</a><br />
+			只有在 key 不存在时设置 key 的值。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">10</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-setrange.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">SETRANGE key offset value</a><br />
+			用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">11</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-strlen.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">STRLEN key</a><br />
+			返回 key 所储存的字符串值的长度。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">12</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-mset.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">MSET key value [key value ...]</a><br />
+			同时设置一个或多个 key-value 对。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">13</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-msetnx.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">MSETNX key value [key value ...]</a>&nbsp;<br />
+			同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">14</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-psetex.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">PSETEX key milliseconds value</a><br />
+			这个命令和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 命令那样，以秒为单位。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">15</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-incr.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">INCR key</a><br />
+			将 key 中储存的数字值增一。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">16</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-incrby.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">INCRBY key increment</a><br />
+			将 key 所储存的值加上给定的增量值（increment） 。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">17</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-incrbyfloat.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">INCRBYFLOAT key increment</a><br />
+			将 key 所储存的值加上给定的浮点增量值（increment） 。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">18</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-decr.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">DECR key</a><br />
+			将 key 中储存的数字值减一。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">19</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-decrby.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">DECRBY key decrement</a><br />
+			key 所储存的值减去给定的减量值（decrement） 。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">20</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/strings-append.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;">APPEND key value</a><br />
+			如果 key 已经存在并且是一个字符串， APPEND 命令将 指定value 追加到改 key 原来的值（value）的末尾。</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h4 class="post-heading">Redis 列表(List)</h4>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）</p>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">一个列表最多可以包含 2<sup style="border: 0px; margin: 0px; padding: 0px;">32</sup>&nbsp;- 1 个元素 (4294967295, 每个列表超过40亿个元素)。</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">redis&nbsp;127.0.0.1:6379&gt; LPUSH runoobkey redis
+(integer) 1
+redis 127.0.0.1:6379&gt; LPUSH runoobkey mongodb
+(integer) 2
+redis 127.0.0.1:6379&gt; LPUSH runoobkey mysql
+(integer) 3
+redis 127.0.0.1:6379&gt; LRANGE runoobkey 0 10
+
+1) &quot;mysql&quot;
+2) &quot;mongodb&quot;
+3) &quot;redis&quot;</code>
+</pre>
+
+<p>&nbsp;</p>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis 列表命令</h3>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">下表列出了列表相关的基本命令：</p>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">&nbsp;</p>
+
+<table class="reference" style="border: 0px; margin: 4px 0px; padding: 0px; border-collapse: collapse; width: 729px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">
+	<tbody style="border: 0px; margin: 0px; padding: 0px;">
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left; width: 29px;">序号</th>
+			<th style="border: 1px solid rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top; text-align: left;">命令及描述</th>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">1</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-blpop.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">BLPOP key1 [key2 ] timeout</a>&nbsp;<br />
+			移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">2</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-brpop.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">BRPOP key1 [key2 ] timeout</a>&nbsp;<br />
+			移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">3</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-brpoplpush.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">BRPOPLPUSH source destination timeout</a>&nbsp;<br />
+			从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">4</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lindex.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LINDEX key index</a>&nbsp;<br />
+			通过索引获取列表中的元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">5</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-linsert.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LINSERT key BEFORE|AFTER pivot value</a>&nbsp;<br />
+			在列表的元素前或者后插入元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">6</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-llen.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LLEN key</a>&nbsp;<br />
+			获取列表长度</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">7</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lpop.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LPOP key</a>&nbsp;<br />
+			移出并获取列表的第一个元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">8</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lpush.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LPUSH key value1 [value2]</a>&nbsp;<br />
+			将一个或多个值插入到列表头部</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">9</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lpushx.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LPUSHX key value</a>&nbsp;<br />
+			将一个值插入到已存在的列表头部</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">10</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lrange.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LRANGE key start stop</a>&nbsp;<br />
+			获取列表指定范围内的元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">11</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lrem.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LREM key count value</a>&nbsp;<br />
+			移除列表元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">12</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-lset.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LSET key index value</a>&nbsp;<br />
+			通过索引设置列表元素的值</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">13</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-ltrim.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">LTRIM key start stop</a>&nbsp;<br />
+			对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除。</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">14</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-rpop.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">RPOP key</a>&nbsp;<br />
+			移除并获取列表最后一个元素</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">15</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-rpoplpush.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">RPOPLPUSH source destination</a>&nbsp;<br />
+			移除列表的最后一个元素，并将该元素添加到另一个列表并返回</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">16</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-rpush.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">RPUSH key value1 [value2]</a>&nbsp;<br />
+			在列表中添加一个或多个值</td>
+		</tr>
+		<tr style="border: 0px; margin: 0px; padding: 0px;">
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;">17</td>
+			<td style="border: 1px solid rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;"><a href="http://www.runoob.com/redis/lists-rpushx.html" style="border: 0px; margin: 0px; padding: 0px; color: rgb(100, 133, 76); transition-duration: 0.2s; transition-property: opacity;" target="_blank">RPUSHX key value</a>&nbsp;<br />
+			为已存在的列表添加值</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h1 style="border: 0px; margin: 0px 0px 10px; padding: 0px; font-size: 2.1em; color: rgb(0, 0, 0); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis 数据备份与恢复</h1>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Redis&nbsp;<b>SAVE</b>&nbsp;命令用于创建当前数据库的备份。</p>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">语法</h3>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">redis Save 命令基本语法如下：</p>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+redis 127.0.0.1:6379&gt; SAVE 
+</pre>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">实例</h3>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+redis 127.0.0.1:6379&gt; SAVE 
+OK
+</pre>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">该命令将在 redis 安装目录中创建dump.rdb文件。</p>
+
+<hr style="background-color: rgb(212, 212, 212); color: rgb(212, 212, 212); height: 1px; border-top: 0px; clear: both; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px;" />
+<h2 style="border: 0px; margin: 2px 0px; padding: 0px; font-size: 1.8em; line-height: 1.8em; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">恢复数据</h2>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">如果需要恢复数据，只需将备份文件 (dump.rdb) 移动到 redis 安装目录并启动服务即可。获取 redis 目录可以使用&nbsp;</span><b style="font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">CONFIG</b><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">&nbsp;命令，如下所示：</span>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+ 
+redis 127.0.0.1:6379&gt; CONFIG GET dir
+1) &quot;dir&quot;
+2) &quot;/usr/local/redis/bin&quot;
+
+</pre>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">以上命令&nbsp;<b>CONFIG GET dir</b>&nbsp;输出的 redis 安装目录为 /usr/local/redis/bin。</p>
+
+<hr style="background-color: rgb(212, 212, 212); color: rgb(212, 212, 212); height: 1px; border-top: 0px; clear: both; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px;" />
+<h2 style="border: 0px; margin: 2px 0px; padding: 0px; font-size: 1.8em; line-height: 1.8em; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">Bgsave</h2>
+
+<p style="border: 0px; margin: 0px; padding: 0px; line-height: 2em; font-size: 13px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">创建 redis 备份文件也可以使用命令&nbsp;<b>BGSAVE</b>，该命令在后台执行。</p>
+
+<h3 style="border: 0px; margin: 8px 0px; padding: 0px; font-size: 1.4em; font-weight: 700; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; background-color: rgb(255, 255, 255);">实例</h3>
+
+<pre style="border-width: 1px 1px 1px 4px; border-style: solid; border-color: rgb(221, 221, 221); border-image: initial; margin: 15px auto; padding: 10px 15px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Menlo, Monaco, Consolas, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; word-break: break-all; background-image: url(&quot;/images/codecolorer_bg.gif&quot;); background-position: center top; background-color: rgb(251, 251, 251);">
+127.0.0.1:6379&gt; BGSAVE
+
+Background saving started
+</pre>
+
+<p>&nbsp;</p>
+</div>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/L2ixkdMH9625D8cmhe2YLU.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/L2ixkdMH9625D8cmhe2YLU.html">《KeKe解说Redis第二弹：Redis的启动与关闭》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+<script>$(".playbox").trigger("click");</script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>rpm命令-中华墨风-'s Zone</title>
+<meta name="description" content="概要：rpm命令是RPM软件包的管理工具。rpm原本是Red Hat Linux发行版专门用来管理Linux各项套件的程序，由于它遵循GPL规则且功能 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="50" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/YXtpM3C5V750XzvD4IAa93.html">rpm命令</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/06/19 09:57:08">2018/06/19 09:57:08</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">353</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<blockquote class="blockquote">
+<p>概要：<strong style="color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">rpm命令</strong><span style="color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">是RPM软件包的管理工具。rpm原本是Red&nbsp;Hat&nbsp;Linux发行版专门用来管理Linux各项套件的程序，由于它遵循GPL规则且功能强大方便，因而广受欢迎。逐渐受到其他发行版的采用。RPM套件管理方式的出现，让Linux易于安装，升级，间接提升了Linux的适用度。</span></p>
+</blockquote>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">语法</h4>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm(选项)(参数)</pre>
+
+<h4 class="post-heading">选项</h4>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+-a：查询所有套件；
+-b&lt;完成阶段&gt;&lt;套件档&gt;+或-t &lt;完成阶段&gt;&lt;套件档&gt;+：设置包装套件的完成阶段，并指定套件档的文件名称；
+-c：只列出组态配置文件，本参数需配合&quot;-l&quot;参数使用；
+-d：只列出文本文件，本参数需配合&quot;-l&quot;参数使用；
+-e&lt;套件档&gt;或--erase&lt;套件档&gt;：删除指定的套件；
+-f&lt;文件&gt;+：查询拥有指定文件的套件；
+-h或--hash：套件安装时列出标记；
+-i：显示套件的相关信息；
+-i&lt;套件档&gt;或--<span class="wp_keywordlink"><a href="http://man.linuxde.net/install" style="border: none; text-decoration-line: none;" target="_blank" title="install命令">install</a></span>&lt;套件档&gt;：安装指定的套件档；
+-l：显示套件的文件列表；
+-p&lt;套件档&gt;+：查询指定的RPM套件档；
+-q：使用询问模式，当遇到任何问题时，rpm指令会先询问用户；
+-R：显示套件的关联性信息；
+-s：显示文件状态，本参数需配合&quot;-l&quot;参数使用；
+-U&lt;套件档&gt;或--upgrade&lt;套件档&gt;：升级指定的套件档；
+-v：显示指令执行过程；
+-vv：详细显示指令执行过程，便于排错。</pre>
+
+<h4 class="post-heading">参数</h4>
+
+<pre style="background-color: rgb(230, 233, 237); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+<span style="color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">软件包：指定要操纵的rpm软件包。</span></pre>
+
+<h4 class="post-heading">实例</h4>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;"><strong>如何安装rpm软件包</strong></p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">rpm软件包的安装可以使用程序rpm来完成。执行下面的命令：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -ivh your-package.rpm</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">其中your-package.rpm是你要安装的rpm包的文件名，一般置于当前目录下。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">安装过程中可能出现下面的警告或者提示：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+... conflict with ...</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">可能是要安装的包里有一些文件可能会覆盖现有的文件，缺省时这样的情况下是无法正确安装的可以用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm --force -i</code>强制安装即可</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+... is needed by ...
+... is not installed ...</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">此包需要的一些软件你没有安装可以用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm --nodeps -i</code>来忽略此信息，也就是说<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -i --force --nodeps</code>可以忽略所有依赖关系和文件问题，什么包都能安装上，但这种强制安装的软件包不能保证完全发挥功能。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;"><strong>如何安装.src.rpm软件包</strong></p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">有些软件包是以.src.rpm结尾的，这类软件包是包含了源代码的rpm包，在安装时需要进行编译。这类软件包有两种安装方法：</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">方法一：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -i your-package.src.rpm
+<span class="wp_keywordlink"><a href="http://man.linuxde.net/cd" style="border: none; text-decoration-line: none;" target="_blank" title="cd命令">cd</a></span> /usr/src/redhat/SPECS
+<span class="wp_keywordlink"><a href="http://man.linuxde.net/rpmbuild" style="border: none; text-decoration-line: none;" target="_blank" title="rpmbuild命令">rpmbuild</a></span> -bp your-package.specs            <span style="color: rgb(128, 128, 128);"> #一个和你的软件包同名的specs文件</span>
+cd /usr/src/redhat/BUILD/your-package/      <span style="color: rgb(128, 128, 128);">#一个和你的软件包同名的目录</span>
+./configure                                 <span style="color: rgb(128, 128, 128);">#这一步和编译普通的源码软件一样，可以加上参数</span>
+<span class="wp_keywordlink"><a href="http://man.linuxde.net/make" style="border: none; text-decoration-line: none;" target="_blank" title="make命令">make</a></span>
+make install</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">方法二：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -i you-package.src.rpm
+cd /usr/src/redhat/SPECS</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">前两步和方法一相同</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpmbuild -bb your-package.specs       #一个和你的软件包同名的specs文件</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">这时在<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">/usr/src/redhat/RPM/i386/</code>（根据具体包的不同，也可能是i686,noarch等等）在这个目录下，有一个新的rpm包，这个是编译好的二进制文件。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">执行<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -i new-package.rpm</code>即可安装完成。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;"><strong>如何卸载rpm软件包</strong></p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">使用命令<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -e</code>包名，包名可以包含版本号等信息，但是不可以有后缀.rpm，比如卸载软件包proftpd-1.2.8-1，可以使用下列格式：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -e proftpd-1.2.8-1
+rpm -e proftpd-1.2.8
+rpm -e proftpd-
+rpm -e proftpd</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">不可以是下列格式：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -e proftpd-1.2.8-1.i386.rpm
+rpm -e proftpd-1.2.8-1.i386
+rpm -e proftpd-1.2
+rpm -e proftpd-1</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">有时会出现一些错误或者警告：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+... is needed by ...</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">这说明这个软件被其他软件需要，不能随便卸载，可以用rpm -e --nodeps强制卸载</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;"><strong>如何不安装但是获取rpm包中的文件</strong></p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">使用工具<span class="wp_keywordlink"><a href="http://man.linuxde.net/rpm2cpio" style="border: none; text-decoration-line: none;" target="_blank" title="rpm2cpio命令">rpm2cpio</a></span>和<span class="wp_keywordlink"><a href="http://man.linuxde.net/cpio" style="border: none; text-decoration-line: none;" target="_blank" title="cpio命令">cpio</a></span></p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm2cpio xxx.rpm | cpio -<span class="wp_keywordlink"><a href="http://man.linuxde.net/vi" style="border: none; text-decoration-line: none;" target="_blank" title="vi命令">vi</a></span>
+rpm2cpio xxx.rpm | cpio -idmv
+rpm2cpio xxx.rpm | cpio --extract --make-directories</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">参数i和extract相同，表示提取文件。v表示指示执行进程，d和make-directory相同，表示根据包中文件原来的路径建立目录，m表示保持文件的更新时间。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;"><strong>如何查看与rpm包相关的文件和其他信息</strong></p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">下面所有的例子都假设使用软件包<span class="wp_keywordlink"><a href="http://man.linuxde.net/mysql" style="border: none; text-decoration-line: none;" target="_blank" title="mysql命令">mysql</a></span>-3.23.54a-11</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">1、我的系统中安装了那些rpm软件包。</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -qa 讲列出所有安装过的包</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">如果要查找所有安装过的包含某个字符串sql的软件包</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -qa | <span class="wp_keywordlink"><a href="http://man.linuxde.net/grep" style="border: none; text-decoration-line: none;" target="_blank" title="grep命令">grep</a></span> sql</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">2、如何获得某个软件包的文件全名。</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -q mysql</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">可以获得系统中安装的mysql软件包全名，从中可以获得当前软件包的版本等信息。这个例子中可以得到信息mysql-3.23.54a-11</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">3、一个rpm包中的文件安装到那里去了？</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -ql 包名</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">注意这里的是不包括.rpm后缀的软件包的名称，也就是说只能用mysql或者mysql-3.23.54a-11而不是mysql-3.23.54a-11.rpm。如果只是想知道可执行程序放到那里去了，也可以用<span class="wp_keywordlink"><a href="http://man.linuxde.net/which" style="border: none; text-decoration-line: none;" target="_blank" title="which命令">which</a></span>，比如：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+which mysql</pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">4、一个rpm包中包含那些文件。</p>
+
+<ul style="margin-top: 0px; list-style: none; margin-left: 0px; padding-left: 0px; line-height: 26px; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">
+	<li style="list-style: disc inside none; margin-bottom: 10px;">一个没有安装过的软件包，使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -qlp ****.rpm</code></li>
+	<li style="list-style: disc inside none; margin-bottom: 10px;">一个已经安装过的软件包，还可以使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -ql ****.rpm</code></li>
+</ul>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">5、如何获取关于一个软件包的版本，用途等相关信息？</p>
+
+<ul style="margin-top: 0px; list-style: none; margin-left: 0px; padding-left: 0px; line-height: 26px; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">
+	<li style="list-style: disc inside none; margin-bottom: 10px;">一个没有安装过的软件包，使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -qip ****.rpm</code></li>
+	<li style="list-style: disc inside none; margin-bottom: 10px;">一个已经安装过的软件包，还可以使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -qi ****.rpm</code></li>
+</ul>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">6、某个程序是哪个软件包安装的，或者哪个软件包包含这个程序。</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+rpm -qf `which 程序名`    <span style="color: rgb(128, 128, 128);">#返回软件包的全名</span>
+rpm -qif `which 程序名`   <span style="color: rgb(128, 128, 128);">#返回软件包的有关信息</span>
+rpm -qlf `which 程序名`   <span style="color: rgb(128, 128, 128);">#返回软件包的文件列表</span></pre>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">注意，这里不是引号，而是`，就是键盘左上角的那个键。也可以使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -qilf</code>，同时输出软件包信息和文件列表。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">7、某个文件是哪个软件包安装的，或者哪个软件包包含这个文件。</p>
+
+<p style="margin-top: 0px; line-height: 1.7em; margin-bottom: 25px; color: rgb(68, 68, 68); font-family: Verdana, Geneva, &quot;Helvetica Neue&quot;, 微软雅黑, &quot;Microsoft Yahei&quot;, Helvetica, Arial, sans-serif;">注意，前一个问题中的方法，只适用与可执行的程序，而下面的方法，不仅可以用于可执行程序，也可以用于普通的任何文件。前提是知道这个文件名。首先获得这个程序的完整路径，可以用<span class="wp_keywordlink"><a href="http://man.linuxde.net/whereis" style="border: none; text-decoration-line: none;" target="_blank" title="whereis命令">whereis</a></span>或者which，然后使用<code style="border: 1px solid rgb(212, 215, 219); border-radius: 2px; color: rgb(102, 102, 102); font-family: &quot;Courier New&quot;, Courier, monospace; margin: 0px 2px; padding: 2px 3px 1px;">rpm -qf</code>例如：</p>
+
+<pre style="background-color: rgb(230, 233, 237); border-left: 4px solid rgb(122, 208, 58); color: rgb(34, 34, 34); font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 12px; line-height: 20px; font-family: Consolas, &quot;Courier New&quot;, Courier, monospace; margin-top: 0px; margin-bottom: 25px; padding: 10px 12px; overflow: hidden;">
+<span style="color: rgb(255, 0, 0);">whereis <span class="wp_keywordlink"><a href="http://man.linuxde.net/ftptop" style="border: none; text-decoration-line: none;" target="_blank" title="ftptop命令">ftptop</a></span></span>
+ftptop: /usr/bin/ftptop /usr/share/<span class="wp_keywordlink"><a href="http://man.linuxde.net/man" style="border: none; text-decoration-line: none;" target="_blank" title="man命令">man</a></span>/man1/ftptop.1.gz
+
+<span style="color: rgb(255, 0, 0);">rpm -qf /usr/bin/ftptop</span>
+proftpd-1.2.8-1
+
+<span style="color: rgb(255, 0, 0);">rpm -qf /usr/share/doc/proftpd-1.2.8/rfc/rfc0959.txt</span>
+proftpd-1.2.8-1</pre>
+</div>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/YXtpM3C5V750XzvD4IAa93.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/YXtpM3C5V750XzvD4IAa93.html">《rpm命令》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+<script>$(".playbox").trigger("click");</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<#list  pages.list as blog>
+<#if blog??>
+<li class="track-item rounded" data-pages="${pages.pages}"  data-total="${pages.total}">
+	<div class="track-wrapper clearfix">
+		 <a href="${basePath}/${blog.staticLink}" target="_blank" rel="nofollow" class="trackname btn-play">${blog.title}</a>
+		 <span class="artist btn-play">${blog.category.name}</span> 
+		 <span class="artist btn-play">&nbsp;/${(blog.createTime)?date}</span> 
+		 <a href="${basePath}/admin/editBlog/${blog.id}" target="_blank" rel="nofollow" class="btn-action-share icon-share">
+		 	<i class="fa fa-edit"></i>
+		 </a> 
+		<a href="javascript:void(0);" data-opid="${blog.id}" data-model="blog" rel="nofollow" class="btn-action-remove icon-trash"><i class="fa fa-remove"></i></a>
+	</div>
+</li>
+</#if>
+</#list>

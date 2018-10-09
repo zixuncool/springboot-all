@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>Hiberante的一级缓存和二级缓存-中华墨风-'s Zone</title>
+<meta name="description" content="概要： 缓存是介于应用程序和物理数据源之间，其作用是为了降低应用程序对物理数据源访问的频次，从而提高了应用的运行性能。缓 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="32" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/wPTG8tyBnc32uZT2kK7zE9.html">Hiberante的一级缓存和二级缓存</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/05/01 22:44:29">2018/05/01 22:44:29</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">196</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+								<img src="http://localhost:8080/resource/blog/2018/05/01/201805012111142.png" id="imgmain" onload="loadimg(this)" onerror="imgError(this)" class="keui-imgbox">
+						</div>
+						<blockquote class="blockquote">
+<p>概要：&nbsp;缓存是介于应用程序和物理数据源之间，其作用是为了降低应用程序对物理数据源访问的频次，从而提高了应用的运行性能。缓存内的数据是对物理数据源中的数据的复制，应用程序在运行时从缓存读写数据，在特定的时刻或事件会同步缓存和物理数据源的数据。</p>
+</blockquote>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">什么是缓存</h4>
+
+<p>&nbsp;缓存是介于应用程序和物理数据源之间，其作用是为了降低应用程序对物理数据源访问的频次，从而提高了应用的运行性能。缓存内的数据是对物理数据源中的数据的复制，应用程序在运行时从缓存读写数据，在特定的时刻或事件会同步缓存和物理数据源的数据。缓存的介质一般是内存，所以读写速度很快。但如果缓存中存放的数据量非常大时，也会用硬盘作为缓存介质。缓存的实现不仅仅要考虑存储的介质，还要考虑到管理缓存的并发访问和缓存数据的生命周期。</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">一级缓存：
+　　就是Session级别的缓存。一个Session做了一个查询操作，它会把这个操作的结果放在一级缓存中。
+　　如果短时间内这个session（一定要同一个session）又做了同一个操作，那么hibernate直接从一级缓存中拿，而不会再去连数据库，取数据。
+　　它是内置的事务范围的缓存，不能被卸载。
+二级缓存：
+　　就是SessionFactory级别的缓存。顾名思义，就是查询的时候会把查询结果缓存到二级缓存中。
+　　如果同一个sessionFactory创建的某个session执行了相同的操作，hibernate就会从二级缓存中拿结果，而不会再去连接数据库。
+　　这是可选的插件式的缓存，在默认情况下，SessionFactory不会启用这个插件。
+　　可以在每个类或每个集合的粒度上配置。缓存适配器用于把具体的缓存实现软件与Hibernate集成。
+
+严格意义上说，SessionFactory缓存分为两类：内置缓存和外置缓存。我们通常意义上说的二级缓存是指外置缓存。
+
+内置缓存与session级别缓存实现方式相似。前者是SessionFactory对象的一些集合属性包含的数据，后者是指Session的一些集合属性包含的数据
+
+SessionFactory的内置缓存中存放了映射元数据和预定义SQL语句。
+　　映射元数据是映射文件中数据的拷贝；
+　　而预定义SQL语句是在Hibernate初始化阶段根据映射元数据推导出来。
+SessionFactory的内置缓存是只读的，应用程序不能修改缓存中的映射元数据和预定义SQL语句，因此SessionFactory不需要进行内置缓存与映射文件的同步。</code></pre>
+
+<p>&nbsp;</p>
+
+<h4 class="post-headingsamll">1.1：Hibernate的缓存包括Session的缓存和SessionFactory的缓存</h4>
+
+<p>Hibernate的缓存包括Session的缓存和SessionFactory的缓存，其中SessionFactory的缓存又可以分为两类：内置缓存和外置缓存。Session的缓存是内置的，不能被卸载，也被称为Hibernate的第一级缓存。SessionFactory的内置缓存和Session的缓存在实现方式上比较相似，前者是SessionFactory对象的一些集合属性包含的数据，后者是指Session的一些集合属性包含的数据。SessionFactory的内置缓存中存放了映射元数据和预定义SQL语句，映射元数据是映射文件中数据的拷贝，而预定义SQL语句是在Hibernate初始化阶段根据映射元数据推导出来，SessionFactory的内置缓存是只读的，应用程序不能修改缓存中的映射元数据和预定义SQL语句，因此SessionFactory不需要进行内置缓存与映射文件的同步。SessionFactory的外置缓存是一个可配置的插件。在默认情况下，SessionFactory不会启用这个插件。外置缓存的数据是数据库数据的拷贝，外置缓存的介质可以是内存或者硬盘。SessionFactory的外置缓存也被称为Hibernate的第二级缓存。Hibernate的这两级缓存都位于持久化层，存放的都是数据库数据的拷贝，那么它们之间的区别是什么呢？为了理解二者的区别，需要深入理解持久化层的缓存的两个特性：缓存的范围和缓存的并发访问策略。</p>
+
+<h4 class="post-headingsamll">1.2：持久化层的缓存的范围</h4>
+
+<p>缓存的范围决定了缓存的生命周期以及可以被谁访问。缓存的范围分为三类。</p>
+
+<p>1 事务范围：缓存只能被当前事务访问。缓存的生命周期依赖于事务的生命周期，当事务结束时，缓存也就结束生命周期。在此范围下，缓存的介质是内存。事务可以是数据库事务或者应用事务，每个事务都有独自的缓存，缓存内的数据通常采用相互关联的的对象形式。</p>
+
+<p>2 进程范围：缓存被进程内的所有事务共享。这些事务有可能是并发访问缓存，因此必须对缓存采取必要的事务隔离机制。缓存的生命周期依赖于进程的生命周期，进程结束时，缓存也就结束了生命周期。进程范围的缓存可能会存放大量的数据，所以存放的介质可以是内存或硬盘。缓存内的数据既可以是相互关联的对象形式也可以是对象的松散数据形式。松散的对象数据形式有点类似于对象的序列化数据，但是对象分解为松散的算法比对象序列化的算法要求更快。</p>
+
+<p>3 集群范围：在集群环境中，缓存被一个机器或者多个机器的进程共享。缓存中的数据被复制到集群环境中的每个进程节点，进程间通过远程通信来保证缓存中的数据的一致性，缓存中的数据通常采用对象的松散数据形式。</p>
+
+<p>对大多数应用来说，应该慎重地考虑是否需要使用集群范围的缓存，因为访问的速度不一定会比直接访问数据库数据的速度快多少。持久化层可以提供多种范围的缓存。如果在事务范围的缓存中没有查到相应的数据，还可以到进程范围或集群范围的缓存内查询，如果还是没有查到，那么只有到数据库中查询。事务范围的缓存是持久化层的第一级缓存，通常它是必需的；进程范围或集群范围的缓存是持久化层的第二级缓存，通常是可选的。</p>
+
+<h4 class="post-headingsamll">1.3：持久化层的缓存的并发访问策略</h4>
+
+<p>当多个并发的事务同时访问持久化层的缓存的相同数据时，会引起并发问题，必须采用必要的事务隔离措施。</p>
+
+<p>在进程范围或集群范围的缓存，即第二级缓存，会出现并发问题。因此可以设定以下四种类型的并发访问策略，每一种策略对应一种事务隔离级别。</p>
+
+<p>事务型：仅仅在受管理环境中适用。它提供了Repeatable Read事务隔离级别。对于经常被读但很少修改的数据，可以采用这种隔离类型，因为它可以防止脏读和不可重复读这类的并发问题。</p>
+
+<p>读写型：提供了Read Committed事务隔离级别。仅仅在非集群的环境中适用。对于经常被读但很少修改的数据，可以采用这种隔离类型，因为它可以防止脏读这类的并发问题。</p>
+
+<p>非严格读写型：不保证缓存与数据库中数据的一致性。如果存在两个事务同时访问缓存中相同数据的可能，必须为该数据配置一个很短的数据过期时间，从而尽量避免脏读。对于极少被修改，并且允许偶尔脏读的数据，可以采用这种并发访问策略。 只读型：对于从来不会修改的数据，如参考数据，可以使用这种并发访问策略。</p>
+
+<p>事务型并发访问策略是事务隔离级别最高，只读型的隔离级别最低。事务隔离级别越高，并发性能就越低。</p>
+
+<p>什么样的数据适合存放到第二级缓存中？</p>
+
+<p>1、很少被修改的数据</p>
+
+<p>2、不是很重要的数据，允许出现偶尔并发的数据</p>
+
+<p>3、不会被并发访问的数据</p>
+
+<p>4、参考数据</p>
+
+<p>不适合存放到第二级缓存的数据？</p>
+
+<p>1、经常被修改的数据</p>
+
+<p>2、财务数据，绝对不允许出现并发</p>
+
+<p>3、与其他应用共享的数据。</p>
+</div>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">Hibernate的二级缓存</h4>
+
+<p>如前所述，Hibernate提供了两级缓存，第一级是Session的缓存。由于Session对象的生命周期通常对应一个数据库事务或者一个应用事务，因此它的缓存是事务范围的缓存。第一级缓存是必需的，不允许而且事实上也无法比卸除。在第一级缓存中，持久化类的每个实例都具有唯一的OID。</p>
+
+<p>第二级缓存是一个可插拔的的缓存插件，它是由SessionFactory负责管理。由于SessionFactory对象的生命周期和应用程序的整个过程对应，因此第二级缓存是进程范围或者集群范围的缓存。这个缓存中存放的对象的松散数据。第二级对象有可能出现并发问题，因此需要采用适当的并发访问策略，该策略为被缓存的数据提供了事务隔离级别。缓存适配器用于把具体的缓存实现软件与Hibernate集成。第二级缓存是可选的，可以在每个类或每个集合的粒度上配置第二级缓存。</p>
+
+<h4 class="post-headingsamll">2.1：Hibernate的二级缓存策略</h4>
+
+<p>1) 条件查询的时候，总是发出一条select * from table_name where &hellip;. （选择所有字段）这样的SQL语句查询数据库，一次获得所有的数据对象。</p>
+
+<p>2) 把获得的所有数据对象根据ID放入到第二级缓存中。</p>
+
+<p>3) 当Hibernate根据ID访问数据对象的时候，首先从Session一级缓存中查；查不到，如果配置了二级缓存，那么从二级缓存中查；查不到，再查询数据库，把结果按照ID放入到缓存。</p>
+
+<p>4) 删除、更新、增加数据的时候，同时更新缓存。</p>
+
+<p>Hibernate的二级缓存策略，是针对于ID查询的缓存策略，对于条件查询则毫无作用。为此，Hibernate提供了针对条件查询的Query缓存。</p>
+
+<p>Hibernate的Query缓存策略的过程如下：</p>
+
+<p>1) Hibernate首先根据这些信息组成一个Query Key，Query Key包括条件查询的请求一般信息：SQL, SQL需要的参数，记录范围（起始位置rowStart，最大记录个数maxRows)，等。</p>
+
+<p>2) Hibernate根据这个Query Key到Query缓存中查找对应的结果列表。如果存在，那么返回这个结果列表；如果不存在，查询数据库，获取结果列表，把整个结果列表根据Query Key放入到Query缓存中。</p>
+
+<p>3) Query Key中的SQL涉及到一些表名，如果这些表的任何数据发生修改、删除、增加等操作，这些相关的Query Key都要从缓存中清空。</p>
+</div>
+
+<div class="mk_cntbox">
+<h4 class="post-heading">Hiberante二级缓存的配置</h4>
+
+<h4 class="post-headingsamll">3.1：在pom.xml加入ehcache依赖</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">&lt;dependency&gt;
+	&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+	  &lt;artifactId&gt;hibernate-ehcache&lt;/artifactId&gt;
+	  &lt;version&gt;4.3.11.Final&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+<p><font face="monospace">如果你是手动下载的话那么需要下载如下两个文件：</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">hibernate-ehcache-4.3.11.Final.jar
+ehcache-core-2.4.3.jar</code>
+</pre>
+
+<h4 class="post-headingsamll">3.2：在Hibernate.cfg.xml中打开二级缓存</h4>
+
+<p>hibernate默认是关闭二级缓存的，需要打开才能生效：</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">&lt;!-- 启用二级缓存 --&gt;
+&lt;property name=&quot;cache.use_second_level_cache&quot;&gt;true&lt;/property&gt;
+&lt;!-- 开启缓存统计功能 --&gt;
+&lt;property name=&quot;hibernate.generate_statistics&quot;&gt;true&lt;/property&gt;
+&lt;!-- 用结构化的方式来维护缓存项 --&gt;
+&lt;property name=&quot;hibernate.cache.use_structured_entries&quot;&gt;true&lt;/property&gt;
+&lt;!-- 配置使用的二级缓存的产品--&gt;
+&lt;property name=&quot;hibernate.cache.region.factory_class&quot;&gt;org.hibernate.cache.ehcache.EhCacheRegionFactory&lt;/property&gt;</code></pre>
+
+<h4 class="post-headingsamll">3.3：定义ehcache.xml文件放入到src目录下</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">&lt;?xml&nbsp;version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ehcache xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+        xsi:noNamespaceSchemaLocation=&quot;http://ehcache.org/ehcache.xsd&quot;&gt;  
+        
+    &lt;diskStore path=&quot;d://tempDirectory&quot; /&gt; &lt;!-- 缓存存放目录(此目录为放入系统默认缓存目录),也可以是&rdquo;D:/cache&ldquo; java.io.tmpdir --&gt;
+    
+    &lt;defaultCache  
+            maxElementsInMemory=&quot;10000&quot;  
+            eternal=&quot;false&quot;  
+            timeToIdleSeconds=&quot;120&quot;  
+            timeToLiveSeconds=&quot;120&quot;  
+            overflowToDisk=&quot;true&quot;  
+            maxElementsOnDisk=&quot;10000000&quot;  
+            diskPersistent=&quot;false&quot;  
+            diskExpiryThreadIntervalSeconds=&quot;120&quot;  
+            memoryStoreEvictionPolicy=&quot;LRU&quot; &gt;
+    &lt;/defaultCache&gt;
+    
+    
+   	&lt;!--  
+   		name: 设置缓存的名字,它的取值为类的全限定名或类的集合的名字 
+		maxElementsInMemory: 设置基于内存的缓存中可存放的对象最大数目 
+		eternal: 设置对象是否为永久的, true表示永不过期,
+		此时将忽略timeToIdleSeconds 和 timeToLiveSeconds属性; 默认值是false 
+		timeToIdleSeconds:设置对象空闲最长时间,以秒为单位, 超过这个时间,对象过期。
+		当对象过期时,EHCache会把它从缓存中清除。如果此值为0,表示对象可以无限期地处于空闲状态。 
+		timeToLiveSeconds:设置对象生存最长时间,超过这个时间,对象过期。
+		如果此值为0,表示对象可以无限期地存在于缓存中. 该属性值必须大于或等于 timeToIdleSeconds 属性值 
+		overflowToDisk:设置基于内存的缓存中的对象数目达到上限后,是否把溢出的对象写到基于硬盘的缓存中 
+   	--&gt;
+    &lt;!--  
+   		设定具体的命名缓存的数据过期策略。每个命名缓存代表一个缓存区域
+   		缓存区域(region)：一个具有名称的缓存块，可以给每一个缓存块设置不同的缓存策略。
+   		如果没有设置任何的缓存区域，则所有被缓存的对象，都将使用默认的缓存策略。即：&lt;defaultCache.../&gt;
+   		Hibernate 在不同的缓存区域保存不同的类/集合。
+			对于类而言，区域的名称是类名。如:com.atguigu.domain.Customer
+			对于集合而言，区域的名称是类名加属性名。如com.atguigu.domain.Customer.orders
+   	--&gt;
+   &lt;cache name=&quot;com.itbooking.bean.User&quot;
+        maxElementsInMemory=&quot;500&quot;
+        eternal=&quot;false&quot;
+        timeToIdleSeconds=&quot;300&quot;
+        timeToLiveSeconds=&quot;600&quot;
+        overflowToDisk=&quot;true&quot; /&gt; 
+&lt;/ehcache&gt;
+
+	</code></pre>
+
+<p>&nbsp;</p>
+
+<h4 class="post-headingsamll">3.4：定义需要缓存的持久类</h4>
+
+<p><img alt="enlightened" height="23" src="http://www.itbooking.net/resources/js/ckeditor/plugins/smiley/images/lightbulb.png" title="enlightened" width="23" />&nbsp;注意：此代码加入到hibernate.cfg.xml文件的最后面即可。</p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">&nbsp;&lt;!-- 二级缓存配置具体要缓存的对象和数据 --&gt;
+   &lt;class-cache usage=&quot;read-write&quot; class=&quot;com.itbooking.bean.User&quot;/&gt;</code></pre>
+
+<h4 class="post-headingsamll">3.5：定义测试类运行</h4>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">package&nbsp;hibernate4;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.itbooking.bean.User;
+
+
+public class TestCacheDao {
+	
+	private Session session;
+	//1：实例化Configuration
+	Configuration configuration = new  Configuration().configure(&quot;hibernate.cfg.xml&quot;);
+	ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+	//2:获取HibernateSessionFactory,
+	SessionFactory sessionFactory = configuration.buildSessionFactory(registry);
+	
+	@Before
+	public void before() {
+		//创建Session,可以完成对表的持久化操作-CURD
+		session = sessionFactory.openSession();
+		session.beginTransaction();
+	}
+	
+	@After
+	public void after() {
+		
+		/*session.getTransaction().commit();
+		session.close();*/
+	}
+
+
+	
+	@Test
+	public void testGet() throws IOException, SQLException {
+		User user = (User)session.get(User.class, 1);//select
+		session.close();
+		session = sessionFactory.openSession();
+		User user2 = (User)session.get(User.class, 1);//select
+		session.close();
+		session = sessionFactory.openSession();
+		User user3 = (User)session.get(User.class, 1);//select
+		System.out.println(user);
+		System.out.println(user2);
+		System.out.println(user3);
+	}
+	
+}
+</code></pre>
+
+<p>&nbsp;</p>
+
+<p><font face="monospace">运行结果如下：</font></p>
+
+<pre>
+<code class="hljs javascript,java,sql,nodejs,vuejs,html,css,json">................
+五月 01, 2018 10:51:02 下午 org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 2, column 62 in HQL: [
+       	 from com.itbooking.bean.User u where u.account like ? and age &gt; ?
+	].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+五月 01, 2018 10:51:02 下午 org.hibernate.hql.internal.ast.HqlSqlWalker generatePositionalParameter
+WARN: [DEPRECATION] Encountered positional parameter near line 2, column 74 in HQL: [
+       	 from com.itbooking.bean.User u where u.account like ? and age &gt; ?
+	].  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+<span style="background-color:#FFA500;">Hibernate: select user0_.id as id1_5_0_, user0_.account as account2_5_0_, user0_.password as password3_5_0_, user0_.username as username4_5_0_, user0_.header_pic as header_p5_5_0_, user0_.create_time as create_t6_5_0_, user0_.update_time as update_t7_5_0_, user0_.age as age8_5_0_, user0_.male as male9_5_0_, userdetail1_.id as id1_6_1_, userdetail1_.email as email2_6_1_, userdetail1_.idcard as idcard3_6_1_, userdetail1_.is_marry as is_marry4_6_1_, userdetail1_.user_id as user_id5_6_1_ from mk_user user0_ left outer join mk_user_detail userdetail1_ on user0_.id=userdetail1_.user_id where user0_.id=?
+五月 01, 2018 10:51:02 下午 org.hibernate.engine.internal.StatisticalLoggingSessionEventListener end
+INFO: Session Metrics {
+    302540 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    11352776 nanoseconds spent preparing 1 JDBC statements;
+    565803 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    3576115 nanoseconds spent performing 1 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    436021 nanoseconds spent performing 1 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+Hibernate: /* load com.itbooking.bean.UserDetail */ select userdetail0_.id as id1_6_0_, userdetail0_.email as email2_6_0_, userdetail0_.idcard as idcard3_6_0_, userdetail0_.is_marry as is_marry4_6_0_, userdetail0_.user_id as user_id5_6_0_ from mk_user_detail userdetail0_ where userdetail0_.user_id=?
+五月 01, 2018 10:51:03 下午 org.hibernate.engine.internal.StatisticalLoggingSessionEventListener end
+INFO: Session Metrics {
+    241064 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    610771 nanoseconds spent preparing 1 JDBC statements;
+    305386 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    154259 nanoseconds spent performing 1 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+Hibernate: /* load com.itbooking.bean.UserDetail */ select userdetail0_.id as id1_6_0_, userdetail0_.email as email2_6_0_, userdetail0_.idcard as idcard3_6_0_, userdetail0_.is_marry as is_marry4_6_0_, userdetail0_.user_id as user_id5_6_0_ from mk_user_detail userdetail0_ where userdetail0_.user_id=?
+五月 01, 2018 10:51:03 下午 org.hibernate.engine.internal.StatisticalLoggingSessionEventListener end
+INFO: Session Metrics {
+    132628 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    285178 nanoseconds spent preparing 1 JDBC statements;
+    261271 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    33584 nanoseconds spent performing 1 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}</span>
+User [id=1, account=zhangsan2345, password=123456, username=32, headerPic=23, createTime=2018-04-26 12:31:13.0, updateTime=null, age=2, male=12]
+User [id=1, account=zhangsan2345, password=123456, username=32, headerPic=23, createTime=2018-04-26 12:31:13.0, updateTime=null, age=2, male=12]
+User [id=1, account=zhangsan2345, password=123456, username=32, headerPic=23, createTime=2018-04-26 12:31:13.0, updateTime=null, age=2, male=12]
+</code>
+</pre>
+</div>
+
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/wPTG8tyBnc32uZT2kK7zE9.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/wPTG8tyBnc32uZT2kK7zE9.html">《Hiberante的一级缓存和二级缓存》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

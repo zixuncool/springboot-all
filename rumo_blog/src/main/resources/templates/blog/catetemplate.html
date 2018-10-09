@@ -1,0 +1,23 @@
+<#assign isflag=true/>
+<#assign year=""/>
+<#list  pages.list as blog>
+<#if blog??>
+	<#if year!=(blog.createTime)?string('yyyy')>
+		<div class="collection-title ${(blog_index%2=0)?string('animated fadeInDown','animated2 fadeInUp')}" data-psize="${pages.pages}">
+			<h2 class="archive-year motion-element archive-year-${(blog.createTime)?string('yyyy')}" style="opacity: 1; display: block; transform: translateX(0px);">${(blog.createTime)?string('yyyy')}</h2>
+		</div>
+		<#assign year=(blog.createTime)?string('yyyy')/>
+	</#if>
+	
+	<article class="post post-type-normal" style="opacity: 1; display: block; transform: translateY(0px);">
+		<header class="post-header">
+			<h1 class="post-title">
+				<a class="post-title-link" href="${basePath}/${blog.staticLink}" ><span>${blog.title}</span></a>
+			</h1>
+			<div class="post-meta">
+				<time class="post-time" title="${(blog.createTime)?string('yyyy-MM-dd HH:mm')}"> ${(blog.createTime)?string('MM-dd')} </time>
+			</div>
+		</header>
+	</article>
+</#if>
+</#list>

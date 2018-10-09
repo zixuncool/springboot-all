@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="http://localhost:8080/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/main.css">
+<link rel="stylesheet" href="http://localhost:8080/css/compoment.css?4bf3b5f">
+<script>var basePath="http://localhost:8080";var adminPath="http://localhost:8080/admin";</script><script type="text/javascript" src="http://localhost:8080/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/md5.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sg.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/sgutil.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/admin.js"></script><title>你离BAT之间，只差这一套Java面试题。-中华墨风-'s Zone</title>
+<meta name="description" content="最近，各大公司开始了春招，很多人已经开始在准备面试了，特地来总结下初中级程序员应该掌握的面试题目。这篇面试指南，只适用 ...">
+<meta name="keywords" content="">
+<style>.loadmore{background:#fbfbfb;padding:5px;margin:30px 0;text-align: center;}
+	.loadmore a{display: block;border-bottom:0;}
+	.rebtn{color:#333;font-size: 12px;}
+	.itb-musicboxs,.itb-imgboxs{margin:20px 0px;text-align: center;overflow:hidden;}
+	.itb-musicboxs,.itb-imgboxs img{width:100%;}
+	.itb-audioboxs{position:absolute;bottom:-3px;left:3px;}
+	.playboxs{position:absolute;z-index:3;top:0;left:0;right:0;text-align: center;line-height: auto;bottom:0;}
+	.playboxs i{font-size:112px;color:#fff;}
+	
+</style>
+</head>
+<body title="双击看详情" data-edit="blog" data-opid="80" data-comment="open">
+<div class="container one-column page-home ">
+	<div id="pandara-brand" class="my-brand" style="opacity: 1; top: 0px;">
+		<div id="space-ship" class="pandara-image  animated rotateInDownRight"></div>
+		<div id="planet0" class="pandara-image r animated rotateIn"></div>
+		<div id="earth" class="pandara-image animated zoomInUp"></div>
+		<!-- <div id="planet1" class="pandara-image animated zoomInDown"></div>
+		<div id="planet2" class="pandara-image animated rotateIn"></div>
+		<div id="planet3" class="pandara-image animated rotateIn"></div>
+		<div id="satellite" class="pandara-image animated zoomInDown"></div>
+		<div id="planet4" class="pandara-image animated rotateIn"></div> -->
+		<!-- <div id="planet5" class="pandara-image animated rotateInDownRight"></div> -->
+		<!-- <div id="planet6" class="pandara-image animated rotateInDownLeft"></div> -->
+	</div>  
+	<div class="headband"></div>
+	<header id="header" class="header" >
+		<div class="header-inner ">
+			<h1 class="site-meta animated2 fadeInDown">
+				<span class="logo-line-before"><i></i></span> <span 
+					class="brand" rel="start" style="opacity: 1;"> <span
+					class="logo" style="opacity: 1; top: 0px;">
+						<i class="icon-logo"></i>
+				</span> <span class="site-title"
+					style="opacity: 1; top: 0px;"><a href="http://localhost:8080" class="cof" style="border-bottom: none;">中华墨风's zone~~~</a></span>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLogin()">登录</a>
+					<a href="javascript:void(0);" class="loginlink fz14 cof" onclick="mkLogin.loadLoginReg()">/&nbsp;注册</a>
+					<span id="loginspan" class="fz14"></span>
+				</span> 
+			
+			</h1>
+			
+			<div class="site-nav-toggle">
+				<button>
+					<span class="btn-bar"></span> <span class="btn-bar"></span> <span
+						class="btn-bar"></span>
+				</button>
+			</div>
+			<nav class="site-nav">
+				<ul id="menu" class="menu animated fadeInDown">
+					<li class="menu-item menu-item-archives" style="opacity: 1; transform: translateY(0px);"><a class="active" href="http://localhost:8080" rel="section"> <i class="menu-item-icon  fa fa-home"></i> <br> 首页</a></li>
+					<li class="menu-item menu-item-archives menu-item-course" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/course" rel="section"> <i class="menu-item-icon  fa fa-bookmark"></i> <br> 课程</a></li>
+					<li class="menu-item menu-item-archives menu-item-blog" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/blog" rel="section"> <i class="menu-item-icon  fa fa-map-signs"></i> <br> 故事</a></li>
+					<li class="menu-item menu-item-archives menu-item-archives2" style="opacity: 1; transform: translateY(0px);"><a href="http://localhost:8080/archives" rel="section"> <i class="menu-item-icon  fa fa-quora"></i> <br> 归档</a></li>
+					<li class="menu-item menu-item-tags"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="https://gitee.com/kekesam" target="_blank" rel="section"> <i class="menu-item-icon fa fa-git-square"></i>
+							<br> Git码云
+					</a></li> 
+					<li class="menu-item menu-item-about"
+						style="opacity: 1; transform: translateY(0px);"><a
+						href="http://localhost:8080/about"  target="_blank" rel="section"> <i
+							class="menu-item-icon fa fa-user-circle-o"></i> <br> 我是谁˚∆˚
+					</a></li> 
+				</ul>
+
+			</nav>
+		</div>
+	</header>	<main id="main" class="main">
+	 	<div class="main-inner"style="width: px">
+		<div id="content" class="content">
+			<div id="posts" class="posts-expand">
+				<article class="post post-type-normal animated  fadeIn">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a class="post-title-link" href="http://localhost:8080/blogs/mkfrunUvXZ80mFE5sa284Q.html">你离BAT之间，只差这一套Java面试题。</a>
+						</h1>
+						<div class="post-meta">
+							<span class="post-time"> 发表于 <time
+									datetime="2018/07/19 14:05:49">2018/07/19 14:05:49</time>
+							</span> <span class="post-category"> &nbsp; | &nbsp; 分类于 :&nbsp;<span><a
+									href="http://localhost:8080/search/1" rel="index">
+										<span>前端</span>
+								</a> </span></span> <span id="busuanzi_container_page_pv"
+								style="display: inline;"> &nbsp; | &nbsp; 访客 :&nbsp;<span
+								id="bloghits">446</span> &nbsp; 评论 :&nbsp;<a href="#txt_message"
+								id="commentnum">0</a>
+							</span>
+							<span id="editbox"></span>
+						</div>
+					</header>
+					<div class="post-body">
+						<div class="itb-imgboxs pr">
+						</div>
+						<div class="asb asb-post asb-post-01"></div> 
+<p>最近，各大公司开始了春招，很多人已经开始在准备面试了，特地来总结下初中级程序员应该掌握的面试题目。这篇面试指南，只适用于初中级程序员，其中不涉及分布式等问题。关于中高级的程序员问题，我后面可能再出一篇文章。</p> 
+<p>对于一个初中级程序员来说，面试问题不仅仅涉及到Java语言，还会包括很多其他知识，比如计算机基础知识（数据结构、计算机网络、操作系统等）、C语言基础、Java底层知识以及一些框架相关知识等。本文几乎覆盖到了所有领域。</p> 
+<ol> 
+ <li>计算机基础知识</li> 
+ <li>C语言基础</li> 
+ <li>Java基础</li> 
+ <li>Java高级</li> 
+ <li>Java Web</li> 
+ <li>设计模式</li> 
+ <li>知识的综合能力</li> 
+ <li>工具使用</li> 
+ <li>项目相关</li> 
+ <li>技术热情</li> 
+ <li>表达能力</li> 
+ <li>思考方式</li> 
+ <li>其他</li> 
+ <li>推荐阅读</li> 
+</ol> 
+<p>还有，我知道很多人会问关于这些题目的答案问题。答案我都有，由于篇幅有限没办法直接贴上来。这些题目的答案我会在我的公众号及知识星球中给出，感谢关注。</p> 
+<p><strong>为了方便，我把他们分了类，有一些是必看的，我用<font color="red">！</font>标注，有一些进阶型的我用<font color="green">%</font>标注，有一些需要了解的，我用<font color="blue">？</font>标注。</strong></p> 
+<h2>必会关键字</h2> 
+<blockquote> 
+ <h3><code>void</code> <code>byte</code> <code>int</code> <code>long</code> <code>char</code> <code>short</code> <code>float</code> <code>double</code> <code>String</code> <code>StringBuffer</code> <code>StringBuilder</code> <code>Array</code> <code>Collection</code> <code>Collections</code> <code>List</code> <code>ArrayList</code> <code>LinkedList</code> <code>Vector</code> <code>Set</code> <code>HashMap</code> <code>TreeMap</code> <code>LinkedHashMap</code> <code>ConcerrentHashMap</code> <code>Set</code> <code>TreeMap</code> <code>HashMap</code> <code>synchronized</code> <code>volatile</code> <code>transient</code> <code>implements</code> <code>extends</code> <code>public</code> <code>private</code> <code>protected</code> <code>this</code> <code>super</code> <code>static</code> <code>final</code> <code>const</code> <code>run</code> <code>start</code> <code>thread</code> <code>enmu</code> <code>stack</code> <code>queue</code> <code>list</code> <code>heap</code> <code>throw</code> <code>throws</code> <code>try</code> <code>catch</code> <code>finally</code> <code>break</code> <code>continue</code> <code>instanceof</code></h3> 
+</blockquote> 
+<h2>计算机基础知识</h2> 
+<h3>数据结构</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、什么是队列、栈、链表</p> 
+ <p><font color="red">！</font>2、什么是树（平衡树,排序树,B树,B+树,R树,红黑树）、堆（大根堆、小根堆）、图（有向图、无向图、拓扑）</p> 
+ <p><font color="red">！</font>3、栈和队列的相同和不同之处</p> 
+ <p><font color="blue">？</font>4、栈通常采用的两种存储结构</p> 
+ <p><font color="green">%</font>5、两个栈实现队列，和两个队列实现栈</p> 
+</blockquote> 
+<h3>算法</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>排序</code>都有哪几种方法？</p> 
+ <p><font color="red">！</font>2、会写常用的排序算法，如快排，归并等。</p> 
+ <p><font color="green">%</font>3、各种排序算法的<code>时间复杂度</code>和<code>稳定性</code> ，重点快排。</p> 
+ <p><font color="red">！</font>4、单链表的遍历和逆序</p> 
+ <p><font color="red">！</font>5、<code>深度优先搜索</code>和<code>广度优先搜索</code></p> 
+ <p><font color="blue">？</font>6、最小生成树</p> 
+ <p><font color="red">！</font>7、常见Hash算法，哈希的原理和代价</p> 
+ <p><font color="green">%</font>8、全排列、贪心算法、KMP算法、hash算法</p> 
+ <p><font color="blue">？</font>9、一致性Hash算法</p> 
+</blockquote> 
+<h3>操作系统</h3> 
+<blockquote> 
+ <p><font color="blue">？</font>1、虚拟内存管理</p> 
+ <p><font color="blue">？</font>2、换页算法</p> 
+ <p><font color="red">！</font>3、进程间通信</p> 
+ <p><font color="blue">？</font>4、进程同步：生产者消费者问题、哲学家就餐问题、读者写者问题</p> 
+ <p><font color="red">！</font>5、死锁的四个必要条件，避免方法</p> 
+ <p><font color="red">！</font>6、Linux的一些基本命令，如<code>ls</code>、<code>tail</code>、<code>chmod</code>等</p> 
+</blockquote> 
+<h3>计算机网络</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、tcp,udp区别</p> 
+ <p><font color="red">！</font>2、HTTP请求和响应的全过程</p> 
+ <p><font color="red">！</font>3、HTTP常见响应码：200、301、302、404、500</p> 
+ <p><font color="red">！</font>4、get和post的区别</p> 
+ <p><font color="red">！</font>5、forward和redirect的区别</p> 
+ <p><font color="red">！</font>6、<code>osi</code>七层模型</p> 
+ <p><font color="red">！</font>7、<code>tcp/ip</code>四层模型及原理</p> 
+ <p><font color="red">！</font>8、TCP和UDP区别</p> 
+ <p><font color="red">！</font>9、TCP的三次握手，四次关闭</p> 
+ <p><font color="green">%</font>10、丢包,粘包，</p> 
+ <p><font color="blue">？</font>11、容量控制，拥塞控制</p> 
+ <p><font color="blue">？</font>12、子网划分</p> 
+ <p><font color="green">%</font>13、IPV4和IPV6</p> 
+ <p><font color="blue">？</font>14、HTTPS和HTTP/2</p> 
+</blockquote> 
+<h3>数据库：</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>范式</code></p> 
+ <p><font color="red">！</font>2、数据库事务和隔离级别</p> 
+ <p><font color="red">！</font>3、为什么需要锁，锁定分类，锁粒度</p> 
+ <p><font color="green">%</font>4、<code>乐观锁</code>，<code>悲观锁</code>的概念及实现方式</p> 
+ <p><font color="red">！</font>5、<code>分页</code>如何实现（<code>Oracle</code>，<code>MySql</code>）</p> 
+ <p><font color="red">！</font>6、Mysql引擎</p> 
+ <p><font color="blue">？</font>7、MYSQL语句优化</p> 
+ <p><font color="green">%</font>8、从一张大表读取数据，如何解决性能问题</p> 
+ <p><font color="red">！</font>9、<code>内连接</code>，<code>左连接</code>，<code>右连接</code>作用及区别</p> 
+ <p><font color="red">！</font>10、<code>Statement</code>和<code>PreparedStatement</code>之间的区别</p> 
+ <p><font color="green">%</font>11、<code>索引</code>以及<code>索引的实现</code>(B+树介绍、和B树、R树区别</p> 
+ <p><font color="blue">？</font>12、什么是数据库连接池</p> 
+</blockquote> 
+<h3>海量数据处理</h3> 
+<blockquote> 
+ <p><font color="green">%</font>1、海量日志数据，如何提取出某日访问淘宝次数最多的IP</p> 
+ <p><font color="green">%</font>2、上亿数据，统计其中出现次数最多的前N个数据</p> 
+ <p><font color="green">%</font>3、5亿个int，找出他们的中位数</p> 
+ <p><font color="green">%</font>4、两个文件，各存放50亿条URL，每个URL占64字节。内存限制是4G，找出两个文件中相同的URL</p> 
+ <p><font color="green">%</font>5、有40亿个不重复的unsigned int的整数，没排过序，现在给一个数，如何快速判断这个数是否在这40亿个数当中。</p> 
+ <p><font color="blue">？</font>6、提示：分治、Hash映射、堆排序、双层桶划分、Bloom filter、bitmap、数据库索引、mapreduce</p> 
+</blockquote> 
+<h2>C语言基础</h2> 
+<h3>构造函数、析构函数</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、构造函数和析构函数</p> 
+ <p><font color="green">%</font>2、为什么不要在构造器中调用虚函数</p> 
+ <p><font color="green">%</font>3、为什么不要在析构函数中抛出异常</p> 
+</blockquote> 
+<h3>c++相关</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、面向对象的三大基本特征，五大基本原则</p> 
+ <p><font color="green">%</font>2、C++继承的内存布局</p> 
+ <p><font color="red">！</font>3、C++多态的实现机制</p> 
+ <p><font color="red">！</font>4、new/deletr和malloc/free的区别</p> 
+</blockquote> 
+<h3>其他</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、为什么使用补码</p> 
+ <p><font color="green">%</font>2、C语言中的内存泄漏</p> 
+ <p><font color="red">！</font>3、进制转换</p> 
+ <p><font color="green">%</font> 4、自己编写strlen/strcpy/strcmp</p> 
+ <p><font color="red">！</font> 5、C、C++以及Java之间的区别和各自优缺点</p> 
+</blockquote> 
+<h2>Java基础</h2> 
+<h3>封装、继承、多态</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、Java中实现多态的机制是什么，动态多态和静态多态的区别</p> 
+ <p><font color="red">！</font>2、接口和抽象类的区别，如何选择</p> 
+ <p><font color="red">！</font>3、Java能不能多继承，可不可以多实现</p> 
+ <p><font color="green">%</font>4、<code>Static Nested Class</code> 和 <code>Inner Class</code>的不同</p> 
+ <p><font color="red">！</font>5、重载和重写的区别。</p> 
+ <p><font color="red">！</font>6、是否可以继承<code>String</code>类</p> 
+ <p><font color="red">！</font>7、构造器是否可被<code>override</code>?</p> 
+ <p><font color="red">！</font>8、<code>public</code>,<code>protected</code>,<code>private</code>的区别?</p> 
+</blockquote> 
+<h3>集合相关</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、列举几个Java中<code>Collection</code>类库中的常用类</p> 
+ <p><font color="red">！</font>2、<code>List</code>、<code>Set</code>、<code>Map</code>是否都继承自<code>Collection</code>接口？存储特点分别是什么？</p> 
+ <p><font color="red">！</font>3、<code>ArrayList</code>、<code>LinkedList</code>和<code>Vector</code>之间的区别与联系</p> 
+ <p><font color="red">！</font>4、<code>HashMap</code>和<code>Hashtable</code>、<code>TreeMap</code>以及<code>ConcurrentHashMap</code>的区别</p> 
+ <p><font color="red">！</font>5、<code>Collection</code> 和 <code>Collections</code>的区别</p> 
+ <p><font color="green">%</font>6、其他的集合类：<code>treeset</code>,<code>linkedhashmap</code>等。</p> 
+</blockquote> 
+<h3>异常相关</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>Error</code>和<code>Exception</code>的区别</p> 
+ <p><font color="red">！</font>2、异常的类型，什么是运行时异常</p> 
+ <p><font color="red">！</font>3、<code>final</code>、<code>finally</code>和<code>finalize</code>的区别</p> 
+ <p><font color="green">%</font>4、<code>try-catch-finally</code>中，如果在<code>catch</code>中<code>return</code>了，<code>finally</code>中的代码还会执行么，原理是什么？</p> 
+ <p><font color="red">！</font>5、列举3个以上的<code>RuntimeException</code></p> 
+ <p><font color="red">！</font>6、Java中的异常处理机制的简单原理和应用</p> 
+</blockquote> 
+<h3>其它</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>String</code>和<code>StringBuffer</code>、<code>StringBuilder</code>的区别</p> 
+ <p><font color="red">！</font>2、<code>==</code>和<code>equals</code>的区别</p> 
+ <p><font color="green">%</font>3、<code>hashCode</code>的作用，和<code>equals</code>方法的关系</p> 
+ <p><font color="red">！</font>4、<code>Input/OutputStream</code>和<code>Reader/Writer</code>有什么区别</p> 
+ <p><font color="red">！</font>5、如何在字符流和字节流之间转换？</p> 
+ <p><font color="red">！</font>6、<code>switch</code>可以使用那些数据类型</p> 
+ <p><font color="green">%</font>7、Java的四种引用</p> 
+ <p><font color="red">！</font>8、序列化与反序列化</p> 
+ <p><font color="red">！</font>9、正则表达式</p> 
+ <p><font color="red">！</font>10、<code>int</code>和<code>Integer</code>的区别，什么是自动装箱和自动拆箱</p> 
+</blockquote> 
+<h2>Java高级</h2> 
+<h3>多线程</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、进程和线程的区别</p> 
+ <p><font color="red">！</font>2、并行和并发的区别和联系</p> 
+ <p><font color="red">！</font>3、同步与异步</p> 
+ <p><font color="red">！</font>4、多线程的实现方式，有什么区别</p> 
+ <p><font color="red">！</font>5、什么叫<code>守护线程</code></p> 
+ <p><font color="green">%</font>6、如何停止一个线程？</p> 
+ <p><font color="red">！</font>7、什么是<code>线程安全</code>？</p> 
+ <p><font color="red">！</font>8、<code>synchronized</code> 和 <code>lock</code>的区别</p> 
+ <p><font color="red">！</font>9、当一个线程进入一个对象的一个<code>synchronized</code>方法后，其它线程是否可进入此对象的其它方法?</p> 
+ <p><font color="red">！</font>10、启动一个线程是用<code>run()</code>还是<code>start()</code>?</p> 
+ <p><font color="red">！</font>12、wait和sleep的区别</p> 
+ <p><font color="green">%</font>13、notify和notifyAll的区别</p> 
+ <p><font color="green">%</font>14、线程池的作用</p> 
+ <p><font color="green">%</font>15、Java中线程池相关的类</p> 
+</blockquote> 
+<h3>JVM底层技术</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>gc</code>的概念，如果A和B对象循环引用，是否可以被GC？</p> 
+ <p><font color="green">%</font>2、jvm gc如何判断对象是否需要回收，有哪几种方式？</p> 
+ <p><font color="red">！</font>3、Java中能不能主动触发GC</p> 
+ <p><font color="red">！</font>4、JVM的内存结构，堆和栈的区别</p> 
+ <p><font color="red">！</font>5、JVM堆的分代</p> 
+ <p><font color="green">%</font>6、<code>Java</code>中的内存溢出是什么，和内存泄露有什么关系</p> 
+ <p><font color="red">！</font>7、Java的类加载机制，什么是双亲委派</p> 
+ <p><font color="red">！</font>8、ClassLoader的类加载方式</p> 
+</blockquote> 
+<h3>IO</h3> 
+<blockquote> 
+ <p><font color="red">！</font> 1、NIO、AIO和BIO 之间的区别</p> 
+ <p><font color="blue">？</font>2、<code>IO</code>和<code>NIO</code>常用用法</p> 
+</blockquote> 
+<h3>其它</h3> 
+<blockquote> 
+ <p><font color="blue">？</font>1、<code>hashcode</code> 有哪些算法</p> 
+ <p><font color="red">！</font>2、反射的基本概念，<code>反射</code>是否可以调用私有方法</p> 
+ <p><font color="red">！</font>3、Java中<code>范型</code>的概念</p> 
+ <p><font color="blue">？</font>4、JVM启动参数，<code>-Xms</code>和 <code>-Xmx</code></p> 
+ <p><font color="green">%</font>5、<code>代理机制</code>的实现</p> 
+ <p><font color="red">！</font>6、<code>String s = new String("s")</code>，创建了几个对象。</p> 
+</blockquote> 
+<h2>Java Web</h2> 
+<h3>Servlet</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>JSP</code>和<code>Servlet</code>的区别，<code>Servelt</code>的概念。</p> 
+ <p><font color="red">！</font>2、<code>Servlet</code>的生命周期</p> 
+ <p><font color="red">！</font>3、Servlet中的<code>session</code>工作原理 ，以及设置过期时间的方式</p> 
+ <p><font color="red">！</font>4、Servlet中，<code>filter</code>的应用场景有哪些？</p> 
+ <p><font color="blue">？</font>5、JSP的动态<code>include</code>和静态<code>include</code></p> 
+ <p><font color="green">%</font>6、web.xml中常用配置及作用</p> 
+ <p><font color="green">%</font>7、Servlet的线程安全问题</p> 
+</blockquote> 
+<h3>MVC框架</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、介绍几个常用的MVC框架</p> 
+ <p><font color="red">！</font>2、什么是MVC</p> 
+ <p><font color="red">！</font>3、<code>Struts</code>中请求的实现过程</p> 
+ <p><font color="green">%</font>4、<code>Spring mvc</code>与<code>Struts mvc</code>的区别</p> 
+ <p><font color="blue">？</font>5、<code>Service</code>嵌套事务处理，如何回滚</p> 
+ <p><font color="red">！</font>6、struts2 中拦截器与过滤器的区别及执行顺序</p> 
+ <p><font color="green">%</font>7、struts2拦截器的实现原理</p> 
+</blockquote> 
+<h3>http相关</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、<code>session</code>和<code>cookie</code>的区别</p> 
+ <p><font color="red">！</font>2、HTTP请求中<code>session</code>实现原理？</p> 
+ <p><font color="green">%</font>3、如果客户端<strong>禁止Cookie能实现Session吗</strong>？</p> 
+ <p><font color="red">！</font>4、http中 <code>get</code>和<code>post</code>区别</p> 
+ <p><font color="red">！</font>5、<code>redirect</code>与<code>forward</code>的区别</p> 
+ <p><font color="red">！</font>6、常见的web请求返回的状态码。404、302、301、500分别代表什么</p> 
+</blockquote> 
+<h3>SSH相关</h3> 
+<blockquote> 
+ <p><font color="blue">？</font>1、<code>Hibernate</code>/<code>Ibatis</code>/<code>MyBatis</code>之间的区别</p> 
+ <p><font color="blue">？</font>2、什么是<code>OR Mapping</code></p> 
+ <p><font color="green">%</font>3、hibernate的缓存机制、一级和二级缓存</p> 
+ <p><font color="red">！</font>4、使用Spring的好处是什么，Spring的核心理念</p> 
+ <p><font color="red">！</font>5、什么是<code>AOP</code>和<code>IOC</code>，实现原理是什么</p> 
+ <p><font color="red">！</font>6、spring bean的初始化过程</p> 
+ <p><font color="red">！</font>7、Spring的<code>事务管理</code> ，<code>Spring bean注入</code>的几种方式</p> 
+ <p><font color="green">%</font>8、spring四种依赖注入方式</p> 
+</blockquote> 
+<h3>容器相关</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、什么是web服务器、什么是应用服务器</p> 
+ <p><font color="red">！</font>2、常用的web服务器有哪些？</p> 
+ <p><font color="blue">？</font>3、<code>Tomcat</code>和<code>weblogic</code>的区别</p> 
+</blockquote> 
+<h3>web安全</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、什么是<code>SQL注入</code> ，如何避免。</p> 
+ <p><font color="green">%</font>2、什么是XSS攻击，如何避免</p> 
+ <p><font color="green">%</font>3、什么是CSRF攻击，如何避免</p> 
+</blockquote> 
+<h3>动态代理</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、Java的动态代理的概念</p> 
+ <p><font color="green">%</font>2、Java的动态代理的实现</p> 
+</blockquote> 
+<h3>编码问题</h3> 
+<blockquote> 
+ <p><font color="red">！</font>1、常用的字符编码</p> 
+ <p><font color="red">！</font>2、如何解决中文乱码问题</p> 
+</blockquote> 
+<h3>其它</h3> 
+<blockquote> 
+ <p><font color="green">%</font>1、XML的解析方式，以及优缺点。</p> 
+ <p><font color="green">%</font>2、什么是ajax，<code>Ajax</code>如何解决跨域问题</p> 
+</blockquote> 
+<h2>设计模式</h2> 
+<blockquote> 
+ <p><font color="green">%</font>1、谈一下自己了解或者熟悉的<code>设计模式</code></p> 
+ <p><font color="red">！</font>2、<code>Singleton</code>的几种实现方式，实现一个线程安全的单例。</p> 
+ <p><font color="blue">？</font>3、<code>工厂模式</code>和<code>抽象工厂模式</code>之间的区别</p> 
+</blockquote> 
+<h2>知识的综合能力</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、请介绍一下一个http请求的全过程，描述的越全面越好</p> 
+ <p><font color="red">！</font>2、当你在浏览器地址栏输入www.taobao.com，敲下回车之后都发生了什么</p> 
+</blockquote> 
+<h2>工具使用</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、知道git/svn是干什么的吗？用过吗</p> 
+ <p><font color="red">！</font>2、知道maven/gradle是干什么的吗？用过吗</p> 
+ <p><font color="red">！</font>3、平常使用什么IDE，为什么</p> 
+ <p><font color="red">！</font>4、平常使用什么浏览器，为什么</p> 
+ <p><font color="red">！</font>5、平常开发机器是什么操作系统的</p> 
+ <p><font color="red">！</font>6、会在Linux上开发吗。Linux常用命令会吗</p> 
+</blockquote> 
+<h2>项目相关</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、请简单介绍一下你的这个项目</p> 
+ <p><font color="red">！</font>2、你在这个项目中充当什么角色</p> 
+ <p><font color="red">！</font>3、这个项目的技术选型有做过么。</p> 
+ <p><font color="red">！</font>4、选择某项技术做过哪些调研和对比</p> 
+ <p><font color="red">！</font>5、这个项目中遇到的最大的问题是什么？你是如何解决的。</p> 
+ <p><font color="red">！</font>6、项目中是否考虑过性能、安全性等问题</p> 
+</blockquote> 
+<h2>技术热情</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、当前Java的最新版本</p> 
+ <p><font color="red">！</font>2、Java8的lambda表达式</p> 
+ <p><font color="green">%</font>3、Java8的stream API</p> 
+ <p><font color="green">%</font>4、Java9的模块化</p> 
+ <p><font color="green">%</font>5、Java10的局部变量类型推断</p> 
+ <p><font color="green">%</font>6、Spring Boot2.0</p> 
+ <p><font color="green">%</font>7、HTTP/2</p> 
+ <p><font color="green">%</font>8、会翻墙么，知道翻墙的原理吗</p> 
+ <p><font color="red">！</font>9、你最近在读什么书</p> 
+</blockquote> 
+<h2>表达能力</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、能不能简单做一个自我介绍。</p> 
+ <p><font color="red">！</font>2、能不能描述一下杭州给你的印象。用三句话概括一下。</p> 
+</blockquote> 
+<h2>思考方式</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、如何估算杭州有多少软件工程师</p> 
+ <p><font color="red">！</font>2、你最近读过的印象最深的文章是什么</p> 
+ <p><font color="red">！</font>3、这篇文章中有几个观点，你最赞成哪一个，最不赞成哪一个</p> 
+</blockquote> 
+<h2>其他</h2> 
+<blockquote> 
+ <p><font color="red">！</font>1、你对加班怎么看</p> 
+ <p><font color="red">！</font>2、你还有什么问题要问我（面试官）的么</p> 
+</blockquote> 
+<h2>推荐阅读</h2> 
+<blockquote> 
+ <p>程序员面试笔试宝典</p> 
+ <p>程序员面试金典</p> 
+ <p>Java编程思想</p> 
+ <p>Effective Java</p> 
+ <p>深入理解Java虚拟机</p> 
+ <p>大话数据结构</p> 
+ <p>剑指Offer</p> 
+ <p><font color="red">！</font>Hollis技术博客（http://www.hollischuang.com）及个人公众号（Hollis）</p> 
+</blockquote> 
+<p class="asb-post-footer"><strong>【公告】</strong><a target="_blank" href="http://www.hollischuang.com/转载说明">版权声明</a></p>(全文完)
+<center>
+ <img src="http://www.hollischuang.com/wp-content/uploads/2016/01/qrcode_for_gh_4ebd1b130cbe_430-1.jpg" width="300px" height="300px" title="" alt="">欢迎关注HollisChuang微信公众账号
+</center>
+<p class="post-copyright">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://www.hollischuang.com">HollisChuang's Blog</a> » <a href="http://www.hollischuang.com/archives/2223">你离BAT之间，只差这一套Java面试题。</a></p><p>此文转自：<a href='http://www.hollischuang.com/archives/2223' target='_blank'>http://www.hollischuang.com/archives/2223</a></p>
+						<hr />
+						<p class="asb-post-footer tc"><strong>【公告】</strong><a target="_blank" href="http://localhost:8080">版权声明</a></p>
+						<div style="text-align: center;padding: 20px 0 10px;margin:20px 0 0px">
+						 <img src="http://localhost:8080/qrcode?k=http://localhost:8080/blogs/mkfrunUvXZ80mFE5sa284Q.html" style="padding: 20px;" width="240px" height="240px" title="" alt=""><br/>欢迎扫描下载《ITbooking.net》APP学习交流平台
+						</div>
+						<p class="post-copyright tc">如未加特殊说明，此网站文章均为原创，转载必须注明出处。<a href="http://localhost:8080">中华墨风's Blog</a> » </p>
+						<p class="post-copyright tc tp4 pr"><a href="http://localhost:8080/blogs/mkfrunUvXZ80mFE5sa284Q.html">《你离BAT之间，只差这一套Java面试题。》</a></p>
+					</div>
+					<footer class="post-footer">
+						<div class="post-eof"></div>
+					</footer>
+				</article>
+				<div class="post-spread"></div>
+			</div>
+		</div>
+		<div class="comments v" id="comments">
+			<div class="vwrap">
+				<div class="vedit">
+					<textarea id="txt_message" maxlength="400" class="veditor vinput" placeholder="Just go go" style=""></textarea>
+					<div class="vemojis">
+						<i name="grinning" title="grinning">😀</i><i name="smiley"
+							title="smiley">😃</i><i name="smile" title="smile">😄</i><i
+							name="grin" title="grin">😁</i><i name="laughing"
+							title="laughing">😆</i><i name="sweat_smile" title="sweat_smile">😅</i><i
+							name="joy" title="joy">😂</i><i name="blush" title="blush">😊</i><i
+							name="innocent" title="innocent">😇</i><i name="wink"
+							title="wink">😉</i><i name="relieved" title="relieved">😌</i><i
+							name="heart_eyes" title="heart_eyes">😍</i><i
+							name="kissing_heart" title="kissing_heart">😘</i><i
+							name="kissing" title="kissing">😗</i><i
+							name="kissing_smiling_eyes" title="kissing_smiling_eyes">😙</i><i
+							name="kissing_closed_eyes" title="kissing_closed_eyes">😚</i><i
+							name="yum" title="yum">😋</i><i
+							name="stuck_out_tongue_winking_eye"
+							title="stuck_out_tongue_winking_eye">😜</i><i
+							name="stuck_out_tongue_closed_eyes"
+							title="stuck_out_tongue_closed_eyes">😝</i><i
+							name="stuck_out_tongue" title="stuck_out_tongue">😛</i><i
+							name="sunglasses" title="sunglasses">😎</i><i name="smirk"
+							title="smirk">😏</i><i name="unamused" title="unamused">😒</i><i
+							name="disappointed" title="disappointed">😞</i><i name="pensive"
+							title="pensive">😔</i><i name="worried" title="worried">😟</i><i
+							name="confused" title="confused">😕</i><i name="persevere"
+							title="persevere">😣</i><i name="confounded" title="confounded">😖</i><i
+							name="tired_face" title="tired_face">😫</i><i name="weary"
+							title="weary">😩</i><i name="angry" title="angry">😠</i><i
+							name="rage" title="rage">😡</i><i name="no_mouth"
+							title="no_mouth">😶</i><i name="neutral_face"
+							title="neutral_face">😐</i><i name="expressionless"
+							title="expressionless">😑</i><i name="hushed" title="hushed">😯</i><i
+							name="frowning" title="frowning">😦</i><i name="anguished"
+							title="anguished">😧</i><i name="open_mouth" title="open_mouth">😮</i><i
+							name="astonished" title="astonished">😲</i><i name="dizzy_face"
+							title="dizzy_face">😵</i><i name="flushed" title="flushed">😳</i><i
+							name="scream" title="scream">😱</i><i name="fearful"
+							title="fearful">😨</i><i name="cold_sweat" title="cold_sweat">😰</i><i
+							name="cry" title="cry">😢</i><i name="disappointed_relieved"
+							title="disappointed_relieved">😥</i><i name="sob" title="sob">😭</i><i
+							name="sweat" title="sweat">😓</i><i name="sleepy" title="sleepy">😪</i><i
+							name="sleeping" title="sleeping">😴</i><i name="mask"
+							title="mask">😷</i><i name="smiling_imp" title="smiling_imp">😈</i><i
+							name="smiley_cat" title="smiley_cat">😺</i><i name="smile_cat"
+							title="smile_cat">😸</i><i name="joy_cat" title="joy_cat">😹</i><i
+							name="heart_eyes_cat" title="heart_eyes_cat">😻</i><i
+							name="smirk_cat" title="smirk_cat">😼</i><i name="kissing_cat"
+							title="kissing_cat">😽</i><i name="scream_cat"
+							title="scream_cat">🙀</i><i name="crying_cat_face"
+							title="crying_cat_face">😿</i><i name="pouting_cat"
+							title="pouting_cat">😾</i><i name="cat" title="cat">🐱</i><i
+							name="mouse" title="mouse">🐭</i><i name="cow" title="cow">🐮</i><i
+							name="monkey_face" title="monkey_face">🐵</i><i name="hand"
+							title="hand">✋</i><i name="fist" title="fist">✊</i><i name="v"
+							title="v">✌️</i><i name="point_up" title="point_up">👆</i><i
+							name="point_down" title="point_down">👇</i><i name="point_left"
+							title="point_left">👈</i><i name="point_right"
+							title="point_right">👉</i><i name="facepunch" title="facepunch">👊</i><i
+							name="wave" title="wave">👋</i><i name="clap" title="clap">👏</i><i
+							name="open_hands" title="open_hands">👐</i><i name="+1"
+							title="+1">👍</i><i name="-1" title="-1">👎</i><i name="ok_hand"
+							title="ok_hand">👌</i><i name="pray" title="pray">🙏</i><i
+							name="ear" title="ear">👂</i><i name="eyes" title="eyes">👀</i><i
+							name="nose" title="nose">👃</i><i name="lips" title="lips">👄</i><i
+							name="tongue" title="tongue">👅</i><i name="heart" title="heart">❤️</i><i
+							name="cupid" title="cupid">💘</i><i name="sparkling_heart"
+							title="sparkling_heart">💖</i><i name="star" title="star">⭐️</i><i
+							name="sparkles" title="sparkles">✨</i><i name="zap" title="zap">⚡️</i><i
+							name="sunny" title="sunny">☀️</i><i name="cloud" title="cloud">☁️</i><i
+							name="snowflake" title="snowflake">❄️</i><i name="umbrella"
+							title="umbrella">☔️</i><i name="coffee" title="coffee">☕️</i><i
+							name="airplane" title="airplane">✈️</i><i name="anchor"
+							title="anchor">⚓️</i><i name="watch" title="watch">⌚️</i><i
+							name="phone" title="phone">☎️</i><i name="hourglass"
+							title="hourglass">⌛️</i><i name="email" title="email">✉️</i><i
+							name="scissors" title="scissors">✂️</i><i name="black_nib"
+							title="black_nib">✒️</i><i name="pencil2" title="pencil2">✏️</i><i
+							name="x" title="x">❌</i><i name="recycle" title="recycle">♻️</i><i
+							name="white_check_mark" title="white_check_mark">✅</i><i
+							name="negative_squared_cross_mark"
+							title="negative_squared_cross_mark">❎</i><i name="m" title="m">Ⓜ️</i><i
+							name="i" title="i">ℹ️</i><i name="tm" title="tm">™️</i><i
+							name="copyright" title="copyright">©️</i><i name="registered"
+							title="registered">®️</i>
+					</div>
+					<div class="vinput vpreview" style="display: none">
+						<p>试了下 Java OpenCV
+							做人脸检测，确实很强大。实现起来非常简单，但是精准度不够。不过应该能满足某些场景，比如相机的自动对焦等。这里分享一下相关的代码。</p>
+					</div>
+				</div>
+				<div class="vcontrol">
+					<div class="col col-20" title="Markdown is supported">
+						还可以输入：<span class="numtip">400</span>&nbsp;字
+					</div>
+					<div class="col col-80 text-right">
+						<a href="javacript:void(0);" onclick="mkComment.vcontrol(this)" class="vemoji-btn" style="margin-right: 20px;">Emoji</a> 
+						<button type="button" @click="saveComment" title="Cmd|Ctrl+Enter" class="vsubmit vbtn">回复</button>
+					</div>
+				</div>
+				<div style="display: none;" class="vmark"></div>
+			</div>
+			<div class="vinfo" style="display: block;">
+				<div class="vcount col">
+					<span class="vnum">{{total}}</span> 评论
+				</div>
+			</div>
+			
+			
+			<div class="vlist" id="vlist_box">
+				<div class="vcard" :id="'vcard_'+comment.id"  v-for="(comment,index) in comments">
+					<img class="vimg" onerror="imgError(this)" :src="basePath+'/'+comment.headerPic">
+					<div class="vh">
+						<div class="vhead">
+							<span class="vnick">{{comment.username}}</span> <span class="vsys">{{comment.ip}}</span> <span class="vsys">{{comment.osbroswer}}</span>
+						</div>
+						<div class="vmeta">
+							<span class="vtime">{{comment.createTime}} / {{comment.createTime|fomatTime}}</span>
+							<span v-if="session_user==15074816437" :index="index" :opid="comment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span> 
+							<span :cid="comment.userId" :at="'@'+comment.username" :opid="comment.id" :index="index" @click="reply" class="vat">回复</span>
+						</div>
+						<div class="vcontent">
+							<p v-html="comment.content"></p>
+						</div>
+						<div class="vquote">
+							<div class="vcard" :id="'vcard_'+ccomment.id" v-for="ccomment in comment.children" >
+								<img class="vimg" :src="basePath+'/'+ccomment.headerPic">
+								<div class="vhead">
+									<span class="vnick">{{ccomment.username}}</span> <span class="vsys">{{ccomment.ip}}</span> <span class="vsys">{{ccomment.osbroswer}}</span>
+								</div>
+								<div class="vmeta">
+									<span class="vtime">{{ccomment.createTime}} / {{ccomment.createTime|fomatTime}}</span> 
+									<span v-if="session_user==15074816437" :index="index" :opid="ccomment.id" @click="del" class="vat">&nbsp;/&nbsp;删除</span>
+									<span :cid="ccomment.userId" :at="'@'+ccomment.username" :index="index" :opid="comment.id" @click="reply" class="vat">回复</span>
+								</div>
+								<div class="vcontent">
+									<p v-html="ccomment.content"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tc" style="padding:100px;background:#fefefe;" v-if="comments.length==0">暂无评论</div>
+				<div v-if="!hasNext" class="loadmore"><a href="javascript:void(0)" @click="loadmore">加载更多({{pages}})</a></div>
+				<div v-if="hasNext" class="loadmore animated fadeOut">加载完毕</div>
+			</div>
+		</div>
+	
+	</div>
+</main>
+</div>
+<aside id="sidebar" class="sidebar ">
+			<div class="sidebar-inner">
+
+				<section class="site-overview">
+					<div class="site-author motion-element" itemprop="author"
+						itemscope="" itemtype="http://schema.org/Person"
+						style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-author-avatar"></div>
+				<p class="site-author-name" itemprop="name">Pandara</p>
+			</div>
+			<p class="site-description motion-element" itemprop="description"
+				style="opacity: 1; display: block; transform: translateX(0px);">一切皆为年少轻狂之诳语·DeepLearning
+				小白</p>
+			<nav class="site-state motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+				<div class="site-state-item site-state-posts">
+					<a href="/archives"> <span class="site-state-item-count">92</span>
+						<span class="site-state-item-name">日志</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-categories">
+					<a href="/categories"> <span class="site-state-item-count">9</span>
+						<span class="site-state-item-name">分类</span>
+					</a>
+				</div>
+
+				<div class="site-state-item site-state-tags">
+					<a href="/tags"> <span class="site-state-item-count">44</span>
+						<span class="site-state-item-name">标签</span>
+					</a>
+				</div>
+
+			</nav>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<span class="links-of-author-item"> <a
+					href="https://github.com/PandaraWen" target="_blank">Github</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://dribbble.com/PandaraWen" target="_blank">Dribbble</a>
+				</span> <span class="links-of-author-item"> <a
+					href="https://twitter.com/WenPandara" target="_blank">Twitter</a>
+				</span>
+
+			</div>
+
+			<div class="links-of-author motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);">
+
+				<p class="site-author-name">基情链接</p>
+
+				<span class="links-of-author-item"> <a
+					href="http://aevit.xyz/" target="_blank">Aevit's Lab</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://w3ctrain.com" target="_blank">W3cTrain</a>
+				</span> <span class="links-of-author-item"> <a
+					href="http://mrazy.com" target="_blank">梦灯笼</a>
+				</span>
+
+			</div>
+
+		</section>
+
+		<div class="side-bar-foot-decorate">
+			<div class="side-bar-man motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+			<div class="side-bar-star motion-element"
+				style="opacity: 1; display: block; transform: translateX(0px);"></div>
+		</div>
+	</div>
+</aside><footer id="footer" class="footer">
+		<div class="footer-inner">
+			<div class="copyright">
+
+				© &nbsp; <span itemprop="copyrightYear">2018-2020</span> <span
+					class="with-love"> <i class="icon-heart"></i>
+				</span> <span class="author" itemprop="copyrightHolder">中华墨风</span>
+			</div>
+
+			<div class="powered-by">
+				由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+			</div>
+
+			<div class="powered-by">湘ICP备16011548号-1</div>
+
+			<div class="theme-info">
+				主题 - <a class="theme-link"
+					href="https://github.com/iissnan/hexo-theme-next"> NexT </a>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="back-to-top" style="display: none;"></div>
+
+<div class="sidebar-toggle">
+	<div class="sidebar-toggle-line-wrap">
+		<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+		<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+	</div>
+</div>
+
+
+<!--弹出登录-->
+<div id="itbooking-loginbox" class="popup search-popup local-search-popup animated bounceInDown" style="display: none;">
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style=""></h3>
+	<h2>登录</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<input type="text" class="cctext" id="telephone" autofocus="autofocus" autocomplete="off" placeholder="报上手机" maxlength="11" >
+		<input type="password" class="ccron" id="password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		<span id="codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<div class="submit"><input type="submit" id="loginbtn" value="Sign in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<style>
+	.tipphone{border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px;/* display: none; */}
+	/* .relocation_box:hover .tipphone{display:block} */
+</style>
+<!--弹出注册-->
+<div id="itbooking-regbox" class="popup search-popup local-search-popup animated bounceInDown">
+<div class="app-location relocation_box">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>注册</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span class="tipinputspan" style="position: relative;display: block;">
+			<input type="text" class="cctext" id="r_telephone"  autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" id="tipphone_get" class="tipphone">提取短信码</a>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" id="r_code" disabled="disabled" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span class="rred_codebox" style="position: relative;display: none;">
+			<input type="text" class="ccron" disabled="disabled" id="r_phocode" placeholder="输入短信码" maxlength="6">
+		</span>
+		<span class="rred_codebox"  style="display: none;">
+			<input type="password" class="ccron" disabled="disabled" id="r_password"   autocomplete="off" placeholder="输入密码" maxlength="16">
+		</span>
+		<div class="rred_codebox submit" style="display: none;"><input type="submit" data-isopen="false" id="r_loginbtn" value="Reg in"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadForget();" style="font-size: 16px;">忘记密码 ?</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+
+
+
+<!--弹出忘记密码-->
+<div id="itbooking-forgetbox" class="popup search-popup local-search-popup animated bounceInDown"  >
+<div class="app-location">
+	<h3 class="errorbox animated flipInY" style="position: absolute;font-size:20px;right:0;left:0;margin:0 auto;color:#fff;display: none"></h3>
+	<h2>找回密码</h2>
+	<div class="line">
+		<span></span>
+	</div>
+	<a href="javascript:void(0);" class="closelogin" style=""><i class="fa fa-remove"></i></a>	
+	<form onsubmit="return false" autocomplete="off">
+		<span style="position: relative;display: block;">
+			<input type="text" class="cctext" id="f_telephone" autofocus="autofocus" autocomplete="off" placeholder="手机号码" maxlength="11" >
+			<a href="javascript:void(0);" style="border-radius:20px;color: #fff;position: absolute;width:100px;top:28px;right:10px;font-size: 12px;border-bottom: 0;background:#0bd38a;padding:3px 0 5px">提取短信码</a>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_code" placeholder="验证码" maxlength="4">
+			<img src="http://localhost:8080/code" alt="点击改变" style="position: absolute;right:10px;top:-10px;"  onclick="this.src='http://localhost:8080/code?d='+new Date().getTime();"/>
+		</span>
+		<span style="position: relative;display: none;">
+			<input type="text" class="ccron" id="f_phonecode" placeholder="输入短信码" maxlength="4">
+		</span>
+		<span style="display: none;">
+			<input type="password" class="ccron" id="f_password"   autocomplete="off" placeholder="输入钥匙" maxlength="16">
+		</span>
+		<div class="submit"><input type="submit" id="f_loginbtn" value="Forget Back"></div>
+		<div class="clear"></div>
+		<div class="new">
+			<h3><a href="javascript:void(0);" onclick="mkLogin.loadLoginReg();" style="font-size: 16px;">注册</a></h3>
+			<h4><a href="javascript:void(0);" onclick="mkLogin.loadLogin();" style="font-size: 16px;">登录</a></h4>
+			<div class="clear"></div>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="search-popup-overlay local-search-pop-overlay" style="display: none;"></div>
+<script type="text/javascript" src="http://localhost:8080/js/highcode/highlight.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/clipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/vue-resource.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/blogcomment.js"></script>
+<script type="text/javascript" src="http://localhost:8080/js/player.js"></script>
+
+</body>
+</html>

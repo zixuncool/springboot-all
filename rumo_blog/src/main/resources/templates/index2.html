@@ -1,0 +1,22 @@
+<@compress single_line=true>
+<!DOCTYPE html>
+<html class="theme-next use-motion">
+<head>
+	<meta charset="UTF-8">
+	<#include "template/commons.html"/>
+	<title>中华墨风 -'s Zone</title>
+	<meta name="description" content="中华墨风 为开发者提供问答、学习与交流编程知识的平台，创造属于开发者的时代！ ">
+	<meta name="keywords" content="中华墨风,javascript,php,python,java,mysql,ios,android,vue.js,node.js,html,css,git,docker,前端">
+</head>
+<body title="双击拉开详情" data-index="true" data-cid="${(cid)!}">
+	<#include "template/header.html"/>	
+	<#include "template/main.html"/>	
+	<#include "template/aside.html"/>		
+	<#include "template/footer.html"/>
+	<#include "template/js.html"/>
+	<script type="text/javascript" src="${basePath}/js/page/jquery.page.js"></script>
+	<script type="text/javascript" src="${basePath}/js/highcode/highlight.min.js"></script>
+	<script type="text/javascript" src="${basePath}/js/index.js"></script>
+</body>
+</html>
+</@compress>
