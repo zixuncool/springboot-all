@@ -229,30 +229,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
-			<plugin>
-				<groupId>com.rumo</groupId>
-				<artifactId>rumo-maven-plugin</artifactId>
-				<version>1.0-SNAPSHOT</version>
-				<configuration>
-					<path>${project.basedir}</path>
-					<msg>This is my message</msg>
-					<options>
-						<option>one Array</option>
-						<option>two Array</option>
-					</options>
-					<args>我是一个参数</args>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>sogoucloud</goal>
-							<goal>countFile</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
